@@ -19,6 +19,8 @@ mindmap
       04 风险监控与预警
       05 策略回测与交易工具
       06 投研模型与研究复现
+      07 预测市场工具箱
+      08 信息搜索与网页采集
       09 热门智能体
     ➕ 补充
       因子库 A股
@@ -37,6 +39,8 @@ mindmap
 - [04 风险监控与预警](#cat-04)
 - [05 策略回测与交易工具](#cat-05)
 - [06 投研模型与研究复现](#cat-06)
+- [07 预测市场工具箱](#cat-07)
+- [08 信息搜索与网页采集](#cat-08)
 - [09 热门智能体](#cat-09)
 - [📊 因子库 Alpha · A股](#alpha-ashare)
 - [📊 因子库 Alpha · 期货](#alpha-futures)
@@ -108,6 +112,16 @@ mindmap
 | [skill-quant-research-replication](https://github.com/quantskills/skill-quant-research-replication) | Codex skill for quantitative research replication workflows. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-research-replication.png"><img src="assets/skill-quant-research-replication.png" width="220"></a> |
 | [skill-paper-replication](https://github.com/quantskills/skill-paper-replication) | 把一篇量化金融论文（arXiv 或本地 PDF），变成一套可运行、可审计的复现实验：检索 → 提取 → 回测 → 图表 → 指标对照，全程框架无关。 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-paper-replication.png"><img src="assets/skill-paper-replication.png" width="220"></a> |
 | [skill-gaetano-crux-capital-research-model](https://github.com/quantskills/skill-gaetano-crux-capital-research-model) | 基于公开资料复刻 Gaetano / Crux Capital 的研究方法：把公开 X 帖子、公开 Substack 页面、财报与技术论文，拆解成「光子堆栈定位 → chokepoint 识别 → 证据分级 → 催化与风险跟踪」的结构化研究模型。 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-gaetano-crux-capital-research-model.png"><img src="assets/skill-gaetano-crux-capital-research-model.png" width="220"></a> |
+
+<a id="cat-07"></a>
+## 07 预测市场工具箱
+
+> 🔒 预留分类，暂无仓库（后续补充）。
+
+<a id="cat-08"></a>
+## 08 信息搜索与网页采集
+
+> 🔒 预留分类，暂无仓库（后续补充）。
 
 <a id="cat-09"></a>
 ## 09 热门智能体

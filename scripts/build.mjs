@@ -184,7 +184,8 @@ function render(lang, repos, reg) {
   const total = repos.filter((r) => !curation.denylist?.includes(r.name)).length;
   const inDoc = Object.values(byFeishu).reduce((n, a) => n + a.length, 0);
   const today = new Date().toISOString().slice(0, 10);
-  const catOrder = Object.keys(FEISHU_CAT).filter((n) => byFeishu[n]?.length);
+  const reserved = curation.reservedCategories || []; // 即便为空也始终显示的类目
+  const catOrder = Object.keys(FEISHU_CAT).filter((n) => byFeishu[n]?.length || reserved.includes(n));
   const suppPresent = SUPP.filter((s) => (s.id === "incubator" ? incubator.length : byFamily[s.id]?.length));
 
   const out = [];
@@ -235,17 +236,21 @@ function render(lang, repos, reg) {
   out.push(toc.map(([id, label]) => `- [${label}](#${id})`).join("\n"));
   out.push("");
 
-  const section = (id, title, intro, items) => {
+  const section = (id, title, intro, items, emptyNote) => {
     out.push(`<a id="${id}"></a>`);
     out.push(`## ${title}`);
     if (intro) out.push(intro);
     out.push("");
-    out.push(items?.length ? table(items, reg, lang) : t("_（暂无）_", "_(none)_"));
+    out.push(items?.length ? table(items, reg, lang) : emptyNote || t("_（暂无）_", "_(none)_"));
     out.push("");
   };
 
   // PART A —— 飞书百宝箱九大类目
-  for (const n of catOrder) section(`cat-${n}`, `${n} ${FEISHU_CAT[n][lang]}`, "", byFeishu[n]);
+  for (const n of catOrder) {
+    const empty = !byFeishu[n]?.length;
+    const note = empty && reserved.includes(n) ? t("> 🔒 预留分类，暂无仓库（后续补充）。", "> 🔒 Reserved category — no repos yet.") : null;
+    section(`cat-${n}`, `${n} ${FEISHU_CAT[n][lang]}`, "", byFeishu[n], note);
+  }
 
   // PART B —— 补充区
   if (suppPresent.length) {
