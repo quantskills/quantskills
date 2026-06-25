@@ -108,36 +108,19 @@ const FEISHU_CAT = {
   "09": { zh: "热门智能体", en: "Featured Agents" },
 };
 
-// 补充区（飞书未收录的仓库），按资产族归类
+// 补充区：仅两类（规则 5）—— 未收录仓库 + 基础设施与模板
 const SUPP = [
-  { id: "alpha-ashare", title: { zh: "📊 因子库 Alpha · A股", en: "📊 Alpha Factors · A-share" }, intro: { zh: "A股选股/事件型 alpha 因子仓库。", en: "A-share stock-selection / event-driven alpha factors." }, short: { zh: "因子库 A股", en: "Alpha A-share" } },
-  { id: "alpha-futures", title: { zh: "📊 因子库 Alpha · 期货", en: "📊 Alpha Factors · Futures" }, intro: { zh: "期货截面/持仓博弈类 alpha 因子仓库。", en: "Futures cross-sectional / positioning alpha factors." }, short: { zh: "因子库 期货", en: "Alpha Futures" } },
-  { id: "build", title: { zh: "🏗️ BUILD 构建技能", en: "🏗️ BUILD Skills" }, intro: { zh: "基于 panda-data / panda-trading 的构建型技能。", en: "BUILD-type skills on panda-data / panda-trading." }, short: { zh: "BUILD", en: "BUILD" } },
-  { id: "skills", title: { zh: "🧩 其他技能（百宝箱未收录）", en: "🧩 Other Skills (not in catalog)" }, intro: { zh: "尚未进入飞书百宝箱的技能。", en: "Skills not yet in the Feishu catalog." }, short: { zh: "其他技能", en: "Other Skills" } },
-  { id: "agents", title: { zh: "🤖 其他 Agent", en: "🤖 Other Agents" }, intro: { zh: "未在百宝箱收录的 Agent。", en: "Agents not in the catalog." }, short: { zh: "其他 Agent", en: "Other Agents" } },
-  { id: "others", title: { zh: "🗄️ 数据与其他", en: "🗄️ Data & Misc" }, intro: { zh: "数据工具、抓取等。", en: "Data tooling, scraping, etc." }, short: { zh: "数据与其他", en: "Data & Misc" } },
-  { id: "infra", title: { zh: "🧱 基础设施与模板", en: "🧱 Infra & Templates" }, intro: { zh: "治理与脚手架，不属于内容资产。", en: "Governance and scaffolding." }, short: { zh: "基础设施与模板", en: "Infra & Templates" } },
-  { id: "incubator", title: { zh: "🧪 实验 · 孵化", en: "🧪 Incubating" }, intro: { zh: "早期/占位仓库，待补充内容后归类。", en: "Early/placeholder repos." }, short: { zh: "实验孵化", en: "Incubating" } },
+  { id: "uncat", title: { zh: "📦 未收录仓库", en: "📦 Repos not in catalog" }, intro: { zh: "未被飞书百宝箱收录的仓库（原始因子、构建技能等非 skill-/agent- 前缀仓库）。", en: "Repos not in the Feishu catalog (raw factors, BUILD skills, and other non skill-/agent- repos)." }, short: { zh: "未收录仓库", en: "Not in catalog" } },
+  { id: "infra", title: { zh: "🧱 基础设施与模板", en: "🧱 Infra & Templates" }, intro: { zh: "治理、脚手架与模板（含本导航仓库 quantskills）。", en: "Governance, scaffolding and templates (incl. the quantskills nav repo)." }, short: { zh: "基础设施与模板", en: "Infra & Templates" } },
 ];
 
 function classify(repo) {
   const name = repo.name;
   const lower = name.toLowerCase();
-  if (catMap[name]) return { feishu: catMap[name] }; // 飞书百宝箱已收录 / 人工归类 → 主分类
-  if (curation.manualCategory?.[name]) return { family: curation.manualCategory[name] };
-  if (curation.infra?.includes(name) || lower.endsWith("-template")) return { family: "infra" };
-  if (lower.startsWith("alpha-")) return { family: lower.charAt(6) === "f" ? "alpha-futures" : "alpha-ashare" };
-  if (lower.startsWith("build-")) return { family: "build" };
-  if (lower.startsWith("agent-")) return { family: "agents" };
-  if (lower.startsWith("skill-")) return { family: "skills" };
-  return { family: "others" };
-}
-
-// 智能过滤：无描述且无语言且不属于任何已知前缀族 → 孵化区
-function isIncubator(repo) {
-  const lower = repo.name.toLowerCase();
-  const knownPrefix = ["skill-", "agent-", "alpha-", "build-"].some((p) => lower.startsWith(p));
-  return !repo.description && !repo.language && !knownPrefix && !curation.infra?.includes(repo.name) && !catMap[repo.name];
+  if (curation.infra?.includes(name) || lower.endsWith("-template")) return { family: "infra" }; // 基础设施与模板（quantskills/.github/registry/join/*-template）
+  if (catMap[name]) return { feishu: catMap[name] }; // 飞书九大类目（含 categoryOverride）
+  if (lower.startsWith("agent-")) return { feishu: "09" }; // 规则 2：所有 agent-* → 09
+  return { family: "uncat" }; // 规则 4：其余（非 skill-/agent- 前缀，或未分类）→ 未收录仓库
 }
 
 // ---------- 渲染辅助 ----------
@@ -173,11 +156,9 @@ function render(lang, repos, reg) {
   const t = (zh, en) => (lang === "zh" ? zh : en);
 
   const byFeishu = {}; // "01".."09" -> repos[]
-  const byFamily = {}; // 补充族 -> repos[]
-  const incubator = [];
+  const byFamily = {}; // 补充族(uncat/infra) -> repos[]
   for (const repo of repos) {
     if (curation.denylist?.includes(repo.name)) continue;
-    if (isIncubator(repo)) { incubator.push(repo); continue; }
     const c = classify(repo);
     if (c.feishu) (byFeishu[c.feishu] ||= []).push(repo);
     else (byFamily[c.family] ||= []).push(repo);
@@ -188,7 +169,7 @@ function render(lang, repos, reg) {
   const today = new Date().toISOString().slice(0, 10);
   const reserved = curation.reservedCategories || []; // 即便为空也始终显示的类目
   const catOrder = Object.keys(FEISHU_CAT).filter((n) => byFeishu[n]?.length || reserved.includes(n));
-  const suppPresent = SUPP.filter((s) => (s.id === "incubator" ? incubator.length : byFamily[s.id]?.length));
+  const suppPresent = SUPP.filter((s) => byFamily[s.id]?.length);
 
   const out = [];
   out.push(`<!-- 本文件由 scripts/build.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->`);
@@ -260,13 +241,10 @@ function render(lang, repos, reg) {
     section(`cat-${n}`, `${n} ${FEISHU_CAT[n][lang]}`, "", byFeishu[n], note);
   }
 
-  // PART B —— 补充区
+  // PART B —— 补充区（未收录仓库 + 基础设施与模板）
   if (suppPresent.length) {
     out.push("---");
-    out.push(`### ${t("➕ 补充：百宝箱未收录的仓库", "➕ Supplementary: repos not in the catalog")}`);
-    out.push(t("原始因子、构建技能、模板、孵化项目等，按资产族归类。", "Raw factors, BUILD skills, templates, incubating repos — grouped by asset family."));
-    out.push("");
-    for (const s of suppPresent) section(s.id, s.title[lang], s.intro[lang], s.id === "incubator" ? incubator : byFamily[s.id]);
+    for (const s of suppPresent) section(s.id, s.title[lang], s.intro[lang], byFamily[s.id]);
   }
 
   // 结尾：PandaAI 社群二维码（取自组织主页 .github/profile）
