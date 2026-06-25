@@ -22,7 +22,7 @@ jobs:
       - name: Generate README (zh/en)
         env:
           GH_TOKEN: ${{ github.token }} # 供脚本内 gh CLI / REST 鉴权
-        run: node scripts/build_awesome.mjs
+        run: node scripts/build.mjs
 
       - name: Commit & push if changed
         run: |
