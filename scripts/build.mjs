@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// awesome-quantskills 导航生成器（零外部依赖，Node 18+）
+// quantskills 导航生成器（零外部依赖，Node 18+）
 //
 // 数据来源：
 //   1) GitHub：组织全量仓库元数据（优先 gh CLI，回退 REST API）
@@ -41,7 +41,7 @@ function fetchReposViaGh() {
 
 async function fetchReposViaRest() {
   const token = process.env.GH_TOKEN || process.env.GITHUB_TOKEN || "";
-  const headers = { "User-Agent": "awesome-quantskills", Accept: "application/vnd.github+json" };
+  const headers = { "User-Agent": "quantskills", Accept: "application/vnd.github+json" };
   if (token) headers.Authorization = `Bearer ${token}`;
   const repos = [];
   for (let page = 1; page < 10; page++) {
@@ -192,8 +192,8 @@ function render(lang, repos, reg) {
   const today = new Date().toISOString().slice(0, 10);
 
   const out = [];
-  out.push(`<!-- 本文件由 scripts/build_awesome.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->`);
-  out.push(`# 🧭 awesome-quantskills`);
+  out.push(`<!-- 本文件由 scripts/build.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->`);
+  out.push(`# 🧭 quantskills`);
   out.push(`> ${t("QuantSkills 组织全景导航 · 量化技能 / 因子 / Agent 一站式可点击索引，图文并茂。", "A panoramic, clickable navigator for the QuantSkills org — skills / factors / agents at a glance.")}`);
   out.push("");
   out.push(t(`**简体中文** | [English](README.en.md)`, `[简体中文](README.md) | **English**`));
@@ -307,7 +307,7 @@ function render(lang, repos, reg) {
   if (incubator.length) section("incubator", t("🧪 实验 · 孵化", "🧪 Incubating"), t("早期/占位仓库，待补充内容后归入正式分类。", "Early/placeholder repos, pending promotion."), incubator);
 
   out.push("---");
-  out.push(t(`_本文件由 [\`scripts/build_awesome.mjs\`](scripts/build_awesome.mjs) 每日自动生成（${today}）。_`, `_Auto-generated daily by [\`scripts/build_awesome.mjs\`](scripts/build_awesome.mjs) (${today})._`));
+  out.push(t(`_本文件由 [\`scripts/build.mjs\`](scripts/build.mjs) 每日自动生成（${today}）。_`, `_Auto-generated daily by [\`scripts/build.mjs\`](scripts/build.mjs) (${today})._`));
   out.push("");
   return out.join("\n");
 }

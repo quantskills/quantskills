@@ -1,10 +1,10 @@
-<!-- 本文件由 scripts/build_awesome.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->
-# 🧭 awesome-quantskills
+<!-- 本文件由 scripts/build.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->
+# 🧭 quantskills
 > A panoramic, clickable navigator for the QuantSkills org — skills / factors / agents at a glance.
 
 [简体中文](README.md) | **English**
 
-![repos](https://img.shields.io/badge/repos-74-blue) ![Skills](https://img.shields.io/badge/Skills-41-8a2be2) ![alphas](https://img.shields.io/badge/alphas-11-ff7f0e) ![BUILD](https://img.shields.io/badge/BUILD-5-2ca02c) ![Agents](https://img.shields.io/badge/Agents-6-d62728) ![updated](https://img.shields.io/badge/updated-2026--06--25-lightgrey)
+![repos](https://img.shields.io/badge/repos-70-blue) ![Skills](https://img.shields.io/badge/Skills-41-8a2be2) ![alphas](https://img.shields.io/badge/alphas-11-ff7f0e) ![BUILD](https://img.shields.io/badge/BUILD-5-2ca02c) ![Agents](https://img.shields.io/badge/Agents-6-d62728) ![updated](https://img.shields.io/badge/updated-2026--06--25-lightgrey)
 
 > **Positioning**: a human-facing panoramic navigator, complementary to [`registry`](https://github.com/quantskills/registry) (machine/AI discovery) and the org `.github` profile.
 
@@ -213,10 +213,6 @@ Data tooling, scraping, prediction markets, etc.
 |---|---|---|
 | [news-sentiment-analyst](https://github.com/quantskills/news-sentiment-analyst) | A-share financial news sentiment analyst - Claude Code Skill | ⭐0 · Python · 📅2026-06-25 |
 | [firecrawl](https://github.com/quantskills/firecrawl) | The API to search, scrape, and interact with the web at scale. 🔥 | ⭐0 · TypeScript · 📅2026-06-16 |
-| [last30days-skill](https://github.com/quantskills/last30days-skill) | AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary | ⭐0 · Python · 📅2026-06-16 |
-| [poly_data](https://github.com/quantskills/poly_data) | Polymarket Data Retriever that fetches, processes, and structures Polymarket data including markets, order events and trades. | ⭐0 · Python · 📅2026-05-27 |
-| [prediction-market-backtesting](https://github.com/quantskills/prediction-market-backtesting) | An extension for Nautilus Trader | ⭐0 · Python · 📅2026-05-16 |
-| [predict-fun-marketmaker](https://github.com/quantskills/predict-fun-marketmaker) | Predict.fun market maker + arbitrage bot with desktop console | ⭐0 · TypeScript · 📅2026-05-05 |
 
 <a id="infra"></a>
 ## 🧱 Infra & Templates
@@ -231,4 +227,4 @@ Governance and scaffolding, not content assets.
 | [agent-template](https://github.com/quantskills/agent-template) | Template repository for QUANTSKILLS agent-* projects. | ⭐0 · 📅2026-06-17 |
 
 ---
-_Auto-generated daily by [`scripts/build_awesome.mjs`](scripts/build_awesome.mjs) (2026-06-25)._
+_Auto-generated daily by [`scripts/build.mjs`](scripts/build.mjs) (2026-06-25)._
