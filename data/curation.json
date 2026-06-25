@@ -3,6 +3,22 @@
   "denylist": ["A4", "A4-1", "Alpha-A8--", "demo-repository"],
   "infra": [".github", "registry", "join"],
   "reservedCategories": ["07", "08"],
+  "categoryOverride": {
+    "skill-pandadata-api": "01",
+    "skill-factor-blend": "02",
+    "skill-factor-decay": "02",
+    "skill-factor-orthogonalize": "02",
+    "skill-factor-alpha191-alpha101": "02",
+    "skill-macro-monitor": "03",
+    "skill-futures-deepview-analyst": "03",
+    "skill-xingtai-catcher": "03",
+    "skill-a1-lhb-tracking": "03",
+    "skill-f7-lei-cross-section-core-broker-follow": "03",
+    "skill-trade-review": "05",
+    "skill-ssquant-trader-generator": "05",
+    "skill-B12-intraday-position-manager": "05",
+    "skill-investment-decision": "06"
+  },
   "featured": [
     "skill-xingtai-catcher",
     "build-b7-lhb-monitor",
@@ -17,5 +33,5 @@
     "last30days-skill": "others",
     "news-sentiment-analyst": "others"
   },
-  "_comment": "人工策展层：denylist=排除；infra=基础设施与模板；reservedCategories=即便为空也始终显示的飞书类目号；manualCategory=对命名不规范仓库手动归类(skills|agents|alpha-ashare|alpha-futures|build|others|infra)。featured 字段当前未使用（精选画廊已移除）。"
+  "_comment": "人工策展层：denylist=排除；infra=基础设施与模板；reservedCategories=即便为空也始终显示的飞书类目号；categoryOverride=人工把仓库归到飞书九大类目号(01-09)，优先级高于 feishu_categories.json，用于给文档未收录的仓库分类；manualCategory=对命名不规范仓库手动归类(skills|agents|alpha-ashare|alpha-futures|build|others|infra)。featured 字段当前未使用（精选画廊已移除）。"
 }

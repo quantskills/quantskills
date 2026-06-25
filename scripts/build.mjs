@@ -21,6 +21,8 @@ const ORG = curation.org || "quantskills";
 const REGISTRY_RAW = `https://raw.githubusercontent.com/${ORG}/registry/main/registry.json`;
 const CAT_FILE = join(ROOT, "data", "feishu_categories.json");
 const feishuCat = existsSync(CAT_FILE) ? JSON.parse(readFileSync(CAT_FILE, "utf8")) : {};
+// 主分类映射：文档抓取(feishuCat) + 人工覆盖/补充(curation.categoryOverride)，后者优先
+const catMap = { ...feishuCat, ...(curation.categoryOverride || {}) };
 const FEISHU_DOC = "https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g";
 
 // ---------- 数据获取 ----------
@@ -121,7 +123,7 @@ const SUPP = [
 function classify(repo) {
   const name = repo.name;
   const lower = name.toLowerCase();
-  if (feishuCat[name]) return { feishu: feishuCat[name] }; // 飞书百宝箱已收录 → 主分类
+  if (catMap[name]) return { feishu: catMap[name] }; // 飞书百宝箱已收录 / 人工归类 → 主分类
   if (curation.manualCategory?.[name]) return { family: curation.manualCategory[name] };
   if (curation.infra?.includes(name) || lower.endsWith("-template")) return { family: "infra" };
   if (lower.startsWith("alpha-")) return { family: lower.charAt(6) === "f" ? "alpha-futures" : "alpha-ashare" };
@@ -135,7 +137,7 @@ function classify(repo) {
 function isIncubator(repo) {
   const lower = repo.name.toLowerCase();
   const knownPrefix = ["skill-", "agent-", "alpha-", "build-"].some((p) => lower.startsWith(p));
-  return !repo.description && !repo.language && !knownPrefix && !curation.infra?.includes(repo.name) && !feishuCat[repo.name];
+  return !repo.description && !repo.language && !knownPrefix && !curation.infra?.includes(repo.name) && !catMap[repo.name];
 }
 
 // ---------- 渲染辅助 ----------
