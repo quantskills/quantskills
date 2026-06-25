@@ -1,0 +1,20 @@
+{
+  "org": "quantskills",
+  "denylist": ["A4", "A4-1", "Alpha-A8--", "demo-repository"],
+  "infra": [".github", "registry", "join"],
+  "featured": [
+    "skill-xingtai-catcher",
+    "build-b7-lhb-monitor",
+    "build-b6-limitup-pool",
+    "skill-a-share-stock-dossier",
+    "skill-market-daily-review",
+    "alpha-a3-streak-leader-relay",
+    "skill-factor-alpha191-alpha101",
+    "skill-pandadata-api"
+  ],
+  "manualCategory": {
+    "last30days-skill": "others",
+    "news-sentiment-analyst": "others"
+  },
+  "_comment": "人工策展层：denylist=排除；infra=基础设施与模板；featured=精选画廊(顺序即展示顺序，截图放 assets/<name>.png)；manualCategory=对命名不规范仓库手动归类(skills|agents|alpha-ashare|alpha-futures|build|others|infra)。"
+}

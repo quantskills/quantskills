@@ -1,0 +1,37 @@
+name: daily-build
+
+# 每日刷新导航 README（北京时间 01:00，错开 registry 的 00:30 扫描）+ 手动触发
+on:
+  schedule:
+    - cron: "0 17 * * *" # 17:00 UTC = 次日 01:00 Asia/Shanghai
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Generate README (zh/en)
+        env:
+          GH_TOKEN: ${{ github.token }} # 供脚本内 gh CLI / REST 鉴权
+        run: node scripts/build_awesome.mjs
+
+      - name: Commit & push if changed
+        run: |
+          git config user.name "abgyjaguo"
+          git config user.email "abgyja@gmail.com"
+          git add README.md README.en.md
+          if git diff --cached --quiet; then
+            echo "无变更，跳过提交。"
+          else
+            git commit -m "chore: 自动刷新导航 $(date -u +%F)"
+            git push
+          fi
