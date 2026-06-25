@@ -19,6 +19,8 @@ mindmap
       04 Risk Monitoring & Alerts
       05 Backtesting & Trading
       06 Research Models & Replication
+      07 Prediction Markets
+      08 Search & Web Scraping
       09 Featured Agents
     ➕ Supplementary
       Alpha A-share
@@ -37,6 +39,8 @@ mindmap
 - [04 Risk Monitoring & Alerts](#cat-04)
 - [05 Backtesting & Trading](#cat-05)
 - [06 Research Models & Replication](#cat-06)
+- [07 Prediction Markets](#cat-07)
+- [08 Search & Web Scraping](#cat-08)
 - [09 Featured Agents](#cat-09)
 - [📊 Alpha Factors · A-share](#alpha-ashare)
 - [📊 Alpha Factors · Futures](#alpha-futures)
@@ -108,6 +112,16 @@ mindmap
 | [skill-quant-research-replication](https://github.com/quantskills/skill-quant-research-replication) | Codex skill for quantitative research replication workflows. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-research-replication.png"><img src="assets/skill-quant-research-replication.png" width="220"></a> |
 | [skill-paper-replication](https://github.com/quantskills/skill-paper-replication) | Framework-neutral quantitative paper replication skill for research scripts, backtests, charts, and auditable outputs. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-paper-replication.png"><img src="assets/skill-paper-replication.png" width="220"></a> |
 | [skill-gaetano-crux-capital-research-model](https://github.com/quantskills/skill-gaetano-crux-capital-research-model) | Research-model skill for public-material analysis of photonics, optical networking, Physical AI, and AI infrastructure themes. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-gaetano-crux-capital-research-model.png"><img src="assets/skill-gaetano-crux-capital-research-model.png" width="220"></a> |
+
+<a id="cat-07"></a>
+## 07 Prediction Markets
+
+> 🔒 Reserved category — no repos yet.
+
+<a id="cat-08"></a>
+## 08 Search & Web Scraping
+
+> 🔒 Reserved category — no repos yet.
 
 <a id="cat-09"></a>
 ## 09 Featured Agents
