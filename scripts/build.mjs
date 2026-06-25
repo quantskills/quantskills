@@ -160,10 +160,11 @@ function metaCell(repo, reg, lang) {
   return parts.join(" · ");
 }
 
-// 截图单元：assets/<name>.png 存在则插入缩略图（点击跳仓库），否则占位
+// 截图单元：assets/<name>.png 存在则插入缩略图（点击打开全尺寸原图放大），否则占位
 function imgCell(name) {
   const rel = `assets/${name}.png`;
-  return existsSync(join(ROOT, rel)) ? `<a href="${repoUrl(name)}"><img src="${rel}" width="220"></a>` : "—";
+  const full = `https://raw.githubusercontent.com/${ORG}/${ORG}/main/${rel}`;
+  return existsSync(join(ROOT, rel)) ? `<a href="${full}"><img src="${rel}" width="220"></a>` : "—";
 }
 
 function table(repos, reg, lang) {
