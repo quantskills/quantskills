@@ -198,22 +198,28 @@ function render(lang, repos, reg) {
   out.push(t(`**简体中文** | [English](README.en.md)`, `[简体中文](README.md) | **English**`));
   out.push("");
   const esc = (s) => encodeURIComponent(String(s).replace(/-/g, "--").replace(/_/g, "__"));
-  const badge = (label, val, color) => `![${label}](https://img.shields.io/badge/${esc(label)}-${esc(val)}-${color})`;
+  const badge = (label, val, color, href) => {
+    const img = `![${label}](https://img.shields.io/badge/${esc(label)}-${esc(val)}-${color})`;
+    return href ? `[${img}](${href})` : img;
+  };
   out.push(
     [
-      badge(t("仓库", "repos"), total, "blue"),
-      badge(t("百宝箱收录", "in-catalog"), inDoc, "8a2be2"),
-      badge("Agents", (byFeishu["09"]?.length || 0) + (byFamily.agents?.length || 0), "d62728"),
-      badge(t("更新", "updated"), today, "lightgrey"),
+      badge(t("仓库", "repos"), total, "blue", `https://github.com/orgs/${ORG}/repositories`),
+      badge(t("百宝箱收录", "in-catalog"), inDoc, "8a2be2", FEISHU_DOC),
+      badge("Agents", (byFeishu["09"]?.length || 0) + (byFamily.agents?.length || 0), "d62728", "#cat-09"),
+      badge(t("更新", "updated"), today, "lightgrey", `https://github.com/${ORG}/${ORG}/commits/main`),
     ].join(" ")
   );
   out.push("");
+  // 简介（取自组织主页 .github/profile）
   out.push(
     t(
-      `> **分类依据**：主分类沿用飞书文档[「QuantSkills 百宝箱」](${FEISHU_DOC})的九大类目；文档未收录的仓库归入末尾「补充」区。与组织 [\`registry\`](${repoUrl("registry")})（机器/AI 发现层）、\`.github\`（门面）互补。`,
-      `> **Taxonomy**: primary categories follow the Feishu doc ["QuantSkills 百宝箱"](${FEISHU_DOC}); repos not in the doc go to the "Supplementary" section. Complementary to [\`registry\`](${repoUrl("registry")}) and the \`.github\` profile.`
+      `**QUANTSKILLS** 是 AI Agent 时代的开放量化社区，聚焦 **Quant Skills（量化技能）** 与 **Agents（智能体）** 两类资产。由 [PandaAI](https://www.pandaaiquant.com/) 发起，帮助量化开发者把交易经验、研究方法、因子模型与策略代码，转化为**可检索、可安装、可验证、可分享**的标准化资产。`,
+      `**QUANTSKILLS** is an open community for **Quant Skills and Agents** in the AI Agent era. Initiated by [PandaAI](https://www.tqx.ai/), it helps quant developers turn trading experience, research methods, factor models, and strategy code into standardized assets that can be **searched, installed, validated, and shared**.`
     )
   );
+  out.push("");
+  out.push(t(`> 把你的量化经验，变成人类可以信任、AI Agent 可以调用的 Skill。`, `> Turn your quant experience into Skills that humans can trust and AI Agents can use.`));
   out.push("");
 
   // mermaid 全景思维导图
@@ -263,6 +269,15 @@ function render(lang, repos, reg) {
     for (const s of suppPresent) section(s.id, s.title[lang], s.intro[lang], s.id === "incubator" ? incubator : byFamily[s.id]);
   }
 
+  // 结尾：PandaAI 社群二维码（取自组织主页 .github/profile）
+  out.push("---");
+  out.push(`## ${t("🐼 PandaAI 社群", "🐼 PandaAI Community")}`);
+  out.push(`<div align="center">`);
+  out.push(`  <img src="assets/pandaai-community-qr.jpg" alt="${t("PandaAI 社群二维码", "PandaAI community QR code")}" width="220">`);
+  out.push(`  <br>`);
+  out.push(`  <sub>${t("扫码加入 PandaAI 社群，交流 QUANTSKILLS 技能、Agent 工作流与量化研究实践。", "Scan to join the PandaAI community for QUANTSKILLS skills, agent workflows, and quant research.")}</sub>`);
+  out.push(`</div>`);
+  out.push("");
   out.push("---");
   out.push(t(`_本文件由 [\`scripts/build.mjs\`](scripts/build.mjs) 每日自动生成（${today}）。_`, `_Auto-generated daily by [\`scripts/build.mjs\`](scripts/build.mjs) (${today})._`));
   out.push("");

@@ -4,9 +4,11 @@
 
 [简体中文](README.md) | **English**
 
-![repos](https://img.shields.io/badge/repos-70-blue) ![in-catalog](https://img.shields.io/badge/in--catalog-46-8a2be2) ![Agents](https://img.shields.io/badge/Agents-6-d62728) ![updated](https://img.shields.io/badge/updated-2026--06--25-lightgrey)
+[![repos](https://img.shields.io/badge/repos-70-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-46-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-6-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--06--25-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
 
-> **Taxonomy**: primary categories follow the Feishu doc ["QuantSkills 百宝箱"](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g); repos not in the doc go to the "Supplementary" section. Complementary to [`registry`](https://github.com/quantskills/registry) and the `.github` profile.
+**QUANTSKILLS** is an open community for **Quant Skills and Agents** in the AI Agent era. Initiated by [PandaAI](https://www.tqx.ai/), it helps quant developers turn trading experience, research methods, factor models, and strategy code into standardized assets that can be **searched, installed, validated, and shared**.
+
+> Turn your quant experience into Skills that humans can trust and AI Agents can use.
 
 ## 🗺️ Overview
 ```mermaid
@@ -215,6 +217,14 @@ Governance and scaffolding.
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |
 | [agent-template](https://github.com/quantskills/agent-template) | Template repository for QUANTSKILLS agent-* projects. | — |
+
+---
+## 🐼 PandaAI Community
+<div align="center">
+  <img src="assets/pandaai-community-qr.jpg" alt="PandaAI community QR code" width="220">
+  <br>
+  <sub>Scan to join the PandaAI community for QUANTSKILLS skills, agent workflows, and quant research.</sub>
+</div>
 
 ---
 _Auto-generated daily by [`scripts/build.mjs`](scripts/build.mjs) (2026-06-25)._
