@@ -186,6 +186,3 @@ mindmap
   <br>
   <sub>扫码加入 PandaAI 社群，交流 QUANTSKILLS 技能、Agent 工作流与量化研究实践。</sub>
 </div>
-
----
-_本文件由 [`scripts/build.mjs`](scripts/build.mjs) 每日自动生成（2026-06-25）。_

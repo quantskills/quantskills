@@ -186,6 +186,3 @@ Governance, scaffolding and templates (incl. the quantskills nav repo).
   <br>
   <sub>Scan to join the PandaAI community for QUANTSKILLS skills, agent workflows, and quant research.</sub>
 </div>
-
----
-_Auto-generated daily by [`scripts/build.mjs`](scripts/build.mjs) (2026-06-25)._
