@@ -19,6 +19,7 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const curation = JSON.parse(readFileSync(join(ROOT, "data", "curation.json"), "utf8"));
 const ORG = curation.org || "quantskills";
 const REGISTRY_RAW = `https://raw.githubusercontent.com/${ORG}/registry/main/registry.json`;
+const LOCAL_REGISTRY = process.env.QS_REGISTRY_JSON || join(ROOT, "..", "registry", "registry.json");
 const CAT_FILE = join(ROOT, "data", "feishu_categories.json");
 const feishuCat = existsSync(CAT_FILE) ? JSON.parse(readFileSync(CAT_FILE, "utf8")) : {};
 // 主分类映射：文档抓取(feishuCat) + 人工覆盖/补充(curation.categoryOverride)，后者优先
@@ -30,7 +31,7 @@ const FEISHU_DOC = "https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkv
 // 归一化后的仓库形状：{name, description, language, stars, pushedAt, isFork, isArchived, topics[]}
 function fetchReposViaGh() {
   const out = execSync(
-    `gh repo list ${ORG} --limit 300 --json name,description,primaryLanguage,stargazerCount,pushedAt,isFork,isArchived,repositoryTopics`,
+    `gh repo list ${ORG} --limit 300 --visibility public --json name,description,primaryLanguage,stargazerCount,pushedAt,isFork,isArchived,repositoryTopics`,
     { encoding: "utf8", maxBuffer: 1e8 }
   );
   return JSON.parse(out).map((r) => ({
@@ -80,6 +81,12 @@ async function getRepos() {
 }
 
 async function getRegistry() {
+  if (existsSync(LOCAL_REGISTRY)) {
+    const arr = JSON.parse(readFileSync(LOCAL_REGISTRY, "utf8"));
+    const byName = {};
+    for (const x of arr) byName[x.name] = x;
+    return byName;
+  }
   try {
     const res = await fetch(REGISTRY_RAW);
     if (!res.ok) throw new Error(`registry ${res.status}`);
