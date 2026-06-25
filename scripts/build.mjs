@@ -160,12 +160,18 @@ function metaCell(repo, reg, lang) {
   return parts.join(" · ");
 }
 
+// 截图单元：assets/<name>.png 存在则插入缩略图（点击跳仓库），否则占位
+function imgCell(name) {
+  const rel = `assets/${name}.png`;
+  return existsSync(join(ROOT, rel)) ? `<a href="${repoUrl(name)}"><img src="${rel}" width="220"></a>` : "—";
+}
+
 function table(repos, reg, lang) {
-  const head = lang === "zh" ? "| 项目 | 说明 | 状态 |\n|---|---|---|" : "| Project | Description | Status |\n|---|---|---|";
+  const head = lang === "zh" ? "| 项目 | 说明 | 截图 |\n|---|---|---|" : "| Project | Description | Screenshot |\n|---|---|---|";
   const rows = repos
     .slice()
     .sort((a, b) => (b.pushedAt || "").localeCompare(a.pushedAt || ""))
-    .map((r) => `| [${r.name}](${repoUrl(r.name)}) | ${descOf(r, reg, lang)} | ${metaCell(r, reg, lang)} |`);
+    .map((r) => `| [${r.name}](${repoUrl(r.name)}) | ${descOf(r, reg, lang)} | ${imgCell(r.name)} |`);
   return [head, ...rows].join("\n");
 }
 
@@ -242,7 +248,6 @@ function render(lang, repos, reg) {
   // 目录（锚点点击定位）
   out.push(`## ${t("📑 目录", "📑 Contents")}`);
   const toc = [
-    ["featured", t("⭐ 精选旗舰", "⭐ Featured")],
     ["skills", t("🧩 技能 Skills", "🧩 Skills")],
     ["alpha-ashare", t("📊 因子 Alpha · A股", "📊 Alpha · A-share")],
     ["alpha-futures", t("📊 因子 Alpha · 期货", "📊 Alpha · Futures")],
@@ -254,27 +259,6 @@ function render(lang, repos, reg) {
   if (incubator.length) toc.push(["incubator", t("🧪 实验 · 孵化", "🧪 Incubating")]);
   out.push(toc.map(([id, label]) => `- [${label}](#${id})`).join("\n"));
   out.push("");
-
-  // 精选画廊
-  out.push(`<a id="featured"></a>`);
-  out.push(`## ${t("⭐ 精选旗舰", "⭐ Featured")}`);
-  out.push("");
-  for (const name of curation.featured || []) {
-    const repo = repos.find((r) => r.name === name);
-    if (!repo) continue;
-    const lb = levelBadge(repo, reg, lang);
-    out.push(`### [${name}](${repoUrl(name)})${lb ? " " + lb : ""}`);
-    out.push(`> ${descOf(repo, reg, lang)}`);
-    const imgRel = `assets/${name}.png`;
-    if (existsSync(join(ROOT, imgRel))) out.push(`\n![${name}](${imgRel})\n`);
-    out.push(
-      `![stars](https://img.shields.io/github/stars/${ORG}/${name}?style=social) ` +
-        `![last commit](https://img.shields.io/github/last-commit/${ORG}/${name})`
-    );
-    const plats = reg[name]?.platforms;
-    if (plats?.length) out.push(`\n${t("平台", "Platforms")}: ${plats.map((p) => `\`${p}\``).join(" ")}`);
-    out.push("");
-  }
 
   // 技能（含子分组）
   out.push(`<a id="skills"></a>`);
