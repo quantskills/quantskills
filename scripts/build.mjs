@@ -256,9 +256,6 @@ function render(lang, repos, reg) {
   out.push(`  <sub>${t("扫码加入 PandaAI 社群，交流 QUANTSKILLS 技能、Agent 工作流与量化研究实践。", "Scan to join the PandaAI community for QUANTSKILLS skills, agent workflows, and quant research.")}</sub>`);
   out.push(`</div>`);
   out.push("");
-  out.push("---");
-  out.push(t(`_本文件由 [\`scripts/build.mjs\`](scripts/build.mjs) 每日自动生成（${today}）。_`, `_Auto-generated daily by [\`scripts/build.mjs\`](scripts/build.mjs) (${today})._`));
-  out.push("");
   return out.join("\n");
 }
 
