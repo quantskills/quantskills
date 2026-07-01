@@ -17,8 +17,17 @@
     "08"
   ],
   "categoryOverride": {
+    "skill-a-share-stock-dossier": "01",
+    "skill-event-risk-alert": "01",
+    "skill-gaetano-crux-capital-research-model": "01",
+    "skill-index-valuation-rotation": "01",
+    "skill-market-daily-review": "01",
+    "skill-options-vol-analyst": "01",
     "skill-pandadata-api": "01",
     "skill-pandadata-warehouse": "01",
+    "skill-serenity-research-model": "01",
+    "skill-stock-screener": "01",
+    "skill-x-trader-builder": "01",
     "skill-alpha-a06-hotmoney-reversal": "02",
     "skill-build-b10-factor-evaluation": "02",
     "skill-doc-to-alphas": "02",
@@ -42,13 +51,23 @@
     "skill-futures-deepview-analyst": "03",
     "skill-macro-monitor": "03",
     "skill-xingtai-catcher": "03",
+    "skill-backtest": "04",
+    "skill-ssquant-ai-trader": "04",
     "skill-B12-intraday-position-manager": "05",
     "skill-ssquant-trader-generator": "05",
     "skill-trade-review": "05",
     "skill-investment-decision": "06",
     "skill-paper-replication": "06",
     "skill-quant-research-replication": "06",
-    "skill-report-replication": "06"
+    "skill-report-replication": "06",
+    "skill-time-series-analysis": "06",
+    "agent-correlation-break-research": "09",
+    "agent-crowding-risk-monitor": "09",
+    "agent-derivatives-skew-sentiment-monitor": "09",
+    "agent-for-liangshuyuan-tasks": "09",
+    "agent-market-regime-monitor": "09",
+    "agent-quantspace": "09",
+    "agent-ssquant": "09"
   },
   "_comment": "人工策展层：denylist=完全排除；infra=基础设施与模板(含 quantskills 本仓 + *-template)；reservedCategories=即便为空也始终显示的飞书类目号；categoryOverride=人工把仓库归到飞书九大类目号(01-09)，优先级高于 feishu_categories.json。分类规则：catMap(feishu+override)命中→对应类目；agent-*→09；infra→基础设施与模板；其余→未收录仓库。"
 }
