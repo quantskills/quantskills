@@ -19,6 +19,8 @@
   "categoryOverride": {
     "skill-pandadata-api": "01",
     "skill-pandadata-warehouse": "01",
+    "skill-alpha-a06-hotmoney-reversal": "02",
+    "skill-build-b10-factor-evaluation": "02",
     "skill-doc-to-alphas": "02",
     "skill-factor-alpha191-alpha101": "02",
     "skill-factor-blend": "02",
