@@ -148,12 +148,12 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
-| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | A-share smart-money profiling skill for LHB seat identity, northbound behavior, and multi-source capital consensus or divergence. | — |
-| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | A-share portfolio health report skill for concentration, benchmark deviation, weighted valuation, quality, and risk exposure aggregation. | — |
-| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | A-share earnings-season scanner for forecast distributions, beat and miss watchlists, industry prosperity, and audit-opinion checks. | — |
-| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Detect backtest overfitting & multiple testing: Deflated Sharpe Ratio, PBO (CSCV), purged/embargoed CV, Harvey-Liu haircut. Research/education only, not investment advice. | — |
-| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Convex portfolio optimizer: mean-variance / min-variance / max-Sharpe / risk-parity / max-diversification with weight caps, sector & exposure neutrality and turnover limits. Research/education only, not investment advice. | — |
-| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Barra-style multi-factor risk model & risk attribution: cross-sectional WLS factor returns, Ledoit-Wolf shrinkage covariance, factor vs specific risk decomposition. Offline via a panda_data adapter. Research/education only, not investment advice. | — |
+| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | 追踪"谁在买卖"以及"他们一贯怎么做"：龙虎榜席位身份识别与画像档案、北向资金跨期行为、北向×机构×融资×大宗的多源资金合力与分歧，输出可溯源的资金主体行为画像报告。 | — |
+| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | 输入一个持仓组合清单（代码+权重/市值），输出组合层级的体检报告：结构与集中度、估值与财务质量分布、风险敞口聚合（解禁/质押/减持/ST）、基准偏离与资金面。 | — |
+| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | 按财报季时间窗对全市场做业绩横截面扫描：预告类型分布、超预期/暴雷榜、行业业绩景气、年报季审计非标清单 —— 每个数据点可溯源，支持财报季定时运行。 | — |
+| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Detect backtest overfitting and selection bias from multiple testing. Use when a user has a backtest / factor result and asks whether the Sharpe is real,... | — |
+| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Turn an alpha signal into optimal portfolio weights under real constraints. Use when a user has factor scores / expected returns and wants portfolio weights,... | — |
+| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Build a Barra-style structural multi-factor risk model and attribute portfolio risk. | — |
 
 <a id="infra"></a>
 ## 🧱 基础设施与模板
@@ -161,8 +161,8 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |

@@ -148,12 +148,12 @@ Repos not in the Feishu catalog (raw factors, BUILD skills, and other non skill-
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | A-share smart-money profiling skill for LHB seat identity, northbound behavior, and multi-source capital consensus or divergence. | — |
-| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | A-share portfolio health report skill for concentration, benchmark deviation, weighted valuation, quality, and risk exposure aggregation. | — |
-| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | A-share earnings-season scanner for forecast distributions, beat and miss watchlists, industry prosperity, and audit-opinion checks. | — |
-| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Detect backtest overfitting & multiple testing: Deflated Sharpe Ratio, PBO (CSCV), purged/embargoed CV, Harvey-Liu haircut. Research/education only, not investment advice. | — |
-| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Convex portfolio optimizer: mean-variance / min-variance / max-Sharpe / risk-parity / max-diversification with weight caps, sector & exposure neutrality and turnover limits. Research/education only, not investment advice. | — |
-| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Barra-style multi-factor risk model & risk attribution: cross-sectional WLS factor returns, Ledoit-Wolf shrinkage covariance, factor vs specific risk decomposition. Offline via a panda_data adapter. Research/education only, not investment advice. | — |
+| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | Identify the capital actors behind A-share trades and profile their cross-period behavior using Pandadata seat, northbound, margin, and block-trade data. | — |
+| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | Portfolio-level checkup skill that uses Pandadata to aggregate single-stock signals into portfolio structure, concentration, weighted valuation/quality, risk exposure, and benchmark deviation. | — |
+| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | Whole-market A-share earnings-season scanner covering forecast-type distribution, beat/miss leaders, industry earnings prosperity, and audit-opinion watchlists. | — |
+| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Detect backtest overfitting and selection bias from multiple testing. Use when a user has a backtest / factor result and asks whether the Sharpe is real, whether a strategy is overfit, or wants to validate results... | — |
+| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Turn an alpha signal into optimal portfolio weights under real constraints. Use when a user has factor scores / expected returns and wants portfolio weights, or asks about mean-variance / risk-parity / minimum-variance... | — |
+| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Build a Barra-style structural multi-factor risk model and attribute portfolio risk. Use when a user wants a covariance matrix for optimisation, asks how risky a portfolio is, where its risk comes from (which factors /... | — |
 
 <a id="infra"></a>
 ## 🧱 Infra & Templates
@@ -161,8 +161,8 @@ Governance, scaffolding and templates (incl. the quantskills nav repo).
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |
