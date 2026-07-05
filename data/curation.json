@@ -53,6 +53,9 @@
     "skill-event-risk-alert": "04",
     "skill-B12-intraday-position-manager": "05",
     "skill-backtest": "05",
+    "skill-backtest-overfit": "05",
+    "skill-portfolio-optimize": "05",
+    "skill-risk-model": "05",
     "skill-ssquant-ai-trader": "05",
     "skill-ssquant-trader-generator": "05",
     "skill-trade-review": "05",
@@ -72,5 +75,5 @@
     "agent-quantspace": "09",
     "agent-ssquant": "09"
   },
-  "_comment": "人工策展层：denylist=完全排除；infra=基础设施与模板(含 quantskills 本仓 + *-template)；reservedCategories=即便为空也始终显示的飞书类目号；categoryOverride=人工或 registry 正式 category 映射确认后的 01-09 归类，优先级高于 feishu_categories.json。repo-auditor 只自动写入 canonical registry category，关键词命中只作为待审核建议。分类规则：catMap(feishu+override)命中→对应类目；agent-*→09；infra→基础设施与模板；其余→未收录仓库。"
+  "_comment": "人工策展层：denylist=完全排除；infra=基础设施与模板(含 quantskills 本仓 + *-template)；reservedCategories=即便为空也始终显示的飞书类目号；categoryOverride=人工或 registry 正式 category 映射确认后的 01-09 归类，优先级高于 feishu_categories.json。repo-auditor 只自动写入 canonical registry category，业务语义信号只作为待审核建议。分类规则：catMap(feishu+override)命中→对应类目；agent-*→09；infra→基础设施与模板；其余→未收录仓库。"
 }
