@@ -4,7 +4,7 @@
 
 [简体中文](README.md) | **English**
 
-[![repos](https://img.shields.io/badge/repos-61-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-53-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-7-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--07--07-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
+[![repos](https://img.shields.io/badge/repos-62-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-55-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-7-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--07--07-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
 
 **QUANTSKILLS** is an open community for **Quant Skills and Agents** in the AI Agent era. Initiated by [PandaAI](https://www.tqx.ai/), it helps quant developers turn trading experience, research methods, factor models, and strategy code into standardized assets that can be **searched, installed, validated, and shared**.
 
@@ -96,6 +96,8 @@ mindmap
 
 | Project | Description | Screenshot |
 |---|---|---|
+| [skill-hk-us-insider-radar](https://github.com/quantskills/skill-hk-us-insider-radar) | An HK/US insider-trading radar that reads get_stock_insider_trade (HK) and get_stock_insider_transaction (US), separates open-market buys from sales and option/gift dispositions, weights by insider role and is_main_role, nets shares and value over a window, flags cluster buying/selling and holding changes, and ranks names by net insider direction. | — |
+| [skill-block-trade-radar](https://github.com/quantskills/skill-block-trade-radar) | A-share block-trade radar that joins each block trade to the same-day close to compute discount/premium, reads institutional (机构专用) buy/sell direction, flags repeated discounted takeovers and same-branch wash-like prints, and ranks names by amount and premium/discount, for the whole market or a single name. | — |
 | [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | Whole-market A-share earnings-season scanner covering forecast-type distribution, beat/miss leaders, industry earnings prosperity, and audit-opinion watchlists. | — |
 | [skill-event-risk-alert](https://github.com/quantskills/skill-event-risk-alert) | A-share event-risk alert skill for watchlists, holdings, unlocks, pledges, reductions, ST changes, forecasts, audit opinions, and traceable reports. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-event-risk-alert.png"><img src="assets/skill-event-risk-alert.png" width="220"></a> |
 
@@ -154,7 +156,6 @@ Repos not in the Feishu catalog (raw factors, BUILD skills, and other non skill-
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [skill-hk-stock-dossier](https://github.com/quantskills/skill-hk-stock-dossier) | 生成结构化港股尽职调查研报，数据来源为 Pandadata 接口，输出为中文 Markdown 研报。 | — |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | — | — |
 
 <a id="infra"></a>
