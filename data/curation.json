@@ -17,6 +17,7 @@
     "08"
   ],
   "categoryOverride": {
+    "skill-fundamental-factor-analysis": "01",
     "skill-pandadata-api": "01",
     "skill-pandadata-warehouse": "01",
     "skill-alpha-a06-hotmoney-reversal": "02",
@@ -58,6 +59,7 @@
     "skill-backtest": "05",
     "skill-backtest-overfit": "05",
     "skill-factor-backtest": "05",
+    "skill-jq-to-panda-converter": "05",
     "skill-portfolio-optimize": "05",
     "skill-risk-model": "05",
     "skill-ssquant-ai-trader": "05",
