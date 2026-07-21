@@ -4,7 +4,7 @@
 
 [简体中文](README.md) | **English**
 
-[![repos](https://img.shields.io/badge/repos-99-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-81-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-8-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--07--21-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
+[![repos](https://img.shields.io/badge/repos-117-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-81-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-8-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--07--21-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
 
 **QUANTSKILLS** is an open community for **Quant Skills and Agents** in the AI Agent era. Initiated by [PandaAI](https://www.tqx.ai/), it helps quant developers turn trading experience, research methods, factor models, and strategy code into standardized assets that can be **searched, installed, validated, and shared**.
 
@@ -166,8 +166,8 @@ mindmap
 
 | Project | Description | Screenshot |
 |---|---|---|
+| [agent-feng-reverse](https://github.com/quantskills/agent-feng-reverse) | 追踪峰哥公开发言，提取观点，基于反向指标逻辑生成信号和跟踪报告。 | — |
 | [agent-quantspace](https://github.com/quantskills/agent-quantspace) | AI-native quantitative research framework | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-quantspace.png"><img src="assets/agent-quantspace.png" width="220"></a> |
-| [agent-macro-driven-rotation](https://github.com/quantskills/agent-macro-driven-rotation) | 宏观驱动行业轮动 Agent | — |
 | [agent-ssquant](https://github.com/quantskills/agent-ssquant) | SSQuant Agent workflow for futures strategies, data services, CTP gates, and Chinese reports. | — |
 | [agent-market-regime-monitor](https://github.com/quantskills/agent-market-regime-monitor) | Monitor market regime from Pandadata index, breadth, volatility, and funding evidence. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-market-regime-monitor.png"><img src="assets/agent-market-regime-monitor.png" width="220"></a> |
 | [agent-for-liangshuyuan-tasks](https://github.com/quantskills/agent-for-liangshuyuan-tasks) | 量枢学院多 Agent 协作框架——基于 Claude Code 的量化交易工具开发平台，将任务需求自动分析、路由、开发、测试、发布全流程自动化。内置 6 个专业 Agent，支持 BUILD 工具与 Alpha 因子的 Skill 架构开发。 | — |
@@ -183,6 +183,24 @@ Repos not in the Feishu catalog (raw factors, BUILD skills, and other non skill-
 | Project | Description | Screenshot |
 |---|---|---|
 | [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | 基于样本外残差IC和LightGBM增量重训练，筛选具有互补信息的候选因子 | — |
+| [skill-survivorship-universe-auditor](https://github.com/quantskills/skill-survivorship-universe-auditor) | Audit point-in-time universe membership, security lifecycles, stable identities, and missing delisting returns before backtesting. | — |
+| [skill-portfolio-liquidity-stress-test](https://github.com/quantskills/skill-portfolio-liquidity-stress-test) | Stress portfolio liquidation capacity, pro-rata redemption shortfalls, and spread plus square-root impact costs. | — |
+| [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | Run reproducible index addition, deletion, and weight-change event studies around announcement or effective-date anchors. | — |
+| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | Audit split and cash-dividend consistency across raw and adjusted equity prices before research or backtesting. | — |
+| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | Audit continuous futures contract selection, roll events, same-day price gaps, and adjustment ledgers before research or backtesting. | — |
+| [skill-intraday-data-quality-auditor](https://github.com/quantskills/skill-intraday-data-quality-auditor) | Audit normalized intraday OHLCV data for timestamp, gap, price, volume, and trading-date defects before research or backtesting. | — |
+| [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | Community Draft: US equity sector return, valuation, and rotation research monitor. | — |
+| [skill-holder-structure-scan](https://github.com/quantskills/skill-holder-structure-scan) | Community Draft: A-share holder structure and ownership-concentration research scan. | — |
+| [skill-hk-us-dividend-events](https://github.com/quantskills/skill-hk-us-dividend-events) | Community Draft: HK/US dividend event calendar, yield, and DRIP research workflow. | — |
+| [skill-cross-listing-parity](https://github.com/quantskills/skill-cross-listing-parity) | Community Draft: A/H and China ADR cross-listing parity research monitor. | — |
+| [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | Community Draft: A-share concept and theme momentum, breadth, and rotation monitor. | — |
+| [skill-refinancing-monitor](https://github.com/quantskills/skill-refinancing-monitor) | Community Draft: A-share refinancing lifecycle, pricing, dilution, and break-issue monitor. | — |
+| [skill-institutional-research-tracker](https://github.com/quantskills/skill-institutional-research-tracker) | Community Draft: A-share institutional research activity and attention monitor. | — |
+| [skill-hk-us-quote-scan](https://github.com/quantskills/skill-hk-us-quote-scan) | Community Draft: HK/US quote, liquidity, return, and valuation research snapshots. | — |
+| [skill-hk-us-consensus-radar](https://github.com/quantskills/skill-hk-us-consensus-radar) | Community Draft: HK/US sell-side consensus ratings, targets, and revision research. | — |
+| [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | Community Draft: A-share dividend yield, continuity, and payout-quality research scan. | — |
+| [skill-buyback-monitor](https://github.com/quantskills/skill-buyback-monitor) | Community Draft: A-share buyback lifecycle, purpose, and intensity research monitor. | — |
+| [skill-macro-altdata-nowcast](https://github.com/quantskills/skill-macro-altdata-nowcast) | Pandadata 宏观特色数据另类高频行业景气 nowcast skill：指标解码、同比环比、趋势、跨行业景气与官方数据领先观察。 | — |
 | [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generate initial stock alpha ideas with economic rationale and concrete factor shapes, defaulting to daily OHLCV when no fields are specified. | — |
 | [skill-alpha-ncav-graham](https://github.com/quantskills/skill-alpha-ncav-graham) | Graham NCAV 净流动资产折价因子技能。A股深度价值筛选，排除金融股，计算 NCAV 折价并生成 buy/sell/hold 信号。 | — |
 | [skill-stock-memory-analyzer-usa](https://github.com/quantskills/skill-stock-memory-analyzer-usa) | 对 MU、SNDK、WDC、STX 等美股存储公司开展基于 panda_data 的可追溯研究分析，结合行情、财务、估值、DRAM/NAND/HBM 供需、库存、CapEx、技术节点和同业对标，生成交互式 HTML 研究报告。当用户提到存储芯片、内存、NAND、DRAM、HBM、存储周期，或要求研究这些美股公司时使用。首次响应列出可分析标的并要求用户明确选择一只； | — |
@@ -201,8 +219,8 @@ Governance, scaffolding and templates (incl. the quantskills nav repo).
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |
