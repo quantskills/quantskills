@@ -97,6 +97,7 @@
     "agent-crowding-risk-monitor": "09",
     "agent-derivatives-skew-sentiment-monitor": "09",
     "agent-for-liangshuyuan-tasks": "09",
+    "agent-macro-driven-rotation": "09",
     "agent-market-regime-monitor": "09",
     "agent-quantspace": "09",
     "agent-ssquant": "09"
