@@ -110,14 +110,13 @@ const FEISHU_CAT = {
   "04": { zh: "风险监控与预警", en: "Risk Monitoring & Alerts" },
   "05": { zh: "策略回测与交易工具", en: "Backtesting & Trading" },
   "06": { zh: "投研模型与研究复现", en: "Research Models & Replication" },
-  "07": { zh: "预测市场工具箱", en: "Prediction Markets" },
-  "08": { zh: "信息搜索与网页采集", en: "Search & Web Scraping" },
+  "07": { zh: "研究验证与质量工具", en: "Research Validation & Quality" },
+  "08": { zh: "资讯搜索与知识分析", en: "Information Search & Knowledge Analysis" },
   "09": { zh: "热门智能体", en: "Featured Agents" },
 };
 
-// 补充区：仅两类（规则 5）—— 未收录仓库 + 基础设施与模板
+// 补充区：基础设施与模板
 const SUPP = [
-  { id: "uncat", title: { zh: "📦 未收录仓库", en: "📦 Repos not in catalog" }, intro: { zh: "未被飞书百宝箱收录的仓库（原始因子、构建技能等非 skill-/agent- 前缀仓库）。", en: "Repos not in the Feishu catalog (raw factors, BUILD skills, and other non skill-/agent- repos)." }, short: { zh: "未收录仓库", en: "Not in catalog" } },
   { id: "infra", title: { zh: "🧱 基础设施与模板", en: "🧱 Infra & Templates" }, intro: { zh: "治理、脚手架与模板（含本导航仓库 quantskills）。", en: "Governance, scaffolding and templates (incl. the quantskills nav repo)." }, short: { zh: "基础设施与模板", en: "Infra & Templates" } },
 ];
 
@@ -125,9 +124,11 @@ function classify(repo) {
   const name = repo.name;
   const lower = name.toLowerCase();
   if (curation.infra?.includes(name) || lower.endsWith("-template")) return { family: "infra" }; // 基础设施与模板（quantskills/.github/registry/join/*-template）
+  if (lower.startsWith("agent-")) return { feishu: "09" }; // 所有 agent-* → 09
+  if (lower.startsWith("skill-") && lower.includes("factor")) return { feishu: "02" }; // 所有 factor skill → 02
   if (catMap[name]) return { feishu: catMap[name] }; // 飞书九大类目（含 categoryOverride）
-  if (lower.startsWith("agent-")) return { feishu: "09" }; // 规则 2：所有 agent-* → 09
-  return { family: "uncat" }; // 规则 4：其余（非 skill-/agent- 前缀，或未分类）→ 未收录仓库
+  if (lower.startsWith("skill-")) return { feishu: "07" }; // 无显式映射的 skill → 研究验证与质量工具
+  return { feishu: "08" }; // 其余公开仓库 → 资讯搜索与知识分析
 }
 
 // ---------- 渲染辅助 ----------
@@ -163,7 +164,7 @@ function render(lang, repos, reg) {
   const t = (zh, en) => (lang === "zh" ? zh : en);
 
   const byFeishu = {}; // "01".."09" -> repos[]
-  const byFamily = {}; // 补充族(uncat/infra) -> repos[]
+  const byFamily = {}; // 补充族(infra) -> repos[]
   for (const repo of repos) {
     if (curation.denylist?.includes(repo.name)) continue;
     const c = classify(repo);
@@ -248,7 +249,7 @@ function render(lang, repos, reg) {
     section(`cat-${n}`, `${n} ${FEISHU_CAT[n][lang]}`, "", byFeishu[n], note);
   }
 
-  // PART B —— 补充区（未收录仓库 + 基础设施与模板）
+  // PART B —— 补充区（基础设施与模板）
   if (suppPresent.length) {
     out.push("---");
     for (const s of suppPresent) section(s.id, s.title[lang], s.intro[lang], byFamily[s.id]);
