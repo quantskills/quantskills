@@ -45,17 +45,17 @@ mindmap
 
 | Project | Description | Screenshot |
 |---|---|---|
+| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | Pandadata and panda_data Python SDK reference skill for selecting, calling, and troubleshooting quant data APIs. | — |
 | [skill-us-sec-edgar-harvester](https://github.com/quantskills/skill-us-sec-edgar-harvester) | Harvest and structure US SEC EDGAR public filings into a deduplicated, sourced, time-lined dataset. | — |
 | [skill-pandadata-warehouse](https://github.com/quantskills/skill-pandadata-warehouse) | Pandadata warehouse skill for caching, refreshing, querying, and validating local DuckDB and Parquet market-data stores. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-pandadata-warehouse.png"><img src="assets/skill-pandadata-warehouse.png" width="220"></a> |
-| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | Pandadata and panda_data Python SDK reference skill for selecting, calling, and troubleshooting quant data APIs. | — |
 
 <a id="cat-02"></a>
 ## 02 Factor R&D Toolbox
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training residuals, and accepting factors only after add-one retraining... | — |
 | [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Rank and select quantitative model factors from local factor and label CSV files with regression mRMR using F-statistic relevance and Pearson redundancy, or fixed-model Marginal-SAGE MSE contribution for LGBM and MLP. | — |
+| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training residuals, and accepting factors only after add-one retraining... | — |
 | [skill-templeton-global-contrarian](https://github.com/quantskills/skill-templeton-global-contrarian) | John Templeton contrarian global value factor for cross-market valuation deviation screening | — |
 | [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generate initial stock alpha ideas with economic rationale and concrete factor shapes, defaulting to daily OHLCV when no fields are specified. | — |
 | [skill-alpha-ncav-graham](https://github.com/quantskills/skill-alpha-ncav-graham) | Graham NCAV 净流动资产折价因子技能。A股深度价值筛选，排除金融股，计算 NCAV 折价并生成 buy/sell/hold 信号。 | — |
@@ -91,10 +91,10 @@ mindmap
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [skill-commodity-brief](https://github.com/quantskills/skill-commodity-brief) | 生成大宗商品简报，数据来源为 Pandadata 期货接口、开放 API、分析师研报、雅虎财经等，输出为中文 Markdown 简报。 | — |
-| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | 生成原油简报，数据来源为 Pandadata 期货接口、美国能源信息署（EIA）开放 API、OPEC 月度报告、雅虎财经等，输出为中文 Markdown 简报。 | — |
 | [skill-portfolio-liquidity-stress-test](https://github.com/quantskills/skill-portfolio-liquidity-stress-test) | Estimate portfolio liquidation days, horizon cash, redemption shortfall, and impact costs under volume stress. | — |
 | [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | Study index-rebalance abnormal returns, volume, and optional weight changes by announcement or effective-date anchor. | — |
+| [skill-commodity-brief](https://github.com/quantskills/skill-commodity-brief) | 生成大宗商品简报，数据来源为 Pandadata 期货接口、开放 API、分析师研报、雅虎财经等，输出为中文 Markdown 简报。 | — |
+| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | 生成原油简报，数据来源为 Pandadata 期货接口、美国能源信息署（EIA）开放 API、OPEC 月度报告、雅虎财经等，输出为中文 Markdown 简报。 | — |
 | [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | US equity sector rotation reports covering constituent returns, valuation snapshots, and ranking changes from Pandadata. | — |
 | [skill-hk-us-dividend-events](https://github.com/quantskills/skill-hk-us-dividend-events) | HK and US ex-dividend calendars, recent payouts, currency-bucketed TTM yields, and simplified DRIP illustrations. | — |
 | [skill-cross-listing-parity](https://github.com/quantskills/skill-cross-listing-parity) | A/H and China ADR cross-listing parity monitoring with explicit market dates, FX rates, and share ratios. | — |
@@ -142,12 +142,12 @@ mindmap
 | Project | Description | Screenshot |
 |---|---|---|
 | [skill-survivorship-universe-auditor](https://github.com/quantskills/skill-survivorship-universe-auditor) | Audit lifecycle and membership rows, rebuild supplied point-in-time universes, and flag missing delisting returns. | — |
-| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | Check raw and adjusted prices for cash-dividend and split consistency before research or backtesting. | — |
-| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | Audit futures contract selection, roll events, price gaps, and difference or ratio adjustment ledgers. | — |
 | [skill-intraday-data-quality-auditor](https://github.com/quantskills/skill-intraday-data-quality-auditor) | Audit normalized intraday OHLCV bars for timestamp, gap, price-invariant, volume, and trading-date defects. | — |
+| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | Audit futures contract selection, roll events, price gaps, and difference or ratio adjustment ledgers. | — |
+| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | Check raw and adjusted prices for cash-dividend and split consistency before research or backtesting. | — |
+| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Run evidence-driven or deterministic grid hyperparameter search for quantitative multi-factor models. Use when an agent needs legacy-compatible RankIC-IR LGBM/MLP results, or explicitly opts into robust block RankIC,... | — |
 | [skill-dalio-all-weather](https://github.com/quantskills/skill-dalio-all-weather) | Build and audit reproducible, research-only A-share All Weather allocations with PandaData, growth-inflation regimes, inverse-volatility risk budgets, quarterly backtests, and risk-contribution diagnostics. | — |
 | [skill-simons-pairs-trading](https://github.com/quantskills/skill-simons-pairs-trading) | Screen and audit reproducible, research-only A-share pairs with adjusted PandaData prices, same-industry Engle-Granger tests, Benjamini-Hochberg FDR, formation-only clustering, rolling backtests, conservative gates, and... | — |
-| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Run evidence-driven or deterministic grid hyperparameter search for quantitative multi-factor models. Use when an agent needs legacy-compatible RankIC-IR LGBM/MLP results, or explicitly opts into robust block RankIC,... | — |
 | [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | Skill-builder workflow for turning public X/Twitter data and user materials into trader-specific research-model skills. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-x-trader-builder.png"><img src="assets/skill-x-trader-builder.png" width="220"></a> |
 | [skill-ssquant-trader-generator](https://github.com/quantskills/skill-ssquant-trader-generator) | Trader-generator skill that turns natural-language trading ideas into deployable AI Trader rules, code, and operating plans. | — |
 | [skill-ssquant-ai-trader](https://github.com/quantskills/skill-ssquant-ai-trader) | SSQuant AI Trader skill for converting natural-language trading descriptions into automated or semi-automated strategy workflows. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-ssquant-ai-trader.png"><img src="assets/skill-ssquant-ai-trader.png" width="220"></a> |
@@ -213,8 +213,8 @@ Governance, scaffolding and templates (incl. the quantskills nav repo).
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |

@@ -45,17 +45,17 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
+| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | 把自然语言数据需求，精准路由到正确的 pandadata API，并生成可直接运行的 Python 调用。 | — |
 | [skill-us-sec-edgar-harvester](https://github.com/quantskills/skill-us-sec-edgar-harvester) | 抓取并结构化美股 SEC EDGAR 公开文件（8-K/Form 4/13D-G/13F/S-1），去重、标注来源与时间线。 | — |
 | [skill-pandadata-warehouse](https://github.com/quantskills/skill-pandadata-warehouse) | Pandadata 本地数据仓库：用 DuckDB 与 Parquet 缓存、增量刷新、查询和校验行情数据，减少重复 API 调用。 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-pandadata-warehouse.png"><img src="assets/skill-pandadata-warehouse.png" width="220"></a> |
-| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | 把自然语言数据需求，精准路由到正确的 pandadata API，并生成可直接运行的 Python 调用。 | — |
 
 <a id="cat-02"></a>
 ## 02 因子研发工具箱
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
-| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training... | — |
 | [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Rank and select quantitative model factors from local factor and label CSV files with regression mRMR using F-statistic relevance and Pearson redundancy, or... | — |
+| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training... | — |
 | [skill-templeton-global-contrarian](https://github.com/quantskills/skill-templeton-global-contrarian) | 邓普顿逆向全球价值因子，A股/港股/美股跨市场估值偏离度筛选 | — |
 | [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generate initial stock alpha ideas with economic rationale and concrete factor shapes, defaulting to daily OHLCV when no fields are specified. | — |
 | [skill-alpha-ncav-graham](https://github.com/quantskills/skill-alpha-ncav-graham) | Graham NCAV 净流动资产折价因子技能。A股深度价值筛选，排除金融股，计算 NCAV 折价并生成 buy/sell/hold 信号。 | — |
@@ -91,10 +91,10 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
-| [skill-commodity-brief](https://github.com/quantskills/skill-commodity-brief) | 生成大宗商品简报，数据来源为 Pandadata 期货接口、开放 API、分析师研报、雅虎财经等，输出为中文 Markdown 简报。 | — |
-| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | 生成原油简报，数据来源为 Pandadata 期货接口、美国能源信息署（EIA）开放 API、OPEC 月度报告、雅虎财经等，输出为中文 Markdown 简报。 | — |
 | [skill-portfolio-liquidity-stress-test](https://github.com/quantskills/skill-portfolio-liquidity-stress-test) | 估算组合在成交量冲击下的清算天数、期限内变现、赎回缺口和冲击成本。 | — |
 | [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | 按公告日或生效日研究指数调整事件的异常收益、成交量及可选权重变化。 | — |
+| [skill-commodity-brief](https://github.com/quantskills/skill-commodity-brief) | 生成大宗商品简报，数据来源为 Pandadata 期货接口、开放 API、分析师研报、雅虎财经等，输出为中文 Markdown 简报。 | — |
+| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | 生成原油简报，数据来源为 Pandadata 期货接口、美国能源信息署（EIA）开放 API、OPEC 月度报告、雅虎财经等，输出为中文 Markdown 简报。 | — |
 | [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | 基于 Pandadata 成分与行业字段生成美股行业收益、估值快照和排名变化报告。 | — |
 | [skill-hk-us-dividend-events](https://github.com/quantskills/skill-hk-us-dividend-events) | 港美股除息日历、近期派息、分币种 TTM 股息率与 DRIP 算术示意。 | — |
 | [skill-cross-listing-parity](https://github.com/quantskills/skill-cross-listing-parity) | 按数据日、汇率和股数比监控 A/H 与中概 ADR 跨市场折溢价。 | — |
@@ -142,12 +142,12 @@ mindmap
 | 项目 | 说明 | 截图 |
 |---|---|---|
 | [skill-survivorship-universe-auditor](https://github.com/quantskills/skill-survivorship-universe-auditor) | 审计证券生命周期和成员资格，并按输入快照重建历史股票池、检查退市收益缺口。 | — |
-| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | 核对现金分红与拆并股场景下原始价格、复权价格和总收益的一致性。 | — |
-| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | 审计期货连续合约的选择序列、换月事件、价差及差值/比例调整台账。 | — |
 | [skill-intraday-data-quality-auditor](https://github.com/quantskills/skill-intraday-data-quality-auditor) | 审计标准化日内 OHLCV 行情的时间戳、缺口、价格不变量、成交量和交易日一致性。 | — |
+| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | 审计期货连续合约的选择序列、换月事件、价差及差值/比例调整台账。 | — |
+| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | 核对现金分红与拆并股场景下原始价格、复权价格和总收益的一致性。 | — |
+| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Run evidence-driven or deterministic grid hyperparameter search for quantitative multi-factor models. | — |
 | [skill-dalio-all-weather](https://github.com/quantskills/skill-dalio-all-weather) | Build and audit reproducible, research-only A-share All Weather allocations with PandaData, growth-inflation regimes, inverse-volatility risk budgets,... | — |
 | [skill-simons-pairs-trading](https://github.com/quantskills/skill-simons-pairs-trading) | Screen and audit reproducible, research-only A-share pairs with adjusted PandaData prices, same-industry Engle-Granger tests, Benjamini-Hochberg FDR,... | — |
-| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Run evidence-driven or deterministic grid hyperparameter search for quantitative multi-factor models. | — |
 | [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | 把任意 X/Twitter 公开交易员的发帖历史，加工成 trader 专属的研究模型 Skill：init-run → 采集 → extract → auto-review → split → evaluate → template → report 九步流水线，从噪... | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-x-trader-builder.png"><img src="assets/skill-x-trader-builder.png" width="220"></a> |
 | [skill-ssquant-trader-generator](https://github.com/quantskills/skill-ssquant-trader-generator) | 说一次想法，得到一个可以随时加载的 AI 交易员。 | — |
 | [skill-ssquant-ai-trader](https://github.com/quantskills/skill-ssquant-ai-trader) | 你负责说话，AI 负责写代码、跑策略、盯盘、控风险。 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-ssquant-ai-trader.png"><img src="assets/skill-ssquant-ai-trader.png" width="220"></a> |
@@ -213,8 +213,8 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |
