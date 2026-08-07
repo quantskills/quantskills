@@ -54,10 +54,10 @@ mindmap
 
 | Project | Description | Screenshot |
 |---|---|---|
+| [skill-factor-grouped-wrapper](https://github.com/quantskills/skill-factor-grouped-wrapper) | 通过分组贪心wrapper，迭代删除或加入因子，并以模型训练和回测表现筛选最优因子池。 | — |
 | [skill-ml-factor-ensemble](https://github.com/quantskills/skill-ml-factor-ensemble) | ML 因子集成：LightGBM/ElasticNet/Ridge + Purged & Embargoed 滚动 walk-forward 防泄漏，OOS 元信号 | — |
 | [skill-pandaai-factor-online](https://github.com/quantskills/skill-pandaai-factor-online) | PandaAI 因子大赛上手与在线挖掘技能：环境体检、登录、字段算子速查、可续跑批量回测与成本折算复盘 · Onboarding and online factor mining for PandaAI | — |
 | [skill-factor-mining-pandaai](https://github.com/quantskills/skill-factor-mining-pandaai) | Community skill for extracting paper-derived quant factors and analyzing them with PandaAI | — |
-| [skill-factor-grouped-wrapper](https://github.com/quantskills/skill-factor-grouped-wrapper) | 通过分组贪心wrapper，迭代删除或加入因子，并以模型训练和回测表现筛选最优因子池。 | — |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | — | — |
 | [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training residuals, and accepting factors only after add-one retraining... | — |
 | [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Rank and select quantitative model factors from local factor and label CSV files with regression mRMR using F-statistic relevance and Pearson redundancy, or fixed-model Marginal-SAGE MSE contribution for LGBM and MLP. | — |
@@ -249,8 +249,8 @@ Governance, scaffolding and templates (incl. the quantskills nav repo).
 
 | Project | Description | Screenshot |
 |---|---|---|
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
+| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
 | [.github](https://github.com/quantskills/.github) | — | — |
 | [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
 | [join](https://github.com/quantskills/join) | — | — |
