@@ -10,7 +10,10 @@ import { verifyBuild } from "./verify-build.mjs";
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 export function stageAndPromote(outputs, outputDir, snapshot) {
+  const expected = ["README.md", "README.en.md", "site/catalog.json"];
+  if (Object.keys(outputs).sort().join(",") !== expected.sort().join(",")) throw new Error("invalid output set");
   const stage = mkdtempSync(join(outputDir, ".catalog-stage-"));
+  const previous = new Map(expected.map((relative) => { const path = join(outputDir, relative); try { return [relative, readFileSync(path)]; } catch { return [relative, null]; } }));
   try {
     for (const [relative, content] of Object.entries(outputs)) {
       const destination = join(stage, relative);
@@ -19,10 +22,11 @@ export function stageAndPromote(outputs, outputDir, snapshot) {
       if (relative.endsWith(".json")) JSON.parse(readFileSync(destination, "utf8"));
     }
     verifyBuild(stage, snapshot);
-    for (const relative of Object.keys(outputs)) {
-      const destination = join(outputDir, relative);
-      mkdirSync(dirname(destination), { recursive: true });
-      renameSync(join(stage, relative), destination);
+    try {
+      for (const relative of expected) { const destination = join(outputDir, relative); mkdirSync(dirname(destination), { recursive: true }); renameSync(join(stage, relative), destination); }
+    } catch (error) {
+      for (const [relative, content] of previous) { const destination = join(outputDir, relative); if (content) { mkdirSync(dirname(destination), { recursive: true }); writeFileSync(destination, content); } }
+      throw error;
     }
   } finally {
     rmSync(stage, { recursive: true, force: true });
