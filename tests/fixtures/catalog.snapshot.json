@@ -1,0 +1,829 @@
+{
+  "schema_version": "1.0.0",
+  "taxonomy_version": "1.0.0",
+  "snapshot_id": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+  "contract_mode": "enforce",
+  "taxonomy": {
+    "schema_version": "1.0.0",
+    "categories": {
+      "01": {
+        "label_zh": "??01",
+        "label_en": "Category 01",
+        "subcategories": [
+          {
+            "id": "01.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "02": {
+        "label_zh": "??02",
+        "label_en": "Category 02",
+        "subcategories": [
+          {
+            "id": "02.factor-generation",
+            "label_zh": "factor-generation",
+            "label_en": "Factor-Generation"
+          },
+          {
+            "id": "02.factor-screening",
+            "label_zh": "factor-screening",
+            "label_en": "Factor-Screening"
+          },
+          {
+            "id": "02.factor-evaluation",
+            "label_zh": "factor-evaluation",
+            "label_en": "Factor-Evaluation"
+          }
+        ]
+      },
+      "03": {
+        "label_zh": "??03",
+        "label_en": "Category 03",
+        "subcategories": [
+          {
+            "id": "03.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "04": {
+        "label_zh": "??04",
+        "label_en": "Category 04",
+        "subcategories": [
+          {
+            "id": "04.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "05": {
+        "label_zh": "??05",
+        "label_en": "Category 05",
+        "subcategories": [
+          {
+            "id": "05.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "06": {
+        "label_zh": "??06",
+        "label_en": "Category 06",
+        "subcategories": [
+          {
+            "id": "06.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "07": {
+        "label_zh": "??07",
+        "label_en": "Category 07",
+        "subcategories": [
+          {
+            "id": "07.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "08": {
+        "label_zh": "??08",
+        "label_en": "Category 08",
+        "subcategories": [
+          {
+            "id": "08.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "09": {
+        "label_zh": "??09",
+        "label_en": "Category 09",
+        "subcategories": [
+          {
+            "id": "09.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      },
+      "10": {
+        "label_zh": "??10",
+        "label_en": "Category 10",
+        "subcategories": [
+          {
+            "id": "10.general",
+            "label_zh": "??",
+            "label_en": "General"
+          }
+        ]
+      }
+    },
+    "workflow_stages": [
+      "data-ingestion",
+      "data-quality",
+      "feature-engineering",
+      "factor-generation",
+      "factor-screening",
+      "modeling",
+      "portfolio-construction",
+      "backtesting",
+      "evaluation",
+      "risk",
+      "monitoring",
+      "execution",
+      "reporting",
+      "orchestration"
+    ]
+  },
+  "assets": [
+    {
+      "name": "skill-fixture-01",
+      "url": "https://github.com/quantskills/skill-fixture-01",
+      "description": "Fixture 1",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "01",
+        "subcategory": "01.general"
+      },
+      "workflow": {
+        "primary_stage": "data-ingestion",
+        "workflow_stages": [
+          "data-ingestion"
+        ]
+      },
+      "interface": {
+        "mode": "structured",
+        "envelope": {
+          "name": "quantskills-envelope",
+          "version": "1.0.0"
+        },
+        "inputs": [],
+        "outputs": [
+          {
+            "profile": "market-bar",
+            "version": "1.0.0"
+          }
+        ],
+        "adapters": []
+      },
+      "category": "01",
+      "subcategory": "01.general",
+      "stage": "data-ingestion",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??01????1",
+      "summary_en": "Fixture skill 1 for category 01.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-02",
+      "url": "https://github.com/quantskills/skill-fixture-02",
+      "description": "Fixture 2",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-screening"
+      },
+      "workflow": {
+        "primary_stage": "data-quality",
+        "workflow_stages": [
+          "data-quality"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "02",
+      "subcategory": "02.factor-screening",
+      "stage": "data-quality",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??02????2",
+      "summary_en": "Fixture skill 2 for category 02.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-03",
+      "url": "https://github.com/quantskills/skill-fixture-03",
+      "description": "Fixture 3",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.general"
+      },
+      "workflow": {
+        "primary_stage": "feature-engineering",
+        "workflow_stages": [
+          "feature-engineering"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "03",
+      "subcategory": "03.general",
+      "stage": "feature-engineering",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??03????3",
+      "summary_en": "Fixture skill 3 for category 03.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-04",
+      "url": "https://github.com/quantskills/skill-fixture-04",
+      "description": "Fixture 4",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "04",
+        "subcategory": "04.general"
+      },
+      "workflow": {
+        "primary_stage": "factor-generation",
+        "workflow_stages": [
+          "factor-generation"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "04",
+      "subcategory": "04.general",
+      "stage": "factor-generation",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??04????4",
+      "summary_en": "Fixture skill 4 for category 04.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-05",
+      "url": "https://github.com/quantskills/skill-fixture-05",
+      "description": "Fixture 5",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.general"
+      },
+      "workflow": {
+        "primary_stage": "factor-screening",
+        "workflow_stages": [
+          "factor-screening"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "05",
+      "subcategory": "05.general",
+      "stage": "factor-screening",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??05????5",
+      "summary_en": "Fixture skill 5 for category 05.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-06",
+      "url": "https://github.com/quantskills/skill-fixture-06",
+      "description": "Fixture 6",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.general"
+      },
+      "workflow": {
+        "primary_stage": "modeling",
+        "workflow_stages": [
+          "modeling"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "06",
+      "subcategory": "06.general",
+      "stage": "modeling",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??06????6",
+      "summary_en": "Fixture skill 6 for category 06.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-07",
+      "url": "https://github.com/quantskills/skill-fixture-07",
+      "description": "Fixture 7",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "07",
+        "subcategory": "07.general"
+      },
+      "workflow": {
+        "primary_stage": "portfolio-construction",
+        "workflow_stages": [
+          "portfolio-construction"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "07",
+      "subcategory": "07.general",
+      "stage": "portfolio-construction",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??07????7",
+      "summary_en": "Fixture skill 7 for category 07.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-08",
+      "url": "https://github.com/quantskills/skill-fixture-08",
+      "description": "Fixture 8",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "08",
+        "subcategory": "08.general"
+      },
+      "workflow": {
+        "primary_stage": "backtesting",
+        "workflow_stages": [
+          "backtesting"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "08",
+      "subcategory": "08.general",
+      "stage": "backtesting",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??08????8",
+      "summary_en": "Fixture skill 8 for category 08.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-09",
+      "url": "https://github.com/quantskills/skill-fixture-09",
+      "description": "Fixture 9",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.general"
+      },
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "evaluation"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "09",
+      "subcategory": "09.general",
+      "stage": "evaluation",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??09????9",
+      "summary_en": "Fixture skill 9 for category 09.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-10",
+      "url": "https://github.com/quantskills/skill-fixture-10",
+      "description": "Fixture 10",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "10",
+        "subcategory": "10.general"
+      },
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "risk"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "10",
+      "subcategory": "10.general",
+      "stage": "risk",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??10????10",
+      "summary_en": "Fixture skill 10 for category 10.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-11",
+      "url": "https://github.com/quantskills/skill-fixture-11",
+      "description": "Fixture 11",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "01",
+        "subcategory": "01.general"
+      },
+      "workflow": {
+        "primary_stage": "monitoring",
+        "workflow_stages": [
+          "monitoring"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "01",
+      "subcategory": "01.general",
+      "stage": "monitoring",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??01????11",
+      "summary_en": "Fixture skill 11 for category 01.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-12",
+      "url": "https://github.com/quantskills/skill-fixture-12",
+      "description": "Fixture 12",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-evaluation"
+      },
+      "workflow": {
+        "primary_stage": "execution",
+        "workflow_stages": [
+          "execution"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "02",
+      "subcategory": "02.factor-evaluation",
+      "stage": "execution",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??02????12",
+      "summary_en": "Fixture skill 12 for category 02.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-13",
+      "url": "https://github.com/quantskills/skill-fixture-13",
+      "description": "Fixture 13",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.general"
+      },
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "reporting"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "03",
+      "subcategory": "03.general",
+      "stage": "reporting",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??03????13",
+      "summary_en": "Fixture skill 13 for category 03.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-fixture-14",
+      "url": "https://github.com/quantskills/skill-fixture-14",
+      "description": "Fixture 14",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "04",
+        "subcategory": "04.general"
+      },
+      "workflow": {
+        "primary_stage": "orchestration",
+        "workflow_stages": [
+          "orchestration"
+        ]
+      },
+      "interface": {
+        "mode": "natural-language"
+      },
+      "category": "04",
+      "subcategory": "04.general",
+      "stage": "orchestration",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??04????14",
+      "summary_en": "Fixture skill 14 for category 04.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "skill-template",
+      "url": "https://github.com/quantskills/skill-template",
+      "description": "Template fixture",
+      "project_type": "skill",
+      "declaration_file": "SKILL.md",
+      "catalog": {
+        "category": "10",
+        "subcategory": "10.skill-template"
+      },
+      "workflow": {
+        "primary_stage": "orchestration",
+        "workflow_stages": [
+          "orchestration"
+        ]
+      },
+      "interface": {
+        "mode": "not-applicable",
+        "reason": "orchestration-only"
+      },
+      "category": "10",
+      "subcategory": "10.skill-template",
+      "stage": "orchestration",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??????",
+      "summary_en": "Template fixture entry.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    },
+    {
+      "name": "agent-template",
+      "url": "https://github.com/quantskills/agent-template",
+      "description": "Template fixture",
+      "project_type": "agent",
+      "declaration_file": "AGENTS.md",
+      "catalog": {
+        "category": "10",
+        "subcategory": "10.agent-template"
+      },
+      "workflow": {
+        "primary_stage": "orchestration",
+        "workflow_stages": [
+          "orchestration"
+        ]
+      },
+      "interface": {
+        "mode": "not-applicable",
+        "reason": "orchestration-only"
+      },
+      "category": "10",
+      "subcategory": "10.agent-template",
+      "stage": "orchestration",
+      "tags": [
+        "fixture"
+      ],
+      "platforms": [
+        "codex"
+      ],
+      "status": "active",
+      "requires": [],
+      "summary_zh": "??????",
+      "summary_en": "Template fixture entry.",
+      "license": "GPL-3.0-only",
+      "validation_level": "listed",
+      "maintainer_type": "community",
+      "last_validated": "2026-08-10",
+      "commit_sha": "fixture"
+    }
+  ],
+  "resources": [
+    {
+      "name": ".github",
+      "url": "https://github.com/quantskills/.github"
+    },
+    {
+      "name": "join",
+      "url": "https://github.com/quantskills/join"
+    },
+    {
+      "name": "quantskills",
+      "url": "https://github.com/quantskills/quantskills"
+    },
+    {
+      "name": "registry",
+      "url": "https://github.com/quantskills/registry"
+    }
+  ],
+  "envelope": {
+    "version": "1.0.0",
+    "name": "quantskills-envelope",
+    "items": [
+      {
+        "version": "1.0.0",
+        "schema": "1.0.0.schema.json"
+      }
+    ]
+  },
+  "profiles": {
+    "version": "1.0.0",
+    "items": [
+      {
+        "id": "market-bar",
+        "version": "1.0.0",
+        "schema": "base/market-bar/1.0.0.schema.json",
+        "kind": "base",
+        "primary_key": [
+          "instrument_id",
+          "timestamp"
+        ],
+        "time_semantics": "bar_timestamp"
+      }
+    ]
+  },
+  "adapters": {
+    "version": "1.0.0",
+    "items": []
+  },
+  "provider_mappings": {
+    "version": "1.0.0",
+    "items": []
+  },
+  "core_lineage": {
+    "version": "1.0.0",
+    "artifacts": []
+  },
+  "interface_diagnostics": [],
+  "compatibility_edges": []
+}
