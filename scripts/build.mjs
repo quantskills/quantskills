@@ -5,10 +5,11 @@ import { fileURLToPath } from "node:url";
 import { buildCatalogModel, loadCatalogSnapshot } from "./catalog-model.mjs";
 import { renderReadme } from "./render-readme.mjs";
 import { renderSiteData } from "./render-site-data.mjs";
+import { verifyBuild } from "./verify-build.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
-export function stageAndPromote(outputs, outputDir) {
+export function stageAndPromote(outputs, outputDir, snapshot) {
   const stage = mkdtempSync(join(outputDir, ".catalog-stage-"));
   try {
     for (const [relative, content] of Object.entries(outputs)) {
@@ -17,6 +18,7 @@ export function stageAndPromote(outputs, outputDir) {
       writeFileSync(destination, content, "utf8");
       if (relative.endsWith(".json")) JSON.parse(readFileSync(destination, "utf8"));
     }
+    verifyBuild(stage, snapshot);
     for (const relative of Object.keys(outputs)) {
       const destination = join(outputDir, relative);
       mkdirSync(dirname(destination), { recursive: true });
@@ -32,7 +34,7 @@ export function build(snapshotPath, outputDir) {
   const model = buildCatalogModel(snapshot);
   const site = { ...renderSiteData(model), profiles: snapshot.profiles.items, adapters: snapshot.adapters.items, compatibility_edges: snapshot.compatibility_edges };
   // catalog-snapshot projections share workflow-data-foundation and cat-10 navigation.
-  stageAndPromote({ "README.md": renderReadme(model, "zh"), "README.en.md": renderReadme(model, "en"), "site/catalog.json": `${JSON.stringify(site, null, 2)}\n` }, outputDir);
+  stageAndPromote({ "README.md": renderReadme(model, "zh"), "README.en.md": renderReadme(model, "en"), "site/catalog.json": `${JSON.stringify(site, null, 2)}\n` }, outputDir, snapshot);
   return model;
 }
 
