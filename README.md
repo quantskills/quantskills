@@ -4,7 +4,7 @@
 
 **简体中文** | [English](README.en.md)
 
-[![仓库](https://img.shields.io/badge/%E4%BB%93%E5%BA%93-154-blue)](https://github.com/orgs/quantskills/repositories) [![百宝箱收录](https://img.shields.io/badge/%E7%99%BE%E5%AE%9D%E7%AE%B1%E6%94%B6%E5%BD%95-148-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-8-d62728)](#cat-09) [![更新](https://img.shields.io/badge/%E6%9B%B4%E6%96%B0-2026--08--10-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
+[![仓库](https://img.shields.io/badge/%E4%BB%93%E5%BA%93-162-blue)](https://github.com/orgs/quantskills/repositories) [![百宝箱收录](https://img.shields.io/badge/%E7%99%BE%E5%AE%9D%E7%AE%B1%E6%94%B6%E5%BD%95-156-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-8-d62728)](#cat-09) [![更新](https://img.shields.io/badge/%E6%9B%B4%E6%96%B0-2026--08--10-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
 
 **QUANTSKILLS** 是 AI Agent 时代的开放量化社区，聚焦 **Quant Skills（量化技能）** 与 **Agents（智能体）** 两类资产。由 [PandaAI](https://www.pandaaiquant.com/) 发起，帮助量化开发者把交易经验、研究方法、因子模型与策略代码，转化为**可检索、可安装、可验证、可分享**的标准化资产。
 
@@ -136,6 +136,7 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
+| [skill-rolling-beta-exposure](https://github.com/quantskills/skill-rolling-beta-exposure) | — | — |
 | [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | — | — |
 | [skill-capital-flow-crowding-monitor](https://github.com/quantskills/skill-capital-flow-crowding-monitor) | 跨市场资金面/拥挤监测：融资融券+北向持股+大宗交易三源聚合，一致性/背离信号 + 拥挤度历史分位 | — |
 | [skill-etf-arbitrage-monitor](https://github.com/quantskills/skill-etf-arbitrage-monitor) | ETF 一二级套利/折溢价监控：IOPV vs 二级价折溢价、申赎篮子可行性、套利方向与扣费毛收益 | — |
@@ -156,6 +157,7 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
+| [skill-signal-stability-audit](https://github.com/quantskills/skill-signal-stability-audit) | — | — |
 | [skill-quant-portfolio-risk](https://github.com/quantskills/skill-quant-portfolio-risk) | — | — |
 | [skill-ma-crossover-signal](https://github.com/quantskills/skill-ma-crossover-signal) | — | — |
 | [skill-cb-analyzer](https://github.com/quantskills/skill-cb-analyzer) | A-share convertible bond daily analyzer: double-low strategy + Black-Scholes Greeks + IC backtest | — |
@@ -192,6 +194,7 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
+| [skill-quant-research-experiment-registry](https://github.com/quantskills/skill-quant-research-experiment-registry) | Quantitative research experiment registry and reproducibility audit skill. | — |
 | [skill-daily-report](https://github.com/quantskills/skill-daily-report) | 是一个跨市场每日复盘技能，用于汇总 A 股、港股、美股、日经、韩国市场以及黄金、原油等公开行情数据，并结合板块表现、资金流向和重要新闻，生成结构化的 Markdown 市场复盘报告和次日情景分析。 | — |
 | [skill-quant-research](https://github.com/quantskills/skill-quant-research) | — | — |
 | [skill-hk-us-consensus-revision-radar](https://github.com/quantskills/skill-hk-us-consensus-revision-radar) | Hong Kong & US Consensus Revision Radar: Uses PandaData to analyze target prices, ratings, price divergence, analyst coverage, and revision trajectories, generating auditable offline HTML research reports. | — |
@@ -208,6 +211,11 @@ mindmap
 
 | 项目 | 说明 | 截图 |
 |---|---|---|
+| [skill-klarman-special-situations](https://github.com/quantskills/skill-klarman-special-situations) | 基于克拉曼特殊情况投资框架的 A 股事件驱动研究 Skill，覆盖定增解禁、重组借壳、分拆上市与困境反转；强调证据核验、失败价值与风险边界。 | — |
+| [skill-buffett-moat-screener](https://github.com/quantskills/skill-buffett-moat-screener) | 面向 A 股与美股的巴菲特式研究 Skill：研究建议、持仓复核、年度记录与点时回测。 | — |
+| [skill-calendar-anomaly-scanner](https://github.com/quantskills/skill-calendar-anomaly-scanner) | — | — |
+| [skill-brinson-performance-attribution](https://github.com/quantskills/skill-brinson-performance-attribution) | Brinson-Fachler / BHB 归因 + Carino 多期链接 | — |
+| [skill-walk-forward-validator](https://github.com/quantskills/skill-walk-forward-validator) | — | — |
 | [skill-quant-execution-microstructure](https://github.com/quantskills/skill-quant-execution-microstructure) | — | — |
 | [skill-pair-correlation](https://github.com/quantskills/skill-pair-correlation) | — | — |
 | [skill-oversold-rebound](https://github.com/quantskills/skill-oversold-rebound) | A股超跌反弹择时与选股：判断短期反弹环境并筛选候选股票 | — |
