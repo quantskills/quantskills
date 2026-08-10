@@ -6,7 +6,7 @@ const fixture = JSON.parse(readFileSync(new URL("./fixtures/catalog.snapshot.jso
 
 test("fixture is a complete same-snapshot renderer input", () => {
   assert.match(fixture.snapshot_id, /^sha256:[0-9a-f]{64}$/);
-  assert.deepEqual(Object.keys(fixture.taxonomy.categories), ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]);
+  assert.deepEqual(Object.keys(fixture.taxonomy.categories).sort(), ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]);
   assert.equal(new Set(fixture.assets.map((asset) => asset.name)).size, fixture.assets.length);
   assert.deepEqual(fixture.resources.map((resource) => resource.name), [".github", "join", "quantskills", "registry"]);
   assert.equal(new Set(fixture.assets.map((asset) => asset.workflow.primary_stage)).size, 14);
