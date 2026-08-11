@@ -1,13 +1,13 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { chmodSync, existsSync, mkdtempSync, mkdirSync, readFileSync, rmSync, statSync, writeFileSync } from "node:fs";
+import { chmodSync, existsSync, mkdtempSync, mkdirSync, readFileSync, renameSync, rmSync, statSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join, parse, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 import { buildMetadataPlan } from "../scripts/build-github-metadata-plan.mjs";
-import { stageAndPromote } from "../scripts/build.mjs";
+import { build, stageAndPromote } from "../scripts/build.mjs";
 import { buildCatalogModel } from "../scripts/catalog-model.mjs";
 import { renderReadme } from "../scripts/render-readme.mjs";
 import { renderSiteData } from "../scripts/render-site-data.mjs";
@@ -68,6 +68,30 @@ test("publication preflight rejects a non-regular destination", () => {
     assert.throws(() => stageAndPromote(outputs, root, snapshot), /regular file/i);
   } finally {
     rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test("staging and focused builds stay on the output filesystem", () => {
+  const outputRoot = mkdtempSync(join(process.cwd(), ".qs-nav-cross-volume-"));
+  const snapshotPath = fileURLToPath(new URL("./fixtures/catalog.snapshot.json", import.meta.url));
+  let transactionRoot;
+  try {
+    stageAndPromote(outputs, outputRoot, snapshot, {
+      replace(source, destination) {
+        const stageDirectory = dirname(source);
+        transactionRoot = dirname(stageDirectory);
+        assert.equal(parse(source).root, parse(outputRoot).root);
+        assert.equal(resolve(transactionRoot).startsWith(`${resolve(outputRoot)}${process.platform === "win32" ? "\\" : "/"}`), true);
+        renameSync(source, destination);
+      },
+    });
+    assert.ok(transactionRoot);
+    build(snapshotPath, outputRoot);
+    assert.ok(existsSync(join(outputRoot, "README.md")));
+    assert.ok(existsSync(join(outputRoot, "README.en.md")));
+    assert.ok(existsSync(join(outputRoot, "site", "catalog.json")));
+  } finally {
+    rmSync(outputRoot, { recursive: true, force: true });
   }
 });
 

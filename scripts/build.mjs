@@ -1,6 +1,5 @@
 #!/usr/bin/env node
 import { chmodSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, renameSync, rmSync, unlinkSync, writeFileSync } from "node:fs";
-import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { buildCatalogModel, loadCatalogSnapshot } from "./catalog-model.mjs";
@@ -35,8 +34,9 @@ export function stageAndPromote(outputs, outputDir, snapshot, options = {}) {
   const expected = ["README.md", "README.en.md", "site/catalog.json"];
   if (!outputs || Object.keys(outputs).sort().join(",") !== expected.slice().sort().join(",")) throw new Error("invalid output set");
   const outputRoot = resolve(outputDir);
+  mkdirSync(outputRoot, { recursive: true });
   const previous = new Map(expected.map((relative) => [relative, destinationState(join(outputRoot, relative))]));
-  const transactionRoot = mkdtempSync(join(tmpdir(), "quantskills-publication-"));
+  const transactionRoot = mkdtempSync(join(outputRoot, ".quantskills-publication-"));
   const stage = join(transactionRoot, "stage");
   const backup = join(transactionRoot, "backup");
   const failAt = options.failAt ?? options.injectFailureAt ?? options.injectReplaceFailureAt;

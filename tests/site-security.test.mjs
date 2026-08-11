@@ -69,10 +69,17 @@ test("filterAssets intersects category, subcategory, group, stage, type, runtime
 });
 
 test("compatibility selection matches only the exact selected status and related edge", () => {
-  for (const status of ["adapter-required", "lossy", "incompatible", "unknown"]) assert.deepEqual(app.filterAssets(data, { compatibility: status }).map((item) => item.name), ["skill-safe", "skill-consumer"]);
+  for (const status of ["adapter-required", "incompatible", "unknown"]) assert.deepEqual(app.filterAssets(data, { compatibility: status }).map((item) => item.name), ["skill-safe", "skill-consumer"]);
   assert.deepEqual(app.filterAssets(data, { compatibility: "compatible" }).map((item) => item.name), ["skill-safe", "skill-consumer", "agent-other", "skill-unrelated"]);
   assert.deepEqual(app.filterAssets(data, { compatibility: "arbitrary-status" }), []);
   assert.deepEqual(app.filterAssets(data, { compatibility: "compatible", text: "unrelated" }).map((item) => item.name), ["skill-unrelated"]);
+});
+
+test("compatibility options are exact and derive not-applicable only from explicit interface modes", () => {
+  assert.deepEqual(app.COMPATIBILITY_STATUSES, ["compatible", "adapter-required", "incompatible", "unknown", "not-applicable"]);
+  assert.deepEqual(app.filterAssets(data, { compatibility: "not-applicable" }).map((item) => item.name).sort(), ["agent-other", "skill-isolated", "skill-unrelated"]);
+  assert.deepEqual(app.filterAssets(data, { compatibility: "lossy" }), []);
+  assert.equal(app.relationshipModel(data, "skill-safe").edges.some((edge) => edge.status === "lossy"), false);
 });
 
 test("relationship model exposes exact edge explanations and profile providers/consumers", () => {

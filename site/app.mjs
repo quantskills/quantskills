@@ -6,7 +6,9 @@ export const WORKFLOW_GROUPS = Object.freeze({
   orchestration: ["orchestration"],
 });
 
-export const COMPATIBILITY_STATUSES = Object.freeze(["compatible", "adapter-required", "lossy", "incompatible", "unknown"]);
+export const COMPATIBILITY_STATUSES = Object.freeze(["compatible", "adapter-required", "incompatible", "unknown", "not-applicable"]);
+const EDGE_COMPATIBILITY_STATUSES = Object.freeze(["compatible", "adapter-required", "incompatible", "unknown"]);
+const NOT_APPLICABLE_MODES = new Set(["natural-language", "not-applicable"]);
 const FILTER_KEYS = ["text", "category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility"];
 const PARAM_ORDER = ["category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility", "text"];
 
@@ -27,9 +29,16 @@ function matchesGroup(data, asset, group) {
   return Array.isArray(stages) && assetStages(asset).some((stage) => stages.includes(stage));
 }
 
+const trustedEdges = (data) => list(data?.compatibility_edges).filter((edge) => edge && EDGE_COMPATIBILITY_STATUSES.includes(edge.status));
+
 function relatedToAsset(data, assetName, status = "") {
-  if (!status || !COMPATIBILITY_STATUSES.includes(status)) return status ? [] : list(data?.compatibility_edges);
-  return list(data?.compatibility_edges).filter((edge) => edge && edge.status === status && (edge.producer === assetName || edge.consumer === assetName));
+  if (!status) return trustedEdges(data);
+  if (!COMPATIBILITY_STATUSES.includes(status)) return [];
+  if (status === "not-applicable") {
+    const asset = list(data?.assets).find((item) => item?.name === assetName);
+    return asset && NOT_APPLICABLE_MODES.has(asset?.interface?.mode) ? [{ status }] : [];
+  }
+  return trustedEdges(data).filter((edge) => edge.status === status && (edge.producer === assetName || edge.consumer === assetName));
 }
 
 export function filterAssets(data, state = {}) {
@@ -57,7 +66,7 @@ export function filterAssets(data, state = {}) {
 
 export function explainEdges(data, asset) {
   const name = typeof asset === "string" ? asset : asset?.name;
-  return list(data?.compatibility_edges).filter((edge) => edge && (edge.producer === name || edge.consumer === name));
+  return trustedEdges(data).filter((edge) => edge.producer === name || edge.consumer === name);
 }
 
 function explanation(edge) {
