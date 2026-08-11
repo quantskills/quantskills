@@ -1,8 +1,9 @@
 import { readFileSync } from "node:fs";
+import { snapshotId, validateCatalogSnapshot } from "./snapshot-contract.mjs";
+
+export { snapshotId };
 
 const CATEGORY_IDS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
-const RESOURCE_NAMES = [".github", "join", "quantskills", "registry"];
-
 export function loadCatalogSnapshot(path) {
   let snapshot;
   try {
@@ -10,17 +11,7 @@ export function loadCatalogSnapshot(path) {
   } catch (error) {
     throw new Error("invalid snapshot", { cause: error });
   }
-  if (!snapshot || snapshot.schema_version !== "1.0.0" || !/^sha256:[0-9a-f]{64}$/.test(snapshot.snapshot_id || "")) throw new Error("invalid snapshot");
-  if (!Array.isArray(snapshot.assets) || !Array.isArray(snapshot.resources) || !snapshot.taxonomy?.categories) throw new Error("invalid snapshot");
-  if (Object.keys(snapshot.taxonomy.categories).sort().join(",") !== CATEGORY_IDS.join(",")) throw new Error("incomplete taxonomy");
-  if (snapshot.resources.map((item) => item.name).sort().join(",") !== RESOURCE_NAMES.join(",")) throw new Error("incomplete resources");
-  const names = new Set();
-  for (const asset of snapshot.assets) {
-    if (!asset?.name || names.has(asset.name) || !asset.summary_zh || !asset.summary_en || !asset.catalog?.category || !asset.catalog?.subcategory || !asset.workflow?.primary_stage) throw new Error("invalid asset");
-    if (!CATEGORY_IDS.includes(asset.catalog.category)) throw new Error("unknown category");
-    names.add(asset.name);
-  }
-  return snapshot;
+  return validateCatalogSnapshot(snapshot);
 }
 
 export function buildCatalogModel(snapshot, presentation = {}) {

@@ -29,9 +29,8 @@ export function renderReadme(model, language) {
   for (const category of model.categories) {
     lines.push("", `<a id="cat-${category.id}"></a>`, `## ${category.id} ${english ? category.label_en : category.label_zh}`);
     const subcategories = [...(category.subcategories || [])];
-    for (const id of [...new Set(model.assets.filter((asset) => asset.catalog.category === category.id).map((asset) => asset.catalog.subcategory))].sort()) {
-      if (!subcategories.some((subcategory) => subcategory.id === id)) subcategories.push({ id, label_zh: id, label_en: id });
-    }
+    const knownSubcategories = new Set(subcategories.map((subcategory) => subcategory.id));
+    for (const asset of model.assets.filter((item) => item.catalog.category === category.id)) if (!knownSubcategories.has(asset.catalog.subcategory)) throw new Error("unclassified asset subcategory");
     for (const subcategory of subcategories) {
       lines.push("", `### ${subcategory.id} ${english ? subcategory.label_en : subcategory.label_zh}`);
       lines.push(`| ${label.name} | ${label.summary} | ${label.type} | ${label.primary} | ${label.extra} | ${label.inputs} | ${label.outputs} | ${label.status} |`, "|---|---|---|---|---|---|---|---|");
