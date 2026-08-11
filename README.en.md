@@ -1,273 +1,455 @@
-<!-- 本文件由 scripts/build.mjs 自动生成，请勿手工编辑。Generated file — do not edit by hand. -->
-# 🧭 quantskills
-> A panoramic, clickable navigator for the QuantSkills org — skills / factors / agents at a glance.
-
+<!-- catalog-snapshot: sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7 -->
+# quantskills
 [简体中文](README.md) | **English**
+Snapshot: sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7; public assets: 158.
+Published structured endpoints: 1; pending maintainer interface review: 157.
 
-[![repos](https://img.shields.io/badge/repos-162-blue)](https://github.com/orgs/quantskills/repositories) [![in-catalog](https://img.shields.io/badge/in--catalog-156-8a2be2)](https://ncn9g4d5xvof.feishu.cn/wiki/ZMD0w4rvoivnHVkoVwKcunkvn1g) [![Agents](https://img.shields.io/badge/Agents-8-d62728)](#cat-09) [![updated](https://img.shields.io/badge/updated-2026--08--10-lightgrey)](https://github.com/quantskills/quantskills/commits/main)
+## Catalog
+[01](#cat-01) · [02](#cat-02) · [03](#cat-03) · [04](#cat-04) · [05](#cat-05) · [06](#cat-06) · [07](#cat-07) · [08](#cat-08) · [09](#cat-09) · [10](#cat-10)
 
-**QUANTSKILLS** is an open community for **Quant Skills and Agents** in the AI Agent era. Initiated by [PandaAI](https://www.tqx.ai/), it helps quant developers turn trading experience, research methods, factor models, and strategy code into standardized assets that can be **searched, installed, validated, and shared**.
-
-> Turn your quant experience into Skills that humans can trust and AI Agents can use.
-
-## 🗺️ Overview
-```mermaid
-mindmap
-  root((QuantSkills))
-    📚 Catalog
-      01 Data APIs & Warehouse
-      02 Factor R&D Toolbox
-      03 Market & Instrument Analysis
-      04 Risk Monitoring & Alerts
-      05 Backtesting & Trading
-      06 Research Models & Replication
-      07 Research Validation & Quality
-      08 Information Search & Knowledge Analysis
-      09 Featured Agents
-    ➕ Supplementary
-      Infra & Templates
-```
-
-## 📑 Contents
-- [01 Data APIs & Warehouse](#cat-01)
-- [02 Factor R&D Toolbox](#cat-02)
-- [03 Market & Instrument Analysis](#cat-03)
-- [04 Risk Monitoring & Alerts](#cat-04)
-- [05 Backtesting & Trading](#cat-05)
-- [06 Research Models & Replication](#cat-06)
-- [07 Research Validation & Quality](#cat-07)
-- [08 Information Search & Knowledge Analysis](#cat-08)
-- [09 Featured Agents](#cat-09)
-- [🧱 Infra & Templates](#infra)
+## Workflow index
+- <a id="workflow-data-foundation"></a>workflow-data-foundation: data-ingestion, data-quality
+- <a id="workflow-research-signal"></a>workflow-research-signal: feature-engineering, factor-generation, factor-screening, modeling
+- <a id="workflow-portfolio-validation"></a>workflow-portfolio-validation: portfolio-construction, backtesting, evaluation, risk
+- <a id="workflow-monitoring-trading"></a>workflow-monitoring-trading: monitoring, execution, reporting
+- <a id="workflow-orchestration"></a>workflow-orchestration: orchestration
 
 <a id="cat-01"></a>
 ## 01 Data APIs & Warehouse
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | Pandadata and panda_data Python SDK reference skill for selecting, calling, and troubleshooting quant data APIs. | — |
-| [skill-us-sec-edgar-harvester](https://github.com/quantskills/skill-us-sec-edgar-harvester) | Harvest and structure US SEC EDGAR public filings into a deduplicated, sourced, time-lined dataset. | — |
-| [skill-pandadata-warehouse](https://github.com/quantskills/skill-pandadata-warehouse) | Pandadata warehouse skill for caching, refreshing, querying, and validating local DuckDB and Parquet market-data stores. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-pandadata-warehouse.png"><img src="assets/skill-pandadata-warehouse.png" width="220"></a> |
+### 01.data-source-connectors Data Sources & Connectors
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-pandadata-api](https://github.com/quantskills/skill-pandadata-api) | Provides Pandadata market and research API calls and contract lookup across agent runtimes. | skill | data-ingestion | data-quality | — | — | pending maintainer review / no public endpoint |
+| [skill-us-sec-edgar-harvester](https://github.com/quantskills/skill-us-sec-edgar-harvester) | Harvests and structures public US SEC EDGAR filings. | skill | data-ingestion | data-quality, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 01.warehouse-cache Warehouse & Cache
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-pandadata-warehouse](https://github.com/quantskills/skill-pandadata-warehouse) | Manages local Pandadata DuckDB and Parquet quantitative data warehouses, caches, and queries. | skill | data-ingestion | data-quality | — | market-bar | published |
+
+### 01.normalization-master-data Normalization & Master Data
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 01.market-data-governance Market Data Governance
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | Audits split and cash-dividend consistency between raw and adjusted equity prices before research. | skill | data-quality | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | Audits continuous-contract selection, roll gaps, and adjustment factors and produces a roll ledger. | skill | data-quality | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-intraday-data-quality-auditor](https://github.com/quantskills/skill-intraday-data-quality-auditor) | Audits normalized intraday OHLCV data for timestamp, gap, price, volume, and trading-date defects. | skill | data-quality | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 01.pit-data-quality PIT & Data Quality
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-a-share-pit-fundamental-vintage-builder](https://github.com/quantskills/skill-a-share-pit-fundamental-vintage-builder) | Builds and audits point-in-time A-share financial data without later restatements. | skill | data-quality | data-ingestion | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-02"></a>
 ## 02 Factor R&D Toolbox
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-pandaai-factor-online](https://github.com/quantskills/skill-pandaai-factor-online) | PandaAI 因子大赛上手与在线挖掘技能：环境体检、登录、字段算子速查、可续跑批量回测与成本折算复盘 · Onboarding and online factor mining for PandaAI | — |
-| [skill-factor-grouped-wrapper](https://github.com/quantskills/skill-factor-grouped-wrapper) | 通过分组贪心wrapper，迭代删除或加入因子，并以模型训练和回测表现筛选最优因子池。 | — |
-| [skill-ml-factor-ensemble](https://github.com/quantskills/skill-ml-factor-ensemble) | ML 因子集成：LightGBM/ElasticNet/Ridge + Purged & Embargoed 滚动 walk-forward 防泄漏，OOS 元信号 | — |
-| [skill-factor-mining-pandaai](https://github.com/quantskills/skill-factor-mining-pandaai) | Community skill for extracting paper-derived quant factors and analyzing them with PandaAI | — |
-| [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | — | — |
-| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Select complementary quantitative factors by fitting fixed-parameter Ridge models on a base factor set, ranking candidates against in-sample training residuals, and accepting factors only after add-one retraining... | — |
-| [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Rank and select quantitative model factors from local factor and label CSV files with regression mRMR using F-statistic relevance and Pearson redundancy, or fixed-model Marginal-SAGE MSE contribution for LGBM and MLP. | — |
-| [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generate initial stock alpha ideas with economic rationale and concrete factor shapes, defaulting to daily OHLCV when no fields are specified. | — |
-| [skill-alpha-ncav-graham](https://github.com/quantskills/skill-alpha-ncav-graham) | Graham NCAV 净流动资产折价因子技能。A股深度价值筛选，排除金融股，计算 NCAV 折价并生成 buy/sell/hold 信号。 | — |
-| [skill-quant-factor-volume-stat-alpha](https://github.com/quantskills/skill-quant-factor-volume-stat-alpha) | Volume, volume-price, ranking, and statistical OHLCV alpha factor library with 216 factor Skills validated on real market data. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-volume-stat-alpha.png"><img src="assets/skill-quant-factor-volume-stat-alpha.png" width="220"></a> |
-| [skill-quant-factor-skill-factory](https://github.com/quantskills/skill-quant-factor-skill-factory) | Factory skill for turning OHLCV alpha ideas into QuantSkills factor skills with real-market validation and packaging. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-skill-factory.png"><img src="assets/skill-quant-factor-skill-factory.png" width="220"></a> |
-| [skill-quant-factor-risk-pattern-alpha](https://github.com/quantskills/skill-quant-factor-risk-pattern-alpha) | Risk-state and chart-pattern OHLCV alpha factor library with 288 factor Skills for volatility, K-line shape, shock, drawdown, and pressure analysis. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-risk-pattern-alpha.png"><img src="assets/skill-quant-factor-risk-pattern-alpha.png" width="220"></a> |
-| [skill-quant-factor-directional-alpha](https://github.com/quantskills/skill-quant-factor-directional-alpha) | Directional OHLCV alpha factor library with 296 trend, breakout, reversal, and channel-position factor Skills validated on real market data. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-directional-alpha.png"><img src="assets/skill-quant-factor-directional-alpha.png" width="220"></a> |
-| [skill-overseas-equity-factor-miner](https://github.com/quantskills/skill-overseas-equity-factor-miner) | Discover and validate cross-sectional alpha factors for HK/US equities by IC, decay, and turnover. | — |
-| [skill-ic-analysis](https://github.com/quantskills/skill-ic-analysis) | Multidimensional IC diagnostics for rank versus Pearson IC, IC decay, subsample IC, top-basket stability, and cumulative IC timelines. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-ic-analysis.png"><img src="assets/skill-ic-analysis.png" width="220"></a> |
-| [skill-fundamental-factor-analysis](https://github.com/quantskills/skill-fundamental-factor-analysis) | Compute, validate, and analyze A-share fundamental factors. Covers value (EP/BP/SP/CP/FCFP/GP/A), quality (ROE/ROA/gross margin/accruals/leverage), growth (earnings growth/revenue growth/analyst revision) and composite factors. Uses Pandadata financial APIs with IC analysis, grouped returns, and Fama-MacBeth regression for validation. | — |
-| [skill-factormad-debate-factor-mining](https://github.com/quantskills/skill-factormad-debate-factor-mining) | Mine interpretable code-based stock alpha factors from OHLCV market data with a FactorMAD-style LLM debate workflow. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factormad-debate-factor-mining.png"><img src="assets/skill-factormad-debate-factor-mining.png" width="220"></a> |
-| [skill-factor-review](https://github.com/quantskills/skill-factor-review) | Factor-library review skill for experiment logs, acceptance rates, score dynamics, factor-family structure, correlations, and research recommendations. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-review.png"><img src="assets/skill-factor-review.png" width="220"></a> |
-| [skill-factor-pool-evolution](https://github.com/quantskills/skill-factor-pool-evolution) | Run one round of factor-pool recommendation from an existing stock alpha set. Use when an agent needs to start from user-provided seed factors, prepare mutation and crossover prompt packs for the current model to reason... | — |
-| [skill-factor-orthogonalize](https://github.com/quantskills/skill-factor-orthogonalize) | Daily cross-sectional OLS orthogonalization against industry one-hot dummies, size (log dollar volume), style (beta, volatility), and legacy factor exposures. Outputs residual signal with exposure-zeroing diagnostics. Integrated with Pandadata for sector classification and style controls. | — |
-| [skill-factor-optimize](https://github.com/quantskills/skill-factor-optimize) | Optimize an existing stock or futures factor with period sweeps, ablations, refinements, and a final keep-or-replace decision. | — |
-| [skill-factor-mine](https://github.com/quantskills/skill-factor-mine) | Disciplined factor-mining workflow for hypothesis design, implementation, validation, iteration notes, acceptance, and rollback decisions. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-mine.png"><img src="assets/skill-factor-mine.png" width="220"></a> |
-| [skill-factor-evaluate](https://github.com/quantskills/skill-factor-evaluate) | Single-factor evaluation skill covering rank IC, Pearson IC, Sharpe, drawdown, monotonicity, turnover, and composite scoring. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-evaluate.png"><img src="assets/skill-factor-evaluate.png" width="220"></a> |
-| [skill-factor-decay](https://github.com/quantskills/skill-factor-decay) | Factor decay analysis with multi-horizon Rank IC curves, exponential/power-law/bi-exponential fitting, bootstrap half-life CIs, turnover decay, and Q5-Q1 group-return decay. Recommends optimal rebalancing frequency. Integrated with Pandadata for 5-horizon forward returns. | — |
-| [skill-factor-debug](https://github.com/quantskills/skill-factor-debug) | Factor debugging playbook for NaNs, signal validation failures, look-ahead bias, horizon mismatch, checksum drift, and correlation violations. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-debug.png"><img src="assets/skill-factor-debug.png" width="220"></a> |
-| [skill-factor-blend](https://github.com/quantskills/skill-factor-blend) | Multi-factor signal-level blending: redundancy removal via correlation matrix and top-bucket overlap, three weighting schemes (equal/ICIR/score), daily cross-sectional z-score synthesis, and composite re-evaluation. Signal-level only — outputs composite_signal, not portfolio weights. | — |
-| [skill-factor-alpha191-alpha101](https://github.com/quantskills/skill-factor-alpha191-alpha101) | Compute Alpha101 and Alpha191 factor values based on JoinQuant formulas with full or selected factor runs. | — |
-| [skill-doc-to-alphas](https://github.com/quantskills/skill-doc-to-alphas) | Generate OHLCV alpha factor expressions from document text, with a formula contract and automatic toy-data validation. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-doc-to-alphas.png"><img src="assets/skill-doc-to-alphas.png" width="220"></a> |
-| [skill-alpha-a06-hotmoney-reversal](https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal) | Use this skill to calculate, validate, backtest, and publish the A06 hot-money seat cooling-reversal and collaborative-breakout Alpha factor for A-share Dragon-Tiger List data. | — |
-| [skill-alpha-f1-position-change](https://github.com/quantskills/skill-alpha-f1-position-change) | 当需要开发、计算、验证期货前20席位持仓突变因子时，使用此 skill。支持多空持仓优势分析、主力调仓方向判断。 | — |
-| [skill-alpha-f5-member-position-concentration](https://github.com/quantskills/skill-alpha-f5-member-position-concentration) | Use when researching or validating the F5 commodity futures member-position concentration factor in a local Panda data environment. | — |
-| [skill-alpha-f6-family-position-reverse](https://github.com/quantskills/skill-alpha-f6-family-position-reverse) | Use when researching or validating the F6 commodity futures family-position reverse factor in a local Panda data environment. | — |
-| [skill-alpha-f8-family-main-divergence](https://github.com/quantskills/skill-alpha-f8-family-main-divergence) | Use when researching or validating the F8 commodity futures broker-position divergence factor in a local Panda data environment. | — |
-| [skill-build-b10-factor-evaluation](https://github.com/quantskills/skill-build-b10-factor-evaluation) | The system supports IC/IR calculation, stratified backtesting, monotonicity testing, turnover rate analysis and decay curve plotting for quantitative factor research. | — |
+### 02.factor-idea-generation Factor Ideation
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generates candidate factor ideas with economic rationale and risk notes from the default data scope. | skill | factor-generation | — | — | — | pending maintainer review / no public endpoint |
+| [skill-factormad-debate-factor-mining](https://github.com/quantskills/skill-factormad-debate-factor-mining) | Uses a FactorMAD-style multi-agent debate framework for interpretable stock-alpha mining. | skill | factor-generation | evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 02.factor-generation Factor Generation
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-a1-lhb-tracking](https://github.com/quantskills/skill-a1-lhb-tracking) | Generates an event-ranking factor from Dragon-Tiger seat history, win rate, payoff, and next-session premium. | skill | factor-generation | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-a06-hotmoney-reversal](https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal) | Computes a hot-money seat cooling and reversal factor from Dragon-Tiger and market data with validation artifacts. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-f1-position-change](https://github.com/quantskills/skill-alpha-f1-position-change) | Computes a futures top-20-seat position-change factor and signal from net-position data. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-f5-member-position-concentration](https://github.com/quantskills/skill-alpha-f5-member-position-concentration) | Computes member-position concentration signals from institutional, hot-money, and northbound net positions. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-f6-family-position-reverse](https://github.com/quantskills/skill-alpha-f6-family-position-reverse) | Computes a futures family-position reversal signal from seat-position relationships. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-f8-family-main-divergence](https://github.com/quantskills/skill-alpha-f8-family-main-divergence) | Computes a futures family-versus-main-seat position-divergence factor signal. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-alpha-ncav-graham](https://github.com/quantskills/skill-alpha-ncav-graham) | Computes a Graham NCAV discount factor for A-share deep-value screening and buy-sell-hold signals. | skill | factor-generation | data-ingestion, feature-engineering, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-doc-to-alphas](https://github.com/quantskills/skill-doc-to-alphas) | Defines OHLCV alpha-expression formats and validation rules for document-derived factors. | skill | factor-generation | data-quality | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-alpha191-alpha101](https://github.com/quantskills/skill-factor-alpha191-alpha101) | Computes Alpha101 and Alpha191 factors from long-form OHLCV CSV and outputs wide CSV. | skill | factor-generation | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-mine](https://github.com/quantskills/skill-factor-mine) | Provides a factor-mining SOP from hypothesis and experiment notes through scoring and accept/rollback. | skill | factor-generation | evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-mining-pandaai](https://github.com/quantskills/skill-factor-mining-pandaai) | Mines factors with PandaAI data and feedback or extracts them from public documents. | skill | factor-generation | backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-optimize](https://github.com/quantskills/skill-factor-optimize) | Runs parameter sweeps, ablations, and version refinements for existing equity or futures factors. | skill | factor-generation | evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-fundamental-factor-analysis](https://github.com/quantskills/skill-fundamental-factor-analysis) | Computes and validates A-share valuation, quality, and growth factors from quarterly financial reports. | skill | factor-generation | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-overseas-equity-factor-miner](https://github.com/quantskills/skill-overseas-equity-factor-miner) | Discovers and validates HK and US cross-sectional alpha factors by IC, decay, and turnover. | skill | factor-generation | data-ingestion, feature-engineering, factor-screening, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-factor-directional-alpha](https://github.com/quantskills/skill-quant-factor-directional-alpha) | Provides an OHLCV directional-factor library for trend, breakout, and reversal research. | skill | factor-generation | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-factor-risk-pattern-alpha](https://github.com/quantskills/skill-quant-factor-risk-pattern-alpha) | Provides an OHLCV factor library for volatility, chart-pattern, and drawdown-pressure research. | skill | factor-generation | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-factor-volume-stat-alpha](https://github.com/quantskills/skill-quant-factor-volume-stat-alpha) | Provides an OHLCV factor library for volume and price-volume statistical research. | skill | factor-generation | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 02.factor-preprocessing Factor Preprocessing
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 02.factor-orthogonalization-blending Orthogonalization & Blending
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-factor-blend](https://github.com/quantskills/skill-factor-blend) | De-redundantly weights and combines multiple factor signals into a composite signal. | skill | factor-generation | evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-orthogonalize](https://github.com/quantskills/skill-factor-orthogonalize) | Orthogonalizes cross-sectional factors with daily OLS and outputs residual factors and exposure diagnostics. | skill | factor-generation | evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-ml-factor-ensemble](https://github.com/quantskills/skill-ml-factor-ensemble) | Ensembles machine-learning models into factor meta-signals with leakage-aware rolling validation. | skill | modeling | feature-engineering, factor-generation, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 02.factor-selection Factor Selection
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-factor-grouped-wrapper](https://github.com/quantskills/skill-factor-grouped-wrapper) | Wraps grouped factor-processing workflows and their pipeline diagrams. | skill | factor-screening | factor-generation, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Runs mRMR or Marginal-SAGE on local factor and label data to produce Top-K rankings. | skill | factor-screening | evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Selects factor combinations using residual IC and out-of-sample evaluation. | skill | factor-screening | feature-engineering, modeling, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 02.factor-evaluation Factor Evaluation
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-build-b10-factor-evaluation](https://github.com/quantskills/skill-build-b10-factor-evaluation) | Evaluates quantitative factors with IC, IR, stratified backtests, monotonicity, turnover, and decay diagnostics. | skill | evaluation | data-ingestion, factor-screening, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-evaluate](https://github.com/quantskills/skill-factor-evaluate) | Scores a cross-sectional factor using IC, Sharpe, drawdown, monotonicity, and turnover. | skill | evaluation | factor-screening | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-mason](https://github.com/quantskills/skill-factor-mason) | Checks timing, IC/IR, costs, and neutralization quality in single-factor research. | skill | evaluation | factor-screening, risk | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-review](https://github.com/quantskills/skill-factor-review) | Scans a factor library and experiment logs for inventory, structural analysis, and research recommendations. | skill | evaluation | reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-ic-analysis](https://github.com/quantskills/skill-ic-analysis) | Evaluates quantitative factors through IC, grouped performance, and predictive effectiveness. | skill | evaluation | factor-generation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 02.factor-pool-online Factor Pool & Online Serving
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-factor-pool-evolution](https://github.com/quantskills/skill-factor-pool-evolution) | Generates mutation, crossover, and recommendations from evaluated seed factor pools. | skill | factor-screening | factor-generation, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-pandaai-factor-online](https://github.com/quantskills/skill-pandaai-factor-online) | Supports PandaAI factor onboarding, online mining, batch backtests, and cost review. | skill | factor-generation | feature-engineering, factor-screening, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-03"></a>
 ## 03 Market & Instrument Analysis
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-dl-gnn-stock-graph](https://github.com/quantskills/skill-dl-gnn-stock-graph) | 当需要对 A 股市场进行 GNN 量化选股时，使用此 skill。支持多层异构图（申万 L1/L2/L3 行业 + 概念板块 + 机构持仓 + DTW 形态相似 + Pearson 相关性）构建、GATs_ts 与 MF-IAMGCN 双模型架构、五维特征工程（量价/基本面/情绪/宏观/关系）、TopK 选股策略、完整 A 股回测引擎（含 T+1/涨跌停/佣金+印花税+滑点模拟）。 | — |
-| [skill-audit-opinion-scanner](https://github.com/quantskills/skill-audit-opinion-scanner) | 从审计意见、财务报表、行业对标三个维度对 A 股做全面财务健康评估。涵盖审计意见扫描、25项财务科目缓存、15项比率计算、行业分类对标、5维快速评分、8段深度分析、综合风险检测。 | — |
-| [skill-a-share-market-risk-radar](https://github.com/quantskills/skill-a-share-market-risk-radar) | A股市场风险雷达：监测技术面、资金流、宏观环境、解禁与行业轮动等市场风险 | — |
-| [skill-northbound-margin-monitor](https://github.com/quantskills/skill-northbound-margin-monitor) | A-share northbound capital + margin trading + futures panorama monitor with 25 signal detectors | — |
-| [skill-post-market-screener](https://github.com/quantskills/skill-post-market-screener) | Daily A-share post-market screener: 8 technical pattern detectors x capital inflow filter with LLM analysis | — |
-| [skill-statistical-arbitrage-time-series](https://github.com/quantskills/skill-statistical-arbitrage-time-series) | 统计套利与时间序列建模 Generate a sourced, reproducible statistical-arbitrage research dossier from a candidate pair, basket, or asset universe, covering data preparation, pair selection, cointegration and stationarity testing (train-window ADF + KPSS), spread modeling with hedge-ratio stability, mean-reversion estimation, z-score signal construction | — |
-| [skill-ag-futures-seasonality](https://github.com/quantskills/skill-ag-futures-seasonality) | 农产品期货月度季节性分析工具:算清各月历史涨跌规律与显著性,叠加作物日历,出可视化报告。 | — |
-| [skill-commodity-carry-cta](https://github.com/quantskills/skill-commodity-carry-cta) | 商品期货横截面 CTA 因子库：carry/时序动量/横截面动量/基差动量/库存，主连接续 + 多空品种轮动回测 | — |
-| [skill-stock-memory-analyzer-usa](https://github.com/quantskills/skill-stock-memory-analyzer-usa) | 对 MU、SNDK、WDC、STX 等美股存储公司开展基于 panda_data 的可追溯研究分析，结合行情、财务、估值、DRAM/NAND/HBM 供需、库存、CapEx、技术节点和同业对标，生成交互式 HTML 研究报告。当用户提到存储芯片、内存、NAND、DRAM、HBM、存储周期，或要求研究这些美股公司时使用。首次响应列出可分析标的并要求用户明确选择一只； | — |
-| [skill-portfolio-liquidity-stress-test](https://github.com/quantskills/skill-portfolio-liquidity-stress-test) | Estimate portfolio liquidation days, horizon cash, redemption shortfall, and impact costs under volume stress. | — |
-| [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | Study index-rebalance abnormal returns, volume, and optional weight changes by announcement or effective-date anchor. | — |
-| [skill-commodity-brief](https://github.com/quantskills/skill-commodity-brief) | 生成大宗商品简报，数据来源为 Pandadata 期货接口、开放 API、分析师研报、雅虎财经等，输出为中文 Markdown 简报。 | — |
-| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | 生成原油简报，数据来源为 Pandadata 期货接口、美国能源信息署（EIA）开放 API、OPEC 月度报告、雅虎财经等，输出为中文 Markdown 简报。 | — |
-| [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | US equity sector rotation reports covering constituent returns, valuation snapshots, and ranking changes from Pandadata. | — |
-| [skill-hk-us-dividend-events](https://github.com/quantskills/skill-hk-us-dividend-events) | HK and US ex-dividend calendars, recent payouts, currency-bucketed TTM yields, and simplified DRIP illustrations. | — |
-| [skill-cross-listing-parity](https://github.com/quantskills/skill-cross-listing-parity) | A/H and China ADR cross-listing parity monitoring with explicit market dates, FX rates, and share ratios. | — |
-| [skill-hk-us-quote-scan](https://github.com/quantskills/skill-hk-us-quote-scan) | Hong Kong and US equity cross-market snapshot covering quotes, adjusted returns, liquidity, price-volume valuation, and industry-relative position, each figure traced to a Pandadata interface. | — |
-| [skill-hk-us-consensus-radar](https://github.com/quantskills/skill-hk-us-consensus-radar) | Sell-side consensus radar for HK/US equities — rating diffusion, target-price upside vs current price, long-term growth expectations, and week/month revisions, each traced to a Pandadata interface. | — |
-| [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | A-share high-dividend / dividend-quality cross-section from Pandadata dividend interfaces, computing trailing dividend yield, ranking it, measuring payout continuity, separating cash return from stock dividends, listing upcoming ex-dividend dates, and rolling up by industry, for the whole market or a basket. | — |
-| [skill-stock-screener](https://github.com/quantskills/skill-stock-screener) | Natural-language A-share stock screener skill that maps fundamentals, dividends, valuation, pledges, northbound flows, sectors, holders, and risk filters to Pandadata calls. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-stock-screener.png"><img src="assets/skill-stock-screener.png" width="220"></a> |
-| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | Identify the capital actors behind A-share trades and profile their cross-period behavior using Pandadata seat, northbound, margin, and block-trade data. | — |
-| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | Portfolio-level checkup skill that uses Pandadata to aggregate single-stock signals into portfolio structure, concentration, weighted valuation/quality, risk exposure, and benchmark deviation. | — |
-| [skill-options-vol-analyst](https://github.com/quantskills/skill-options-vol-analyst) | Options volatility analyst skill for option chains, implied volatility, realized volatility, IV percentiles, term structure, skew, and volatility-premium reports. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-options-vol-analyst.png"><img src="assets/skill-options-vol-analyst.png" width="220"></a> |
-| [skill-market-daily-review](https://github.com/quantskills/skill-market-daily-review) | A-share end-of-day review skill covering indexes, valuation, breadth, sentiment, sectors, themes, and capital-flow clues. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-market-daily-review.png"><img src="assets/skill-market-daily-review.png" width="220"></a> |
-| [skill-macro-monitor](https://github.com/quantskills/skill-macro-monitor) | Macro monitoring skill for Pandadata macro data, economic calendars, industry prosperity, and high-frequency signals. | — |
-| [skill-index-valuation-rotation](https://github.com/quantskills/skill-index-valuation-rotation) | Index valuation and A-share industry rotation skill for PE/PB percentiles, valuation temperature, broad-index references, momentum ranks, and rotation summaries. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-index-valuation-rotation.png"><img src="assets/skill-index-valuation-rotation.png" width="220"></a> |
-| [skill-global-macro-rates-fx-lab](https://github.com/quantskills/skill-global-macro-rates-fx-lab) | Study global rates, FX, and macro regime from public FRED/central-bank data and Pandadata international macro. | — |
-| [skill-global-commodity-term-structure](https://github.com/quantskills/skill-global-commodity-term-structure) | Research overseas commodity futures term structure, roll yield, and cross-commodity spreads from public data. | — |
-| [skill-gao-shanwen-research-model](https://github.com/quantskills/skill-gao-shanwen-research-model) | Build and apply a Gao Shanwen-style China macro and capital-market research workflow from his books, public articles, and archived materials. | — |
-| [skill-futures-deepview-analyst](https://github.com/quantskills/skill-futures-deepview-analyst) | Futures DeepView analyst skill for position seats, basis, inventory, term structure, and calendar-spread signals from Pandadata. | — |
-| [skill-a1-lhb-tracking](https://github.com/quantskills/skill-a1-lhb-tracking) | A-share LHB event-ranking factor using seat win rate, payoff, premium, and buy-size evidence from Pandadata. | — |
-| [skill-a-share-stock-dossier](https://github.com/quantskills/skill-a-share-stock-dossier) | A-share stock dossier skill that uses Pandadata to produce company, financial, dividend, shareholder, and risk analysis. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-a-share-stock-dossier.png"><img src="assets/skill-a-share-stock-dossier.png" width="220"></a> |
-| [skill-hk-stock-dossier](https://github.com/quantskills/skill-hk-stock-dossier) | 生成结构化港股尽职调查研报，输出为中文 Markdown 研报。 | — |
-| [skill-b7-lhb-monitor](https://github.com/quantskills/skill-b7-lhb-monitor) |  | — |
-| [skill-b6-limitup-pool](https://github.com/quantskills/skill-b6-limitup-pool) |  | — |
-| [skill-xingtai-catcher](https://github.com/quantskills/skill-xingtai-catcher) | PatternCatcher MCP skill for similar K-line stock and futures search | — |
+### 03.a-share-equity A-Share Equities
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-a-share-stock-dossier](https://github.com/quantskills/skill-a-share-stock-dossier) | Uses Pandadata to produce a sourced A-share dossier covering fundamentals, corporate actions, holders, event risks, and market funds. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-buffett-moat-screener](https://github.com/quantskills/skill-buffett-moat-screener) | Screens A-share and US companies using moat, valuation, and point-in-time data for research records. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | Monitors A-share concept and theme momentum, breadth, and rotation for research reports. | skill | monitoring | data-ingestion, feature-engineering, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | Calculates A-share rolling dividend yield, dividend continuity, and ex-dividend calendars. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-holder-structure-scan](https://github.com/quantskills/skill-holder-structure-scan) | Tracks A-share holder counts, top-holder concentration, and free float to assess ownership concentration. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-post-market-screener](https://github.com/quantskills/skill-post-market-screener) | Screens A-share stocks after market close using technical patterns and capital-flow evidence. | skill | factor-screening | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-stock-screener](https://github.com/quantskills/skill-stock-screener) | Screens A-share stocks from natural-language criteria and Pandadata evidence. | skill | factor-screening | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 03.hk-us-equity HK & US Equities
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-cross-listing-parity](https://github.com/quantskills/skill-cross-listing-parity) | Monitors A/H and China ADR cross-listing parity using prices, FX, and share ratios. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-stock-dossier](https://github.com/quantskills/skill-hk-stock-dossier) | Generates nine-dimension Hong Kong equity due-diligence reports from Pandadata interfaces. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-us-consensus-radar](https://github.com/quantskills/skill-hk-us-consensus-radar) | Summarizes HK/US sell-side ratings, target prices, growth expectations, and changes. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-us-consensus-revision-radar](https://github.com/quantskills/skill-hk-us-consensus-revision-radar) | Organizes cross-period HK/US target-price and rating revisions into a research report. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-us-dividend-events](https://github.com/quantskills/skill-hk-us-dividend-events) | Generates HK and US equity dividend-event reports using Pandadata overseas-market interfaces. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-us-insider-radar](https://github.com/quantskills/skill-hk-us-insider-radar) | Scans HK and US insider transactions, net direction, trading clusters, and holding changes. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-hk-us-quote-scan](https://github.com/quantskills/skill-hk-us-quote-scan) | Builds HK and US equity snapshots covering quotes, liquidity, valuation, and industry-relative position. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-stock-memory-analyzer-usa](https://github.com/quantskills/skill-stock-memory-analyzer-usa) | Performs multidimensional research analysis of US memory-chip stocks. | skill | reporting | data-ingestion, modeling | — | — | pending maintainer review / no public endpoint |
+| [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | Generates factual reports on US sector performance, valuation, and rotation. | skill | reporting | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 03.etf-fund-index ETFs, Funds & Indices
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-etf-arbitrage-monitor](https://github.com/quantskills/skill-etf-arbitrage-monitor) | Monitors A-share ETF primary/secondary-market premiums and redemption-basket feasibility. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-etf-fund-evaluator](https://github.com/quantskills/skill-etf-fund-evaluator) | Evaluates domestic non-QDII passive equity-index ETFs and comparable-index peers. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | Runs reproducible event studies for index additions, deletions, and weight changes. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-index-valuation-rotation](https://github.com/quantskills/skill-index-valuation-rotation) | Analyzes A-share index valuation percentiles, relative industry valuation, and rotation signals. | skill | reporting | data-ingestion, feature-engineering, modeling | — | — | pending maintainer review / no public endpoint |
+
+### 03.futures-commodity Futures & Commodities
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-ag-futures-seasonality](https://github.com/quantskills/skill-ag-futures-seasonality) | Computes monthly agricultural-futures seasonality from daily prices and overlays crop-calendar context. | skill | modeling | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-commodity-carry-cta](https://github.com/quantskills/skill-commodity-carry-cta) | Builds commodity-futures carry, time-series momentum, cross-sectional momentum, basis, and inventory factors for rotation backtests. | skill | factor-generation | data-ingestion, feature-engineering, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-futures-deepview-analyst](https://github.com/quantskills/skill-futures-deepview-analyst) | Turns futures DeepView natural-language requests into data-call plans and fact/inference-separated reports. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-global-commodity-term-structure](https://github.com/quantskills/skill-global-commodity-term-structure) | Uses public data to study global commodity-futures term structure, roll yield, and spreads. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-oil-brief](https://github.com/quantskills/skill-oil-brief) | Combines futures, EIA, OPEC, and market data into Chinese crude-oil briefs. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-xingtai-catcher](https://github.com/quantskills/skill-xingtai-catcher) | Retrieves similar A-share and futures K-line patterns from text or image descriptions. | skill | factor-screening | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 03.options-convertible-bond Options & Convertible Bonds
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-cb-analyzer](https://github.com/quantskills/skill-cb-analyzer) | Analyzes A-share convertible bonds with double-low screening, terms, equity linkage, Greeks, and volatility. | skill | evaluation | data-ingestion, modeling, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-option-strategy-builder](https://github.com/quantskills/skill-option-strategy-builder) | Builds option strategies with legs, payoff charts, breakevens, Greeks, and margin analysis. | skill | portfolio-construction | data-ingestion, risk, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-options-vol-analyst](https://github.com/quantskills/skill-options-vol-analyst) | Analyzes option chains, implied and historical volatility, term structure, skew, and volatility premium. | skill | modeling | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 03.macro-cross-asset Macro & Cross-Asset
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-global-macro-rates-fx-lab](https://github.com/quantskills/skill-global-macro-rates-fx-lab) | Produces sourced global macro briefs from public rates, central-bank, and FX data. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-macro-altdata-nowcast](https://github.com/quantskills/skill-macro-altdata-nowcast) | Uses high-frequency alternative macro data for industry nowcasts and trend monitoring. | skill | modeling | data-ingestion, feature-engineering, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-macro-monitor](https://github.com/quantskills/skill-macro-monitor) | Monitors macro data, industry conditions, economic calendars, and recurring macro changes. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-04"></a>
 ## 04 Risk Monitoring & Alerts
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-rolling-beta-exposure](https://github.com/quantskills/skill-rolling-beta-exposure) | — | — |
-| [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | — | — |
-| [skill-capital-flow-crowding-monitor](https://github.com/quantskills/skill-capital-flow-crowding-monitor) | 跨市场资金面/拥挤监测：融资融券+北向持股+大宗交易三源聚合，一致性/背离信号 + 拥挤度历史分位 | — |
-| [skill-etf-arbitrage-monitor](https://github.com/quantskills/skill-etf-arbitrage-monitor) | ETF 一二级套利/折溢价监控：IOPV vs 二级价折溢价、申赎篮子可行性、套利方向与扣费毛收益 | — |
-| [skill-regulatory-risk-radar](https://github.com/quantskills/skill-regulatory-risk-radar) | A股合规/监管风险雷达：解禁·减持·质押·举牌·冻结·停牌·ST 七类风险聚合分级 | — |
-| [skill-holder-structure-scan](https://github.com/quantskills/skill-holder-structure-scan) | A-share shareholder-structure and chip-concentration scan tracking holder-count trend and average holding per account, top-holder concentration (flow vs total), and free-float share, to see whether chips are concentrating or dispersing across disclosure periods, for a single name or a small watchlist. | — |
-| [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | A-share concept/theme rotation monitor that aggregates each concept's constituent daily returns into concept-level momentum and breadth rankings, detects newly-formed concepts, and compares short-vs-long-window momentum to see which themes are heating up or cooling down. | — |
-| [skill-refinancing-monitor](https://github.com/quantskills/skill-refinancing-monitor) | A-share equity-refinancing monitor tracking private placements and rights issues through their approval stages, measuring dilution vs total share capital, comparing issue/allotment price to market price (discount and break-issue), and rolling up by industry, for the whole market or a single name. | — |
-| [skill-institutional-research-tracker](https://github.com/quantskills/skill-institutional-research-tracker) | A-share institutional-research (investor-relations) activity monitor that ranks the most-visited companies, measures distinct-institution breadth, classifies participant institution types from source text, rolls up by industry, and builds a single-name research timeline, for the whole market or one company. | — |
-| [skill-buyback-monitor](https://github.com/quantskills/skill-buyback-monitor) | A-share share-buyback monitor tracking repurchase events through their procedure stages, classifying purpose, measuring intensity vs total share capital, and comparing price band to market price, for the whole market or a single name. | — |
-| [skill-macro-altdata-nowcast](https://github.com/quantskills/skill-macro-altdata-nowcast) | Alternative-data high-frequency industry nowcasting that first resolves opaque indicator codes via get_macro_detail, then pulls e-commerce/pharma/energy-chemical/auto/ appliance/offline-retail/hiring/real-estate/electronics/new-energy series, computes YoY/MoM and trend, and reads lead/lag against official stats, for a single-sector nowcast or a cross-sector prosperity dashboard. | — |
-| [skill-hk-us-insider-radar](https://github.com/quantskills/skill-hk-us-insider-radar) | An HK/US insider-trading radar that reads get_stock_insider_trade (HK) and get_stock_insider_transaction (US), separates open-market buys from sales and option/gift dispositions, weights by insider role and is_main_role, nets shares and value over a window, flags cluster buying/selling and holding changes, and ranks names by net insider direction. | — |
-| [skill-event-risk-alert](https://github.com/quantskills/skill-event-risk-alert) | A-share event-risk alert skill for watchlists, holdings, unlocks, pledges, reductions, ST changes, forecasts, audit opinions, and traceable reports. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-event-risk-alert.png"><img src="assets/skill-event-risk-alert.png" width="220"></a> |
-| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | Whole-market A-share earnings-season scanner covering forecast-type distribution, beat/miss leaders, industry earnings prosperity, and audit-opinion watchlists. | — |
-| [skill-block-trade-radar](https://github.com/quantskills/skill-block-trade-radar) | A-share block-trade radar that joins each block trade to the same-day close to compute discount/premium, reads institutional (机构专用) buy/sell direction, flags repeated discounted takeovers and same-branch wash-like prints, and ranks names by amount and premium/discount, for the whole market or a single name. | — |
+### 04.market-regime Market Regime
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-market-regime-analysis](https://github.com/quantskills/skill-market-regime-analysis) | Classifies A-share market regimes using index, macro, futures term-structure, and volatility features. | skill | modeling | data-ingestion, feature-engineering, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 04.flow-crowding Flows & Crowding
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-b7-lhb-monitor](https://github.com/quantskills/skill-b7-lhb-monitor) | Monitors Dragon-Tiger entries and seat labels to produce next-session watchlists and searchable views. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-block-trade-radar](https://github.com/quantskills/skill-block-trade-radar) | Builds an A-share block-trade radar from discount or premium, volume, and price evidence. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-capital-flow-crowding-monitor](https://github.com/quantskills/skill-capital-flow-crowding-monitor) | Aggregates margin, northbound-holding, and block-trade data into consensus, divergence, and crowding-percentile signals. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-northbound-margin-monitor](https://github.com/quantskills/skill-northbound-margin-monitor) | Monitors northbound flows, margin trading, and futures conditions with multiple risk signals. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-smart-money-profiler](https://github.com/quantskills/skill-smart-money-profiler) | Analyzes LHB seats, northbound activity, and capital-flow consensus or divergence. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 04.liquidity-risk Liquidity Risk
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-portfolio-liquidity-stress-test](https://github.com/quantskills/skill-portfolio-liquidity-stress-test) | Estimates portfolio liquidation days, horizon cash, redemption shortfalls, and impact costs under volume stress. | skill | risk | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 04.corporate-event Corporate Events
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-buyback-monitor](https://github.com/quantskills/skill-buyback-monitor) | Monitors A-share buyback lifecycles, purposes, price ranges, and intensity for research. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-event-risk-alert](https://github.com/quantskills/skill-event-risk-alert) | Scans watchlists or holdings for unlock, pledge, ownership-change, and earnings-event risks. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-klarman-special-situations](https://github.com/quantskills/skill-klarman-special-situations) | Researches private placements, restructurings, spin-offs, and distressed turnarounds as special situations. | skill | modeling | data-ingestion, evaluation, risk, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-refinancing-monitor](https://github.com/quantskills/skill-refinancing-monitor) | Tracks A-share refinancing lifecycles, pricing, and dilution risk. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 04.regulatory-compliance Regulatory Compliance
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-audit-opinion-scanner](https://github.com/quantskills/skill-audit-opinion-scanner) | Assesses A-share financial health from audit opinions, statements, and industry benchmarks with risk checks. | skill | evaluation | data-ingestion, risk, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-regulatory-risk-radar](https://github.com/quantskills/skill-regulatory-risk-radar) | Aggregates and grades A-share regulatory and compliance risk events. | skill | monitoring | data-ingestion, risk, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 04.portfolio-stress Portfolio Stress Testing
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-portfolio-checkup](https://github.com/quantskills/skill-portfolio-checkup) | Aggregates concentration, benchmark deviation, valuation, quality, and risk exposures into a portfolio health report. | skill | risk | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-portfolio-risk](https://github.com/quantskills/skill-quant-portfolio-risk) | Analyzes portfolio risk exposures, constraints, and stress scenarios. | skill | risk | portfolio-construction, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Builds a multifactor risk model and performs risk attribution. | skill | risk | data-ingestion, modeling, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-rolling-beta-exposure](https://github.com/quantskills/skill-rolling-beta-exposure) | Estimates rolling beta exposure of assets or portfolios relative to a benchmark. | skill | risk | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 04.automated-alerts Automated Alerts
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-a-share-market-risk-radar](https://github.com/quantskills/skill-a-share-market-risk-radar) | Scans A-share macro, funding, valuation, trend, sector-rotation, and event evidence into risk levels. | skill | monitoring | data-ingestion, risk, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-b6-limitup-pool](https://github.com/quantskills/skill-b6-limitup-pool) | Maintains a daily limit-up pool with board, break, reseal, theme, sentiment, and dashboard outputs. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-05"></a>
 ## 05 Backtesting & Trading
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-signal-stability-audit](https://github.com/quantskills/skill-signal-stability-audit) | — | — |
-| [skill-quant-portfolio-risk](https://github.com/quantskills/skill-quant-portfolio-risk) | — | — |
-| [skill-ma-crossover-signal](https://github.com/quantskills/skill-ma-crossover-signal) | — | — |
-| [skill-cb-analyzer](https://github.com/quantskills/skill-cb-analyzer) | A-share convertible bond daily analyzer: double-low strategy + Black-Scholes Greeks + IC backtest | — |
-| [skill-portfolio-pnl-attribution](https://github.com/quantskills/skill-portfolio-pnl-attribution) | skill 收益归因：证券贡献、行业贡献、费用、基准和主动收益，并做日度 P&L 对账 | — |
-| [skill-backtesting-bias-avoidance](https://github.com/quantskills/skill-backtesting-bias-avoidance) | 回测引擎构建与偏差规避Build a correct, look-ahead-free backtest and audit a strategy for the biases that make backtests lie — look-ahead bias, survivorship bias, overfitting and data-snooping — while modeling realistic transaction costs and validating with out-of-sample and walk-forward testing and a full set of performance metrics. | — |
-| [skill-portfolio-attribution](https://github.com/quantskills/skill-portfolio-attribution) | 把主动收益分解为行业配置、个股选择、交互效应（Brinson-Fachler + Carino 多期链接）与因子贡献 | — |
-| [skill-dalio-all-weather](https://github.com/quantskills/skill-dalio-all-weather) | Build and audit reproducible, research-only A-share All Weather allocations with PandaData, growth-inflation regimes, inverse-volatility risk budgets, quarterly backtests, and risk-contribution diagnostics. | — |
-| [skill-simons-pairs-trading](https://github.com/quantskills/skill-simons-pairs-trading) | Screen and audit reproducible, research-only A-share pairs with adjusted PandaData prices, same-industry Engle-Granger tests, Benjamini-Hochberg FDR, formation-only clustering, rolling backtests, conservative gates, and... | — |
-| [skill-option-strategy-builder](https://github.com/quantskills/skill-option-strategy-builder) | 期权策略构建器：7 种结构（垂直价差/跨式/宽跨式/领口/日历/备兑/自定义）选腿+损益图+盈亏平衡+净希腊字母+保证金，BS 用 math.erf 纯标准库补算 | — |
-| [skill-strategy-tearsheet-report](https://github.com/quantskills/skill-strategy-tearsheet-report) | 策略绩效 tearsheet：全套风险调整指标 + 自包含 HTML 看板 | — |
-| [skill-survivorship-universe-auditor](https://github.com/quantskills/skill-survivorship-universe-auditor) | Audit lifecycle and membership rows, rebuild supplied point-in-time universes, and flag missing delisting returns. | — |
-| [skill-intraday-data-quality-auditor](https://github.com/quantskills/skill-intraday-data-quality-auditor) | Audit normalized intraday OHLCV bars for timestamp, gap, price-invariant, volume, and trading-date defects. | — |
-| [skill-futures-roll-auditor](https://github.com/quantskills/skill-futures-roll-auditor) | Audit futures contract selection, roll events, price gaps, and difference or ratio adjustment ledgers. | — |
-| [skill-corporate-action-adjustment-auditor](https://github.com/quantskills/skill-corporate-action-adjustment-auditor) | Check raw and adjusted prices for cash-dividend and split consistency before research or backtesting. | — |
-| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Run evidence-driven or deterministic grid hyperparameter search for quantitative multi-factor models. Use when an agent needs legacy-compatible RankIC-IR LGBM/MLP results, or explicitly opts into robust block RankIC,... | — |
-| [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | Skill-builder workflow for turning public X/Twitter data and user materials into trader-specific research-model skills. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-x-trader-builder.png"><img src="assets/skill-x-trader-builder.png" width="220"></a> |
-| [skill-ssquant-trader-generator](https://github.com/quantskills/skill-ssquant-trader-generator) | Trader-generator skill that turns natural-language trading ideas into deployable AI Trader rules, code, and operating plans. | — |
-| [skill-ssquant-ai-trader](https://github.com/quantskills/skill-ssquant-ai-trader) | SSQuant AI Trader skill for converting natural-language trading descriptions into automated or semi-automated strategy workflows. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-ssquant-ai-trader.png"><img src="assets/skill-ssquant-ai-trader.png" width="220"></a> |
-| [skill-risk-model](https://github.com/quantskills/skill-risk-model) | Build a Barra-style structural multi-factor risk model and attribute portfolio risk. Use when a user wants a covariance matrix for optimisation, asks how risky a portfolio is, where its risk comes from (which factors /... | — |
-| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Turn an alpha signal into optimal portfolio weights under real constraints. Use when a user has factor scores / expected returns and wants portfolio weights, or asks about mean-variance / risk-parity / minimum-variance... | — |
-| [skill-pandaai-workflow-generator](https://github.com/quantskills/skill-pandaai-workflow-generator) | Generate ready-to-import PandaAI workflow JSON files containing Python strategy/factor code and complete graph links based on user's natural language trading ideas. | — |
-| [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | Review PandaAI workflow files like code review by checking graph structure, strategy and factor code, data timing, research flexibility, backtest assumptions, and validation evidence, with severity-ranked defects and actionable fixes. | — |
-| [skill-market-regime-analysis](https://github.com/quantskills/skill-market-regime-analysis) | Chinese A-share market regime analysis toolkit — classify market states (bull/bear/sideways/high-vol/low-vol) using HMMs or threshold rules on index data, macro indicators, and futures term structure; evaluate conditional factor performance; generate regime-aware risk forecasts; and build regime-switching strategies. | — |
-| [skill-jq-to-panda-converter](https://github.com/quantskills/skill-jq-to-panda-converter) | Batch convert JoinQuant platform strategies to PandaAI-compatible code. Understands strategy intent rather than line-by-line translation, supports single file and batch directory conversion, produces runnable backtest configs with a summary report. | — |
-| [skill-global-macro-trend-strategy](https://github.com/quantskills/skill-global-macro-trend-strategy) | Turn an overseas commodity/macro/FX signal into a framework-neutral, backtestable research strategy. | — |
-| [skill-backtest](https://github.com/quantskills/skill-backtest) | Standard cross-sectional long-only backtest protocol with T+1 execution, fees, limit filters, NAV curves, IC, drawdown, and diagnostic charts. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-backtest.png"><img src="assets/skill-backtest.png" width="220"></a> |
-| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Detect backtest overfitting and selection bias from multiple testing. Use when a user has a backtest / factor result and asks whether the Sharpe is real, whether a strategy is overfit, or wants to validate results... | — |
-| [skill-qbti](https://github.com/quantskills/skill-qbti) | QBTI (Quant Behavior Type Indicator): a personality-style quiz that translates a retail user's investing preferences into factor directions and strategy parameters via a fixed rule table, then hands off to the QuantSkills backtest pipeline. | — |
-| [skill-b12-intraday-position-manager](https://github.com/quantskills/skill-b12-intraday-position-manager) | 当需要对日内多品种持仓做动态仓位管理时，使用此 skill。支持 A股/A股ETF/股指期货/商品期货/港股+ETF；区分 T+1/T+0、昨仓/今仓、保证金/现金，输出标准 8 字段调仓指令。 | — |
-| [skill-b11-auto-stop-loss-take-profit](https://github.com/quantskills/skill-b11-auto-stop-loss-take-profit) | 当需要对 A 股和期货持仓做自动止盈止损与仓位管理时，使用此 skill。支持次日高开止盈、次日低开止损、持仓满2交易日强平、单票名义仓位上限控制。交易日历唯一来源 = panda_data.get_trade_cal（硬依赖）。 | — |
+### 05.strategy-signal Strategies & Signals
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-global-macro-trend-strategy](https://github.com/quantskills/skill-global-macro-trend-strategy) | Turns global signals and public daily prices into backtestable research strategies, positions, and risk rules. | skill | backtesting | factor-screening, portfolio-construction | — | — | pending maintainer review / no public endpoint |
+| [skill-ma-crossover-signal](https://github.com/quantskills/skill-ma-crossover-signal) | Computes moving-average crossover signals and reports trend state, latest cross, MA gap, and price bias. | skill | factor-generation | data-ingestion, feature-engineering, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-oversold-rebound](https://github.com/quantskills/skill-oversold-rebound) | Identifies A-share oversold-rebound conditions and screens candidate stocks. | skill | factor-screening | data-ingestion, feature-engineering, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-qbti](https://github.com/quantskills/skill-qbti) | Translates a five-part user questionnaire into factor directions and strategy parameters. | skill | portfolio-construction | factor-screening, backtesting, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 05.portfolio-construction Portfolio Construction
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-dalio-all-weather](https://github.com/quantskills/skill-dalio-all-weather) | Provides an all-weather allocation and backtest workflow for A-share assets, bonds, gold, and commodities. | skill | portfolio-construction | data-ingestion, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-portfolio-optimize](https://github.com/quantskills/skill-portfolio-optimize) | Turns alpha signals into optimized weights under weight, sector, exposure, and turnover constraints. | skill | portfolio-construction | data-ingestion, modeling, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+
+### 05.backtest-engine Backtesting Engine
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-backtest](https://github.com/quantskills/skill-backtest) | Provides a cross-sectional long-only backtest protocol with T+1 execution, fees, limit filters, and diagnostics. | skill | backtesting | data-ingestion, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | Runs long-only cross-sectional factor backtests on supplied factors and market data with diagnostics. | skill | backtesting | factor-screening, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 05.performance-attribution Performance Attribution
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-brinson-performance-attribution](https://github.com/quantskills/skill-brinson-performance-attribution) | Runs Brinson-Fachler or BHB attribution with HHI, contributor ranking, and Carino multi-period linking. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-portfolio-attribution](https://github.com/quantskills/skill-portfolio-attribution) | Attributes active portfolio returns to industry allocation, stock selection, interaction, and factor contributions. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-portfolio-pnl-attribution](https://github.com/quantskills/skill-portfolio-pnl-attribution) | Attributes realized portfolio returns by security and sector while reconciling fees, benchmarks, and input quality. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | Calculates risk-return metrics for portfolios or strategies. | skill | evaluation | reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-strategy-tearsheet-report](https://github.com/quantskills/skill-strategy-tearsheet-report) | Generates strategy-performance tearsheets with risk-adjusted metrics. | skill | reporting | evaluation, risk | — | — | pending maintainer review / no public endpoint |
+
+### 05.transaction-costs Transaction Costs
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-transaction-cost-analysis](https://github.com/quantskills/skill-transaction-cost-analysis) | Decomposes fills against VWAP/TWAP into transaction-cost components. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-transaction-cost-calibration](https://github.com/quantskills/skill-transaction-cost-calibration) | Calibrates commission, spread, slippage, and market-impact assumptions from execution and market data. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 05.market-microstructure Market Microstructure
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-quant-execution-microstructure](https://github.com/quantskills/skill-quant-execution-microstructure) | Converts approved trade targets into observable, cost-aware execution plans. | skill | execution | risk, monitoring, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 05.position-orders Positions & Orders
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-b11-auto-stop-loss-take-profit](https://github.com/quantskills/skill-b11-auto-stop-loss-take-profit) | Applies entry-date and open-price rules for take-profit, stop-loss, forced exits, and single-name position caps. | skill | execution | data-ingestion, risk | — | — | pending maintainer review / no public endpoint |
+| [skill-b12-intraday-position-manager](https://github.com/quantskills/skill-b12-intraday-position-manager) | Manages intraday multi-instrument positions using sellable and locked quantity, price, and cash inputs. | skill | execution | data-ingestion, risk | — | — | pending maintainer review / no public endpoint |
+
+### 05.paper-live-execution Paper & Live Execution
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-ssquant-ai-trader](https://github.com/quantskills/skill-ssquant-ai-trader) | Orchestrates SSQuant strategy research, paper trading, and runtime checks. | skill | execution | modeling, portfolio-construction, backtesting, risk, reporting | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-06"></a>
 ## 06 Research Models & Replication
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-quant-research-experiment-registry](https://github.com/quantskills/skill-quant-research-experiment-registry) | Quantitative research experiment registry and reproducibility audit skill. | — |
-| [skill-daily-report](https://github.com/quantskills/skill-daily-report) | 是一个跨市场每日复盘技能，用于汇总 A 股、港股、美股、日经、韩国市场以及黄金、原油等公开行情数据，并结合板块表现、资金流向和重要新闻，生成结构化的 Markdown 市场复盘报告和次日情景分析。 | — |
-| [skill-quant-research](https://github.com/quantskills/skill-quant-research) | — | — |
-| [skill-hk-us-consensus-revision-radar](https://github.com/quantskills/skill-hk-us-consensus-revision-radar) | Hong Kong & US Consensus Revision Radar: Uses PandaData to analyze target prices, ratings, price divergence, analyst coverage, and revision trajectories, generating auditable offline HTML research reports. | — |
-| [skill-time-series-analysis](https://github.com/quantskills/skill-time-series-analysis) | Conclusion-first time-series diagnostics for original series, Log diff, distributions, stationarity, cointegration, and half-life. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-time-series-analysis.png"><img src="assets/skill-time-series-analysis.png" width="220"></a> |
-| [skill-serenity-research-model](https://github.com/quantskills/skill-serenity-research-model) | Research-model skill for reconstructing Serenity-style AI, semiconductor, and supply-chain theses from public posts and datasets. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-serenity-research-model.png"><img src="assets/skill-serenity-research-model.png" width="220"></a> |
-| [skill-report-replication](https://github.com/quantskills/skill-report-replication) | Quant report replication skill that turns papers or reports into Chinese translations, factor formulas, Pandadata-backed validation reports, and strategy assets. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-report-replication.png"><img src="assets/skill-report-replication.png" width="220"></a> |
-| [skill-quant-research-replication](https://github.com/quantskills/skill-quant-research-replication) | Quant research replication skill for source discovery, formula reconstruction, Chinese summaries, validation, and deliverables. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-research-replication.png"><img src="assets/skill-quant-research-replication.png" width="220"></a> |
-| [skill-paper-replication](https://github.com/quantskills/skill-paper-replication) | Framework-neutral quantitative paper replication skill for research scripts, backtests, charts, and auditable outputs. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-paper-replication.png"><img src="assets/skill-paper-replication.png" width="220"></a> |
-| [skill-gaetano-crux-capital-research-model](https://github.com/quantskills/skill-gaetano-crux-capital-research-model) | Research-model skill for public-material analysis of photonics, optical networking, Physical AI, and AI infrastructure themes. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-gaetano-crux-capital-research-model.png"><img src="assets/skill-gaetano-crux-capital-research-model.png" width="220"></a> |
-| [skill-investment-decision](https://github.com/quantskills/skill-investment-decision) | Given a company name or ticker, generate a long-term (6-18 month) BUY/NEUTRAL/SELL investment decision report with confidence, charts, and sources in .docx format — self-contained, uses public data. | — |
+### 06.paper-replication Paper Replication
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-paper-replication](https://github.com/quantskills/skill-paper-replication) | Supports paper search, data extraction, experiment reproduction, and research-result reporting. | skill | modeling | data-ingestion, backtesting, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-research-replication](https://github.com/quantskills/skill-quant-research-replication) | Guides auditable quantitative-research replication workflows. | skill | modeling | data-ingestion, backtesting, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 06.strategy-replication Strategy Replication
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-report-replication](https://github.com/quantskills/skill-report-replication) | Guides conversion of research reports into reproducible analysis workflows. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 06.statistical-ml-models Statistical & ML Models
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-dl-gnn-stock-graph](https://github.com/quantskills/skill-dl-gnn-stock-graph) | Builds A-share heterogeneous graphs for GNN stock selection and backtesting. | skill | modeling | feature-engineering, backtesting, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Optimizes quantitative multi-factor model hyperparameters with fixed validation and trial-level evidence. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-pair-correlation](https://github.com/quantskills/skill-pair-correlation) | Computes and interprets asset-pair correlations, rolling relationships, and research uses. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-simons-pairs-trading](https://github.com/quantskills/skill-simons-pairs-trading) | Studies A-share pairs trading with cointegration, spreads, and execution constraints. | skill | modeling | data-ingestion, backtesting, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-statistical-arbitrage-time-series](https://github.com/quantskills/skill-statistical-arbitrage-time-series) | Builds statistical-arbitrage time-series research and produces traceable reports. | skill | modeling | data-ingestion, backtesting, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-time-series-analysis](https://github.com/quantskills/skill-time-series-analysis) | Diagnoses financial time series and produces analysis reports. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 06.investor-research-models Investor Research Models
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-gaetano-crux-capital-research-model](https://github.com/quantskills/skill-gaetano-crux-capital-research-model) | Uses public sources to structure research evidence and risks for photonics, optical-network, and AI-infrastructure companies. | skill | modeling | reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-gao-shanwen-research-model](https://github.com/quantskills/skill-gao-shanwen-research-model) | Organizes, retrieves, and studies Gao Shanwen's public writings and articles. | skill | reporting | — | — | — | pending maintainer review / no public endpoint |
+| [skill-investment-decision](https://github.com/quantskills/skill-investment-decision) | Combines research evidence, valuation, and risk information into an auditable investment decision report. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-keynes-contrarian-investment](https://github.com/quantskills/skill-keynes-contrarian-investment) | Uses long-term expectations and contrarian analysis to identify optimism, pessimism, and value traps. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-munger-mental-model](https://github.com/quantskills/skill-munger-mental-model) | Applies a multidisciplinary mental-model framework to company investment research and judgment reports. | skill | modeling | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-serenity-research-model](https://github.com/quantskills/skill-serenity-research-model) | Reconstructs Serenity-style research logic from public X/Twitter evidence. | skill | modeling | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | Builds trader-specific research-model skills from public X/Twitter post data. | skill | orchestration | data-ingestion, modeling, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 06.experiment-reproducibility Experiment Registry & Reproducible Research
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-quant-research](https://github.com/quantskills/skill-quant-research) | Guides quantitative research, backtest design, and statistical validation workflows. | skill | modeling | data-ingestion, backtesting, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-research-experiment-registry](https://github.com/quantskills/skill-quant-research-experiment-registry) | Registers quantitative experiments and audits their reproducibility evidence. | skill | evaluation | modeling, reporting | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-07"></a>
 ## 07 Research Validation & Quality
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-klarman-special-situations](https://github.com/quantskills/skill-klarman-special-situations) | 基于克拉曼特殊情况投资框架的 A 股事件驱动研究 Skill，覆盖定增解禁、重组借壳、分拆上市与困境反转；强调证据核验、失败价值与风险边界。 | — |
-| [skill-buffett-moat-screener](https://github.com/quantskills/skill-buffett-moat-screener) | 面向 A 股与美股的巴菲特式研究 Skill：研究建议、持仓复核、年度记录与点时回测。 | — |
-| [skill-calendar-anomaly-scanner](https://github.com/quantskills/skill-calendar-anomaly-scanner) | — | — |
-| [skill-brinson-performance-attribution](https://github.com/quantskills/skill-brinson-performance-attribution) | Brinson-Fachler / BHB 归因 + Carino 多期链接 | — |
-| [skill-walk-forward-validator](https://github.com/quantskills/skill-walk-forward-validator) | — | — |
-| [skill-quant-execution-microstructure](https://github.com/quantskills/skill-quant-execution-microstructure) | — | — |
-| [skill-pair-correlation](https://github.com/quantskills/skill-pair-correlation) | — | — |
-| [skill-oversold-rebound](https://github.com/quantskills/skill-oversold-rebound) | A股超跌反弹择时与选股：判断短期反弹环境并筛选候选股票 | — |
-| [skill-etf-fund-evaluator](https://github.com/quantskills/skill-etf-fund-evaluator) | 境内股票指数ETF评价与同类比较：分析跟踪质量、风险收益、流动性、规模和资金流 | — |
-| [skill-keynes-contrarian-investment](https://github.com/quantskills/skill-keynes-contrarian-investment) | 凯恩斯长期预期与反共识投资研究：识别过度乐观、过度悲观、预期差及价值陷阱 | — |
-| [skill-forecast-calibration-audit](https://github.com/quantskills/skill-forecast-calibration-audit) | skill评估概率预测的可靠性、Brier Score、Log Loss、ECE/MCE、校准斜率和时间漂移，区别于已有的因子 IC 评估和盈利预告扫描 | — |
-| [skill-transaction-cost-calibration](https://github.com/quantskills/skill-transaction-cost-calibration) | skill基于成交、历史盘口或 OHLCV 校准手续费、点差、滑点和参与率冲击成本，区别于已有的组合流动性压力测试 | — |
-| [skill-transaction-cost-analysis](https://github.com/quantskills/skill-transaction-cost-analysis) | 交易成本分析(TCA)：implementation shortfall 五项分解 + VWAP/TWAP/arrival 对标 | — |
-| [skill-a-share-pit-fundamental-vintage-builder](https://github.com/quantskills/skill-a-share-pit-fundamental-vintage-builder) | A 股 PIT 财务数据审计：**还原历史可见财报，而非使用今天的最新版。 | — |
-| [skill-numerical-leak-check](https://github.com/quantskills/skill-numerical-leak-check) | 当 agent 需要检查时间序列计算、量化因子、特征工程、标签生成、回测信号或研究管线是否存在未来信息泄露时使用。Use this skill for numerical causality checks, lookahead/future-leakage detection, prefix replay, future mutation, batch checking many factors or cases, and... | — |
+### 07.lookahead-leakage Lookahead & Data Leakage
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-backtesting-bias-avoidance](https://github.com/quantskills/skill-backtesting-bias-avoidance) | Builds look-ahead-safe backtests and audits leakage, survivorship, overfitting, costs, and out-of-sample checks. | skill | evaluation | data-ingestion, data-quality, backtesting | — | — | pending maintainer review / no public endpoint |
+| [skill-numerical-leak-check](https://github.com/quantskills/skill-numerical-leak-check) | Detects lookahead and data leakage in quantitative research workflows through numerical checks. | skill | evaluation | data-quality, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 07.survivorship-bias Survivorship Bias
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-survivorship-universe-auditor](https://github.com/quantskills/skill-survivorship-universe-auditor) | Audits point-in-time universe membership, identities, and delisting returns before backtests. | skill | data-quality | data-ingestion, evaluation, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 07.walk-forward-oos Walk-Forward & OOS
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Evaluates backtest overfitting and multiple-testing risk with DSR, PBO, purged cross-validation, and Harvey-Liu haircut. | skill | evaluation | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-walk-forward-validator](https://github.com/quantskills/skill-walk-forward-validator) | Validates cross-sectional signals out of sample with purged and embargoed rolling windows. | skill | evaluation | data-quality, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 07.signal-stability Signal Stability
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-calendar-anomaly-scanner](https://github.com/quantskills/skill-calendar-anomaly-scanner) | Scans dated price changes for calendar anomalies using robust tests, bootstrap checks, and multiple-testing control. | skill | evaluation | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-factor-decay](https://github.com/quantskills/skill-factor-decay) | Analyzes decay in Rank IC, turnover, and bucket returns and estimates half-life. | skill | evaluation | reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-signal-stability-audit](https://github.com/quantskills/skill-signal-stability-audit) | Audits quantitative-signal stability across time and samples. | skill | evaluation | data-quality, risk, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 07.forecast-calibration Forecast Calibration
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-forecast-calibration-audit](https://github.com/quantskills/skill-forecast-calibration-audit) | Audits probability-forecast calibration rather than sample ranking alone. | skill | evaluation | reporting | — | — | pending maintainer review / no public endpoint |
+
+### 07.numerical-model-audit Numerical & Model Audit
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-factor-debug](https://github.com/quantskills/skill-factor-debug) | Provides a symptom, cause, and verification playbook for factor failures. | skill | evaluation | risk | — | — | pending maintainer review / no public endpoint |
+
+### 07.workflow-audit Workflow Audit
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | Audits PandaAI workflow graphs, code, timing, parameters, and backtest-validation evidence. | skill | evaluation | data-quality, reporting | — | — | pending maintainer review / no public endpoint |
 
 <a id="cat-08"></a>
 ## 08 Information Search & Knowledge Analysis
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [skill-munger-mental-model](https://github.com/quantskills/skill-munger-mental-model) | Munger 5-维模型与一票否决的多角度cross-validation分析工具，面向 A 股。支持单票和行业批筛。 | — |
-| [skill-fin-news](https://github.com/quantskills/skill-fin-news) | 实时财经头条生成器。采集东方财富财经要闻 + Pandadata 市场数据，由 AI 精选 5 条并撰写深度文章（含事实描述、数据解读、大V点评）。 | — |
-| [skill-news-sentiment-analyst](https://github.com/quantskills/skill-news-sentiment-analyst) | A-share financial news sentiment analyst - Claude Code Skill | — |
+### 08.news-disclosures News & Disclosures
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-earnings-season-tracker](https://github.com/quantskills/skill-earnings-season-tracker) | Scans earnings guidance, industry distributions, and qualified audit items during earnings seasons. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-fin-news](https://github.com/quantskills/skill-fin-news) | Aggregates financial headlines and market data to select headlines and draft analysis articles. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-news-sentiment-analyst](https://github.com/quantskills/skill-news-sentiment-analyst) | Collects, verifies, and analyzes A-share financial-news sentiment for research reports. | skill | modeling | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 08.institutional-research Institutional Research
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-institutional-research-tracker](https://github.com/quantskills/skill-institutional-research-tracker) | Monitors A-share institutional research activity, attention, and changes over time. | skill | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 08.event-calendar Event Calendar
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 08.daily-review Daily Review
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-daily-report](https://github.com/quantskills/skill-daily-report) | Aggregates cross-market prices, sectors, flows, and news into a daily Markdown review. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+| [skill-market-daily-review](https://github.com/quantskills/skill-market-daily-review) | Generates Pandadata-based A-share after-close daily market review reports. | skill | reporting | data-ingestion | — | — | pending maintainer review / no public endpoint |
+
+### 08.thematic-brief Thematic Brief
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 08.document-knowledge Document Extraction & Knowledge Organization
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
 
 <a id="cat-09"></a>
-## 09 Featured Agents
+## 09 Quant Agents & Automation
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [agent-quantspace](https://github.com/quantskills/agent-quantspace) | AI-native quantitative research framework | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-quantspace.png"><img src="assets/agent-quantspace.png" width="220"></a> |
-| [agent-macro-driven-rotation](https://github.com/quantskills/agent-macro-driven-rotation) | 宏观驱动行业轮动 Agent | — |
-| [agent-for-liangshuyuan-tasks](https://github.com/quantskills/agent-for-liangshuyuan-tasks) | 量枢学院多 Agent 协作框架——基于 Claude Code 的量化交易工具开发平台，将任务需求自动分析、路由、开发、测试、发布全流程自动化。内置 6 个专业 Agent，支持 BUILD 工具与 Alpha 因子的 Skill 架构开发。 | — |
-| [agent-ssquant](https://github.com/quantskills/agent-ssquant) | SSQuant Agent workflow for futures strategies, data services, CTP gates, and Chinese reports. | — |
-| [agent-market-regime-monitor](https://github.com/quantskills/agent-market-regime-monitor) | Monitor market regime from Pandadata index, breadth, volatility, and funding evidence. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-market-regime-monitor.png"><img src="assets/agent-market-regime-monitor.png" width="220"></a> |
-| [agent-derivatives-skew-sentiment-monitor](https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor) | Monitor derivatives sentiment from option implied volatility and underlying historical volatility. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-derivatives-skew-sentiment-monitor.png"><img src="assets/agent-derivatives-skew-sentiment-monitor.png" width="220"></a> |
-| [agent-crowding-risk-monitor](https://github.com/quantskills/agent-crowding-risk-monitor) | Monitor crowded-trade risk from Pandadata price, turnover, margin, and LHB heat evidence. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-crowding-risk-monitor.png"><img src="assets/agent-crowding-risk-monitor.png" width="220"></a> |
-| [agent-correlation-break-research](https://github.com/quantskills/agent-correlation-break-research) | Detect correlation breaks, style shifts, and diversification stress from Pandadata return evidence. | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-correlation-break-research.png"><img src="assets/agent-correlation-break-research.png" width="220"></a> |
+### 09.research-agent Research Agent
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [agent-correlation-break-research](https://github.com/quantskills/agent-correlation-break-research) | Uses Pandadata price-series correlation changes to identify style shifts, diversification stress, and structural market moves. | agent | monitoring | data-ingestion, modeling, reporting | — | — | pending maintainer review / no public endpoint |
+| [agent-macro-driven-rotation](https://github.com/quantskills/agent-macro-driven-rotation) | Generates macro-driven industry-rotation research materials from clock phases, nowcasts, and valuation filters. | agent | modeling | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
 
----
-<a id="infra"></a>
-## 🧱 Infra & Templates
-Governance, scaffolding and templates (incl. the quantskills nav repo).
+### 09.monitor-risk-agent Monitoring & Risk Agent
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [agent-crowding-risk-monitor](https://github.com/quantskills/agent-crowding-risk-monitor) | Monitors crowded-trade risk from Pandadata price, turnover, margin, and Dragon-Tiger heat evidence. | agent | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [agent-derivatives-skew-sentiment-monitor](https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor) | Monitors derivatives sentiment from option implied volatility and underlying historical volatility. | agent | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
+| [agent-market-regime-monitor](https://github.com/quantskills/agent-market-regime-monitor) | Monitors market regimes from Pandadata index breadth, volatility, and funding evidence. | agent | monitoring | data-ingestion, reporting | — | — | pending maintainer review / no public endpoint |
 
-| Project | Description | Screenshot |
-|---|---|---|
-| [registry](https://github.com/quantskills/registry) | Public display registry for QUANTSKILLS skill-* and agent-* assets. | — |
-| [agent-template](https://github.com/quantskills/agent-template) | Template repository for QUANTSKILLS agent-* projects. | — |
-| [skill-template](https://github.com/quantskills/skill-template) | Template repository for QUANTSKILLS skill-* projects. | — |
-| [quantskills](https://github.com/quantskills/quantskills) | QuantSkills组织的全景导航 ——Panoramic navigator for the QuantSkills organization | — |
-| [.github](https://github.com/quantskills/.github) | — | — |
-| [join](https://github.com/quantskills/join) | — | — |
+### 09.execution-agent Trading Execution Agent
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [agent-ssquant](https://github.com/quantskills/agent-ssquant) | SSQuant Agent workflow for futures strategies, data services, CTP gates, and Chinese backtest reports. | agent | execution | data-ingestion, modeling, backtesting, reporting | — | — | pending maintainer review / no public endpoint |
 
----
-## 🐼 PandaAI Community
-<div align="center">
-  <img src="assets/pandaai-community-qr.jpg" alt="PandaAI community QR code" width="220">
-  <br>
-  <sub>Scan to join the PandaAI community for QUANTSKILLS skills, agent workflows, and quant research.</sub>
-</div>
+### 09.workflow-orchestration-agent Workflow Orchestration Agent
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [agent-for-liangshuyuan-tasks](https://github.com/quantskills/agent-for-liangshuyuan-tasks) | Multi-agent collaboration framework for Liangshuyuan tasks, organizing quantitative tools, build workflows, and task roles. | agent | orchestration | — | — | — | pending maintainer review / no public endpoint |
+| [agent-quantspace](https://github.com/quantskills/agent-quantspace) | AI-native quantitative research framework for reusable skills, strategy workflows, backtests, and reports. | agent | orchestration | data-ingestion, modeling, backtesting, reporting | — | — | pending maintainer review / no public endpoint |
+
+### 09.development-review-agent Development & Review Agent
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+<a id="cat-10"></a>
+## 10 Infrastructure & Templates
+
+### 10.registry-navigation Registry & Navigation
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 10.skill-template Skill Template
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-template](https://github.com/quantskills/skill-template) | Provides a template structure and instructions for QuantSkills skill projects. | skill | orchestration | — | — | — | pending maintainer review / no public endpoint |
+
+### 10.agent-template Agent Template
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [agent-template](https://github.com/quantskills/agent-template) | Canonical template for portable QuantSkills agent projects. | agent | orchestration | — | — | — | pending maintainer review / no public endpoint |
+
+### 10.governance-community Governance & Community
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+
+### 10.build-release-tooling Build & Release Tooling
+| Name | Summary | Type | Primary stage | Additional stages | Inputs | Outputs | Status |
+|---|---|---|---|---|---|---|---|
+| [skill-jq-to-panda-converter](https://github.com/quantskills/skill-jq-to-panda-converter) | Converts JoinQuant strategy code into PandaAI JSON configurations runnable in backtests. | skill | orchestration | modeling, reporting | — | — | pending maintainer review / no public endpoint |
+| [skill-pandaai-workflow-generator](https://github.com/quantskills/skill-pandaai-workflow-generator) | Generates importable PandaAI workflow JSON and embedded strategy or factor code from quant ideas. | skill | orchestration | — | — | — | pending maintainer review / no public endpoint |
+| [skill-quant-factor-skill-factory](https://github.com/quantskills/skill-quant-factor-skill-factory) | Batch-generates, validates, and packages framework-neutral OHLCV factor skills. | skill | orchestration | data-ingestion, factor-generation, evaluation | — | — | pending maintainer review / no public endpoint |
+| [skill-ssquant-trader-generator](https://github.com/quantskills/skill-ssquant-trader-generator) | Turns natural-language trading ideas into a reusable Trader Skill and delegates simulated deployment. | skill | orchestration | execution | — | — | pending maintainer review / no public endpoint |
+
+### Organization resources
+| Name | Summary |
+|---|---|
+| [.github](https://github.com/quantskills/.github) | Organization resources |
+| [join](https://github.com/quantskills/join) | Organization resources |
+| [quantskills](https://github.com/quantskills/quantskills) | Organization resources |
+| [registry](https://github.com/quantskills/registry) | Organization resources |

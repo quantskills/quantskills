@@ -1,10 +1,16 @@
-name: daily-build
+name: validated-snapshot-build
 
-# 每日刷新导航 README（北京时间 01:00，错开 registry 的 00:30 扫描）+ 手动触发
 on:
-  schedule:
-    - cron: "0 17 * * *" # 17:00 UTC = 次日 01:00 Asia/Shanghai
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      snapshot_url:
+        description: Exact Registry catalog snapshot URL
+        required: true
+        type: string
+      expected_snapshot_id:
+        description: Expected sha256 snapshot ID
+        required: true
+        type: string
 
 permissions:
   contents: write
@@ -14,24 +20,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-
-      - name: Generate README (zh/en)
+      - name: Download exact snapshot
+        run: curl --fail --location --output "$RUNNER_TEMP/catalog.snapshot.json" "${{ inputs.snapshot_url }}"
+      - name: Validate snapshot identity
+        run: node -e "const x=require(process.env.RUNNER_TEMP + '/catalog.snapshot.json'); if(x.snapshot_id !== process.env.EXPECTED) process.exit(1)"
         env:
-          GH_TOKEN: ${{ github.token }} # 供脚本内 gh CLI / REST 鉴权
-        run: node scripts/build.mjs
-
-      - name: Commit & push if changed
+          EXPECTED: ${{ inputs.expected_snapshot_id }}
+      - name: Test and build
+        run: |
+          npm test
+          node scripts/build.mjs --snapshot "$RUNNER_TEMP/catalog.snapshot.json" --output-dir .
+          node -e "import('./scripts/verify-build.mjs').then(({verifyBuild})=>{const x=require(process.env.RUNNER_TEMP + '/catalog.snapshot.json'); verifyBuild('.',x)})"
+      - name: Commit validated generated outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "abgyjaguo"
-          git config user.email "abgyja@gmail.com"
-          git add README.md README.en.md
-          if git diff --cached --quiet; then
-            echo "无变更，跳过提交。"
-          else
-            git commit -m "chore: 自动刷新导航 $(date -u +%F)"
-            git push
+          git config user.email "213890245+abgyjaguo@users.noreply.github.com"
+          git add README.md README.en.md site/catalog.json
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: render validated catalog snapshot"
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:${{ github.ref_name }}
           fi
