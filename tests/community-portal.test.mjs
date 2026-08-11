@@ -7,7 +7,7 @@ test("Pages deployment builds the verified static site with least required permi
   assert.match(workflow, /branches: \[main\]/);
   assert.match(workflow, /workflow_dispatch:/);
   assert.match(workflow, /contents: read[\s\S]*pages: write[\s\S]*id-token: write/);
-  assert.match(workflow, /npm run build[\s\S]*verify-build[\s\S]*upload-pages-artifact/);
+  assert.match(workflow, /repository: quantskills\/registry[\s\S]*build\.mjs --snapshot registry\/catalog\.snapshot\.json[\s\S]*verifyBuild[\s\S]*upload-pages-artifact/);
   assert.match(workflow, /actions\/deploy-pages@v4/);
   assert.doesNotMatch(workflow, /curl|api\.github\.com|gh api/);
 });

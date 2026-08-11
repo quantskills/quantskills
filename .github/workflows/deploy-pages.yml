@@ -19,12 +19,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+        with:
+          repository: quantskills/registry
+          path: registry
       - uses: actions/setup-node@v4
         with:
           node-version: 24
       - run: npm test
-      - run: npm run build
-      - run: node scripts/verify-build.mjs
+      - run: node scripts/build.mjs --snapshot registry/catalog.snapshot.json --output-dir .
+      - run: node --input-type=module -e "import { readFileSync } from 'node:fs'; import { verifyBuild } from './scripts/verify-build.mjs'; verifyBuild('.', JSON.parse(readFileSync('registry/catalog.snapshot.json', 'utf8')))"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
