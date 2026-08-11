@@ -20,9 +20,9 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 
 [All organization repositories](https://github.com/orgs/quantskills/repositories) · [navigation repository](https://github.com/quantskills/quantskills) · [registry](https://github.com/quantskills/registry) · [templates](https://github.com/quantskills/skill-template) · [join the community](https://github.com/quantskills/join)
 
-## Live catalog
+## Catalog overview
 
-The following section is generated from the pinned snapshot. Browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
+A periodic snapshot of the community's public assets; browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->
