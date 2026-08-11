@@ -59,7 +59,7 @@ export function filterAssets(data, state = {}) {
       && (!value.project_type || asset?.project_type === value.project_type)
       && (!runtime || list(asset?.platforms).includes(runtime))
       && (!profile || profiles.includes(profile))
-      && (!value.status || asset?.status === value.status)
+      && (!value.status || (asset?.interface_status || asset?.status || "published") === value.status)
       && (!compatibility || relatedToAsset(data, asset.name, compatibility).length > 0)
       && (!text || haystack.includes(text));
   });
@@ -123,6 +123,10 @@ export function renderAssetCard(document_, data, asset, index = 0) {
     link.textContent = model.name;
     title.append(link);
   } else title.textContent = model.name;
+  const badge = document_.createElement("span");
+  badge.className = `endpoint-badge ${model.interface_status === "published" ? "published" : "pending"}`;
+  badge.textContent = model.interface_status === "published" ? "published endpoint" : "pending maintainer review";
+  title.append(" ", badge);
   const summary = document_.createElement("p");
   summary.textContent = `${model.summary_zh} ${model.summary_en}`.trim();
   const metadata = document_.createElement("p");
@@ -130,7 +134,7 @@ export function renderAssetCard(document_, data, asset, index = 0) {
   const edges = document_.createElement("p");
   edges.textContent = model.edges.length ? model.edges.map((edge) => `${asText(edge.status)}: ${edge.explanation}`).join(" | ") : "Compatibility: none";
   const profiles = document_.createElement("p");
-  profiles.textContent = model.interface_status === "published" ? `Published endpoints — inputs: ${model.inputs.join(", ") || "—"}; outputs: ${model.outputs.join(", ") || "—"}. Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}` : "Interface: pending maintainer review / no public endpoint.";
+  profiles.textContent = model.interface_status === "published" ? `${model.name === "skill-pandadata-warehouse" ? "Warehouse endpoint. " : ""}Published endpoints — inputs: ${model.inputs.join(", ") || "—"}; outputs: ${model.outputs.join(", ") || "—"}. Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}` : "Interface: pending maintainer review / no public endpoint.";
   card.append(title, summary, metadata, edges, profiles);
   return card;
 }
@@ -163,7 +167,7 @@ function optionValues(data) {
     platform: assets.flatMap((asset) => list(asset?.platforms)),
     runtime: assets.flatMap((asset) => list(asset?.platforms)),
     profile: assets.flatMap((asset) => [...endpointProfiles(asset?.interface?.inputs), ...endpointProfiles(asset?.interface?.outputs)]),
-    status: assets.map((asset) => asset?.status),
+    status: assets.map((asset) => asset?.interface_status || asset?.status || "published"),
     compatibility: COMPATIBILITY_STATUSES,
   };
   return Object.fromEntries(Object.entries(values).map(([key, items]) => [key, [...new Set(items.filter(safeOption))].sort()]));

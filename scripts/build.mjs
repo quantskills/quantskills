@@ -3,7 +3,7 @@ import { chmodSync, lstatSync, mkdirSync, mkdtempSync, readFileSync, renameSync,
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { buildCatalogModel, loadCatalogSnapshot } from "./catalog-model.mjs";
-import { renderReadme } from "./render-readme.mjs";
+import { replaceCatalog } from "./render-readme.mjs";
 import { renderSiteData } from "./render-site-data.mjs";
 import { verifyBuild } from "./verify-build.mjs";
 
@@ -90,8 +90,10 @@ export function build(snapshotPath, outputDir) {
   const snapshot = loadCatalogSnapshot(snapshotPath);
   const model = buildCatalogModel(snapshot);
   const site = { ...renderSiteData(model), profiles: snapshot.profiles.items, adapters: snapshot.adapters.items, compatibility_edges: snapshot.compatibility_edges };
+  const zhTemplate = readFileSync(join(ROOT, "docs", "README.zh.template.md"), "utf8");
+  const enTemplate = readFileSync(join(ROOT, "docs", "README.en.template.md"), "utf8");
   // catalog-snapshot projections share workflow-data-foundation and cat-10 navigation.
-  stageAndPromote({ "README.md": renderReadme(model, "zh"), "README.en.md": renderReadme(model, "en"), "site/catalog.json": `${JSON.stringify(site, null, 2)}\n` }, outputDir, snapshot);
+  stageAndPromote({ "README.md": replaceCatalog(zhTemplate, model, "zh"), "README.en.md": replaceCatalog(enTemplate, model, "en"), "site/catalog.json": `${JSON.stringify(site, null, 2)}\n` }, outputDir, snapshot);
   return model;
 }
 
