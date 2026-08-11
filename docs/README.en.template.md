@@ -1,6 +1,6 @@
 # 🧭 QuantSkills
 
-[简体中文](README.md) | **English** · [Browse the website](https://quantskills.github.io/quantskills/)
+[简体中文](README.md) | **English** · [Browse the website](https://www.quantskills.ai/)
 
 > A community catalog for quantitative Skills and Agents that are discoverable, installable, verifiable, and shareable.
 
@@ -22,11 +22,11 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 
 ## Live catalog
 
-The following section is generated from the pinned snapshot. The website link will be live after this is merged to `main` and GitHub Pages is enabled.
+The following section is generated from the pinned snapshot. Browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->
 
 ## Maintenance and license
 
-Maintained by [abgyjaguo](https://github.com/abgyjaguo) and the QuantSkills community. Each asset declares its own license; see this navigation repository's [LICENSE](LICENSE).
+Maintained by [quantskills-GuoYJ](https://github.com/quantskills-GuoYJ) and the QuantSkills community. Each asset declares its own license; see this navigation repository's [LICENSE](LICENSE).
