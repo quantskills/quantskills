@@ -17,6 +17,7 @@ const list = (value) => Array.isArray(value) ? value : [];
 const safeOption = (value) => /^[a-z0-9][a-z0-9._-]*$/.test(asText(value));
 const assetStages = (asset) => list(asset?.workflow?.workflow_stages).filter((stage) => typeof stage === "string");
 const endpointProfiles = (items) => list(items).filter((item) => item && typeof item === "object" && typeof item.profile === "string").map((item) => item.profile);
+const publishedInterface = (asset) => asset?.interface_status !== "pending-maintainer" ? asset.interface : null;
 
 export function workflowGroups(data) {
   const groups = data?.taxonomy?.workflow_groups;
@@ -49,7 +50,7 @@ export function filterAssets(data, state = {}) {
   const compatibility = value.compatibility || "";
   return list(data?.assets).filter((asset) => {
     const stages = assetStages(asset);
-    const profiles = [...endpointProfiles(asset?.interface?.inputs), ...endpointProfiles(asset?.interface?.outputs)];
+    const profiles = [...endpointProfiles(publishedInterface(asset)?.inputs), ...endpointProfiles(publishedInterface(asset)?.outputs)];
     const haystack = [asset?.name, asset?.summary_zh, asset?.summary_en].map(asText).join(" ").toLowerCase();
     return (!value.category || asset?.catalog?.category === value.category)
       && (!value.subcategory || asset?.catalog?.subcategory === value.subcategory)
@@ -76,11 +77,11 @@ function explanation(edge) {
 export function relationshipModel(data, asset) {
   const target = typeof asset === "string" ? list(data?.assets).find((item) => item?.name === asset) : asset;
   const name = target?.name;
-  const inputs = new Set(endpointProfiles(target?.interface?.inputs));
-  const outputs = new Set(endpointProfiles(target?.interface?.outputs));
+  const inputs = new Set(endpointProfiles(publishedInterface(target)?.inputs));
+  const outputs = new Set(endpointProfiles(publishedInterface(target)?.outputs));
   const assets = list(data?.assets);
-  const upstreamProviders = assets.filter((item) => item?.name !== name && [...inputs].some((profile) => endpointProfiles(item?.interface?.outputs).includes(profile))).map((item) => item.name).filter(Boolean).sort();
-  const downstreamConsumers = assets.filter((item) => item?.name !== name && [...outputs].some((profile) => endpointProfiles(item?.interface?.inputs).includes(profile))).map((item) => item.name).filter(Boolean).sort();
+  const upstreamProviders = assets.filter((item) => item?.name !== name && [...inputs].some((profile) => endpointProfiles(publishedInterface(item)?.outputs).includes(profile))).map((item) => item.name).filter(Boolean).sort();
+  const downstreamConsumers = assets.filter((item) => item?.name !== name && [...outputs].some((profile) => endpointProfiles(publishedInterface(item)?.inputs).includes(profile))).map((item) => item.name).filter(Boolean).sort();
   const edges = explainEdges(data, name).map((edge) => ({ ...edge, explanation: explanation(edge) }));
   return { edges, upstreamProviders: [...new Set(upstreamProviders)], downstreamConsumers: [...new Set(downstreamConsumers)] };
 }
@@ -103,8 +104,9 @@ export function assetViewModel(data, asset) {
     primary_stage: asText(asset?.workflow?.primary_stage),
     project_type: asText(asset?.project_type),
     status: asText(asset?.status),
-    inputs: endpointProfiles(asset?.interface?.inputs),
-    outputs: endpointProfiles(asset?.interface?.outputs),
+    interface_status: asText(asset?.interface_status || "published"),
+    inputs: endpointProfiles(publishedInterface(asset)?.inputs),
+    outputs: endpointProfiles(publishedInterface(asset)?.outputs),
     ...relationships,
   };
 }
@@ -128,7 +130,7 @@ export function renderAssetCard(document_, data, asset, index = 0) {
   const edges = document_.createElement("p");
   edges.textContent = model.edges.length ? model.edges.map((edge) => `${asText(edge.status)}: ${edge.explanation}`).join(" | ") : "Compatibility: none";
   const profiles = document_.createElement("p");
-  profiles.textContent = `Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}`;
+  profiles.textContent = model.interface_status === "published" ? `Published endpoints — inputs: ${model.inputs.join(", ") || "—"}; outputs: ${model.outputs.join(", ") || "—"}. Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}` : "Interface: pending maintainer review / no public endpoint.";
   card.append(title, summary, metadata, edges, profiles);
   return card;
 }
@@ -196,6 +198,12 @@ if (typeof document !== "undefined") {
   const data = await fetch("catalog.json").then((response) => { if (!response.ok) throw new Error("catalog unavailable"); return response.json(); });
   if (!/^sha256:[0-9a-f]{64}$/.test(data.snapshot_id || "")) throw new Error("invalid snapshot");
   document.querySelector("#snapshot").textContent = data.snapshot_id;
+  const endpointSummary = document.querySelector("#endpoint-summary");
+  if (endpointSummary) {
+    const published = list(data.assets).filter((asset) => asset?.interface_status === "published").length;
+    const pending = list(data.assets).filter((asset) => asset?.interface_status === "pending-maintainer").length;
+    endpointSummary.textContent = `Published structured endpoints: ${published}; pending maintainer interface review: ${pending}.`;
+  }
   for (const key of FILTER_KEYS.filter((id) => id !== "text")) {
     const control = document.querySelector(`#${key}`);
     if (!control) continue;

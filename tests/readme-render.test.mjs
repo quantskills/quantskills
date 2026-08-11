@@ -9,8 +9,9 @@ const model = buildCatalogModel(snapshot);
 
 for (const language of ["zh", "en"]) test(`${language} README has the approved navigation structure and golden bytes`, () => {
   const actual = renderReadme(model, language);
-  const golden = readFileSync(new URL(`./golden/README${language === "en" ? ".en" : ""}.md`, import.meta.url), "utf8");
+  const golden = readFileSync(new URL(`./golden/README${language === "en" ? ".en" : ""}.md`, import.meta.url), "utf8").replace(/\r\n/g, "\n");
   assert.equal(actual, golden);
+  assert.doesNotMatch(actual, /\r\n/);
   assert.match(actual, new RegExp(`<!-- catalog-snapshot: ${snapshot.snapshot_id} -->`));
   assert.match(actual, /public assets: 16/);
   assert.deepEqual([...actual.matchAll(/\[([0-9]{2})\]\(#cat-\1\)/g)].map((match) => match[1]), ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]);

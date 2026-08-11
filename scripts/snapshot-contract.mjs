@@ -9,14 +9,14 @@ const WORKFLOW_STAGES = [
 const RESOURCE_NAMES = [".github", "join", "quantskills", "registry"];
 const ROOT_KEYS = [
   "schema_version", "taxonomy_version", "snapshot_id", "contract_mode", "interface_diagnostics", "taxonomy", "assets",
-  "resources", "envelope", "profiles", "adapters", "provider_mappings", "core_lineage", "compatibility_edges",
+  "resources", "envelope", "profiles", "adapters", "provider_mappings", "core_lineage", "compatibility_edges", "publication",
 ];
 const ASSET_REQUIRED = [
   "name", "url", "description", "project_type", "declaration_file", "catalog", "workflow", "interface", "category",
   "subcategory", "stage", "tags", "platforms", "status", "requires", "summary_zh", "summary_en", "license",
   "validation_level", "maintainer_type", "last_validated", "commit_sha",
 ];
-const ASSET_OPTIONAL = ["migration_state", "migration_issues", "health", "workflow_groups", "lineage"];
+const ASSET_OPTIONAL = ["migration_state", "migration_issues", "health", "workflow_groups", "lineage", "catalog_status", "interface_status", "declaration_status", "default_branch", "description"];
 
 const PROFILE_DEFINITIONS = Object.freeze({
   "backtest-result": ["result", "result/backtest-result/1.0.0.schema.json"],
@@ -173,7 +173,7 @@ function validateMappings(mappings, profiles) {
 function validateInterface(interface_, profiles, adapters) {
   ensure(isObject(interface_), "invalid interface"); string(interface_.mode);
   if (interface_.mode === "natural-language") { exactKeys(interface_, ["mode"]); return; }
-  if (interface_.mode === "not-applicable" || interface_.mode === "unknown") { exactKeys(interface_, ["mode", "reason"]); string(interface_.reason); return; }
+  if (interface_.mode === "not-applicable") { exactKeys(interface_, ["mode", "reason"]); string(interface_.reason); return; }
   ensure(interface_.mode === "structured" || interface_.mode === "hybrid", "unknown interface mode");
   exactKeys(interface_, ["mode", "envelope", "inputs", "outputs", "adapters"]);
   exactKeys(interface_.envelope, ["name", "version"]); ensure(interface_.envelope.name === "quantskills-envelope" && interface_.envelope.version === "1.0.0", "invalid interface envelope");
@@ -190,7 +190,7 @@ function validateAssets(assets, taxonomy, profiles, adapters) {
     exactKeys(asset, ASSET_REQUIRED, ASSET_OPTIONAL); ASSET_REQUIRED.forEach((key) => ensure(Object.prototype.hasOwnProperty.call(asset, key), `asset missing ${key}`));
     string(asset.name); ensure(!names.has(asset.name), "duplicate asset"); names.add(asset.name);
     ensure(asset.url === `https://github.com/quantskills/${asset.name}`, "invalid asset URL");
-    string(asset.description); ensure(asset.project_type === "skill" || asset.project_type === "agent", "invalid project type");
+    ensure(typeof asset.description === "string", "invalid description"); ensure(asset.project_type === "skill" || asset.project_type === "agent", "invalid project type");
     ensure(asset.declaration_file === (asset.project_type === "skill" ? "SKILL.md" : "AGENTS.md"), "invalid declaration file");
     exactKeys(asset.catalog, ["category", "subcategory"]); ensure(taxonomy.subcategories.get(asset.catalog.subcategory) === asset.catalog.category, "unknown asset subcategory");
     ensure(asset.category === asset.catalog.category && asset.subcategory === asset.catalog.subcategory, "asset catalog aliases mismatch");
@@ -198,18 +198,24 @@ function validateAssets(assets, taxonomy, profiles, adapters) {
     ensure(asset.workflow.workflow_stages.every((stage) => taxonomy.stages.has(stage)), "unknown asset workflow stage");
     ensure(taxonomy.stages.has(asset.workflow.primary_stage) && asset.workflow.workflow_stages.includes(asset.workflow.primary_stage), "invalid primary stage");
     ensure(asset.stage === asset.workflow.primary_stage, "asset stage alias mismatch");
-    validateInterface(asset.interface, profiles, adapters);
+    if (asset.catalog_status !== undefined) ensure(asset.catalog_status === "approved", "asset is not catalog-approved");
+    if (asset.interface_status !== undefined) {
+      ensure(asset.interface_status === "pending-maintainer" || asset.interface_status === "published", "invalid interface status");
+      if (asset.interface_status === "pending-maintainer") ensure(asset.interface === null, "pending interface must be null");
+      if (asset.interface_status === "published") ensure(asset.interface !== null, "published interface is required");
+    }
+    if (asset.interface !== null) validateInterface(asset.interface, profiles, adapters);
     arrayOfStrings(asset.tags); arrayOfStrings(asset.platforms); arrayOfStrings(asset.requires);
     ["status", "summary_zh", "summary_en", "license", "validation_level", "maintainer_type", "commit_sha"].forEach((key) => string(asset[key])); date(asset.last_validated);
     if (asset.workflow_groups !== undefined) arrayOfStrings(asset.workflow_groups);
     if (asset.lineage !== undefined) { exactKeys(asset.lineage, ["source_mapping_id"]); string(asset.lineage.source_mapping_id); }
     if (asset.migration_issues !== undefined) ensure(Array.isArray(asset.migration_issues), "invalid migration issues");
   }
-  return names;
+  return new Map(assets.map((asset) => [asset.name, asset]));
 }
 
 function validateCoreLineage(lineage, assets, profiles) {
-  exactKeys(lineage, ["version", "artifacts"]); ensure(lineage.version === "1.0.0" && Array.isArray(lineage.artifacts) && lineage.artifacts.length <= 7, "invalid core lineage");
+  exactKeys(lineage, ["version", "artifacts"], ["scope"]); ensure(lineage.version === "1.0.0" && Array.isArray(lineage.artifacts) && lineage.artifacts.length <= 7, "invalid core lineage");
   const ids = new Set();
   for (const item of lineage.artifacts) {
     exactKeys(item, ["id", "file", "artifact_sha256", "producer", "profile", "version", "inputs"], ["source_mapping_id", "provenance"]);
@@ -232,13 +238,30 @@ function validateEdges(edges, assets, profiles, adapters) {
   ensure(Array.isArray(edges), "invalid compatibility edges");
   edges.forEach((edge) => {
     exactKeys(edge, ["producer", "consumer", "output", "input", "status", "adapter_path"]);
-    ensure(assets.has(edge.producer) && assets.has(edge.consumer), "unknown compatibility asset"); validateProfileRef(edge.output, profiles); exactKeys(edge.input, ["profile", "version_range", "required"]); ensure(profiles.has(profileKey(edge.input.profile, "1.0.0")), "unknown compatibility input profile"); string(edge.input.version_range); ensure(typeof edge.input.required === "boolean");
+    ensure(assets.has(edge.producer) && assets.has(edge.consumer), "unknown compatibility asset");
+    ensure(assets.get(edge.producer)?.interface_status !== "pending-maintainer" && assets.get(edge.consumer)?.interface_status !== "pending-maintainer", "pending interface cannot have compatibility edges");
+    validateProfileRef(edge.output, profiles); exactKeys(edge.input, ["profile", "version_range", "required"]); ensure(profiles.has(profileKey(edge.input.profile, "1.0.0")), "unknown compatibility input profile"); string(edge.input.version_range); ensure(typeof edge.input.required === "boolean");
     ensure(edge.status === "compatible" || edge.status === "adapter-required", "invalid compatibility status"); arrayOfStrings(edge.adapter_path); edge.adapter_path.forEach((id) => ensure(adapters.has(id), "unknown compatibility adapter"));
   });
 }
 
+function validatePublication(publication, assets, profiles, adapters) {
+  exactKeys(publication, ["assignments_sha256", "inventory_sha256", "manifest_sha256", "published_interfaces"]);
+  sha(publication.assignments_sha256); sha(publication.inventory_sha256); sha(publication.manifest_sha256);
+  ensure(Array.isArray(publication.published_interfaces), "invalid published interfaces");
+  const published = new Set();
+  for (const item of publication.published_interfaces) {
+    exactKeys(item, ["name", "default_branch", "head_sha", "interface"]);
+    string(item.name); string(item.default_branch); ensure(/^[0-9a-f]{40}$/.test(item.head_sha), "invalid published head");
+    const asset = assets.get(item.name);
+    ensure(asset?.catalog_status === "approved" && asset.interface_status === "published" && JSON.stringify(asset.interface) === JSON.stringify(item.interface), "invalid published interface");
+    validateInterface(item.interface, profiles, adapters); ensure(!published.has(item.name), "duplicate published interface"); published.add(item.name);
+  }
+  ensure(published.size === [...assets.values()].filter((asset) => asset.interface_status === "published").length, "published interface mismatch");
+}
+
 export function validateCatalogSnapshot(snapshot) {
-  exactKeys(snapshot, ROOT_KEYS);
+  exactKeys(snapshot, ROOT_KEYS.filter((key) => key !== "publication"), ["publication"]);
   ensure(snapshot.schema_version === "1.0.0" && snapshot.taxonomy_version === "1.0.0", "invalid snapshot schema");
   ensure(snapshot.contract_mode === "enforce", "catalog admission requires enforce mode");
   ensure(typeof snapshot.snapshot_id === "string" && /^sha256:[0-9a-f]{64}$/.test(snapshot.snapshot_id), "invalid snapshot id");
@@ -247,6 +270,6 @@ export function validateCatalogSnapshot(snapshot) {
   validateResources(snapshot.resources); validateEnvelope(snapshot.envelope);
   const profiles = validateProfiles(snapshot.profiles); const adapters = validateAdapters(snapshot.adapters, profiles); validateMappings(snapshot.provider_mappings, profiles);
   const assets = validateAssets(snapshot.assets, taxonomy, profiles, adapters);
-  validateCoreLineage(snapshot.core_lineage, assets, profiles); validateDiagnostics(snapshot.interface_diagnostics); validateEdges(snapshot.compatibility_edges, assets, profiles, adapters);
+  validateCoreLineage(snapshot.core_lineage, assets, profiles); validateDiagnostics(snapshot.interface_diagnostics); validateEdges(snapshot.compatibility_edges, assets, profiles, adapters); if (snapshot.publication !== undefined) validatePublication(snapshot.publication, assets, profiles, adapters);
   return snapshot;
 }
