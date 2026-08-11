@@ -29,20 +29,34 @@ function assetRow(asset, language) {
   return `| [${escape(asset.name)}](${asset.url}) | ${escape(language === "en" ? asset.summary_en : asset.summary_zh)} | ${escape(workflow.primary_stage)} | ${escape(endpoint(asset, interface_.inputs))} | ${escape(endpoint(asset, interface_.outputs))} | ${interfaceState(asset, language === "en")} | ${imgCell(asset.name)} |`;
 }
 
+// 快照展示日期：优先 snapshot_id 内嵌时间戳（20260811T051557Z），其次 built_at 元数据
+function snapshotDate(model) {
+  const embedded = String(model.snapshot_id || "").match(/(\d{4})(\d{2})(\d{2})T\d{4}/);
+  if (embedded) return `${embedded[1]}-${embedded[2]}-${embedded[3]}`;
+  const built = String(model.built_at || "").match(/(\d{4})-(\d{2})-(\d{2})/);
+  if (built) return `${built[1]}-${built[2]}-${built[3]}`;
+  return new Date().toISOString().slice(0, 10);
+}
+
 export function renderCatalog(model, language) {
   const english = language === "en";
   const published = model.assets.filter((asset) => asset.interface_status === "published").length;
-  const pending = model.assets.filter((asset) => asset.interface_status === "pending-maintainer").length;
   const labels = english
-    ? { catalog: "Live catalog", summary: "Category summary", workflow: "Workflow map", stages: "stages", assets: "assets", name: "Project", summaryCol: "Bilingual summary", stage: "Primary stage", inputs: "Inputs", outputs: "Outputs", status: "Interface status", shot: "Screenshot", resources: "Infrastructure & community entry points" }
-    : { catalog: "实时目录", summary: "分类总览", workflow: "工作流地图", stages: "个阶段", assets: "项资产", name: "项目", summaryCol: "双语摘要", stage: "主阶段", inputs: "输入", outputs: "输出", status: "接口状态", shot: "截图", resources: "基础设施与社区入口" };
+    ? { catalog: "Live catalog", summary: "Category summary", workflow: "Workflow map", stages: "stages", assets: "assets", name: "Project", summaryCol: "Bilingual summary", stage: "Primary stage", inputs: "Inputs", outputs: "Outputs", status: "Interface status", shot: "Screenshot", lAssets: "Assets", lCats: "Categories", lPub: "Published endpoints", lUpd: "Snapshot updated", resources: "Infrastructure & community entry points" }
+    : { catalog: "实时目录", summary: "分类总览", workflow: "工作流地图", stages: "个阶段", assets: "项资产", name: "项目", summaryCol: "双语摘要", stage: "主阶段", inputs: "输入", outputs: "输出", status: "接口状态", shot: "截图", lAssets: "资产", lCats: "分类", lPub: "已发布端点", lUpd: "快照更新", resources: "基础设施与社区入口" };
   const bySub = {}; // subcategory id -> assets[]（快照 taxonomy 的二级分类归属）
   for (const asset of model.assets) (bySub[asset.catalog?.subcategory] ||= []).push(asset);
   const subNames = (category) =>
     (category.subcategories || []).filter((s) => bySub[s.id]?.length).map((s) => (english ? s.label_en : s.label_zh));
+  const stat = (num, label) => `<td align="center"><strong>${num}</strong><br><sub>${label}</sub></td>`;
   const lines = [
     `<!-- catalog-snapshot: ${model.snapshot_id} -->`,
-    `> ${english ? `Snapshot ${model.snapshot_id}. **${model.assets.length}** public assets across **${model.categories.length}** categories; **${published} published** structured endpoint and **${pending} pending** maintainer interface reviews.` : `快照 ${model.snapshot_id}。**${model.assets.length}** 项公开资产，覆盖 **${model.categories.length}** 个分类；**${published} 个已发布**结构化端点，**${pending} 个待维护者接口审核**。`}`,
+    `<table align="center"><tr>`,
+    stat(model.assets.length, labels.lAssets),
+    stat(model.categories.length, labels.lCats),
+    stat(published, labels.lPub),
+    stat(snapshotDate(model), labels.lUpd),
+    `</tr></table>`,
     "", `## ${labels.summary}`,
     model.categories.map((category) => {
       const total = model.assets.filter((asset) => asset.catalog.category === category.id).length;

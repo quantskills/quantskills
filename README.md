@@ -20,13 +20,18 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 [全部组织仓库](https://github.com/orgs/quantskills/repositories) · [导航仓库](https://github.com/quantskills/quantskills) · [注册表](https://github.com/quantskills/registry) · [模板](https://github.com/quantskills/skill-template) · [加入社区](https://github.com/quantskills/join)
 
-## 动态目录
+## 目录概况
 
-以下内容由固定快照生成；网站入口见 [www.quantskills.ai](https://www.quantskills.ai/)。
+以下是社区公开资产的定期快照；交互式目录见 [www.quantskills.ai](https://www.quantskills.ai/)。
 
 <!-- CATALOG:START -->
 <!-- catalog-snapshot: sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7 -->
-> 快照 sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7。**158** 项公开资产，覆盖 **10** 个分类；**1 个已发布**结构化端点，**157 个待维护者接口审核**。
+<table align="center"><tr>
+<td align="center"><strong>158</strong><br><sub>资产</sub></td>
+<td align="center"><strong>10</strong><br><sub>分类</sub></td>
+<td align="center"><strong>1</strong><br><sub>已发布端点</sub></td>
+<td align="center"><strong>2026-08-11</strong><br><sub>快照更新</sub></td>
+</tr></table>
 
 ## 分类总览
 - [01 数据接口与数据仓库](#cat-01) — 7 项资产（数据源与连接器 / 仓库与缓存 / 行情数据治理 / PIT 与数据质量）

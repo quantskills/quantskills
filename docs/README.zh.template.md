@@ -20,9 +20,9 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 [全部组织仓库](https://github.com/orgs/quantskills/repositories) · [导航仓库](https://github.com/quantskills/quantskills) · [注册表](https://github.com/quantskills/registry) · [模板](https://github.com/quantskills/skill-template) · [加入社区](https://github.com/quantskills/join)
 
-## 动态目录
+## 目录概况
 
-以下内容由固定快照生成；网站入口见 [www.quantskills.ai](https://www.quantskills.ai/)。
+以下是社区公开资产的定期快照；交互式目录见 [www.quantskills.ai](https://www.quantskills.ai/)。
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->
