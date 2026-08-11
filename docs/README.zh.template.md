@@ -1,6 +1,6 @@
 # 🧭 QuantSkills
 
-**简体中文** | [English](README.en.md) · [浏览网站](https://quantskills.github.io/quantskills/)
+**简体中文** | [English](README.en.md) · [浏览网站](https://www.quantskills.ai/)
 
 > 可发现、可安装、可验证、可分享的量化 Skill 与 Agent 社区目录。
 
@@ -22,11 +22,11 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 ## 动态目录
 
-以下内容由固定快照生成；合并到 `main` 并启用 GitHub Pages 后，网站链接将生效。
+以下内容由固定快照生成；网站入口见 [www.quantskills.ai](https://www.quantskills.ai/)。
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->
 
 ## 维护与许可
 
-维护者：[abgyjaguo](https://github.com/abgyjaguo) 与 QuantSkills 社区。目录内容以各资产仓库声明的许可证为准；本导航仓库请参见其 [LICENSE](LICENSE)。
+维护者：[quantskills-GuoYJ](https://github.com/quantskills-GuoYJ) 与 QuantSkills 社区。目录内容以各资产仓库声明的许可证为准；本导航仓库请参见其 [LICENSE](LICENSE)。
