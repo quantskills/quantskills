@@ -16,6 +16,6 @@ export function loadCatalogSnapshot(path) {
 
 export function buildCatalogModel(snapshot, presentation = {}) {
   const categories = CATEGORY_IDS.map((id) => ({ id, ...snapshot.taxonomy.categories[id] }));
-  const assets = [...snapshot.assets].sort((left, right) => left.name.localeCompare(right.name));
+  const assets = snapshot.assets.filter((asset) => asset.status !== "deprecated").sort((left, right) => left.name.localeCompare(right.name));
   return { snapshot_id: snapshot.snapshot_id, taxonomy: snapshot.taxonomy, categories, assets, resources: [...snapshot.resources], presentation };
 }

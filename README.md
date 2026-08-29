@@ -25,20 +25,20 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 以下是社区公开资产的定期快照；交互式目录见 [www.quantskills.ai](https://www.quantskills.ai/)。
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7 -->
+<!-- catalog-snapshot: sha256:117387f24ed230521243f50541e0d1f8c10cd949848b4ba095c55222ba833c00 -->
 <table align="center"><tr>
-<td align="center"><strong>158</strong><br><sub>资产</sub></td>
+<td align="center"><strong>156</strong><br><sub>资产</sub></td>
 <td align="center"><strong>10</strong><br><sub>分类</sub></td>
 <td align="center"><strong>1</strong><br><sub>已发布端点</sub></td>
-<td align="center"><strong>2026-08-11</strong><br><sub>快照更新</sub></td>
+<td align="center"><strong>2026-08-29</strong><br><sub>快照更新</sub></td>
 </tr></table>
 
 ## 分类总览
 - [01 数据接口与数据仓库](#cat-01) — 7 项资产（数据源与连接器 / 仓库与缓存 / 行情数据治理 / PIT 与数据质量）
-- [02 因子研发工具箱](#cat-02) — 32 项资产（因子创意 / 因子生成 / 正交与合成 / 因子筛选 / 因子评价 / 因子池与在线化）
+- [02 因子研发工具箱](#cat-02) — 31 项资产（因子创意 / 因子生成 / 正交与合成 / 因子筛选 / 因子评价 / 因子池与在线化）
 - [03 市场与标的分析](#cat-03) — 32 项资产（A 股 / 港股与美股 / ETF、基金与指数 / 期货与商品 / 期权与可转债 / 宏观与跨资产）
 - [04 风险监控与预警](#cat-04) — 19 项资产（市场状态 / 资金与拥挤 / 流动性风险 / 公司事件 / 监管合规 / 组合压力测试 / 自动预警）
-- [05 策略回测与交易工具](#cat-05) — 19 项资产（策略与信号 / 组合构建 / 回测引擎 / 绩效归因 / 交易成本 / 微观结构 / 仓位与订单 / 模拟与实盘执行）
+- [05 策略回测与交易工具](#cat-05) — 18 项资产（策略与信号 / 组合构建 / 回测引擎 / 绩效归因 / 交易成本 / 微观结构 / 仓位与订单 / 模拟与实盘执行）
 - [06 投研模型与研究复现](#cat-06) — 18 项资产（论文复现 / 策略复现 / 统计与机器学习模型 / 投资者研究模型 / 实验登记与可重复研究）
 - [07 研究验证与质量工具](#cat-07) — 11 项资产（前视与数据泄漏 / 幸存者偏差 / Walk-forward 与 OOS / 信号稳定性 / 预测校准 / 数值与模型审计 / 工作流审计）
 - [08 资讯搜索与知识分析](#cat-08) — 6 项资产（新闻与公告 / 机构研究 / 每日复盘）
@@ -87,7 +87,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 <a id="cat-02"></a>
 <details>
-<summary><strong>02 因子研发工具箱</strong> — 32 项资产，含截图 9</summary>
+<summary><strong>02 因子研发工具箱</strong> — 31 项资产，含截图 8</summary>
 
 ### 因子创意（2）
 
@@ -96,7 +96,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | 根据默认数据范围生成包含经济逻辑和风险说明的因子候选想法。 | factor-generation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-factormad-debate-factor-mining](https://github.com/quantskills/skill-factormad-debate-factor-mining) | 参考FactorMAD多智能体辩论框架进行可解释的股票Alpha因子挖掘。 | factor-generation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factormad-debate-factor-mining.png"><img src="assets/skill-factormad-debate-factor-mining.png" width="260"></a> |
 
-### 因子生成（17）
+### 因子生成（16）
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
@@ -116,7 +116,6 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-overseas-equity-factor-miner](https://github.com/quantskills/skill-overseas-equity-factor-miner) | 发现并以IC、衰减和换手率验证港美股横截面alpha因子。 | factor-generation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-quant-factor-directional-alpha](https://github.com/quantskills/skill-quant-factor-directional-alpha) | 提供用于趋势、突破和反转研究的 OHLCV 方向因子库。 | factor-generation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-directional-alpha.png"><img src="assets/skill-quant-factor-directional-alpha.png" width="260"></a> |
 | [skill-quant-factor-risk-pattern-alpha](https://github.com/quantskills/skill-quant-factor-risk-pattern-alpha) | 提供用于波动、K 线形态和回撤压力研究的 OHLCV 因子库。 | factor-generation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-risk-pattern-alpha.png"><img src="assets/skill-quant-factor-risk-pattern-alpha.png" width="260"></a> |
-| [skill-quant-factor-volume-stat-alpha](https://github.com/quantskills/skill-quant-factor-volume-stat-alpha) | 提供用于成交量和量价统计研究的 OHLCV 因子库。 | factor-generation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-volume-stat-alpha.png"><img src="assets/skill-quant-factor-volume-stat-alpha.png" width="260"></a> |
 
 ### 正交与合成（3）
 
@@ -283,7 +282,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 <a id="cat-05"></a>
 <details>
-<summary><strong>05 策略回测与交易工具</strong> — 19 项资产，含截图 2</summary>
+<summary><strong>05 策略回测与交易工具</strong> — 18 项资产，含截图 2</summary>
 
 ### 策略与信号（4）
 
@@ -308,11 +307,10 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-backtest](https://github.com/quantskills/skill-backtest) | 提供横截面多头回测协议，固定 T+1 开盘成交、费用、涨跌停剔除与诊断图表。 | backtesting | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-backtest.png"><img src="assets/skill-backtest.png" width="260"></a> |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | 对给定因子和行情数据执行long-only横截面因子回测并生成诊断报告。 | backtesting | — | — | 待维护者审核 / 无公开端点 |  |
 
-### 绩效归因（5）
+### 绩效归因（4）
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
-| [skill-brinson-performance-attribution](https://github.com/quantskills/skill-brinson-performance-attribution) | 执行 Brinson-Fachler 或 BHB 归因、HHI 与贡献排序，并支持 Carino 多期链接。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-portfolio-attribution](https://github.com/quantskills/skill-portfolio-attribution) | 将组合主动收益分解为行业配置、个股选择、交互效应和因子贡献。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-portfolio-pnl-attribution](https://github.com/quantskills/skill-portfolio-pnl-attribution) | 按证券和行业归因组合已实现收益，并对账费用、基准和输入质量。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | 计算投资组合或策略的风险收益指标。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |

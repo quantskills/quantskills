@@ -25,20 +25,20 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 A periodic snapshot of the community's public assets; browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7 -->
+<!-- catalog-snapshot: sha256:117387f24ed230521243f50541e0d1f8c10cd949848b4ba095c55222ba833c00 -->
 <table align="center"><tr>
-<td align="center"><strong>158</strong><br><sub>Assets</sub></td>
+<td align="center"><strong>156</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
-<td align="center"><strong>2026-08-11</strong><br><sub>Snapshot updated</sub></td>
+<td align="center"><strong>2026-08-29</strong><br><sub>Snapshot updated</sub></td>
 </tr></table>
 
 ## Category summary
 - [01 Data APIs & Warehouse](#cat-01) — 7 assets（Data Sources & Connectors / Warehouse & Cache / Market Data Governance / PIT & Data Quality）
-- [02 Factor R&D Toolbox](#cat-02) — 32 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
+- [02 Factor R&D Toolbox](#cat-02) — 31 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
 - [03 Market & Instrument Analysis](#cat-03) — 32 assets（A-Share Equities / HK & US Equities / ETFs, Funds & Indices / Futures & Commodities / Options & Convertible Bonds / Macro & Cross-Asset）
 - [04 Risk Monitoring & Alerts](#cat-04) — 19 assets（Market Regime / Flows & Crowding / Liquidity Risk / Corporate Events / Regulatory Compliance / Portfolio Stress Testing / Automated Alerts）
-- [05 Backtesting & Trading](#cat-05) — 19 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
+- [05 Backtesting & Trading](#cat-05) — 18 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
 - [06 Research Models & Replication](#cat-06) — 18 assets（Paper Replication / Strategy Replication / Statistical & ML Models / Investor Research Models / Experiment Registry & Reproducible Research）
 - [07 Research Validation & Quality](#cat-07) — 11 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
 - [08 Information Search & Knowledge Analysis](#cat-08) — 6 assets（News & Disclosures / Institutional Research / Daily Review）
@@ -87,7 +87,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 <a id="cat-02"></a>
 <details>
-<summary><strong>02 Factor R&D Toolbox</strong> — 32 assets, 9 with screenshots</summary>
+<summary><strong>02 Factor R&D Toolbox</strong> — 31 assets, 8 with screenshots</summary>
 
 ### Factor Ideation（2）
 
@@ -96,7 +96,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-factor-idea-generation](https://github.com/quantskills/skill-factor-idea-generation) | Generates candidate factor ideas with economic rationale and risk notes from the default data scope. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factormad-debate-factor-mining](https://github.com/quantskills/skill-factormad-debate-factor-mining) | Uses a FactorMAD-style multi-agent debate framework for interpretable stock-alpha mining. | factor-generation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factormad-debate-factor-mining.png"><img src="assets/skill-factormad-debate-factor-mining.png" width="260"></a> |
 
-### Factor Generation（17）
+### Factor Generation（16）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
@@ -116,7 +116,6 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-overseas-equity-factor-miner](https://github.com/quantskills/skill-overseas-equity-factor-miner) | Discovers and validates HK and US cross-sectional alpha factors by IC, decay, and turnover. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-quant-factor-directional-alpha](https://github.com/quantskills/skill-quant-factor-directional-alpha) | Provides an OHLCV directional-factor library for trend, breakout, and reversal research. | factor-generation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-directional-alpha.png"><img src="assets/skill-quant-factor-directional-alpha.png" width="260"></a> |
 | [skill-quant-factor-risk-pattern-alpha](https://github.com/quantskills/skill-quant-factor-risk-pattern-alpha) | Provides an OHLCV factor library for volatility, chart-pattern, and drawdown-pressure research. | factor-generation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-risk-pattern-alpha.png"><img src="assets/skill-quant-factor-risk-pattern-alpha.png" width="260"></a> |
-| [skill-quant-factor-volume-stat-alpha](https://github.com/quantskills/skill-quant-factor-volume-stat-alpha) | Provides an OHLCV factor library for volume and price-volume statistical research. | factor-generation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-quant-factor-volume-stat-alpha.png"><img src="assets/skill-quant-factor-volume-stat-alpha.png" width="260"></a> |
 
 ### Orthogonalization & Blending（3）
 
@@ -283,7 +282,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 <a id="cat-05"></a>
 <details>
-<summary><strong>05 Backtesting & Trading</strong> — 19 assets, 2 with screenshots</summary>
+<summary><strong>05 Backtesting & Trading</strong> — 18 assets, 2 with screenshots</summary>
 
 ### Strategies & Signals（4）
 
@@ -308,11 +307,10 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-backtest](https://github.com/quantskills/skill-backtest) | Provides a cross-sectional long-only backtest protocol with T+1 execution, fees, limit filters, and diagnostics. | backtesting | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-backtest.png"><img src="assets/skill-backtest.png" width="260"></a> |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | Runs long-only cross-sectional factor backtests on supplied factors and market data with diagnostics. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 
-### Performance Attribution（5）
+### Performance Attribution（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
-| [skill-brinson-performance-attribution](https://github.com/quantskills/skill-brinson-performance-attribution) | Runs Brinson-Fachler or BHB attribution with HHI, contributor ranking, and Carino multi-period linking. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-portfolio-attribution](https://github.com/quantskills/skill-portfolio-attribution) | Attributes active portfolio returns to industry allocation, stock selection, interaction, and factor contributions. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-portfolio-pnl-attribution](https://github.com/quantskills/skill-portfolio-pnl-attribution) | Attributes realized portfolio returns by security and sector while reconciling fees, benchmarks, and input quality. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | Calculates risk-return metrics for portfolios or strategies. | evaluation | — | — | pending maintainer review / no public endpoint |  |

@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7",
+  "snapshot_id": "sha256:117387f24ed230521243f50541e0d1f8c10cd949848b4ba095c55222ba833c00",
   "taxonomy": {
     "categories": {
       "10": {
@@ -1547,45 +1547,6 @@
         "workflow_stages": [
           "data-ingestion",
           "monitoring",
-          "reporting"
-        ]
-      }
-    },
-    {
-      "catalog": {
-        "category": "05",
-        "subcategory": "05.performance-attribution"
-      },
-      "catalog_status": "approved",
-      "category": "05",
-      "commit_sha": "08b2be7386c49c640d974ef41dc4c5478288f201",
-      "declaration_file": "SKILL.md",
-      "declaration_status": "legacy",
-      "default_branch": "main",
-      "description": "Brinson-Fachler / BHB sector attribution with interaction, concentration (HHI), top contributors, and optional Carino multi-period linking. Use to explain active return as allocation vs selection.\n",
-      "health": "frozen-declaration-only",
-      "interface": null,
-      "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
-      "license": "GPL-3.0-only",
-      "maintainer_type": "community",
-      "name": "skill-brinson-performance-attribution",
-      "platforms": [],
-      "project_type": "skill",
-      "requires": [],
-      "stage": "evaluation",
-      "status": "active",
-      "subcategory": "05.performance-attribution",
-      "summary_en": "Runs Brinson-Fachler or BHB attribution with HHI, contributor ranking, and Carino multi-period linking.",
-      "summary_zh": "执行 Brinson-Fachler 或 BHB 归因、HHI 与贡献排序，并支持 Carino 多期链接。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-brinson-performance-attribution",
-      "validation_level": "listed",
-      "workflow": {
-        "primary_stage": "evaluation",
-        "workflow_stages": [
-          "data-ingestion",
-          "evaluation",
           "reporting"
         ]
       }
@@ -5362,45 +5323,6 @@
           "factor-generation",
           "evaluation",
           "orchestration"
-        ]
-      }
-    },
-    {
-      "catalog": {
-        "category": "02",
-        "subcategory": "02.factor-generation"
-      },
-      "catalog_status": "approved",
-      "category": "02",
-      "commit_sha": "b169f31106f748b8746c4c1028c162e95f7277f4",
-      "declaration_file": "SKILL.md",
-      "declaration_status": "legacy",
-      "default_branch": "main",
-      "description": "Use when an agent needs a verified library of OHLCV volume, volume-price, ranking, and statistical alpha factor Skills for liquidity and distribution research.",
-      "health": "frozen-declaration-only",
-      "interface": null,
-      "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
-      "license": "GPL-3.0-only",
-      "maintainer_type": "community",
-      "name": "skill-quant-factor-volume-stat-alpha",
-      "platforms": [],
-      "project_type": "skill",
-      "requires": [],
-      "stage": "factor-generation",
-      "status": "active",
-      "subcategory": "02.factor-generation",
-      "summary_en": "Provides an OHLCV factor library for volume and price-volume statistical research.",
-      "summary_zh": "提供用于成交量和量价统计研究的 OHLCV 因子库。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-quant-factor-volume-stat-alpha",
-      "validation_level": "listed",
-      "workflow": {
-        "primary_stage": "factor-generation",
-        "workflow_stages": [
-          "data-ingestion",
-          "factor-generation",
-          "evaluation"
         ]
       }
     },
