@@ -97,7 +97,7 @@ export function replaceCatalog(template, model, language) {
   const catalog = renderCatalog(model, language);
   const marker = /<!-- CATALOG:START -->[\s\S]*?<!-- CATALOG:END -->/;
   if (!marker.test(template)) throw new Error("README template is missing catalog markers");
-  return template.replace(marker, `<!-- CATALOG:START -->\n${catalog}<!-- CATALOG:END -->`);
+  return template.replace(marker, `<!-- CATALOG:START -->\n${catalog}<!-- CATALOG:END -->`).replace(/\r\n/g, "\n");
 }
 
 export function renderReadme(model, language) {

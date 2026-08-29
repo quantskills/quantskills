@@ -24,6 +24,9 @@ export function verifyBuild(outputDir, snapshot) {
     if (!actual || JSON.stringify(actual) !== JSON.stringify(asset)) throw new Error("output asset mismatch");
     if (!zh.includes(asset.name) || !en.includes(asset.name)) throw new Error("README asset mismatch");
   }
-  if (!zh.includes(`**${snapshot.assets.length}** 项公开资产`) || !en.includes(`**${snapshot.assets.length}** public assets`)) throw new Error("output count mismatch");
+  const count = snapshot.assets.length;
+  const zhCount = new RegExp(`<strong>${count}</strong>\\s*<br>\\s*<sub>资产</sub>`);
+  const enCount = new RegExp(`<strong>${count}</strong>\\s*<br>\\s*<sub>Assets</sub>`);
+  if (!zhCount.test(zh) || !enCount.test(en)) throw new Error("output count mismatch");
   return true;
 }
