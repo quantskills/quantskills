@@ -18,12 +18,15 @@ export function verifyBuild(outputDir, snapshot) {
   const zhTemplate = readFileSync(join(ROOT, "docs", "README.zh.template.md"), "utf8");
   const enTemplate = readFileSync(join(ROOT, "docs", "README.en.template.md"), "utf8");
   if (zh !== replaceCatalog(zhTemplate, model, "zh") || en !== replaceCatalog(enTemplate, model, "en")) throw new Error("README projection mismatch");
-  if (names(site.assets) !== names(snapshot.assets) || names(site.resources) !== names(snapshot.resources) || JSON.stringify(site.taxonomy) !== JSON.stringify(snapshot.taxonomy) || JSON.stringify(site.profiles) !== JSON.stringify(snapshot.profiles.items) || JSON.stringify(site.adapters) !== JSON.stringify(snapshot.adapters.items) || JSON.stringify(site.compatibility_edges) !== JSON.stringify(snapshot.compatibility_edges)) throw new Error("output projection mismatch");
-  for (const asset of snapshot.assets) {
+  if (names(site.assets) !== names(model.assets) || names(site.resources) !== names(snapshot.resources) || JSON.stringify(site.taxonomy) !== JSON.stringify(snapshot.taxonomy) || JSON.stringify(site.profiles) !== JSON.stringify(snapshot.profiles.items) || JSON.stringify(site.adapters) !== JSON.stringify(snapshot.adapters.items) || JSON.stringify(site.compatibility_edges) !== JSON.stringify(snapshot.compatibility_edges)) throw new Error("output projection mismatch");
+  for (const asset of model.assets) {
     const actual = site.assets.find((item) => item.name === asset.name);
     if (!actual || JSON.stringify(actual) !== JSON.stringify(asset)) throw new Error("output asset mismatch");
     if (!zh.includes(asset.name) || !en.includes(asset.name)) throw new Error("README asset mismatch");
   }
-  if (!zh.includes(`**${snapshot.assets.length}** 项公开资产`) || !en.includes(`**${snapshot.assets.length}** public assets`)) throw new Error("output count mismatch");
+  const count = model.assets.length;
+  const zhCount = new RegExp(`<strong>${count}</strong>\\s*<br>\\s*<sub>资产</sub>`);
+  const enCount = new RegExp(`<strong>${count}</strong>\\s*<br>\\s*<sub>Assets</sub>`);
+  if (!zhCount.test(zh) || !enCount.test(en)) throw new Error("output count mismatch");
   return true;
 }

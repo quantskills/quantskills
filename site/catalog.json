@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "sha256:ecb9a3d03c6df06f3d5ca7961766ad2927ab3d370ee64e80343c0dd6946567a7",
+  "snapshot_id": "sha256:276e68899f6db4a7570a1b13cd84231f94987469343002522270686e52e87091",
   "taxonomy": {
     "categories": {
       "10": {
@@ -416,6 +416,105 @@
     {
       "catalog": {
         "category": "09",
+        "subcategory": "09.monitor-risk-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "4c93fd6d93a5bca6e4cac178c2cf9d6ef7e8d241",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Multi-factor portfolio health guardian. Orchestrates factor evaluate/decay, crowding risk, and smart-money profiling into a health matrix, crowding alerts, retire/rebuild candidates, and IC decay curves. Use when a research AI agent needs continuous portfolio-level factor monitoring without automated order placement.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-alpha-portfolio-guardian",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "cursor"
+      ],
+      "project_type": "agent",
+      "requires": [
+        "skill-factor-evaluate",
+        "skill-factor-decay",
+        "agent-crowding-risk-monitor",
+        "skill-smart-money-profiler"
+      ],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "09.monitor-risk-agent",
+      "summary_en": "Multi-factor portfolio health guardian producing a health matrix, crowding alerts, retire/rebuild candidates, IC decay curves, and a research-only effectiveness backtest L4 page.",
+      "summary_zh": "多因子组合健康度守卫：健康度矩阵 + 拥挤警示 + 退休/重构候选 + IC 衰减曲线，含守卫规则有效性回测 L4。",
+      "tags": [
+        "quant",
+        "factor",
+        "portfolio",
+        "guardian",
+        "crowding",
+        "smart-money",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/agent-alpha-portfolio-guardian",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.monitor-risk-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "e326af2ead3d46f0adebbf5ff2a078a6ece89acd",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "公司治理综合评分 Agent。对 A 股上市公司进行 9 维度治理风险打分（0-100）并生成逐项证据链：审计意见、诉讼风险、关联交易、担保风险、合同风险、中介机构、股权性质、违规记录、举牌收购。LLM 编排 + PandaData 数据驱动。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-corporate-governance-scanner",
+      "platforms": [],
+      "project_type": "agent",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "09.monitor-risk-agent",
+      "summary_en": "Corporate governance scoring agent with 9-dimension risk scoring and evidence chains",
+      "summary_zh": "公司治理综合评分 Agent，9维度治理风险打分+证据链",
+      "tags": [],
+      "url": "https://github.com/quantskills/agent-corporate-governance-scanner",
+      "validation_level": "verified",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
         "subcategory": "09.research-agent"
       },
       "catalog_status": "approved",
@@ -534,6 +633,96 @@
     {
       "catalog": {
         "category": "09",
+        "subcategory": "09.monitor-risk-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "2173d3a851ddf0d221fc0f5d3750e5962ab40c4a",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "财报季 Surprise/暴雷猎手 Agent。获取财报预告、一致预期、审计意见，计算偏离度并生成分析报告。支持A股/港股/美股。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-earnings-surprise-hunter",
+      "platforms": [],
+      "project_type": "agent",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "09.monitor-risk-agent",
+      "summary_en": "财报季 Surprise/暴雷猎手 Agent。获取财报预告、一致预期、审计意见，计算偏离度并生成分析报告。支持A股/港股/美股。",
+      "summary_zh": "财报季 Surprise/暴雷猎手 Agent。获取财报预告、一致预期、审计意见，计算偏离度并生成分析报告。支持A股/港股/美股。",
+      "tags": [],
+      "url": "https://github.com/quantskills/agent-earnings-surprise-hunter",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.research-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "7f100672d95eff4c2351517ba2c6a1be7ddea464",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "master",
+      "description": "追踪微博\"峰哥亡命天涯\"的发言，提取其股票/市场观点，生成反向操作信号，并通过Pandadata实现K线图信号标注、回测验证和虚拟交易系统。峰哥是A股知名反向指标——其公开观点具有稳定反向参考价值。Use when the user asks for 峰哥反向指标, 峰哥亡命天涯, 反向指标, 峰哥观点, 峰哥持仓, or to check what Feng Ge is saying about the market.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-feng-reverse",
+      "platforms": [],
+      "project_type": "agent",
+      "requires": [],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "09.research-agent",
+      "summary_en": "Tracks Weibo user \"峰哥亡命天涯\" (Feng Ge), a well-known A-share reverse indicator. Extracts stock/market opinions from his posts and generates contrarian trading signals.",
+      "summary_zh": "追踪微博\"峰哥亡命天涯\"的发言，提取股票/市场观点，生成反向操作信号。峰哥是A股知名反向指标，其公开观点具有稳定的反向参考价值。",
+      "tags": [
+        "a-share",
+        "weibo",
+        "reverse-indicator",
+        "sentiment",
+        "feng-ge",
+        "contrarian",
+        "backtest",
+        "chart",
+        "database"
+      ],
+      "url": "https://github.com/quantskills/agent-feng-reverse",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
         "subcategory": "09.workflow-orchestration-agent"
       },
       "catalog_status": "approved",
@@ -565,6 +754,113 @@
         "primary_stage": "orchestration",
         "workflow_stages": [
           "orchestration"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.workflow-orchestration-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "42a899733db3173a331159fb25d29d78eb4d3e32",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "基于 LangGraph 编排的多智能体期货研究与回测工作流，适用于结构化市场分析、组合决策、历史复刻、执行检查、结算和研究反馈。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-future-trading",
+      "platforms": [
+        "cursor",
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "agent",
+      "requires": [],
+      "stage": "orchestration",
+      "status": "draft",
+      "subcategory": "09.workflow-orchestration-agent",
+      "summary_en": "Multi-agent futures research, strategy generation, backtesting, and research feedback workflow",
+      "summary_zh": "多智能体期货研究、策略生成、历史回测与研究反馈工作流",
+      "tags": [
+        "futures",
+        "multi-agent",
+        "langgraph",
+        "langchain",
+        "backtesting",
+        "portfolio-construction",
+        "research-loop"
+      ],
+      "url": "https://github.com/quantskills/agent-future-trading",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "orchestration",
+        "workflow_stages": [
+          "data-ingestion",
+          "data-quality",
+          "modeling",
+          "portfolio-construction",
+          "backtesting",
+          "evaluation",
+          "risk",
+          "execution",
+          "reporting",
+          "orchestration"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.monitor-risk-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "beeb3718bd081926d62e9f48cea3fe5967ce7be1",
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "A research-only reinforcement-learning lab for intraday timing on minute bars. Builds a Gymnasium-style trading environment from Pandadata minute data, ships baseline policies (TWAP, intraday momentum, intraday reversal), and a leakage-aware walk-forward train/eval harness for offline/online RL (DQN-style). Use when a research agent needs to prototype and benchmark intraday-timing policies against baselines with realistic fees/slippage — never for live order placement.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-intraday-rl-timing",
+      "platforms": [],
+      "project_type": "agent",
+      "requires": [],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "09.monitor-risk-agent",
+      "summary_en": "Research-only RL lab for intraday timing on minute bars: Gym env, baseline policies, leakage-aware walk-forward train/eval. No live orders.",
+      "summary_zh": "纯研究的日内强化学习实验台：分钟数据建 Gym 环境 + 基线策略(TWAP/动量/反转) + 防泄漏 walk-forward 训练评估，绝不实盘下单。",
+      "tags": [
+        "reinforcement-learning",
+        "intraday",
+        "minute-bars",
+        "gymnasium",
+        "walk-forward",
+        "research-only"
+      ],
+      "url": "https://github.com/quantskills/agent-intraday-rl-timing",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "monitoring",
+          "reporting"
         ]
       }
     },
@@ -767,6 +1063,45 @@
     },
     {
       "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Analyze A-share cross-sectional market participation, turnover concentration, liquidity distribution, speculative crowding, leader dependence, and structural fragility from daily or intraday stock snapshots. Use when the user asks in Chinese or English to analyze A-share market breadth, participation, turnover concentration, crowding, whether an index rally is broad or narrow, or to generate a reproducible market-structure report. Use only bundled scripts with PandaData as the primary live source, AKShare as fallback, or user-provided local data; never search, browse, or scrape webpages for replacement market data, and fail closed when approved sources are unavailable. Do not use for order routing, fill simulation, slippage/TCA, live trade execution, or stock-level margin/northbound/block-trade capital-flow attribution.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-a-share-market-participation",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "Analyze A-share cross-sectional market participation, turnover concentration, liquidity distribution, speculative crowding, leader dependence, and structural fragility from daily or intraday stock snapshots. Use when the user asks in Chinese or English to analyze A-share market breadth, participation, turnover concentration, crowding, whether an index rally is broad or narrow, or to generate a reproducible market-structure report. Use only bundled scripts with PandaData as the primary live source, AKShare as fallback, or user-provided local data; never search, browse, or scrape webpages for replacement market data, and fail closed when approved sources are unavailable. Do not use for order routing, fill simulation, slippage/TCA, live trade execution, or stock-level margin/northbound/block-trade capital-flow attribution.",
+      "summary_zh": "Analyze A-share cross-sectional market participation, turnover concentration, liquidity distribution, speculative crowding, leader dependence, and structural fragility from daily or intraday stock snapshots. Use when the user asks in Chinese or English to analyze A-share market breadth, participation, turnover concentration, crowding, whether an index rally is broad or narrow, or to generate a reproducible market-structure report. Use only bundled scripts with PandaData as the primary live source, AKShare as fallback, or user-provided local data; never search, browse, or scrape webpages for replacement market data, and fail closed when approved sources are unavailable. Do not use for order routing, fill simulation, slippage/TCA, live trade execution, or stock-level margin/northbound/block-trade capital-flow attribution.",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-a-share-market-participation",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "04",
         "subcategory": "04.automated-alerts"
       },
@@ -883,6 +1218,62 @@
     },
     {
       "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "A-share tradability-constraint auditor — replays a backtest or signal trade log against date-resolved price limits (10%/20%/30%; main-board ST was 5% until the 2026-07-06 rule change), locked vs intraday-opened limit bars, suspensions, T+1 settlement, the naked-short ban, the new-listing window and turnover participation caps, then splits headline PnL into executable PnL and phantom PnL. Use when the user asks 回测收益是不是真的能成交、涨停买不进、 跌停卖不出、停牌怎么处理、T+1 约束、一字板、可交易性/可成交性审计, or wants to know why a live account underperforms its backtest. Fills the ecosystem gap: the four existing auditors all check whether the DATA is right, none checks whether the EXECUTION ASSUMPTION is possible.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-a-share-tradability-auditor",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "cursor"
+      ],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "A-share tradability-constraint auditor — replays a backtest or signal trade log against date-resolved price limits (10%/20%/30%; main-board ST was 5% until the 2026-07-06 rule change), locked vs intraday-opened limit bars, suspensions, T+1 settlement, the naked-short ban, the new-listing window and turnover participation caps, then splits headline PnL into executable PnL and phantom PnL. Use when the user asks 回测收益是不是真的能成交、涨停买不进、 跌停卖不出、停牌怎么处理、T+1 约束、一字板、可交易性/可成交性审计, or wants to know why a live account underperforms its backtest. Fills the ecosystem gap: the four existing auditors all check whether the DATA is right, none checks whether the EXECUTION ASSUMPTION is possible.",
+      "summary_zh": "A 股可交易性约束审计：把回测交易流放回历史行情，逐笔判定涨跌停封板、停牌、T+1、 裸卖空、新股窗口与参与率上限，把账面收益拆成\"可成交收益\"与\"幽灵收益\"， 并定位到具体交易。回答\"这条净值曲线里有多少是市场根本不会给你的\"。",
+      "tags": [
+        "a-share",
+        "tradability",
+        "price-limit",
+        "t-plus-1",
+        "suspension",
+        "backtest-integrity",
+        "execution",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/skill-a-share-tradability-auditor",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "02",
         "subcategory": "02.factor-generation"
       },
@@ -961,6 +1352,59 @@
     },
     {
       "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "33b26ef77ae97c5a824b1441d124023308cf78bb",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Monitor and research relative valuation between dual-listed A-share and H-share securities using bundled scripts, PandaData, and HKMA FX data. Use when analyzing A/H premiums or discounts, FX-adjusted price gaps, historical premium percentiles and z-scores, cross-market dislocations, daily lead-lag proxies, market-wide A/H scans, single-company A/H questions, or company-name-to-code lookup for mainland China and Hong Kong listings. Prefer the skill's scripts and normalized CSVs; never browse unrelated webpages or manually scrape public sites for this skill. If PandaData or live data access fails, fail closed instead of searching the web. Produce reproducible JSON and Markdown research outputs; do not present price gaps as guaranteed arbitrage or place trades.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-ah-share-relative-value-montior",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "Monitor FX-adjusted A/H premiums, historical extremes, dislocations, and daily cross-market price-discovery proxies.",
+      "summary_zh": "监控A/H双重上市股票的汇率调整溢价、历史极值、脱钩与日频价格发现关系。",
+      "tags": [
+        "a-share",
+        "h-share",
+        "ah-premium",
+        "relative-value",
+        "cross-market",
+        "fx",
+        "lead-lag"
+      ],
+      "url": "https://github.com/quantskills/skill-ah-share-relative-value-montior",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "02",
         "subcategory": "02.factor-generation"
       },
@@ -991,6 +1435,46 @@
       "validation_level": "listed",
       "workflow": {
         "primary_stage": "factor-generation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "c1de583f6f42c559020b2d3d2b6fdab654ed8c82",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "连板龙头接力（A3）Alpha 因子——从全 A 市场每日 ≥3 板候选池中识别 T+1 接力的事件型 top-N 信号，10 个子因子（个股截面 8 + 大盘情绪 2），权重可用 ICIR + shrinkage 重训，含滚动 IC gate 与 score 加权。研究层面的候选发现器，非交易策略。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-alpha-a3-streak-leader-relay",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "02.factor-generation",
+      "summary_en": "连板龙头接力（A3）Alpha 因子——从全 A 市场每日 ≥3 板候选池中识别 T+1 接力的事件型 top-N 信号，10 个子因子（个股截面 8 + 大盘情绪 2），权重可用 ICIR + shrinkage 重训，含滚动 IC gate 与 score 加权。研究层面的候选发现器，非交易策略。",
+      "summary_zh": "连板龙头接力（A3）Alpha 因子——从全 A 市场每日 ≥3 板候选池中识别 T+1 接力的事件型 top-N 信号，10 个子因子（个股截面 8 + 大盘情绪 2），权重可用 ICIR + shrinkage 重训，含滚动 IC gate 与 score 加权。研究层面的候选发现器，非交易策略。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-alpha-a3-streak-leader-relay",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
         "workflow_stages": [
           "data-ingestion",
           "feature-engineering",
@@ -1148,46 +1632,6 @@
       "summary_zh": "从期货家族席位与主力席位持仓背离计算因子信号。",
       "tags": [],
       "url": "https://github.com/quantskills/skill-alpha-f8-family-main-divergence",
-      "validation_level": "listed",
-      "workflow": {
-        "primary_stage": "factor-generation",
-        "workflow_stages": [
-          "data-ingestion",
-          "feature-engineering",
-          "factor-generation",
-          "evaluation"
-        ]
-      }
-    },
-    {
-      "catalog": {
-        "category": "02",
-        "subcategory": "02.factor-generation"
-      },
-      "catalog_status": "approved",
-      "category": "02",
-      "commit_sha": "066eb0f86eb03f40a4ee639bdb651d928d89f262",
-      "declaration_file": "SKILL.md",
-      "declaration_status": "legacy",
-      "default_branch": "main",
-      "description": "当需要开发、计算、验证 Graham 净净营运资本(NCAV) 因子时，使用此 skill。适用于 A 股全市场深度价值筛选，排除银行/房地产/非银金融，计算 NCAV 折价因子并生成 buy/sell/hold 信号。",
-      "health": "frozen-declaration-only",
-      "interface": null,
-      "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
-      "license": "GPL-3.0-only",
-      "maintainer_type": "community",
-      "name": "skill-alpha-ncav-graham",
-      "platforms": [],
-      "project_type": "skill",
-      "requires": [],
-      "stage": "factor-generation",
-      "status": "active",
-      "subcategory": "02.factor-generation",
-      "summary_en": "Computes a Graham NCAV discount factor for A-share deep-value screening and buy-sell-hold signals.",
-      "summary_zh": "计算 Graham NCAV 净流动资产折价因子，面向排除金融股的 A 股深度价值筛选并生成信号。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-alpha-ncav-graham",
       "validation_level": "listed",
       "workflow": {
         "primary_stage": "factor-generation",
@@ -1437,6 +1881,52 @@
     {
       "catalog": {
         "category": "07",
+        "subcategory": "07.workflow-audit"
+      },
+      "catalog_status": "approved",
+      "category": "07",
+      "commit_sha": "0332e475abcb399b5949999cf1d0ffc9559aa00f",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix).",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-backtest-assumption_check",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "07.workflow-audit",
+      "summary_en": "Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix).",
+      "summary_zh": "独立的回测假设审计师：对回测代码/策略代码/研究报告按九大维度（成交时点、成本、涨跌停停牌、幸存者、多重比较、数据对齐、换手容量、基准、透明）逐条取证，输出缺陷×证据×严重度×影响×修复清单，配套可运行校验脚本。",
+      "tags": [
+        "backtest-audit",
+        "lookahead",
+        "survivorship",
+        "multiple-testing",
+        "trading-costs"
+      ],
+      "url": "https://github.com/quantskills/skill-backtest-assumption_check",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "data-quality",
+          "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "07",
         "subcategory": "07.walk-forward-oos"
       },
       "catalog_status": "approved",
@@ -1553,45 +2043,6 @@
     },
     {
       "catalog": {
-        "category": "05",
-        "subcategory": "05.performance-attribution"
-      },
-      "catalog_status": "approved",
-      "category": "05",
-      "commit_sha": "08b2be7386c49c640d974ef41dc4c5478288f201",
-      "declaration_file": "SKILL.md",
-      "declaration_status": "legacy",
-      "default_branch": "main",
-      "description": "Brinson-Fachler / BHB sector attribution with interaction, concentration (HHI), top contributors, and optional Carino multi-period linking. Use to explain active return as allocation vs selection.\n",
-      "health": "frozen-declaration-only",
-      "interface": null,
-      "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
-      "license": "GPL-3.0-only",
-      "maintainer_type": "community",
-      "name": "skill-brinson-performance-attribution",
-      "platforms": [],
-      "project_type": "skill",
-      "requires": [],
-      "stage": "evaluation",
-      "status": "active",
-      "subcategory": "05.performance-attribution",
-      "summary_en": "Runs Brinson-Fachler or BHB attribution with HHI, contributor ranking, and Carino multi-period linking.",
-      "summary_zh": "执行 Brinson-Fachler 或 BHB 归因、HHI 与贡献排序，并支持 Carino 多期链接。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-brinson-performance-attribution",
-      "validation_level": "listed",
-      "workflow": {
-        "primary_stage": "evaluation",
-        "workflow_stages": [
-          "data-ingestion",
-          "evaluation",
-          "reporting"
-        ]
-      }
-    },
-    {
-      "catalog": {
         "category": "03",
         "subcategory": "03.a-share-equity"
       },
@@ -1626,6 +2077,51 @@
           "data-ingestion",
           "modeling",
           "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "08b4e44a01d493e70cbd478b95a45e57fb7997d7",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "PandaData-only, point-in-time A-share Buffett moat hard screener with ten-year return consistency, margin stability, capital intensity, debt and TTM valuation evidence. Use when an agent needs an auditable quality screen, historical signal reconstruction, or annual factor validation without future information.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-buffett-moat-screener--lavineversion",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "PandaData-only point-in-time Buffett moat hard screener for A-shares.",
+      "summary_zh": "基于 PandaData 点时证据执行十年资本回报与护城河硬筛选。",
+      "tags": [
+        "a-share",
+        "buffett",
+        "fundamental",
+        "point-in-time",
+        "screener"
+      ],
+      "url": "https://github.com/quantskills/skill-buffett-moat-screener--lavineversion",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
@@ -1784,6 +2280,57 @@
           "data-ingestion",
           "monitoring",
           "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "c4d186a9bbedd05890472fd3e2c006cdcfa5d6a9",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Discover causal alpha factors from OHLCV data using causal discovery (PC + LiNGAM + NOTEARS), build Structural Causal Models, construct regime-invariant factor expressions, and validate through backtesting. Produces OHLCV-only alpha factors whose predictive power is grounded in causal mechanisms rather than spurious correlations. Use when an agent needs to discover stable alpha factors that survive regime changes, test whether existing factors are causal or merely correlational, or generate alpha factors with formal invariance guarantees on portable agent platforms such as Claude Code, Codex, or Codex-style skill systems.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-causal-alpha-discovery",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Discover causal alpha factors from OHLCV data using causal discovery (PC + LiNGAM + NOTEARS), build Structural Causal Models, construct regime-invariant factor expressions, and validate through backtesting. Produces OHLCV-only alpha factors whose predictive power is grounded in causal mechanisms rather than spurious correlations. Use when an agent needs to discover stable alpha factors that survive regime changes, test whether existing factors are causal or merely correlational, or generate alpha factors with formal invariance guarantees on portable agent platforms such as Claude Code, Codex, or Codex-style skill systems.",
+      "summary_zh": "Discover causal alpha factors from OHLCV data using causal discovery (PC + LiNGAM + NOTEARS), build Structural Causal Models, construct regime-invariant factor expressions, and validate through backtesting. Produces OHLCV-only alpha factors whose predictive power is grounded in causal mechanisms rather than spurious correlations. Use when an agent needs to discover stable alpha factors that survive regime changes, test whether existing factors are causal or merely correlational, or generate alpha factors with formal invariance guarantees on portable agent platforms such as Claude Code, Codex, or Codex-style skill systems.",
+      "tags": [
+        "causal-discovery",
+        "causal-inference",
+        "alpha-generation",
+        "factor-discovery",
+        "regime-invariance",
+        "structural-causal-model",
+        "do-calculus",
+        "ohlcv",
+        "stock-selection",
+        "cross-sectional"
+      ],
+      "url": "https://github.com/quantskills/skill-causal-alpha-discovery",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
         ]
       }
     },
@@ -1989,6 +2536,54 @@
     },
     {
       "catalog": {
+        "category": "04",
+        "subcategory": "04.regulatory-compliance"
+      },
+      "catalog_status": "approved",
+      "category": "04",
+      "commit_sha": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "A-share CSRC approval pipeline tracking skill — monitors regulatory approval progress, categorizes by announcement level, and generates pipeline status reports. Use when the user asks to track CSRC approval progress, monitor regulatory announcements, check approval pipeline status, or generate approval progress reports.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-csrc-approval-pipeline",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "04.regulatory-compliance",
+      "summary_en": "A-share CSRC approval pipeline tracking: categorization by announcement level, approval flow monitoring, and status report generation.",
+      "summary_zh": "A 股证监会批文进度追踪：按公告级别分类、审批流程监控、批文状态报告生成。",
+      "tags": [
+        "a-share",
+        "csrc",
+        "approval",
+        "pipeline",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/skill-csrc-approval-pipeline",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "risk",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "08",
         "subcategory": "08.daily-review"
       },
@@ -2067,6 +2662,114 @@
     },
     {
       "catalog": {
+        "category": "04",
+        "subcategory": "04.portfolio-stress"
+      },
+      "catalog_status": "approved",
+      "category": "04",
+      "commit_sha": "554ffc48fc46f3ffc9039406ec40938a20424351",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Price options and other derivatives and quantify their risk from a contract specification and market inputs, covering Black-Scholes-Merton analytical pricing, the full set of Greeks, binomial-tree and Monte-Carlo numerical pricing with convergence checks, implied-volatility inversion, volatility smile/skew structure, and model-risk validation (put-call parity, no-arbitrage bounds, cross-method consistency). Use when the user asks for 期权定价、希腊字母计算、隐含波动率、波动率微笑/曲面、二叉树或蒙特卡洛定价、Black-Scholes、美式期权定价、看跌看涨平价校验, or a one-stop option pricing and risk dossier.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-derivatives-pricing-stochastic-calculus",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "openclaw",
+        "cursor",
+        "hermes"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "04.portfolio-stress",
+      "summary_en": "Price options and other derivatives and quantify their risk from a contract specification and market inputs, covering Black-Scholes-Merton analytical pricing, the full set of Greeks, binomial-tree and Monte-Carlo numerical pricing with convergence checks, implied-volatility inversion, volatility smile/skew structure, and model-risk validation (put-call parity, no-arbitrage bounds, cross-method consistency). Use when the user asks for 期权定价、希腊字母计算、隐含波动率、波动率微笑/曲面、二叉树或蒙特卡洛定价、Black-Scholes、美式期权定价、看跌看涨平价校验, or a one-stop option pricing and risk dossier.",
+      "summary_zh": "输入期权合约与市场参数，输出可复现的定价与风险报告：BSM 解析价、全套希腊字母、二叉树与蒙特卡洛数值价、隐含波动率、平价与无套利校验，一次算清。",
+      "tags": [
+        "derivatives-pricing",
+        "options",
+        "black-scholes",
+        "greeks",
+        "implied-volatility",
+        "monte-carlo",
+        "binomial-tree",
+        "stochastic-calculus"
+      ],
+      "url": "https://github.com/quantskills/skill-derivatives-pricing-stochastic-calculus",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "risk",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "08",
+        "subcategory": "08.news-disclosures"
+      },
+      "catalog_status": "approved",
+      "category": "08",
+      "commit_sha": "6fae7ed42fde63fd7fd12807a4c866e95eaeb709",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Turn unstructured A-share disclosure text from cninfo (巨潮) and the SSE/SZSE exchanges into a traceable, structured event table (监管问询/诉讼担保/重组/治理/ 停牌控制权变更/增减持/质押/业绩预告). Use when the user asks to scan A-share announcements, find 关注函/问询函/诉讼/停牌/易主 events, build an event table for factor or alert pipelines, or backtest disclosure events. Fills the information-search gap Pandadata does not cover.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-disclosure-event-extractor",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "cursor"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "08.news-disclosures",
+      "summary_en": "Turn unstructured A-share disclosure text from cninfo (巨潮) and the SSE/SZSE exchanges into a traceable, structured event table (监管问询/诉讼担保/重组/治理/ 停牌控制权变更/增减持/质押/业绩预告). Use when the user asks to scan A-share announcements, find 关注函/问询函/诉讼/停牌/易主 events, build an event table for factor or alert pipelines, or backtest disclosure events. Fills the information-search gap Pandadata does not cover.",
+      "summary_zh": "Turn unstructured A-share disclosure text from cninfo (巨潮) and the SSE/SZSE exchanges into a traceable, structured event table (监管问询/诉讼担保/重组/治理/ 停牌控制权变更/增减持/质押/业绩预告). Use when the user asks to scan A-share announcements, find 关注函/问询函/诉讼/停牌/易主 events, build an event table for factor or alert pipelines, or backtest disclosure events. Fills the information-search gap Pandadata does not cover.",
+      "tags": [
+        "a-share",
+        "disclosure",
+        "announcement",
+        "event-extraction",
+        "cninfo",
+        "web-scraping",
+        "event-driven"
+      ],
+      "url": "https://github.com/quantskills/skill-disclosure-event-extractor",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "03",
         "subcategory": "03.a-share-equity"
       },
@@ -2110,6 +2813,46 @@
       },
       "catalog_status": "approved",
       "category": "06",
+      "commit_sha": "e9df0dc55a6184ed4a637c7a970d528dcc861405",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "深度自编码器无监督异常检测 —— 用户问「今天哪些股票走势最异常」「沪深300 异常股」「AE 跑一下」「找不像自己往常样子的股票」类问题时触发。对沪深300成分股用最近60日窗口重训一个MLP自编码器，输出T日重建误差Top-10异常股，按「样式② 结构化播报」呈现。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-dl-autoencoder-anomaly",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "06.statistical-ml-models",
+      "summary_en": "深度自编码器无监督异常检测 —— 用户问「今天哪些股票走势最异常」「沪深300 异常股」「AE 跑一下」「找不像自己往常样子的股票」类问题时触发。对沪深300成分股用最近60日窗口重训一个MLP自编码器，输出T日重建误差Top-10异常股，按「样式② 结构化播报」呈现。",
+      "summary_zh": "深度自编码器无监督异常检测 —— 用户问「今天哪些股票走势最异常」「沪深300 异常股」「AE 跑一下」「找不像自己往常样子的股票」类问题时触发。对沪深300成分股用最近60日窗口重训一个MLP自编码器，输出T日重建误差Top-10异常股，按「样式② 结构化播报」呈现。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-dl-autoencoder-anomaly",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "modeling",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.statistical-ml-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
       "commit_sha": "2ecd99ae31d2d2bc3d57149818781615fbfbfb41",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
@@ -2139,6 +2882,86 @@
           "feature-engineering",
           "modeling",
           "backtesting",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.statistical-ml-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "1733a8a9f7653ef0063b56a2221c7f82df759e1c",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "使用因果扩张 Temporal Convolutional Network 对沪深 A 股分钟线执行未来 1、2、3、5 个交易日的横截面收益排序研究，并以同数据、切分和预算的 LSTM 作为基准，生成可审计的数据、训练、速度和预测效果证据。用于运行或诊断 TCN 短线预测、核验感受野与因果卷积、PIT/walk-forward/purge/embargo、防止未来泄漏、比较 RankIC/Top 区域指标与训练吞吐，或判断研究模型是否达到冻结候选条件；不用于组合换手优化、券商连接、实盘交易或收益承诺。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-dl-tcn-shortterm",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "06.statistical-ml-models",
+      "summary_en": "使用因果扩张 Temporal Convolutional Network 对沪深 A 股分钟线执行未来 1、2、3、5 个交易日的横截面收益排序研究，并以同数据、切分和预算的 LSTM 作为基准，生成可审计的数据、训练、速度和预测效果证据。用于运行或诊断 TCN 短线预测、核验感受野与因果卷积、PIT/walk-forward/purge/embargo、防止未来泄漏、比较 RankIC/Top 区域指标与训练吞吐，或判断研究模型是否达到冻结候选条件；不用于组合换手优化、券商连接、实盘交易或收益承诺。",
+      "summary_zh": "使用因果扩张 Temporal Convolutional Network 对沪深 A 股分钟线执行未来 1、2、3、5 个交易日的横截面收益排序研究，并以同数据、切分和预算的 LSTM 作为基准，生成可审计的数据、训练、速度和预测效果证据。用于运行或诊断 TCN 短线预测、核验感受野与因果卷积、PIT/walk-forward/purge/embargo、防止未来泄漏、比较 RankIC/Top 区域指标与训练吞吐，或判断研究模型是否达到冻结候选条件；不用于组合换手优化、券商连接、实盘交易或收益承诺。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-dl-tcn-shortterm",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "modeling",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.statistical-ml-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "7c2e647a9af04c760db7a35efadb751eee7f917d",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-dl-transformer-multiasset",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "06.statistical-ml-models",
+      "summary_en": "skill dl transformer multiasset",
+      "summary_zh": "skill dl transformer multiasset",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-dl-transformer-multiasset",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "modeling",
           "evaluation"
         ]
       }
@@ -2188,6 +3011,57 @@
       },
       "catalog_status": "approved",
       "category": "08",
+      "commit_sha": "d615f1c2c098d646d7b5d9a4832d9a07adc3fd93",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Formal CAR event-study for A-share / equity earnings (or any corporate) events: abnormal returns, cumulative abnormal returns, cross-sectional t-tests and sign tests across event windows. Use when the user asks 财报事件研究, CAR, 异常收益, 事件窗口, earnings surprise reaction, average abnormal return around earnings, or event-study statistics — not for real-time event-risk monitoring/alerts.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-earnings-event-study",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "08.news-disclosures",
+      "summary_en": "Formal CAR event study around earnings/corporate events — abnormal returns, multi-window CARs, t-tests and sign tests, with sample and model disclosure; research only, no trading advice.",
+      "summary_zh": "对财报/公司事件做正式 CAR 事件研究：异常收益、多窗口累计异常收益、截面 t 检验与符号检验；披露样本量与模型，不输出买卖建议。",
+      "tags": [
+        "event-study",
+        "car",
+        "earnings",
+        "abnormal-return",
+        "a-share"
+      ],
+      "url": "https://github.com/quantskills/skill-earnings-event-study",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "08",
+        "subcategory": "08.news-disclosures"
+      },
+      "catalog_status": "approved",
+      "category": "08",
       "commit_sha": "203f4f69b029468f50d1b9aa08f71814d472a945",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
@@ -2216,6 +3090,45 @@
         "workflow_stages": [
           "data-ingestion",
           "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "499db18924760203e88285a56fde6214be7177d5",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-equity-placard-watchlist",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。",
+      "summary_zh": "举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-equity-placard-watchlist",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
@@ -2255,6 +3168,45 @@
         "workflow_stages": [
           "data-ingestion",
           "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "c5841918a48d8beb24434454526cdc93839de753",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "每日盘后 ETF 资金流雷达 —— 用户问「今天/最近 ETF 有什么异动」「ETF 资金流看下」「哪些 ETF 在被大量申购/赎回」「ETF 净申赎异动」类问题时触发。扫描主流权益 ETF，输出三类信号（净申赎异动 / 折溢价背离 / 连续多日大额同向），以「样式② 结构化播报」呈现给用户。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-etf-flow-radar",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "每日盘后 ETF 资金流雷达 —— 用户问「今天/最近 ETF 有什么异动」「ETF 资金流看下」「哪些 ETF 在被大量申购/赎回」「ETF 净申赎异动」类问题时触发。扫描主流权益 ETF，输出三类信号（净申赎异动 / 折溢价背离 / 连续多日大额同向），以「样式② 结构化播报」呈现给用户。",
+      "summary_zh": "每日盘后 ETF 资金流雷达 —— 用户问「今天/最近 ETF 有什么异动」「ETF 资金流看下」「哪些 ETF 在被大量申购/赎回」「ETF 净申赎异动」类问题时触发。扫描主流权益 ETF，输出三类信号（净申赎异动 / 折溢价背离 / 连续多日大额同向），以「样式② 结构化播报」呈现给用户。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-etf-flow-radar",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
@@ -2609,6 +3561,58 @@
     {
       "catalog": {
         "category": "02",
+        "subcategory": "02.factor-evaluation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "384fadbb78e476649cc12aa856f6908769f1a205",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Diagnose factor predictive-power decay via daily Spearman IC, ICIR, Newey-West significance, rolling stability, and multi-horizon half-life. Evidence-first, no signals. Use when the user asks 因子IC衰减, IC半衰期, 因子稳不稳, ICIR, 预测力衰退, or 因子还能用多久, on Claude Code, Codex, Cursor, Hermes, or OpenClaw.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-factor-ic-decay",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "stable",
+      "subcategory": "02.factor-evaluation",
+      "summary_en": "Diagnose factor IC decay, ICIR, significance, rolling stability, and multi-horizon half-life. Evidence-first, no trading signals.",
+      "summary_zh": "用日度截面 Spearman IC、ICIR、Newey-West 显著性、滚动稳定性与多周期半衰期，诊断因子预测力衰减；事实优先，不给买卖指令。",
+      "tags": [
+        "factor-ic",
+        "ic-decay",
+        "half-life",
+        "icir",
+        "factor-research"
+      ],
+      "url": "https://github.com/quantskills/skill-factor-ic-decay",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
         "subcategory": "02.factor-idea-generation"
       },
       "catalog_status": "approved",
@@ -2640,6 +3644,59 @@
         "primary_stage": "factor-generation",
         "workflow_stages": [
           "factor-generation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "83cbeb00012a49ecdb2de7d41efc474f14dcc045",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Closed-loop factor evolution system: validate, backtest, diagnose, learn, generate variants, repeat for N iterations. Factors evolve through controlled transformations toward higher Sharpe. Use when iteratively optimizing alpha factors from candidate expressions and trading/backtest diagnostics.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-factor-loop-evolve",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Local closed-loop factor research: generate, validate, backtest, diagnose, learn, iterate N rounds. Self-improving alpha discovery and optimization.",
+      "summary_zh": "本地闭环因子研究系统：生成导入因子，验证，回测（PandaData真实A股数据），诊断，优化，经验记忆，生成新批次，迭代N轮，实现自我改进的因子发现与优化。",
+      "tags": [
+        "factor-optimization",
+        "closed-loop",
+        "backtest",
+        "factor-validation",
+        "experience-memory",
+        "iterative-improvement",
+        "alpha-discovery",
+        "factor-diagnosis",
+        "self-improving",
+        "genetic-optimization"
+      ],
+      "url": "https://github.com/quantskills/skill-factor-loop-evolve",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
         ]
       }
     },
@@ -3071,6 +4128,57 @@
       },
       "catalog_status": "approved",
       "category": "02",
+      "commit_sha": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Generate alpha factor expressions from fundamental data (financial statements, valuation ratios, cash-flow derivatives, earnings forecasts, and ownership signals) using only PandaData (panda_data). Takes a research document, URL, or natural language query as input — or lets the model invent from a trading paradigm — and produces validated point-in-time alpha expressions backed by a formula contract. Use when an agent needs to generate alpha ideas from academic papers, market commentary, research notes, or its own invention in value, quality, growth, cash-flow, forecast, or ownership factor styles.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-fundamental-alpha",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Generate alpha factor expressions from fundamental data (PandaData). Accepts a document, URL, natural language query, or model invention and returns validated point-in-time factors.",
+      "summary_zh": "基于基本面数据（PandaData）生成Alpha因子表达式，支持从研报/自然语言输入中提取估值、质量、成长、现金流、预期与股东信号，并通过公式合约与PIT面板验证。",
+      "tags": [
+        "fundamental-data",
+        "financial-statements",
+        "alpha-generation",
+        "factor-discovery",
+        "point-in-time",
+        "value-investing",
+        "quality",
+        "pandadata",
+        "a-shares",
+        "ownership-signals"
+      ],
+      "url": "https://github.com/quantskills/skill-fundamental-alpha",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
       "commit_sha": "6e34aa7bee6bbbe534b40a21ce1fe537187eac8a",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
@@ -3098,6 +4206,63 @@
         "primary_stage": "factor-generation",
         "workflow_stages": [
           "data-ingestion",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-evaluation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "a9c1feddaec41984d58e8a15ae5678743c769c2a",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Commodity-futures CTA factor library — computes a structured date×variety factor panel (time-series & cross-sectional momentum, carry/roll, term structure, positioning/COT, inventory, volatility). Use when the user asks for 商品期货因子、 CTA 信号、动量/carry/期限结构/库存/持仓因子, a factor panel for futures backtesting, or futures factor IC. Fills the ecosystem gap of ZERO futures factor libraries (vs 10 for equities). Emits factor values for the factor toolchain (factor-evaluate / ic-analysis / backtest), NOT human-readable reports.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-futures-cta-alpha",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw",
+        "cursor"
+      ],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "evaluation",
+      "status": "stable",
+      "subcategory": "02.factor-evaluation",
+      "summary_en": "Commodity-futures CTA factor library — computes a structured date×variety factor panel (time-series & cross-sectional momentum, carry/roll, term structure, positioning/COT, inventory, volatility). Use when the user asks for 商品期货因子、 CTA 信号、动量/carry/期限结构/库存/持仓因子, a factor panel for futures backtesting, or futures factor IC. Fills the ecosystem gap of ZERO futures factor libraries (vs 10 for equities). Emits factor values for the factor toolchain (factor-evaluate / ic-analysis / backtest), NOT human-readable reports.",
+      "summary_zh": "Commodity-futures CTA factor library — computes a structured date×variety factor panel (time-series & cross-sectional momentum, carry/roll, term structure, positioning/COT, inventory, volatility). Use when the user asks for 商品期货因子、 CTA 信号、动量/carry/期限结构/库存/持仓因子, a factor panel for futures backtesting, or futures factor IC. Fills the ecosystem gap of ZERO futures factor libraries (vs 10 for equities). Emits factor values for the factor toolchain (factor-evaluate / ic-analysis / backtest), NOT human-readable reports.",
+      "tags": [
+        "futures",
+        "commodity",
+        "cta",
+        "factor-library",
+        "momentum",
+        "carry",
+        "term-structure",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/skill-futures-cta-alpha",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
           "factor-generation",
           "evaluation"
         ]
@@ -3143,6 +4308,84 @@
     },
     {
       "catalog": {
+        "category": "03",
+        "subcategory": "03.futures-commodity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "89c447a7d5256c505e325b90c7897ba83774a606",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要设计、审查或排错期货对冲、期货仓位 sizing、合约移仓、基差/carry 分析、日历价差、保证金压力测试或 CTA 风格期货配置时，使用此 skill。适用于股指期货、商品期货、利率期货和跨期价差场景，重点处理合约乘数、名义本金、保证金、期限结构、交割规则和压力损失。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-futures-hedgecraft",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.futures-commodity",
+      "summary_en": "当需要设计、审查或排错期货对冲、期货仓位 sizing、合约移仓、基差/carry 分析、日历价差、保证金压力测试或 CTA 风格期货配置时，使用此 skill。适用于股指期货、商品期货、利率期货和跨期价差场景，重点处理合约乘数、名义本金、保证金、期限结构、交割规则和压力损失。",
+      "summary_zh": "当需要设计、审查或排错期货对冲、期货仓位 sizing、合约移仓、基差/carry 分析、日历价差、保证金压力测试或 CTA 风格期货配置时，使用此 skill。适用于股指期货、商品期货、利率期货和跨期价差场景，重点处理合约乘数、名义本金、保证金、期限结构、交割规则和压力损失。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-futures-hedgecraft",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.futures-commodity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "7a056483143649eee38719535e313db51217c66e",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Futures research Skill for analyzing, comparing, and screening futures markets with technical indicators, futures structure, and committee-style reports. Use when Codex needs to analyze a futures symbol, compare futures symbols, screen futures candidates, explain signal changes, or generate a structured futures research report without stock analysis, auto-trading, or deterministic buy/sell promises.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-futures-investment-council",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.futures-commodity",
+      "summary_en": "Futures research Skill for analyzing, comparing, and screening futures markets with technical indicators, futures structure, and committee-style reports. Use when Codex needs to analyze a futures symbol, compare futures symbols, screen futures candidates, explain signal changes, or generate a structured futures research report without stock analysis, auto-trading, or deterministic buy/sell promises.",
+      "summary_zh": "Futures research Skill for analyzing, comparing, and screening futures markets with technical indicators, futures structure, and committee-style reports. Use when Codex needs to analyze a futures symbol, compare futures symbols, screen futures candidates, explain signal changes, or generate a structured futures research report without stock analysis, auto-trading, or deterministic buy/sell promises.",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-futures-investment-council",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "01",
         "subcategory": "01.market-data-governance"
       },
@@ -3178,6 +4421,58 @@
           "data-quality",
           "evaluation",
           "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "70fdb397efecf67cdf8e8fe0f90da87744b5d51f",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build an auditable cross-sectional futures factor from contract-level open-interest concentration, volume concentration, and confirmed dominant-contract migration. Use when an agent needs to compute point-in-time transition and crowding features from direct PandaData futures data, produce factor values and roll-ledger evidence, or prepare a handoff to an existing factor-evaluation or backtest workflow. Do not use this skill for broker DeepView reports, generic carry or term-structure research, continuous-contract auditing, portfolio optimization, or trading instructions.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-futures-transition-crowding-factor",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "openclaw",
+        "cursor",
+        "hermes"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Build an auditable futures factor from contract transitions and crowding shifts",
+      "summary_zh": "从期货合约迁移与拥挤转移构造可审计横截面因子",
+      "tags": [
+        "futures-factor",
+        "crowding",
+        "contract-transition",
+        "open-interest",
+        "roll-ledger"
+      ],
+      "url": "https://github.com/quantskills/skill-futures-transition-crowding-factor",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
         ]
       }
     },
@@ -3374,6 +4669,144 @@
     {
       "catalog": {
         "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "8eab8d25d5147c23d5839d87c80224353a42f4b8",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要开发、计算、验证 Graham 净净营运资本(NCAV) 因子时，使用此 skill。适用于 A 股全市场深度价值筛选，排除银行/房地产/非银金融，计算 NCAV 折价因子并生成 buy/sell/hold 信号。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-graham-netnet-screener",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "当需要开发、计算、验证 Graham 净净营运资本(NCAV) 因子时，使用此 skill。适用于 A 股全市场深度价值筛选，排除银行/房地产/非银金融，计算 NCAV 折价因子并生成 buy/sell/hold 信号。",
+      "summary_zh": "当需要开发、计算、验证 Graham 净净营运资本(NCAV) 因子时，使用此 skill。适用于 A 股全市场深度价值筛选，排除银行/房地产/非银金融，计算 NCAV 折价因子并生成 buy/sell/hold 信号。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-graham-netnet-screener",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "e7cf9a0a378f648819172bb66a73532cb9afe807",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build auditable equity factors by filtering predeclared PandaData factor channels over point-in-time industry and concept graphs. Use when an agent needs to measure graph-wide diffusion, local residuals, lagged neighbor propagation, or price-liquidity disagreement from a date-by-symbol factor panel. Do not use this skill to train graph neural networks, search arbitrary factor fields, reconstruct future graph membership, run portfolio backtests, or issue investment advice.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-graph-spectral-diffusion-factor",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "openclaw",
+        "cursor",
+        "hermes"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Build auditable factor diffusion and residuals on point-in-time equity graphs",
+      "summary_zh": "在点时股票关系图上构造可审计的因子扩散与局部残差",
+      "tags": [
+        "graph-signal-processing",
+        "diffusion-factor",
+        "spectral-filter",
+        "pandadata",
+        "point-in-time"
+      ],
+      "url": "https://github.com/quantskills/skill-graph-spectral-diffusion-factor",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "04",
+        "subcategory": "04.portfolio-stress"
+      },
+      "catalog_status": "approved",
+      "category": "04",
+      "commit_sha": "184a346d018e964ec39c71cff84c588d8c692b01",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "A-share cumulative guarantee risk scanning skill for Pandadata-based monitoring of stock guarantee ratios, excess guarantee amounts, and high-debt-ratio guarantee exposure. Use when the user asks to scan A-share holdings for guarantee risks, monitor cumulative guarantee ratios, flag excess guarantee events, generate guarantee risk reports, or schedule recurring guarantee risk scans.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-guarantee-risk-scan",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "reporting",
+      "status": "draft",
+      "subcategory": "04.portfolio-stress",
+      "summary_en": "A-share cumulative guarantee risk scanning: guarantee ratio, excess guarantee, and high-debt-ratio guarantee monitoring and alerting.",
+      "summary_zh": "A 股累计担保风险扫描：担保比率、超额担保、高负债率担保占比监控与预警报告。",
+      "tags": [
+        "a-share",
+        "guarantee-risk",
+        "monitoring",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/skill-guarantee-risk-scan",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "risk",
+          "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
         "subcategory": "03.hk-us-equity"
       },
       "catalog_status": "approved",
@@ -3526,6 +4959,46 @@
     },
     {
       "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "612027ff14cd0aefd0027f4f322af4907d68de3c",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build, standardize, compare, and validate multi-factor fundamental panels for Hong Kong and US equities from PandaAI operating, market-financial, industry-median, price-volume, and financial-statement APIs. Use for quality, value, growth, momentum, low-risk, composite-score, percentile-rank, or cross-market stock-screening tasks.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-hk-us-fundamental-factor",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Build, standardize, compare, and validate multi-factor fundamental panels for Hong Kong and US equities from PandaAI operating, market-financial, industry-median, price-volume, and financial-statement APIs. Use for quality, value, growth, momentum, low-risk, composite-score, percentile-rank, or cross-market stock-screening tasks.",
+      "summary_zh": "Build, standardize, compare, and validate multi-factor fundamental panels for Hong Kong and US equities from PandaAI operating, market-financial, industry-median, price-volume, and financial-statement APIs. Use for quality, value, growth, momentum, low-risk, composite-score, percentile-rank, or cross-market stock-screening tasks.",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-hk-us-fundamental-factor",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "03",
         "subcategory": "03.hk-us-equity"
       },
@@ -3559,6 +5032,45 @@
         "workflow_stages": [
           "data-ingestion",
           "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.hk-us-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "1e68ec5b50d6fb6158afd9899923e7c7fb9a34ae",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build, compare, and validate institutional ownership structure panels for Hong Kong and US equities with PandaAI investor concentration, ranking, and shareholder-report APIs. Use for ownership breadth, top-holder dominance, HHI, controlling-holder risk, evidence confidence, or within-market institutional ownership screening.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-hk-us-institutional-concentration",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.hk-us-equity",
+      "summary_en": "Build, compare, and validate institutional ownership structure panels for Hong Kong and US equities with PandaAI investor concentration, ranking, and shareholder-report APIs. Use for ownership breadth, top-holder dominance, HHI, controlling-holder risk, evidence confidence, or within-market institutional ownership screening.",
+      "summary_zh": "Build, compare, and validate institutional ownership structure panels for Hong Kong and US equities with PandaAI investor concentration, ranking, and shareholder-report APIs. Use for ownership breadth, top-holder dominance, HHI, controlling-holder risk, evidence confidence, or within-market institutional ownership screening.",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-hk-us-institutional-concentration",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
@@ -3998,6 +5510,125 @@
     },
     {
       "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "d42a44234df4127419703eece171043c410404e8",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "用截图或只读 PandaData 行情识别股票/期货K线趋势结构、蜡烛线和候选图表形态，支持日线与1/5/10/15/30/60分钟线，输出证据、确认条件、失效条件和不确定性。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-kline-pattern-vision",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "用截图或只读 PandaData 行情识别股票/期货K线趋势结构、蜡烛线和候选图表形态，支持日线与1/5/10/15/30/60分钟线，输出证据、确认条件、失效条件和不确定性。",
+      "summary_zh": "用截图或只读 PandaData 行情识别股票/期货K线趋势结构、蜡烛线和候选图表形态，支持日线与1/5/10/15/30/60分钟线，输出证据、确认条件、失效条件和不确定性。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-kline-pattern-vision",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "c92effa9c8e0b74230b22f96eac3cc19b158ac77",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Mine formulaic alpha factors end to end: LLM 主导生成候选公式 → 三层校验（白名单/量纲/前视）→ warm-start 遗传编程精修 → AlphaEval 五维打分 → LLM 经济解释 → 自包含 HTML 报告，返回结构化因子结果。Use when the user wants to mine/discover alpha factors, generate formulaic (expression-tree) trading factors, run LLM+GP factor search, or evaluate factor predictive power (RankIC) on stocks or futures. 只挖因子、不做回测（回测归另一 skill）。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-llm-alpha-generator",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Mine formulaic alpha factors end to end: LLM 主导生成候选公式 → 三层校验（白名单/量纲/前视）→ warm-start 遗传编程精修 → AlphaEval 五维打分 → LLM 经济解释 → 自包含 HTML 报告，返回结构化因子结果。Use when the user wants to mine/discover alpha factors, generate formulaic (expression-tree) trading factors, run LLM+GP factor search, or evaluate factor predictive power (RankIC) on stocks or futures. 只挖因子、不做回测（回测归另一 skill）。",
+      "summary_zh": "Mine formulaic alpha factors end to end: LLM 主导生成候选公式 → 三层校验（白名单/量纲/前视）→ warm-start 遗传编程精修 → AlphaEval 五维打分 → LLM 经济解释 → 自包含 HTML 报告，返回结构化因子结果。Use when the user wants to mine/discover alpha factors, generate formulaic (expression-tree) trading factors, run LLM+GP factor search, or evaluate factor predictive power (RankIC) on stocks or futures. 只挖因子、不做回测（回测归另一 skill）。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-llm-alpha-generator",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.statistical-ml-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "5deec2cc446f44bbc916c851f0d43e8a67317288",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "财报公告 RAG 问答系统——就一家 A 股公司的财报/公告提问，给出带官方引用、可核对、拒绝编造的回答。三路路由（数字精确算 / 底仓文本检索 / 官方全文按需）+ 引用纪律 + 拒答。数据源 PandaData 优先、官方披露网页为次级源。BUILD 型 skill，可被复盘 agent 或投研 agent 调用。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-llm-rag-financial-qa",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "06.statistical-ml-models",
+      "summary_en": "财报公告 RAG 问答系统——就一家 A 股公司的财报/公告提问，给出带官方引用、可核对、拒绝编造的回答。三路路由（数字精确算 / 底仓文本检索 / 官方全文按需）+ 引用纪律 + 拒答。数据源 PandaData 优先、官方披露网页为次级源。BUILD 型 skill，可被复盘 agent 或投研 agent 调用。",
+      "summary_zh": "财报公告 RAG 问答系统——就一家 A 股公司的财报/公告提问，给出带官方引用、可核对、拒绝编造的回答。三路路由（数字精确算 / 底仓文本检索 / 官方全文按需）+ 引用纪律 + 拒答。数据源 PandaData 优先、官方披露网页为次级源。BUILD 型 skill，可被复盘 agent 或投研 agent 调用。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-llm-rag-financial-qa",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "modeling",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "05",
         "subcategory": "05.strategy-signal"
       },
@@ -4071,6 +5702,45 @@
         "workflow_stages": [
           "data-ingestion",
           "feature-engineering",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.macro-cross-asset"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "6f9fd7d0699ef99fa567e5d6b694cd57696dc643",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "基于 PandaData 的宏观事件—期货预期分析：读取宏观经济日历的实际值、市场预期与前值，结合期货价格、成交量、持仓量、基差、期限结构、库存与仓单，对沪金、沪铜、原油及用户指定品种输出基准、偏强、偏弱情景。当用户询问「美国CPI对期货影响」「宏观事件期货预期」「美联储对商品影响」「期货供需与宏观共振」「事件公布前情景」时触发。仅作条件化研究，不承诺涨跌或生成自动交易指令。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-macro-futures-scenario-analysis",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.macro-cross-asset",
+      "summary_en": "基于 PandaData 的宏观事件—期货预期分析：读取宏观经济日历的实际值、市场预期与前值，结合期货价格、成交量、持仓量、基差、期限结构、库存与仓单，对沪金、沪铜、原油及用户指定品种输出基准、偏强、偏弱情景。当用户询问「美国CPI对期货影响」「宏观事件期货预期」「美联储对商品影响」「期货供需与宏观共振」「事件公布前情景」时触发。仅作条件化研究，不承诺涨跌或生成自动交易指令。",
+      "summary_zh": "基于 PandaData 的宏观事件—期货预期分析：读取宏观经济日历的实际值、市场预期与前值，结合期货价格、成交量、持仓量、基差、期限结构、库存与仓单，对沪金、沪铜、原油及用户指定品种输出基准、偏强、偏弱情景。当用户询问「美国CPI对期货影响」「宏观事件期货预期」「美联储对商品影响」「期货供需与宏观共振」「事件公布前情景」时触发。仅作条件化研究，不承诺涨跌或生成自动交易指令。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-macro-futures-scenario-analysis",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
           "modeling",
           "reporting"
         ]
@@ -4197,6 +5867,133 @@
     {
       "catalog": {
         "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "6d859ee20d3309d340ae00b00ed86bd866c25271",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "A-share material contract alpha factor skill — generates trading signals based on major contract announcements. Use when the user asks to calculate material contract alpha, generate contract-based signals, scan for recent major contract announcements, or evaluate contract-driven trading opportunities.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-material-contract-alpha",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "A-share material contract alpha factor: cross-sectional ranking based on log-sum of contract amounts.",
+      "summary_zh": "A 股重大合同 Alpha 因子：基于合同金额对数和的横截面排序信号。",
+      "tags": [
+        "a-share",
+        "alpha",
+        "material-contract",
+        "factor",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/skill-material-contract-alpha",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.market-microstructure"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "f9e7fbe6a173063f364bdc435ce3d8d778324872",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Minute-bar VWAP deviation strategy research and auditable SSQuant futures validation. Use for rolling VWAP deviation signals, confirmed mean reversion, trend guards, next-bar execution, execution-cost modeling, frozen-data backtests, and trade-result review.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-microstructure-vwap-deviation",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "05.market-microstructure",
+      "summary_en": "Minute-bar VWAP deviation strategy research and auditable SSQuant futures validation. Use for rolling VWAP deviation signals, confirmed mean reversion, trend guards, next-bar execution, execution-cost modeling, frozen-data backtests, and trade-result review.",
+      "summary_zh": "Minute-bar VWAP deviation strategy research and auditable SSQuant futures validation. Use for rolling VWAP deviation signals, confirmed mean reversion, trend guards, next-bar execution, execution-cost modeling, frozen-data backtests, and trade-result review.",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-microstructure-vwap-deviation",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "a44602c187ec01d6f69bbc0d69e2b388e06bb5f4",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Generate alpha factor expressions from minute-level market data using PandaData (panda_data). Takes a research document or natural language query as input, fetches intraday OHLCV bars via get_market_min_data, extracts rich minute-level features (VWAP divergence, intraday momentum decay, order flow proxy, volatility curve shape, trade concentration, lead-lag signatures), and produces validated alpha expressions backed by a formula contract. Use when an agent needs to generate alpha ideas from academic papers, market commentary, or research notes that leverage intraday microstructure signals invisible in daily data.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-minuteflow-alpha",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Generate alpha factor expressions from minute-level market data using PandaData (panda_data). Takes a research document or natural language query as input, fetches intraday OHLCV bars via get_market_min_data, extracts rich minute-level features (VWAP divergence, intraday momentum decay, order flow proxy, volatility curve shape, trade concentration, lead-lag signatures), and produces validated alpha expressions backed by a formula contract. Use when an agent needs to generate alpha ideas from academic papers, market commentary, or research notes that leverage intraday microstructure signals invisible in daily data.",
+      "summary_zh": "基于分钟级行情数据（PandaData）生成Alpha因子表达式，支持从研报/自然语言输入中提取日内微观结构信号（VWAP偏离、订单流代理、日内动量衰减、波动率曲线等），并通过公式合约验证。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-minuteflow-alpha",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
         "subcategory": "02.factor-orthogonalization-blending"
       },
       "catalog_status": "approved",
@@ -4231,6 +6028,46 @@
           "factor-generation",
           "modeling",
           "backtesting",
+          "evaluation"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.statistical-ml-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "362893c4ae20edf62836670eee753baa67490e2e",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "审计任意金融特征、可训练时序模型或候选策略收益，并执行防泄漏的 Purged K-Fold、Embargo、CPCV、Causal Walk-Forward、PBO、DSR、Governed Holdout 与 Temporal Forward Evidence。用于检查未来函数、信息区间重叠、特征可用时间和血缘、Fold-Local 预处理、CPCV Path 稳健性、策略选择过拟合、预测是否在标签成熟前登记，以及在接受金融模型或策略前生成结构化验证证据。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-ml-purged-cv",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "06.statistical-ml-models",
+      "summary_en": "审计任意金融特征、可训练时序模型或候选策略收益，并执行防泄漏的 Purged K-Fold、Embargo、CPCV、Causal Walk-Forward、PBO、DSR、Governed Holdout 与 Temporal Forward Evidence。用于检查未来函数、信息区间重叠、特征可用时间和血缘、Fold-Local 预处理、CPCV Path 稳健性、策略选择过拟合、预测是否在标签成熟前登记，以及在接受金融模型或策略前生成结构化验证证据。",
+      "summary_zh": "审计任意金融特征、可训练时序模型或候选策略收益，并执行防泄漏的 Purged K-Fold、Embargo、CPCV、Causal Walk-Forward、PBO、DSR、Governed Holdout 与 Temporal Forward Evidence。用于检查未来函数、信息区间重叠、特征可用时间和血缘、Fold-Local 预处理、CPCV Path 稳健性、策略选择过拟合、预测是否在标签成熟前登记，以及在接受金融模型或策略前生成结构化验证证据。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-ml-purged-cv",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "modeling",
           "evaluation"
         ]
       }
@@ -4467,6 +6304,58 @@
         "workflow_stages": [
           "data-ingestion",
           "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-generation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "29763e849a1b8a7d6f5194758a23714c4ad0c7c4",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build auditable cross-sectional factors with one-dimensional optimal transport from point-in-time market panels. Use when an agent needs to compare weighted feature distributions across dates, compute Wasserstein displacement and transport-pressure features, construct global or industry-neutral panels, or prepare a deterministic handoff to factor evaluation. Do not use this skill to train black-box models, search arbitrary formulas, replace data APIs, backtest portfolios, or issue investment advice.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-optimal-transport-cross-sectional-factor",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "openclaw",
+        "cursor",
+        "hermes"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-generation",
+      "summary_en": "Build auditable factors from point-in-time cross-sectional transport",
+      "summary_zh": "用点时截面分布的单调最优传输构造可审计因子",
+      "tags": [
+        "optimal-transport",
+        "wasserstein",
+        "cross-sectional-factor",
+        "point-in-time",
+        "industry-neutral"
+      ],
+      "url": "https://github.com/quantskills/skill-optimal-transport-cross-sectional-factor",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "data-ingestion",
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
         ]
       }
     },
@@ -4933,6 +6822,51 @@
     },
     {
       "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "2beed86fe9c69fa12c2cee9bf36eb937d8194eb4",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Use when an agent needs to attribute the returns of an A-share quant strategy or portfolio — decompose performance into Alpha/Beta/timing, Brinson allocation/selection/interaction effects by industry, and factor-return contributions (style factors, industry, residual Alpha). Outputs a unified AttributionReport (Markdown + JSON) with reconciliation checks.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-performance-attribution",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "Use when an agent needs to attribute the returns of an A-share quant strategy or portfolio — decompose performance into Alpha/Beta/timing, Brinson allocation/selection/interaction effects by industry, and factor-return contributions (style factors, industry, residual Alpha). Outputs a unified AttributionReport (Markdown + JSON) with reconciliation checks.",
+      "summary_zh": "A股量化策略绩效归因：三层综合归因（Alpha/Beta/择时 + Brinson 配置/选择/交互 + 因子收益归因含风格行业与 Alpha 残差），输出统一归因报告并做分解对账。与 skill-risk-model（风险归因）互补。",
+      "tags": [
+        "performance-attribution",
+        "brinson",
+        "factor-attribution",
+        "alpha-beta",
+        "portfolio-analysis"
+      ],
+      "url": "https://github.com/quantskills/skill-performance-attribution",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "05",
         "subcategory": "05.performance-attribution"
       },
@@ -4972,6 +6906,46 @@
     },
     {
       "catalog": {
+        "category": "05",
+        "subcategory": "05.portfolio-construction"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "cc4ec36956fdd123141557c922bc34dcd7600ab6",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Black-Litterman 组合优化 —— 用户问「跑一下 BL 组合」「基于视图的组合权重」「相对沪深300 的主动配置」「动量/反转/换手视图对权重的影响」类问题时触发。以沪深300 指数权重为先验，用动量/反转/换手率三条因子视图更新，输出长权重组合，按「样式② 结构化播报」呈现给用户。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-portfolio-blacklitterman",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "05.portfolio-construction",
+      "summary_en": "Black-Litterman 组合优化 —— 用户问「跑一下 BL 组合」「基于视图的组合权重」「相对沪深300 的主动配置」「动量/反转/换手视图对权重的影响」类问题时触发。以沪深300 指数权重为先验，用动量/反转/换手率三条因子视图更新，输出长权重组合，按「样式② 结构化播报」呈现给用户。",
+      "summary_zh": "Black-Litterman 组合优化 —— 用户问「跑一下 BL 组合」「基于视图的组合权重」「相对沪深300 的主动配置」「动量/反转/换手视图对权重的影响」类问题时触发。以沪深300 指数权重为先验，用动量/反转/换手率三条因子视图更新，输出长权重组合，按「样式② 结构化播报」呈现给用户。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-portfolio-blacklitterman",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "portfolio-construction",
+          "risk"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "04",
         "subcategory": "04.portfolio-stress"
       },
@@ -5006,6 +6980,46 @@
           "data-ingestion",
           "risk",
           "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.portfolio-construction"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "ba87ca4932f39e21d58c4647a919422bcadfe2c3",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要开发、计算、验证 CVaR 尾部风险最小化组合时，使用此 skill。在预期收益约束下最小化组合 95% CVaR，支持极值理论(EVT/GPD)尾部补样、组合权重求解、样本外验证。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-portfolio-cvar-optim",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "05.portfolio-construction",
+      "summary_en": "当需要开发、计算、验证 CVaR 尾部风险最小化组合时，使用此 skill。在预期收益约束下最小化组合 95% CVaR，支持极值理论(EVT/GPD)尾部补样、组合权重求解、样本外验证。",
+      "summary_zh": "当需要开发、计算、验证 CVaR 尾部风险最小化组合时，使用此 skill。在预期收益约束下最小化组合 95% CVaR，支持极值理论(EVT/GPD)尾部补样、组合权重求解、样本外验证。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-portfolio-cvar-optim",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "portfolio-construction",
+          "risk"
         ]
       }
     },
@@ -5125,6 +7139,46 @@
           "data-ingestion",
           "evaluation",
           "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.portfolio-construction"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "ea2a22de1c66767e844d136b68d287806a43e00c",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要开发、计算、验证风险平价（等风险贡献 ERC）组合时使用。手写 Ledoit-Wolf 收缩协方差稳定相关性，scipy SLSQP 求 ERC 权重，支持指数/期货/ETF 三类资产与月度 rebalance。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-portfolio-risk-parity",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "05.portfolio-construction",
+      "summary_en": "当需要开发、计算、验证风险平价（等风险贡献 ERC）组合时使用。手写 Ledoit-Wolf 收缩协方差稳定相关性，scipy SLSQP 求 ERC 权重，支持指数/期货/ETF 三类资产与月度 rebalance。",
+      "summary_zh": "当需要开发、计算、验证风险平价（等风险贡献 ERC）组合时使用。手写 Ledoit-Wolf 收缩协方差稳定相关性，scipy SLSQP 求 ERC 权重，支持指数/期货/ETF 三类资产与月度 rebalance。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-portfolio-risk-parity",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "portfolio-construction",
+          "risk"
         ]
       }
     },
@@ -5367,45 +7421,6 @@
     },
     {
       "catalog": {
-        "category": "02",
-        "subcategory": "02.factor-generation"
-      },
-      "catalog_status": "approved",
-      "category": "02",
-      "commit_sha": "b169f31106f748b8746c4c1028c162e95f7277f4",
-      "declaration_file": "SKILL.md",
-      "declaration_status": "legacy",
-      "default_branch": "main",
-      "description": "Use when an agent needs a verified library of OHLCV volume, volume-price, ranking, and statistical alpha factor Skills for liquidity and distribution research.",
-      "health": "frozen-declaration-only",
-      "interface": null,
-      "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
-      "license": "GPL-3.0-only",
-      "maintainer_type": "community",
-      "name": "skill-quant-factor-volume-stat-alpha",
-      "platforms": [],
-      "project_type": "skill",
-      "requires": [],
-      "stage": "factor-generation",
-      "status": "active",
-      "subcategory": "02.factor-generation",
-      "summary_en": "Provides an OHLCV factor library for volume and price-volume statistical research.",
-      "summary_zh": "提供用于成交量和量价统计研究的 OHLCV 因子库。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-quant-factor-volume-stat-alpha",
-      "validation_level": "listed",
-      "workflow": {
-        "primary_stage": "factor-generation",
-        "workflow_stages": [
-          "data-ingestion",
-          "factor-generation",
-          "evaluation"
-        ]
-      }
-    },
-    {
-      "catalog": {
         "category": "04",
         "subcategory": "04.portfolio-stress"
       },
@@ -5525,42 +7540,54 @@
     },
     {
       "catalog": {
-        "category": "06",
-        "subcategory": "06.paper-replication"
+        "category": "02",
+        "subcategory": "02.factor-evaluation"
       },
       "catalog_status": "approved",
-      "category": "06",
-      "commit_sha": "0e41cf070091de7117bdb5be3b571e5571243641",
+      "category": "02",
+      "commit_sha": "46fb8aa255de5782e241601b2aeede70d6eb2174",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
       "default_branch": "main",
-      "description": "Search for quantitative finance papers or research reports, then reproduce them end to end: source discovery across arXiv/Crossref/Semantic Scholar/SSRN/NBER/RePEc/institutional reports/Chinese broker research, full Chinese translation, AI summary, factor formula reconstruction, factor effectiveness validation, standalone beginner-readable HTML factor report, BACKTEST strategy generation and local backtest execution, Chinese backtest explanation report, and final delivery summary. Use when the user asks to find quant papers/reports, replicate a report/PDF/link/text, validate a factor, generate BACKTEST strategy code, or create a beginner-readable research replication package.",
+      "description": "诊断量化策略或因子的近期表现是否恶化，并列出可验证的原因。用户提供因子/策略的周期收益，以及可选的 IC、基准收益、换手率或市场状态数据，要求检查滚动收益、回撤、IC 衰减、相对基准表现、换手变化、样本外稳定性或新旧版本差异时使用。适用于 PandaAI/Pandadata 的因子挖掘和回测结果；数据不足时只报告可计算部分和缺失字段，不给买卖建议。",
       "health": "frozen-declaration-only",
       "interface": null,
       "interface_status": "pending-maintainer",
-      "last_validated": "2026-08-11",
+      "last_validated": "2026-08-29",
       "license": "GPL-3.0-only",
       "maintainer_type": "community",
-      "name": "skill-quant-research-replication",
-      "platforms": [],
+      "name": "skill-quant-strategy-diagnostics",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
       "project_type": "skill",
       "requires": [],
-      "stage": "modeling",
-      "status": "active",
-      "subcategory": "06.paper-replication",
-      "summary_en": "Guides auditable quantitative-research replication workflows.",
-      "summary_zh": "指导可审计的量化研究复现流程。",
-      "tags": [],
-      "url": "https://github.com/quantskills/skill-quant-research-replication",
-      "validation_level": "listed",
+      "stage": "evaluation",
+      "status": "draft",
+      "subcategory": "02.factor-evaluation",
+      "summary_en": "Check recent strategy or factor deterioration using returns, IC, drawdown, turnover, benchmarks, and market regimes.",
+      "summary_zh": "检查策略或因子近期是否恶化，列出收益、IC、回撤、换手率和市场状态方面的证据。",
+      "tags": [
+        "strategy-diagnostics",
+        "factor-decay",
+        "drawdown",
+        "rolling-ic",
+        "backtest-validation",
+        "regime-analysis"
+      ],
+      "url": "https://github.com/quantskills/skill-quant-strategy-diagnostics",
+      "validation_level": "runnable",
       "workflow": {
-        "primary_stage": "modeling",
+        "primary_stage": "evaluation",
         "workflow_stages": [
           "data-ingestion",
-          "modeling",
-          "backtesting",
-          "evaluation",
-          "reporting"
+          "feature-engineering",
+          "factor-generation",
+          "evaluation"
         ]
       }
     },
@@ -5804,6 +7831,46 @@
     },
     {
       "catalog": {
+        "category": "05",
+        "subcategory": "05.portfolio-construction"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "b40f25acc4f26a042cc1667c7c6b23c8b5f2d115",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-rl-portfolio-allocator",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "05.portfolio-construction",
+      "summary_en": "skill rl portfolio allocator",
+      "summary_zh": "skill rl portfolio allocator",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-rl-portfolio-allocator",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "portfolio-construction",
+          "risk"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "04",
         "subcategory": "04.portfolio-stress"
       },
@@ -5848,6 +7915,45 @@
       },
       "catalog_status": "approved",
       "category": "06",
+      "commit_sha": "a14e7fb69cd116d3068a66fb7eb95898001f518b",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要分析市场状态、行业轮动、ETF 强弱排序、市场宽度、风格切换或战术配置信号时，使用此 skill。适用于 A 股、港股、美股和 ETF 池的行业轮动分析、risk-on/risk-off 状态识别、相对强弱排名、宽度确认、假突破过滤和轮动失效条件设计。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-rotation-radar",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "当需要分析市场状态、行业轮动、ETF 强弱排序、市场宽度、风格切换或战术配置信号时，使用此 skill。适用于 A 股、港股、美股和 ETF 池的行业轮动分析、risk-on/risk-off 状态识别、相对强弱排名、宽度确认、假突破过滤和轮动失效条件设计。",
+      "summary_zh": "当需要分析市场状态、行业轮动、ETF 强弱排序、市场宽度、风格切换或战术配置信号时，使用此 skill。适用于 A 股、港股、美股和 ETF 池的行业轮动分析、risk-on/risk-off 状态识别、相对强弱排名、宽度确认、假突破过滤和轮动失效条件设计。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-rotation-radar",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
       "commit_sha": "97896616e3704e374ae4f0dbda7a93cc349b11cb",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
@@ -5876,6 +7982,108 @@
         "workflow_stages": [
           "data-ingestion",
           "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "fec65729f709ae291ce4c9fa9a24af6b0ad35edc",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Run and audit the Q58 five-session cross-sectional short-term return reversal factor on A-shares. Use when an agent needs 5-day loser-versus-winner signals, point-in-time factor snapshots, or a cost-aware mean-reversion research backtest.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-shortterm-mean-reversal",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "Cost-aware A-share five-session cross-sectional return reversal research.",
+      "summary_zh": "A 股五交易日收益率横截面反转因子与成本敏感回测。",
+      "tags": [
+        "a-share",
+        "mean-reversion",
+        "short-term-reversal",
+        "point-in-time",
+        "backtest"
+      ],
+      "url": "https://github.com/quantskills/skill-shortterm-mean-reversal",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.portfolio-construction"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "b85dc0760ba9b36a4c10a8a8e108d7bf06e5c412",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Build an open Barra-style structural equity risk model and convert one frozen cross-sectional stock signal into benchmark-relative long-only target weights with auditable two-stage signal-capture, transaction-cost, exposure, turnover, tracking-error, and tradability controls. Use when Codex needs to optimize a LightGBM or single-factor stock signal, estimate or consume covariance, enforce market-cap, style, or point-in-time industry constraints, run a next-trading-day rolling portfolio study, or diagnose weights, risk, turnover, NAV, and drawdown results. Also use for Chinese requests such as 风险模型、协方差估计、信号组合优化、单因子权重优化、风险约束配权、行业风格中性、滚动优化、净值回撤、换手成本或优化前后回测对比.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-signal-portfolio-optimize",
+      "platforms": [
+        "cursor",
+        "claude-code",
+        "codex",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "portfolio-construction",
+      "status": "active",
+      "subcategory": "05.portfolio-construction",
+      "summary_en": "Converts one stock signal into benchmark-relative target weights with auditable risk, exposure, turnover, and cost controls.",
+      "summary_zh": "将单个股票信号转换为受基准相对风险、风格、行业、换手和成本约束的可审计组合权重。",
+      "tags": [
+        "portfolio-optimization",
+        "signal-optimization",
+        "risk-model",
+        "benchmark-relative",
+        "factor-model",
+        "risk-control",
+        "backtesting"
+      ],
+      "url": "https://github.com/quantskills/skill-signal-portfolio-optimize",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "portfolio-construction",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "risk",
+          "portfolio-construction",
+          "backtesting",
+          "evaluation",
           "reporting"
         ]
       }
@@ -5996,6 +8204,45 @@
         "workflow_stages": [
           "data-ingestion",
           "monitoring",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "23141a47ba0c11761f0b333b70a0f73b13d749da",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "索罗斯反身性识别器——用双环模型（快环情绪-资金 / 慢环基本面-资本）判断 A 股\"这波涨跌是不是自我强化的反身性、转到哪一圈、燃料和裂缝在哪\"，做阶段识别与仓位纪律。BUILD 型 skill，可被复盘 agent 或 Alpha 调用。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-soros-reflexivity-detector",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "索罗斯反身性识别器——用双环模型（快环情绪-资金 / 慢环基本面-资本）判断 A 股\"这波涨跌是不是自我强化的反身性、转到哪一圈、燃料和裂缝在哪\"，做阶段识别与仓位纪律。BUILD 型 skill，可被复盘 agent 或 Alpha 调用。",
+      "summary_zh": "索罗斯反身性识别器——用双环模型（快环情绪-资金 / 慢环基本面-资本）判断 A 股\"这波涨跌是不是自我强化的反身性、转到哪一圈、燃料和裂缝在哪\"，做阶段识别与仓位纪律。BUILD 型 skill，可被复盘 agent 或 Alpha 调用。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-soros-reflexivity-detector",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
@@ -6167,6 +8414,45 @@
       },
       "catalog_status": "approved",
       "category": "03",
+      "commit_sha": "5d25e6700438ade67b77a498cfd1d34b567acc80",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-stock-score",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "skill stock score",
+      "summary_zh": "skill stock score",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-stock-score",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
       "commit_sha": "8234c3fd2d2ba49ef505e249b572eac2fd008926",
       "declaration_file": "SKILL.md",
       "declaration_status": "legacy",
@@ -6195,6 +8481,105 @@
         "workflow_stages": [
           "data-ingestion",
           "factor-screening",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.transaction-costs"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "6ae79f729000f497674dd29e8a3689f816a33452",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "策略容量, 冲击成本, ADV参与率, TCA, 容量曲线, implementation shortfall style cost estimate. Estimate how much capital a strategy can take before costs eat alpha — participation vs ADV, square-root/linear impact, capacity curve and breakeven AUM. Evidence-first; impact model is an estimate not a guarantee; no trade advice. Use when the user asks 策略容量, 冲击成本, ADV参与率, TCA, 容量曲线, 交易成本吃掉多少alpha, or market impact / capacity analysis on Claude Code, Codex, Cursor, Hermes, or OpenClaw.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-strategy-capacity-tca",
+      "platforms": [
+        "claude-code",
+        "codex",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "05.transaction-costs",
+      "summary_en": "Estimate strategy capacity and transaction costs from trades and ADV — participation, square-root/linear impact, capacity curve and breakeven vs alpha. Estimates only, no trade advice.",
+      "summary_zh": "用成交与 ADV 估计参与率、平方根/线性冲击成本与容量曲线，回答「策略能承载多少资金、成本何时吃掉 alpha」——估计非保证，不作交易建议。",
+      "tags": [
+        "capacity",
+        "tca",
+        "market-impact",
+        "turnover",
+        "liquidity"
+      ],
+      "url": "https://github.com/quantskills/skill-strategy-capacity-tca",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "08",
+        "subcategory": "08.daily-review"
+      },
+      "catalog_status": "approved",
+      "category": "08",
+      "commit_sha": "938daeb1f960b681eb7394274234401aa033bc3e",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Use when an agent needs to generate a periodic performance report for a LIVE A-share quant strategy — 日报/周报/月报/半年报/年报 or custom period — covering returns, risk, trade analysis, and position/turnover detail, with embedded visualizations. Outputs a self-contained offline HTML dashboard (interactive ECharts) plus Markdown + JSON.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-strategy-performance-report",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "08.daily-review",
+      "summary_en": "Use when an agent needs to generate a periodic performance report for a LIVE A-share quant strategy — 日报/周报/月报/半年报/年报 or custom period — covering returns, risk, trade analysis, and position/turnover detail, with embedded visualizations. Outputs a self-contained offline HTML dashboard (interactive ECharts) plus Markdown + JSON.",
+      "summary_zh": "Use when an agent needs to generate a periodic performance report for a LIVE A-share quant strategy — 日报/周报/月报/半年报/年报 or custom period — covering returns, risk, trade analysis, and position/turnover detail, with embedded visualizations. Outputs a self-contained offline HTML dashboard (interactive ECharts) plus Markdown + JSON.",
+      "tags": [
+        "performance-report",
+        "sharpe",
+        "drawdown",
+        "turnover",
+        "equity-curve",
+        "live-monitoring",
+        "visualization"
+      ],
+      "url": "https://github.com/quantskills/skill-strategy-performance-report",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "evaluation",
           "reporting"
         ]
       }
@@ -6317,6 +8702,45 @@
     },
     {
       "catalog": {
+        "category": "03",
+        "subcategory": "03.a-share-equity"
+      },
+      "catalog_status": "approved",
+      "category": "03",
+      "commit_sha": "81e7fbd8ab64dcb16ac17070c5fb88bbb4e9cdc9",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要开发、计算、验证 Templeton 全球价值多因子 V2 时，使用此 skill。适用于 A 股/港股/美股跨市场价值筛选，基于 EP/BP/SP/股息/ROE/杠杆/动量 七子因子截面打分，生成 buy/sell/hold 信号。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-templeton-global-contrarian",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "03.a-share-equity",
+      "summary_en": "当需要开发、计算、验证 Templeton 全球价值多因子 V2 时，使用此 skill。适用于 A 股/港股/美股跨市场价值筛选，基于 EP/BP/SP/股息/ROE/杠杆/动量 七子因子截面打分，生成 buy/sell/hold 信号。",
+      "summary_zh": "当需要开发、计算、验证 Templeton 全球价值多因子 V2 时，使用此 skill。适用于 A 股/港股/美股跨市场价值筛选，基于 EP/BP/SP/股息/ROE/杠杆/动量 七子因子截面打分，生成 buy/sell/hold 信号。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-templeton-global-contrarian",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
         "category": "06",
         "subcategory": "06.statistical-ml-models"
       },
@@ -6350,6 +8774,90 @@
         "workflow_stages": [
           "data-ingestion",
           "modeling",
+          "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "8507fe4556c440a9f0700e954a35af03b502980c",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-tqx-research",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "skill tqx research",
+      "summary_zh": "skill tqx research",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-tqx-research",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "08",
+        "subcategory": "08.daily-review"
+      },
+      "catalog_status": "approved",
+      "category": "08",
+      "commit_sha": "510f285a08c49a07829ced26c74189b8525e4e29",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Reproduce daily or range-based trade review workflows end to end: normalize closed/open trades, pull market context, compute attribution and patterns, generate actionable advice, optionally call LLM for narrative review, and return a structured review result. Use when the user provides trade records and asks for a trade retrospective, post-trade diagnosis, mistake pattern detection, or execution/process advice.",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-trade-review",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "stable",
+      "subcategory": "08.daily-review",
+      "summary_en": "Trade review skill that turns trade records into attribution, pattern detection, per-trade review, and actionable advice.",
+      "summary_zh": "把交易流水转成结构化复盘结果，包含归因、逐笔点评、错误模式、建议和可选 LLM 总结。",
+      "tags": [
+        "trade-review",
+        "retrospective",
+        "pnl-attribution",
+        "market-context",
+        "chinese"
+      ],
+      "url": "https://github.com/quantskills/skill-trade-review",
+      "validation_level": "runnable",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
           "evaluation",
           "reporting"
         ]
@@ -6429,6 +8937,45 @@
         "workflow_stages": [
           "data-ingestion",
           "evaluation",
+          "reporting"
+        ]
+      }
+    },
+    {
+      "catalog": {
+        "category": "06",
+        "subcategory": "06.investor-research-models"
+      },
+      "catalog_status": "approved",
+      "category": "06",
+      "commit_sha": "0e33deadd53b2ad77127e3f05267d889dd152b50",
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "计算A股日线下跌突破划线压力位反转因子，识别下破下降压力线后反转确认的个股；当用户提供交易日期、要求自动获取当日全市场A股行情、量化选股、因子研究或回测时使用。",
+      "health": "frozen-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-08-29",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-trendline-breakdown-reversal",
+      "platforms": [],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "06.investor-research-models",
+      "summary_en": "计算A股日线下跌突破划线压力位反转因子，识别下破下降压力线后反转确认的个股；当用户提供交易日期、要求自动获取当日全市场A股行情、量化选股、因子研究或回测时使用。",
+      "summary_zh": "计算A股日线下跌突破划线压力位反转因子，识别下破下降压力线后反转确认的个股；当用户提供交易日期、要求自动获取当日全市场A股行情、量化选股、因子研究或回测时使用。",
+      "tags": [],
+      "url": "https://github.com/quantskills/skill-trendline-breakdown-reversal",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
           "reporting"
         ]
       }
