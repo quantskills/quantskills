@@ -12783,7 +12783,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "d2fb7396d10764b371b5853da1cf20eab902997b4a52f7a5d9bfec7808ea445b",
+    "snapshot_digest": "53178a1362d5946361a73ad5c2384655106a7c93544e6164369ac735299693c0",
     "score_record_count": 218,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"
