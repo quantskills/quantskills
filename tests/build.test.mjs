@@ -7,6 +7,7 @@ const source = readFileSync(new URL("../scripts/build.mjs", import.meta.url), "u
 test("renderer accepts an explicit snapshot and output directory without network access", () => {
   assert.match(source, /--snapshot/);
   assert.match(source, /--output-dir/);
+  assert.match(source, /--evaluations-root/);
   assert.doesNotMatch(source, /(?:gh repo list|api\.github\.com|raw\.githubusercontent\.com)/);
 });
 

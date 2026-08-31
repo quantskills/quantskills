@@ -22,6 +22,11 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: quantskills/registry
+          path: registry
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
@@ -34,7 +39,7 @@ jobs:
       - name: Test and build
         run: |
           npm test
-          node scripts/build.mjs --snapshot "$RUNNER_TEMP/catalog.snapshot.json" --output-dir .
+          node scripts/build.mjs --snapshot "$RUNNER_TEMP/catalog.snapshot.json" --evaluations-root registry/evaluations --output-dir .
           node -e "import('./scripts/verify-build.mjs').then(({verifyBuild})=>{const x=require(process.env.RUNNER_TEMP + '/catalog.snapshot.json'); verifyBuild('.',x)})"
       - name: Commit validated generated outputs
         env:

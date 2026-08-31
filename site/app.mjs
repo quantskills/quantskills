@@ -9,8 +9,8 @@ export const WORKFLOW_GROUPS = Object.freeze({
 export const COMPATIBILITY_STATUSES = Object.freeze(["compatible", "adapter-required", "incompatible", "unknown", "not-applicable"]);
 const EDGE_COMPATIBILITY_STATUSES = Object.freeze(["compatible", "adapter-required", "incompatible", "unknown"]);
 const NOT_APPLICABLE_MODES = new Set(["natural-language", "not-applicable"]);
-const FILTER_KEYS = ["text", "category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility"];
-const PARAM_ORDER = ["category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility", "text"];
+const FILTER_KEYS = ["view", "text", "category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility"];
+const PARAM_ORDER = ["view", "category", "subcategory", "group", "stage", "project_type", "platform", "runtime", "profile", "status", "compatibility", "text"];
 
 const asText = (value) => typeof value === "string" ? value : value == null ? "" : String(value);
 const list = (value) => Array.isArray(value) ? value : [];
@@ -53,6 +53,7 @@ export function filterAssets(data, state = {}) {
     const profiles = [...endpointProfiles(publishedInterface(asset)?.inputs), ...endpointProfiles(publishedInterface(asset)?.outputs)];
     const haystack = [asset?.name, asset?.summary_zh, asset?.summary_en].map(asText).join(" ").toLowerCase();
     return (!value.category || asset?.catalog?.category === value.category)
+      && (!value.view || value.view === "all" || (value.view === "recommended" && asset?.evaluation?.recommended === true))
       && (!value.subcategory || asset?.catalog?.subcategory === value.subcategory)
       && (!value.group || matchesGroup(data, asset, value.group))
       && (!value.stage || stages.includes(value.stage))
@@ -107,6 +108,7 @@ export function assetViewModel(data, asset) {
     interface_status: asText(asset?.interface_status || "published"),
     inputs: endpointProfiles(publishedInterface(asset)?.inputs),
     outputs: endpointProfiles(publishedInterface(asset)?.outputs),
+    evaluation: asset?.evaluation || null,
     ...relationships,
   };
 }
@@ -135,7 +137,17 @@ export function renderAssetCard(document_, data, asset, index = 0) {
   edges.textContent = model.edges.length ? model.edges.map((edge) => `${asText(edge.status)}: ${edge.explanation}`).join(" | ") : "Compatibility: none";
   const profiles = document_.createElement("p");
   profiles.textContent = model.interface_status === "published" ? `${model.name === "skill-pandadata-warehouse" ? "Warehouse endpoint. " : ""}Published endpoints — inputs: ${model.inputs.join(", ") || "—"}; outputs: ${model.outputs.join(", ") || "—"}. Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}` : "Interface: pending maintainer review / no public endpoint.";
-  card.append(title, summary, metadata, edges, profiles);
+  card.append(title, summary, metadata);
+  if (model.evaluation) {
+    const score = document_.createElement("p");
+    score.className = "score-line";
+    const featured = model.evaluation.featured_status === "eligible"
+      ? `Featured ${Number(model.evaluation.featured_score).toFixed(2)}`
+      : model.evaluation.featured_status === "not_applicable" ? "Featured N/A" : "Featured ineligible";
+    score.textContent = `Shadow Core ${Number(model.evaluation.core).toFixed(2)} · B ${Number(model.evaluation.behavior).toFixed(2)} · Q ${Number(model.evaluation.quality).toFixed(2)} · T ${Number(model.evaluation.token).toFixed(2)} · ${featured}`;
+    card.append(score);
+  }
+  card.append(edges, profiles);
   return card;
 }
 
@@ -206,9 +218,12 @@ if (typeof document !== "undefined") {
   if (endpointSummary) {
     const published = list(data.assets).filter((asset) => asset?.interface_status === "published").length;
     const pending = list(data.assets).filter((asset) => asset?.interface_status === "pending-maintainer").length;
-    endpointSummary.textContent = `Published structured endpoints: ${published}; pending maintainer interface review: ${pending}.`;
+    const scored = list(data.assets).filter((asset) => asset?.evaluation).length;
+    const recommended = list(data.assets).filter((asset) => asset?.evaluation?.recommended).length;
+    const evaluated = Number(data?.evaluations?.score_record_count || scored);
+    endpointSummary.textContent = `Published structured endpoints: ${published}; pending maintainer interface review: ${pending}; Shadow scores: ${scored} listed / ${evaluated} evaluated; recommended: ${recommended}.`;
   }
-  for (const key of FILTER_KEYS.filter((id) => id !== "text")) {
+  for (const key of FILTER_KEYS.filter((id) => !["text", "view"].includes(id))) {
     const control = document.querySelector(`#${key}`);
     if (!control) continue;
     controls[key] = control;
@@ -218,12 +233,20 @@ if (typeof document !== "undefined") {
   if (textControl) controls.text = textControl;
   const initial = stateFromSearch(location.search);
   for (const [key, control] of Object.entries(controls)) control.value = initial[key] || "";
+  const viewButtons = [...document.querySelectorAll("[data-view]")];
+  let view = initial.view === "recommended" ? "recommended" : "all";
   const render = () => {
-    const state = readControls(controls);
+    const state = { ...readControls(controls), view };
     renderResults(document, data, state);
     const query = searchFromState(state);
     history.replaceState(null, "", `${query ? `?${query}` : ""}${location.hash}`);
   };
+  const selectView = (next) => {
+    view = next === "recommended" ? "recommended" : "all";
+    for (const button of viewButtons) button.setAttribute("aria-pressed", String(button.dataset.view === view));
+    render();
+  };
+  for (const button of viewButtons) button.addEventListener("click", () => selectView(button.dataset.view));
   for (const control of Object.values(controls)) control.addEventListener("input", render);
-  render();
+  selectView(view);
 }

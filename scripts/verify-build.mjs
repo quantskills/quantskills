@@ -21,8 +21,18 @@ export function verifyBuild(outputDir, snapshot) {
   if (names(site.assets) !== names(model.assets) || names(site.resources) !== names(snapshot.resources) || JSON.stringify(site.taxonomy) !== JSON.stringify(snapshot.taxonomy) || JSON.stringify(site.profiles) !== JSON.stringify(snapshot.profiles.items) || JSON.stringify(site.adapters) !== JSON.stringify(snapshot.adapters.items) || JSON.stringify(site.compatibility_edges) !== JSON.stringify(snapshot.compatibility_edges)) throw new Error("output projection mismatch");
   for (const asset of model.assets) {
     const actual = site.assets.find((item) => item.name === asset.name);
-    if (!actual || JSON.stringify(actual) !== JSON.stringify(asset)) throw new Error("output asset mismatch");
+    if (!actual) throw new Error("output asset missing");
+    const { evaluation, ...catalogAsset } = actual;
+    if (JSON.stringify(catalogAsset) !== JSON.stringify(asset)) throw new Error("output asset mismatch");
+    if (evaluation !== null && evaluation !== undefined) {
+      const expected = ["behavior", "core", "current_commit", "evaluated_commit_sha", "featured_reason", "featured_score", "featured_status", "mode", "quality", "recommendation_group", "recommendation_rank", "recommended", "source_publication", "token"];
+      if (Object.keys(evaluation).sort().join(",") !== expected.sort().join(",") || evaluation.mode !== "shadow" || typeof evaluation.core !== "number") throw new Error("invalid evaluation projection");
+    }
     if (!zh.includes(asset.name) || !en.includes(asset.name)) throw new Error("README asset mismatch");
+  }
+  if (site.evaluations) {
+    const recommended = site.assets.filter((asset) => asset.evaluation?.recommended).length;
+    if (site.evaluations.mode !== "shadow" || site.evaluations.score_record_count !== 218 || site.evaluations.recommended_record_count !== recommended || !/^[0-9a-f]{64}$/.test(site.evaluations.snapshot_digest || "")) throw new Error("invalid evaluation summary");
   }
   const count = model.assets.length;
   const zhCount = new RegExp(`<strong>${count}</strong>\\s*<br>\\s*<sub>资产</sub>`);

@@ -30,7 +30,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 <td align="center"><strong>214</strong><br><sub>资产</sub></td>
 <td align="center"><strong>10</strong><br><sub>分类</sub></td>
 <td align="center"><strong>1</strong><br><sub>已发布端点</sub></td>
-<td align="center"><strong>2026-08-29</strong><br><sub>快照更新</sub></td>
+<td align="center"><strong>2026-08-31</strong><br><sub>快照更新</sub></td>
 </tr></table>
 
 ## 分类总览
