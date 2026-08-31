@@ -30,7 +30,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 <td align="center"><strong>214</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
-<td align="center"><strong>2026-08-29</strong><br><sub>Snapshot updated</sub></td>
+<td align="center"><strong>2026-08-31</strong><br><sub>Snapshot updated</sub></td>
 </tr></table>
 
 ## Category summary

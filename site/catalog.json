@@ -470,6 +470,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "4c93fd6d93a5bca6e4cac178c2cf9d6ef7e8d241",
+        "current_commit": true,
+        "behavior": 97.46,
+        "quality": 82.5,
+        "token": 41.74,
+        "core": 79.79,
+        "featured_status": "eligible",
+        "featured_score": 91.96,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "agent:09"
       }
     },
     {
@@ -510,6 +526,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "dc7c29e3f953e871574150993dfb036c2403d658",
+        "current_commit": false,
+        "behavior": 97.22,
+        "quality": 42.5,
+        "token": 39.58,
+        "core": 69.13,
+        "featured_status": "eligible",
+        "featured_score": 89.12,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -550,6 +582,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "30584d4bc2c071e20d478f949eab7dfc0e51981e",
+        "current_commit": true,
+        "behavior": 96.88,
+        "quality": 71.88,
+        "token": 40.32,
+        "core": 76.49,
+        "featured_status": "eligible",
+        "featured_score": 91.64,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 3,
+        "recommendation_group": "agent:09"
       }
     },
     {
@@ -589,6 +637,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ce24e9db80865995b8ac1fab6dda41558e539194",
+        "current_commit": true,
+        "behavior": 97.7,
+        "quality": 68.12,
+        "token": 40.35,
+        "core": 75.97,
+        "featured_status": "eligible",
+        "featured_score": 85.64,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -628,6 +692,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "266b0239b19f88b1f65393d769ae857a662aab26",
+        "current_commit": true,
+        "behavior": 93.78,
+        "quality": 87.5,
+        "token": 40.39,
+        "core": 78.86,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -668,6 +748,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d697366910255a3f1e1174a65f95cc1f5412a879",
+        "current_commit": false,
+        "behavior": 98.58,
+        "quality": 37.5,
+        "token": 41.95,
+        "core": 69.15,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -718,6 +814,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7f100672d95eff4c2351517ba2c6a1be7ddea464",
+        "current_commit": true,
+        "behavior": 97.96,
+        "quality": 35,
+        "token": 40.03,
+        "core": 67.73,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -755,6 +867,22 @@
         "workflow_stages": [
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "606d818c32a52732a0a3573c0445e1da2500480f",
+        "current_commit": true,
+        "behavior": 98.76,
+        "quality": 74.38,
+        "token": 40.21,
+        "core": 78.03,
+        "featured_status": "eligible",
+        "featured_score": 96.39,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "agent:09"
       }
     },
     {
@@ -815,6 +943,22 @@
           "reporting",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.21",
+        "evaluated_commit_sha": "42a899733db3173a331159fb25d29d78eb4d3e32",
+        "current_commit": true,
+        "behavior": 99.45,
+        "quality": 41.88,
+        "token": 41.76,
+        "core": 70.63,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -862,6 +1006,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "beeb3718bd081926d62e9f48cea3fe5967ce7be1",
+        "current_commit": true,
+        "behavior": 99.07,
+        "quality": 55.62,
+        "token": 41.85,
+        "core": 73.9,
+        "featured_status": "eligible",
+        "featured_score": 79.89,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -901,6 +1061,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b9c2a88228034bdd7ec4b7b908b923fc0f68d2d2",
+        "current_commit": true,
+        "behavior": 98.62,
+        "quality": 66.88,
+        "token": 41.16,
+        "core": 76.32,
+        "featured_status": "eligible",
+        "featured_score": 99.78,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -940,6 +1116,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "276ad227c8a24f572fbb733a1284dcc0ce9872a2",
+        "current_commit": true,
+        "behavior": 97.52,
+        "quality": 67.5,
+        "token": 39.3,
+        "core": 75.46,
+        "featured_status": "eligible",
+        "featured_score": 87.97,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -981,6 +1173,22 @@
           "reporting",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "f12702e72c76c22e1b502ab5f083f8a90d70a67e",
+        "current_commit": false,
+        "behavior": 98.52,
+        "quality": 61.88,
+        "token": 41.56,
+        "core": 75.12,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1022,6 +1230,22 @@
           "execution",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ac4ff3c0e41cb41d8738779f80d23793e982cee5",
+        "current_commit": true,
+        "behavior": 93.9,
+        "quality": 75,
+        "token": 41.38,
+        "core": 76.04,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1059,7 +1283,8 @@
         "workflow_stages": [
           "orchestration"
         ]
-      }
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -1098,6 +1323,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e0984965ff8bd26fec67a798a9f35c5717d0a301",
+        "current_commit": true,
+        "behavior": 98.45,
+        "quality": 78.12,
+        "token": 14.77,
+        "core": 72.45,
+        "featured_status": "eligible",
+        "featured_score": 88.29,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1138,6 +1379,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b860c02de08baba7a2f36da64a01434d6382a792",
+        "current_commit": true,
+        "behavior": 98.35,
+        "quality": 72.5,
+        "token": 23.86,
+        "core": 73.27,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 4,
+        "recommendation_group": "skill:04"
       }
     },
     {
@@ -1176,6 +1433,22 @@
           "data-ingestion",
           "data-quality"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "04d8ac946b0fc9256fa3514dcc9e05b06b981458",
+        "current_commit": true,
+        "behavior": 97.89,
+        "quality": 78.12,
+        "token": 41.57,
+        "core": 78.87,
+        "featured_status": "eligible",
+        "featured_score": 87.36,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1214,6 +1487,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "213a9cb6b36ccc3ae4c72606ff72211de7b67199",
+        "current_commit": true,
+        "behavior": 99.27,
+        "quality": 58.12,
+        "token": 39.45,
+        "core": 74.03,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1270,6 +1559,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0d1cbdafde3ddb148a0bed90d06ad09525bfecee",
+        "current_commit": true,
+        "behavior": 72.97,
+        "quality": 73.75,
+        "token": 37.15,
+        "core": 64.21,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1309,6 +1614,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "55142304b4b2dd40f436e5736e6285b8a8e90c99",
+        "current_commit": true,
+        "behavior": 58.37,
+        "quality": 73.12,
+        "token": 19.76,
+        "core": 52.4,
+        "featured_status": "eligible",
+        "featured_score": 79.59,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1348,6 +1669,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a94710758f5ef0bb870e0d8fc14ad43d07e19412",
+        "current_commit": true,
+        "behavior": 98.48,
+        "quality": 86.88,
+        "token": 39.08,
+        "core": 80.73,
+        "featured_status": "eligible",
+        "featured_score": 95.1,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -1401,6 +1738,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "33b26ef77ae97c5a824b1441d124023308cf78bb",
+        "current_commit": true,
+        "behavior": 99.78,
+        "quality": 83.12,
+        "token": 42.53,
+        "core": 81.3,
+        "featured_status": "eligible",
+        "featured_score": 79.95,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:06"
       }
     },
     {
@@ -1441,6 +1794,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "495a22d02b34c0b5d6c567ebe1e21c1b4c0986b2",
+        "current_commit": true,
+        "behavior": 43,
+        "quality": 64.38,
+        "token": 11.76,
+        "core": 40.53,
+        "featured_status": "eligible",
+        "featured_score": 92.19,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1481,6 +1850,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c1de583f6f42c559020b2d3d2b6fdab654ed8c82",
+        "current_commit": true,
+        "behavior": 43.36,
+        "quality": 76.25,
+        "token": 12.12,
+        "core": 43.77,
+        "featured_status": "eligible",
+        "featured_score": 97.69,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1521,6 +1906,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e1265597f5d59e7cb6aa0c6f31275928cfa87eb8",
+        "current_commit": true,
+        "behavior": 58.62,
+        "quality": 71.88,
+        "token": 19.63,
+        "core": 52.19,
+        "featured_status": "eligible",
+        "featured_score": 58.25,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1561,6 +1962,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "8cc50fc78833036648df6f1d9fd543466aacba78",
+        "current_commit": true,
+        "behavior": 43.76,
+        "quality": 41.88,
+        "token": 13.13,
+        "core": 35.63,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1601,6 +2018,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9a09a59d6cfec241ca9589f8a72553fc67475c8a",
+        "current_commit": true,
+        "behavior": 58.52,
+        "quality": 57.5,
+        "token": 21.18,
+        "core": 48.93,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1641,6 +2074,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "3ccd5923eee4a0519f56047abf3971c2287d2083",
+        "current_commit": true,
+        "behavior": 58.6,
+        "quality": 56.25,
+        "token": 21.29,
+        "core": 48.68,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1681,6 +2130,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "58b250453ac6d2390bf7ee352153b34a14241aa3",
+        "current_commit": true,
+        "behavior": 88.43,
+        "quality": 75.62,
+        "token": 0,
+        "core": 63.12,
+        "featured_status": "eligible",
+        "featured_score": 47.12,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1720,6 +2185,22 @@
           "risk",
           "execution"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "bb7ba0deee3d2a8be2ab1d027792fa981dc6e8ed",
+        "current_commit": true,
+        "behavior": 89.86,
+        "quality": 61.25,
+        "token": 34.82,
+        "core": 68.95,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1759,6 +2240,22 @@
           "risk",
           "execution"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d61d0ff1dece71ab457fdbf3e0e48ee3415817d3",
+        "current_commit": true,
+        "behavior": 77.98,
+        "quality": 50.62,
+        "token": 34.11,
+        "core": 60.17,
+        "featured_status": "eligible",
+        "featured_score": 51.44,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1798,6 +2295,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "447cae786ee53b5e0e914344323dcb9490faae3e",
+        "current_commit": true,
+        "behavior": 99.32,
+        "quality": 67.5,
+        "token": 23.59,
+        "core": 72.43,
+        "featured_status": "eligible",
+        "featured_score": 79.97,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1837,6 +2350,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "8072d39bc3b68f274dfb1d8972f28d20229f1f9e",
+        "current_commit": true,
+        "behavior": 95.7,
+        "quality": 66.88,
+        "token": 24.18,
+        "core": 70.62,
+        "featured_status": "eligible",
+        "featured_score": 56.84,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1876,6 +2405,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "cf9154603263e2a4e2151f39e2708923d8d776a7",
+        "current_commit": true,
+        "behavior": 94.74,
+        "quality": 58.75,
+        "token": 39.59,
+        "core": 71.96,
+        "featured_status": "eligible",
+        "featured_score": 66.52,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -1922,6 +2467,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0332e475abcb399b5949999cf1d0ffc9559aa00f",
+        "current_commit": true,
+        "behavior": 97.07,
+        "quality": 85.62,
+        "token": 39.19,
+        "core": 79.74,
+        "featured_status": "eligible",
+        "featured_score": 79.53,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:07"
       }
     },
     {
@@ -1960,6 +2521,22 @@
           "data-ingestion",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c6c01622193d85340e156bd6fc5c16f1808f8a01",
+        "current_commit": true,
+        "behavior": 91.2,
+        "quality": 56.88,
+        "token": 37.62,
+        "core": 69.23,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2000,6 +2577,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "affafd2537671e5df6a9a44a137d82a9c95504bf",
+        "current_commit": true,
+        "behavior": 91.86,
+        "quality": 75.62,
+        "token": 37.57,
+        "core": 74.23,
+        "featured_status": "eligible",
+        "featured_score": 99.46,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2039,6 +2632,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a87a3bef85e6bad56c619ec9351fd24515ef6995",
+        "current_commit": true,
+        "behavior": 97.64,
+        "quality": 64.38,
+        "token": 10.27,
+        "core": 67.48,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2079,6 +2688,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.22",
+        "evaluated_commit_sha": "ce00fee720fad6eeb8e1f655fe75474b8b257d6d",
+        "current_commit": true,
+        "behavior": 99.18,
+        "quality": 91.88,
+        "token": 38.07,
+        "core": 82.08,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -2124,6 +2749,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.22",
+        "evaluated_commit_sha": "08b4e44a01d493e70cbd478b95a45e57fb7997d7",
+        "current_commit": true,
+        "behavior": 99.58,
+        "quality": 77.5,
+        "token": 40.78,
+        "core": 79.36,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 4,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -2164,6 +2805,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c736385444649aa88858d56f89b483b51fc4e14d",
+        "current_commit": true,
+        "behavior": 43.48,
+        "quality": 51.25,
+        "token": 11.99,
+        "core": 37.55,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2203,6 +2860,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2e02b4bf51a4968010fdc9fad97b6748254d86a2",
+        "current_commit": true,
+        "behavior": 98.08,
+        "quality": 64.38,
+        "token": 21.08,
+        "core": 70.41,
+        "featured_status": "eligible",
+        "featured_score": 79.58,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2242,6 +2915,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "61f3e76640ca3c5b0e9e3d6051de9c87381da3b7",
+        "current_commit": true,
+        "behavior": 90.98,
+        "quality": 56.88,
+        "token": 42.59,
+        "core": 70.35,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2281,6 +2970,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "84141c9b0ce7a6727b0c69ba616b7a8a8b9d7b88",
+        "current_commit": true,
+        "behavior": 99.71,
+        "quality": 78.12,
+        "token": 22.35,
+        "core": 74.97,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:04"
       }
     },
     {
@@ -2332,6 +3037,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c4d186a9bbedd05890472fd3e2c006cdcfa5d6a9",
+        "current_commit": true,
+        "behavior": 86.6,
+        "quality": 53.12,
+        "token": 39.3,
+        "core": 66.41,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2372,6 +3093,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "3e092f3828fb154755bc60503416066f5c8c9583",
+        "current_commit": true,
+        "behavior": 97.89,
+        "quality": 62.5,
+        "token": 40.73,
+        "core": 74.75,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2413,6 +3150,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1fa821acca994403bca4c9fc85db989e7d99e59a",
+        "current_commit": true,
+        "behavior": 98.22,
+        "quality": 65.62,
+        "token": 40.81,
+        "core": 75.72,
+        "featured_status": "eligible",
+        "featured_score": 99.89,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2453,6 +3206,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1b65851a4473eebbc711eeecad22f58d0278ef1b",
+        "current_commit": true,
+        "behavior": 99.02,
+        "quality": 66.88,
+        "token": 40.53,
+        "core": 76.36,
+        "featured_status": "eligible",
+        "featured_score": 96.92,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2493,6 +3262,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c4a8a124b1deb79cc579e8a791795a3bc48b7b25",
+        "current_commit": true,
+        "behavior": 98.8,
+        "quality": 80.62,
+        "token": 45.05,
+        "core": 80.82,
+        "featured_status": "eligible",
+        "featured_score": 99.88,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:01"
       }
     },
     {
@@ -2532,6 +3317,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ca2230f229a39003ff3340a4941705e2bb751d37",
+        "current_commit": true,
+        "behavior": 98.6,
+        "quality": 63.12,
+        "token": 41.97,
+        "core": 75.58,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2580,6 +3381,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "f2c6e548d5e4d1a44cd073ab04aca09a3a91dfc2",
+        "current_commit": true,
+        "behavior": 93.61,
+        "quality": 57.5,
+        "token": 24.06,
+        "core": 67.2,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2618,6 +3435,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9a209052cf6d31077541bf865379cbd13e7a29d2",
+        "current_commit": true,
+        "behavior": 99.09,
+        "quality": 58.12,
+        "token": 33.67,
+        "core": 72.49,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2658,6 +3491,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "66767ac5e4dda46d88fe9be9e5ae1dc62c705ecd",
+        "current_commit": true,
+        "behavior": 89.11,
+        "quality": 71.88,
+        "token": 38.69,
+        "core": 72.2,
+        "featured_status": "eligible",
+        "featured_score": 81.17,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2713,6 +3562,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "554ffc48fc46f3ffc9039406ec40938a20424351",
+        "current_commit": true,
+        "behavior": 74.16,
+        "quality": 49.38,
+        "token": 32.48,
+        "core": 57.55,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2766,6 +3631,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6fae7ed42fde63fd7fd12807a4c866e95eaeb709",
+        "current_commit": true,
+        "behavior": 99.24,
+        "quality": 82.5,
+        "token": 34.61,
+        "core": 78.9,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:08"
       }
     },
     {
@@ -2804,6 +3685,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "64a0471f466cd22096860b401c5f0b806fcec7b2",
+        "current_commit": true,
+        "behavior": 99.61,
+        "quality": 66.88,
+        "token": 40.42,
+        "core": 76.63,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2844,6 +3741,22 @@
           "modeling",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e9df0dc55a6184ed4a637c7a970d528dcc861405",
+        "current_commit": true,
+        "behavior": 77.7,
+        "quality": 71.25,
+        "token": 36.67,
+        "core": 65.83,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2884,6 +3797,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2ecd99ae31d2d2bc3d57149818781615fbfbfb41",
+        "current_commit": true,
+        "behavior": 32.42,
+        "quality": 69.38,
+        "token": 19.41,
+        "core": 38.41,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2924,6 +3853,22 @@
           "modeling",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1733a8a9f7653ef0063b56a2221c7f82df759e1c",
+        "current_commit": true,
+        "behavior": 92.38,
+        "quality": 75.62,
+        "token": 41.3,
+        "core": 75.42,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2964,6 +3909,22 @@
           "modeling",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7c2e647a9af04c760db7a35efadb751eee7f917d",
+        "current_commit": true,
+        "behavior": 97.77,
+        "quality": 65,
+        "token": 47.74,
+        "core": 77.07,
+        "featured_status": "eligible",
+        "featured_score": 75.76,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3002,6 +3963,22 @@
           "data-quality",
           "factor-generation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b79bb29c051dc504fe5d0b01c1d65af90c20f4ef",
+        "current_commit": true,
+        "behavior": 63.36,
+        "quality": 71.88,
+        "token": 28.56,
+        "core": 56.79,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3053,6 +4030,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d615f1c2c098d646d7b5d9a4832d9a07adc3fd93",
+        "current_commit": true,
+        "behavior": 99.34,
+        "quality": 79.38,
+        "token": 39.38,
+        "core": 79.36,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:08"
       }
     },
     {
@@ -3092,6 +4085,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "203f4f69b029468f50d1b9aa08f71814d472a945",
+        "current_commit": true,
+        "behavior": 99.62,
+        "quality": 64.38,
+        "token": 34.93,
+        "core": 74.64,
+        "featured_status": "eligible",
+        "featured_score": 79.95,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3131,6 +4140,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "499db18924760203e88285a56fde6214be7177d5",
+        "current_commit": true,
+        "behavior": 98.51,
+        "quality": 18.75,
+        "token": 23.78,
+        "core": 59.89,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3170,6 +4195,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "56f93ef87ba7acfe928efb0fab19b8d6f8fdadcb",
+        "current_commit": true,
+        "behavior": 99.51,
+        "quality": 71.25,
+        "token": 38.56,
+        "core": 77.21,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3209,6 +4250,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c5841918a48d8beb24434454526cdc93839de753",
+        "current_commit": true,
+        "behavior": 82.72,
+        "quality": 69.38,
+        "token": 0,
+        "core": 58.7,
+        "featured_status": "eligible",
+        "featured_score": 74.15,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3248,6 +4305,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "229573025be800675ce6ecc01b5a766715f3eda8",
+        "current_commit": true,
+        "behavior": 98.64,
+        "quality": 75.62,
+        "token": 40.3,
+        "core": 78.3,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3287,6 +4360,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7a7cbf1d4f94c0b02486a3102c3fab65d35b64a2",
+        "current_commit": true,
+        "behavior": 98.02,
+        "quality": 70.62,
+        "token": 21.69,
+        "core": 72.09,
+        "featured_status": "eligible",
+        "featured_score": 91.1,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3325,6 +4414,22 @@
           "data-ingestion",
           "factor-generation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "8512f6cdb391d13cd28fa4d207f8d9f3c6de9d2c",
+        "current_commit": true,
+        "behavior": 43.52,
+        "quality": 74.38,
+        "token": 11.83,
+        "core": 43.31,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3365,6 +4470,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0deaf6f576a92637ba3511aa44f857cdd90b6af7",
+        "current_commit": true,
+        "behavior": 77.26,
+        "quality": 87.5,
+        "token": 40.12,
+        "core": 70.53,
+        "featured_status": "eligible",
+        "featured_score": 93.77,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3403,6 +4524,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "5eb2d0b7b8f8abd957af7540f7d4c11761ae49d1",
+        "current_commit": true,
+        "behavior": 43.02,
+        "quality": 73.12,
+        "token": 11.72,
+        "core": 42.72,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3441,6 +4578,22 @@
           "evaluation",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1d3e881c4d4fb4afdcc65aae572f8d9add554dd1",
+        "current_commit": true,
+        "behavior": 96.64,
+        "quality": 60.62,
+        "token": 37.16,
+        "core": 72.76,
+        "featured_status": "eligible",
+        "featured_score": 87.48,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3479,6 +4632,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e049c2bdfca2e630fd5f22c03d596732ef9d884a",
+        "current_commit": true,
+        "behavior": 95.86,
+        "quality": 66.88,
+        "token": 35.92,
+        "core": 73.63,
+        "featured_status": "eligible",
+        "featured_score": 79.41,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3517,6 +4686,22 @@
           "factor-screening",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.14",
+        "evaluated_commit_sha": "3b335ec4814dcea49ba6005524157b09c555a225",
+        "current_commit": true,
+        "behavior": 74,
+        "quality": 72.5,
+        "token": 27.03,
+        "core": 61.88,
+        "featured_status": "eligible",
+        "featured_score": 89.23,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3556,6 +4741,22 @@
           "factor-screening",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "54343fd5f8acffdaec3529fa43c4f95c929907c4",
+        "current_commit": false,
+        "behavior": 58.45,
+        "quality": 41.88,
+        "token": 20.3,
+        "core": 44.77,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3608,6 +4809,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "384fadbb78e476649cc12aa856f6908769f1a205",
+        "current_commit": true,
+        "behavior": 87.54,
+        "quality": 80.62,
+        "token": 39.54,
+        "core": 73.81,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3645,6 +4862,22 @@
         "workflow_stages": [
           "factor-generation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "4fda44d27bc80efe60284da6b03bc56a2bf4e82f",
+        "current_commit": true,
+        "behavior": 57.48,
+        "quality": 78.12,
+        "token": 19.25,
+        "core": 53.08,
+        "featured_status": "eligible",
+        "featured_score": 88.02,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3698,6 +4931,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.20",
+        "evaluated_commit_sha": "83cbeb00012a49ecdb2de7d41efc474f14dcc045",
+        "current_commit": true,
+        "behavior": 38.58,
+        "quality": 66.88,
+        "token": 20.52,
+        "core": 41.14,
+        "featured_status": "eligible",
+        "featured_score": 79.6,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3737,6 +4986,22 @@
           "evaluation",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.16",
+        "evaluated_commit_sha": "0f3496c6d9b2cb510f76222780e3ac92375d5d2a",
+        "current_commit": true,
+        "behavior": 42.85,
+        "quality": 68.75,
+        "token": 11.5,
+        "core": 41.49,
+        "featured_status": "eligible",
+        "featured_score": 99.52,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3775,6 +5040,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "57c6e0ccd03a96186894122f36fc1da5e6ee0665",
+        "current_commit": true,
+        "behavior": 42.22,
+        "quality": 55.62,
+        "token": 11.54,
+        "core": 37.9,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3814,6 +5095,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "281f8c7af7403a76462fc43fb473f8c893472c5a",
+        "current_commit": true,
+        "behavior": 89.98,
+        "quality": 80,
+        "token": 41.75,
+        "core": 75.42,
+        "featured_status": "eligible",
+        "featured_score": 23.75,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:02"
       }
     },
     {
@@ -3852,6 +5149,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "020b406c13f4c06accc55d307ed99b69d76dcd75",
+        "current_commit": true,
+        "behavior": 55.46,
+        "quality": 69.38,
+        "token": 18.99,
+        "core": 49.82,
+        "featured_status": "eligible",
+        "featured_score": 95.57,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3890,6 +5203,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "36972acf62e37f9f5dd40504422d57ec561dee21",
+        "current_commit": true,
+        "behavior": 95.71,
+        "quality": 73.75,
+        "token": 39.1,
+        "core": 76.07,
+        "featured_status": "eligible",
+        "featured_score": 79.75,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:02"
       }
     },
     {
@@ -3929,6 +5258,22 @@
           "factor-screening",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6731bfa8bf1da6fb3f3ecc6e7eb730005002342e",
+        "current_commit": true,
+        "behavior": 45.68,
+        "quality": 70.62,
+        "token": 19.56,
+        "core": 45.38,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3967,6 +5312,22 @@
           "factor-screening",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d2b331504ee1a2a6fbde5e7119f5aa5c96a9b221",
+        "current_commit": true,
+        "behavior": 58.2,
+        "quality": 71.25,
+        "token": 20.25,
+        "core": 51.97,
+        "featured_status": "eligible",
+        "featured_score": 24.12,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4005,6 +5366,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.14",
+        "evaluated_commit_sha": "8d8cc17a592ad6f706028661f834a47d58c45d12",
+        "current_commit": true,
+        "behavior": 59.04,
+        "quality": 60.62,
+        "token": 19.6,
+        "core": 49.58,
+        "featured_status": "eligible",
+        "featured_score": 79.69,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4043,6 +5420,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "040bd21f5f5a2a06d8974581896778748c6fdac8",
+        "current_commit": false,
+        "behavior": 80.34,
+        "quality": 73.12,
+        "token": 31.15,
+        "core": 66.24,
+        "featured_status": "eligible",
+        "featured_score": 79.44,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4081,6 +5474,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "329370ad25fb56dbf548fdc9c65e9556d3b0d3cd",
+        "current_commit": true,
+        "behavior": 99.23,
+        "quality": 38.75,
+        "token": 37.34,
+        "core": 68.64,
+        "featured_status": "eligible",
+        "featured_score": 79.95,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4119,6 +5528,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9fd588982c060ff2b0356616405034b6a7ac2837",
+        "current_commit": true,
+        "behavior": 89.2,
+        "quality": 66.88,
+        "token": 42.17,
+        "core": 71.86,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4170,6 +5595,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "5bbb00a244f2e1330894d3c7fcb016d5c98b9954",
+        "current_commit": true,
+        "behavior": 58.83,
+        "quality": 61.88,
+        "token": 19.49,
+        "core": 49.75,
+        "featured_status": "eligible",
+        "featured_score": 99.83,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4209,6 +5650,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6e34aa7bee6bbbe534b40a21ce1fe537187eac8a",
+        "current_commit": true,
+        "behavior": 42.01,
+        "quality": 55,
+        "token": 11.81,
+        "core": 37.71,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4266,6 +5723,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a9c1feddaec41984d58e8a15ae5678743c769c2a",
+        "current_commit": true,
+        "behavior": 91.29,
+        "quality": 64.38,
+        "token": 39.27,
+        "core": 71.56,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4304,6 +5777,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "757bba6f690d9318acfa7704da3d5cbab8a1ff0d",
+        "current_commit": true,
+        "behavior": 97,
+        "quality": 59.38,
+        "token": 38.99,
+        "core": 73.09,
+        "featured_status": "eligible",
+        "featured_score": 99.55,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4343,6 +5832,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "89c447a7d5256c505e325b90c7897ba83774a606",
+        "current_commit": true,
+        "behavior": 99.82,
+        "quality": 80.62,
+        "token": 38.55,
+        "core": 79.7,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 3,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -4382,6 +5887,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7a056483143649eee38719535e313db51217c66e",
+        "current_commit": true,
+        "behavior": 96.3,
+        "quality": 68.75,
+        "token": 40.87,
+        "core": 75.55,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4422,6 +5943,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "646f6a6fd0d49bd930c854c7b54e0a91d1d033b8",
+        "current_commit": true,
+        "behavior": 59.53,
+        "quality": 46.88,
+        "token": 22.9,
+        "core": 47.21,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4474,6 +6011,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "70fdb397efecf67cdf8e8fe0f90da87744b5d51f",
+        "current_commit": true,
+        "behavior": 95.18,
+        "quality": 70.62,
+        "token": 40,
+        "core": 75.24,
+        "featured_status": "eligible",
+        "featured_score": 83.58,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4512,6 +6065,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "fdfa6eee1a1ea68047e44b9c90f2052b9a325121",
+        "current_commit": true,
+        "behavior": 95.91,
+        "quality": 59.38,
+        "token": 42.52,
+        "core": 73.43,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4549,6 +6118,22 @@
         "workflow_stages": [
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a7d082678ae472c99863eedad6368945769287f7",
+        "current_commit": true,
+        "behavior": 71.92,
+        "quality": 80,
+        "token": 29.26,
+        "core": 63.28,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4587,6 +6172,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b458381b9b5e23b8ec3159ab0e4515955cd63689",
+        "current_commit": true,
+        "behavior": 99.76,
+        "quality": 76.25,
+        "token": 40.37,
+        "core": 79.03,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 6,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -4625,6 +6226,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b1f79c7282f3ceaad1c7fbef0ca38010b1959521",
+        "current_commit": true,
+        "behavior": 98.91,
+        "quality": 75.62,
+        "token": 39.19,
+        "core": 78.16,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4664,6 +6281,22 @@
           "portfolio-construction",
           "backtesting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2eb638f8da966e51e5d0c026a7bc66a6f408d0c7",
+        "current_commit": true,
+        "behavior": 82.84,
+        "quality": 64.38,
+        "token": 37.6,
+        "core": 66.91,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4703,6 +6336,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1d6fbea960d7715ab38ae50be2df571f7c6358df",
+        "current_commit": false,
+        "behavior": 98.2,
+        "quality": 57.5,
+        "token": 38.84,
+        "core": 73.19,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4755,6 +6404,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e7cf9a0a378f648819172bb66a73532cb9afe807",
+        "current_commit": true,
+        "behavior": 90.21,
+        "quality": 78.12,
+        "token": 39.39,
+        "core": 74.48,
+        "featured_status": "eligible",
+        "featured_score": 53.37,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4802,6 +6467,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "184a346d018e964ec39c71cff84c588d8c692b01",
+        "current_commit": true,
+        "behavior": 82.89,
+        "quality": 49.38,
+        "token": 23.59,
+        "core": 59.68,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4840,6 +6521,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "5acf1a8131cbb67aeea59eba08e56681522c10f2",
+        "current_commit": true,
+        "behavior": 98.61,
+        "quality": 55,
+        "token": 39.84,
+        "core": 73.02,
+        "featured_status": "eligible",
+        "featured_score": 56.09,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4878,6 +6575,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "94bcddefd232863fa3a259b1556a4222c890a77a",
+        "current_commit": true,
+        "behavior": 98.58,
+        "quality": 64.38,
+        "token": 39.84,
+        "core": 75.35,
+        "featured_status": "eligible",
+        "featured_score": 97.45,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4917,6 +6630,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6b699d27c4abc9e5ca8a21cca1b8c5aef5d3c663",
+        "current_commit": true,
+        "behavior": 99.56,
+        "quality": 73.75,
+        "token": 42.01,
+        "core": 78.72,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 8,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -4955,6 +6684,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "50678c69d5b7d4bc10707aeea108e88823cad5d1",
+        "current_commit": true,
+        "behavior": 97.72,
+        "quality": 64.38,
+        "token": 40.29,
+        "core": 75.03,
+        "featured_status": "eligible",
+        "featured_score": 79.76,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -4995,6 +6740,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "612027ff14cd0aefd0027f4f322af4907d68de3c",
+        "current_commit": true,
+        "behavior": 65.92,
+        "quality": 46.88,
+        "token": 25,
+        "core": 50.93,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5034,6 +6795,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9f3e040594a9c0b9b1ffa96cd24551ad76fc69dd",
+        "current_commit": true,
+        "behavior": 96.31,
+        "quality": 64.38,
+        "token": 39.15,
+        "core": 74.04,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5073,6 +6850,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1e68ec5b50d6fb6158afd9899923e7c7fb9a34ae",
+        "current_commit": true,
+        "behavior": 94.33,
+        "quality": 76.25,
+        "token": 41.75,
+        "core": 76.66,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5111,6 +6904,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "acdba50911d47556f2af7bdbeca39c9e9083ba80",
+        "current_commit": true,
+        "behavior": 99.18,
+        "quality": 56.88,
+        "token": 41.19,
+        "core": 74.11,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5150,6 +6959,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b985fb82eefc457f685a75ee6a419f3dc4de3585",
+        "current_commit": true,
+        "behavior": 99.56,
+        "quality": 64.38,
+        "token": 41.54,
+        "core": 76.26,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5189,6 +7014,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a2a864852ed53145a2cf833f0dde84b10a93916f",
+        "current_commit": true,
+        "behavior": 80.83,
+        "quality": 48.12,
+        "token": 31.46,
+        "core": 60.31,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5228,6 +7069,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "518bd5b4f165441c4765d1800dda0262947e6766",
+        "current_commit": true,
+        "behavior": 98.28,
+        "quality": 78.12,
+        "token": 38.7,
+        "core": 78.35,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 10,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -5268,6 +7125,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0f4d3c16d4bc19e33afb857172438b171a688c2d",
+        "current_commit": true,
+        "behavior": 98.14,
+        "quality": 69.38,
+        "token": 40.17,
+        "core": 76.45,
+        "featured_status": "eligible",
+        "featured_score": 98.25,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5307,6 +7180,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "32792b58baae3584aa82bab10fa91439bcce6034",
+        "current_commit": true,
+        "behavior": 96.6,
+        "quality": 66.88,
+        "token": 34.69,
+        "core": 73.69,
+        "featured_status": "eligible",
+        "featured_score": 67.04,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5346,6 +7235,22 @@
           "data-quality",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b9f633480a7c77c9595251f67018d4d37cc3241d",
+        "current_commit": true,
+        "behavior": 43.58,
+        "quality": 51.88,
+        "token": 13.54,
+        "core": 38.14,
+        "featured_status": "eligible",
+        "featured_score": 56.54,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5386,6 +7291,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "cfd664bc868cd82682301c4a4c66fb41252e5202",
+        "current_commit": true,
+        "behavior": 82.17,
+        "quality": 86.25,
+        "token": 31.83,
+        "core": 70.61,
+        "featured_status": "eligible",
+        "featured_score": 98.7,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5425,6 +7346,22 @@
           "reporting",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c6e23481f05246828b5d944623c35afb08fb3987",
+        "current_commit": true,
+        "behavior": 46.85,
+        "quality": 49.38,
+        "token": 22.16,
+        "core": 41.31,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5465,6 +7402,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0c4bc57cf767979491bab26f4af6a9e55763e4ca",
+        "current_commit": true,
+        "behavior": 94.52,
+        "quality": 78.75,
+        "token": 39.43,
+        "core": 76.81,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5506,6 +7459,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "281f99f57074a95db8ede34b26f731d3e05cc058",
+        "current_commit": true,
+        "behavior": 98.95,
+        "quality": 83.12,
+        "token": 8.25,
+        "core": 72.32,
+        "featured_status": "eligible",
+        "featured_score": 79.79,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5545,6 +7514,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d42a44234df4127419703eece171043c410404e8",
+        "current_commit": true,
+        "behavior": 99.78,
+        "quality": 66.25,
+        "token": 39.42,
+        "core": 76.3,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5585,6 +7570,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c92effa9c8e0b74230b22f96eac3cc19b158ac77",
+        "current_commit": true,
+        "behavior": 81.26,
+        "quality": 66.88,
+        "token": 30.61,
+        "core": 65,
+        "featured_status": "eligible",
+        "featured_score": 81.23,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5625,6 +7626,22 @@
           "modeling",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "5deec2cc446f44bbc916c851f0d43e8a67317288",
+        "current_commit": true,
+        "behavior": 93.12,
+        "quality": 64.38,
+        "token": 36.33,
+        "core": 71.74,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5665,6 +7682,22 @@
           "factor-generation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7b5380e3e0a2ba75decc1d542e8afd8415e02b05",
+        "current_commit": true,
+        "behavior": 90.14,
+        "quality": 55.62,
+        "token": 40.08,
+        "core": 69,
+        "featured_status": "eligible",
+        "featured_score": 55.8,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5705,6 +7738,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2ebe86bee65ea48b7e3305d76f0c31ef2a31f724",
+        "current_commit": true,
+        "behavior": 96.46,
+        "quality": 82.5,
+        "token": 43.69,
+        "core": 79.78,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5744,6 +7793,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6f9fd7d0699ef99fa567e5d6b694cd57696dc643",
+        "current_commit": true,
+        "behavior": 99.66,
+        "quality": 70.62,
+        "token": 39.42,
+        "core": 77.34,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5783,6 +7848,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "cf1f76aaf7be751988343c73363199a0b422bf15",
+        "current_commit": true,
+        "behavior": 99.54,
+        "quality": 61.88,
+        "token": 39.13,
+        "core": 75.02,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5821,6 +7902,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "510e35a56ddadfd0d3899ba69015c9d0d3f2be5f",
+        "current_commit": true,
+        "behavior": 96.8,
+        "quality": 71.25,
+        "token": 37.06,
+        "core": 75.48,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5862,6 +7959,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ce1301568000a7ed4972ec5b305867d59cfba0c7",
+        "current_commit": true,
+        "behavior": 96.99,
+        "quality": 58.12,
+        "token": 21.05,
+        "core": 68.29,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5910,6 +8023,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6d859ee20d3309d340ae00b00ed86bd866c25271",
+        "current_commit": true,
+        "behavior": 58.03,
+        "quality": 55.62,
+        "token": 20.45,
+        "core": 48.03,
+        "featured_status": "eligible",
+        "featured_score": 86.09,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5949,6 +8078,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "f9e7fbe6a173063f364bdc435ce3d8d778324872",
+        "current_commit": true,
+        "behavior": 43.5,
+        "quality": 55.62,
+        "token": 11.99,
+        "core": 38.65,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -5989,6 +8134,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a44602c187ec01d6f69bbc0d69e2b388e06bb5f4",
+        "current_commit": true,
+        "behavior": 23.88,
+        "quality": 49.38,
+        "token": 12.37,
+        "core": 27.38,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6030,6 +8191,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "51bc5513cc950b21ceb8dd755082922ffc49bae0",
+        "current_commit": true,
+        "behavior": 71.3,
+        "quality": 41.88,
+        "token": 32.1,
+        "core": 54.14,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6070,6 +8247,22 @@
           "modeling",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "362893c4ae20edf62836670eee753baa67490e2e",
+        "current_commit": true,
+        "behavior": 80.61,
+        "quality": 77.5,
+        "token": 39.35,
+        "core": 69.52,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6110,6 +8303,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1096589d3e64a71b82b60275aa094eca9ac522ee",
+        "current_commit": true,
+        "behavior": 43.6,
+        "quality": 56.88,
+        "token": 12.34,
+        "core": 39.11,
+        "featured_status": "eligible",
+        "featured_score": 5,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6150,6 +8359,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "391d7bf621d954139835fea7703c34094fab201a",
+        "current_commit": true,
+        "behavior": 67.12,
+        "quality": 61.25,
+        "token": 25.35,
+        "core": 55.21,
+        "featured_status": "eligible",
+        "featured_score": 79.78,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6189,6 +8414,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "fbd38b6a5f412fea7ff7d7b42380978179193666",
+        "current_commit": true,
+        "behavior": 98.26,
+        "quality": 57.5,
+        "token": 35.01,
+        "core": 72.26,
+        "featured_status": "eligible",
+        "featured_score": 96.82,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6228,6 +8469,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "f14453375fd7bcb6fce8b84dd20f3cde7b78d013",
+        "current_commit": true,
+        "behavior": 75.17,
+        "quality": 62.5,
+        "token": 0,
+        "core": 53.21,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6267,6 +8524,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "00126750b52aae8ecb5bc8c3916ee9b033e1a96c",
+        "current_commit": true,
+        "behavior": 90.02,
+        "quality": 78.12,
+        "token": 37.44,
+        "core": 73.9,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6305,6 +8578,22 @@
           "data-ingestion",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "31da0f18c7f9ff04bbf2af95bc514e5e894f9d03",
+        "current_commit": true,
+        "behavior": 96.91,
+        "quality": 35,
+        "token": 39.9,
+        "core": 67.18,
+        "featured_status": "eligible",
+        "featured_score": 84.23,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6357,6 +8646,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "29763e849a1b8a7d6f5194758a23714c4ad0c7c4",
+        "current_commit": true,
+        "behavior": 73.74,
+        "quality": 88.75,
+        "token": 29.04,
+        "core": 66.32,
+        "featured_status": "eligible",
+        "featured_score": 74.61,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6397,6 +8702,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b646fa750a6716863543425405acb649e18b5e0a",
+        "current_commit": true,
+        "behavior": 98.44,
+        "quality": 78.12,
+        "token": 38.97,
+        "core": 78.49,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": true,
+        "recommendation_rank": 9,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -6436,6 +8757,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "575d0c9d50a5e65dd0b0f6eeb36870c5ddc94563",
+        "current_commit": true,
+        "behavior": 97.33,
+        "quality": 72.5,
+        "token": 40.91,
+        "core": 77.02,
+        "featured_status": "eligible",
+        "featured_score": 92,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6477,6 +8814,22 @@
           "factor-screening",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b8327fb2a1fc69e39fbab9a1c570f1cb87ad074f",
+        "current_commit": true,
+        "behavior": 59.12,
+        "quality": 70.62,
+        "token": 19.93,
+        "core": 52.2,
+        "featured_status": "eligible",
+        "featured_score": 90.14,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6517,6 +8870,22 @@
           "factor-screening",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9dfe98242a6eb21ddb6b5e1ba9ca3d304750ecfc",
+        "current_commit": true,
+        "behavior": 88.01,
+        "quality": 70.62,
+        "token": 38.48,
+        "core": 71.28,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6556,6 +8925,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a15ca0adcc644c73154cc34e94a700c69531d42f",
+        "current_commit": true,
+        "behavior": 80.42,
+        "quality": 76.25,
+        "token": 33.39,
+        "core": 67.62,
+        "featured_status": "eligible",
+        "featured_score": 79.53,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6597,6 +8982,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7e27530fb6fafabae3f4c3ab7a70887d251f3cfa",
+        "current_commit": false,
+        "behavior": 56.22,
+        "quality": 71.88,
+        "token": 19.37,
+        "core": 50.92,
+        "featured_status": "eligible",
+        "featured_score": 77.45,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6636,6 +9037,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7aae77befdb7a7c54f8d7b83807a6a46392b6210",
+        "current_commit": true,
+        "behavior": 94.35,
+        "quality": 76.88,
+        "token": 39.65,
+        "core": 76.31,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6673,6 +9090,22 @@
         "workflow_stages": [
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7ac2be859c558773a73fdd1d9a3930cfe2a6e4fa",
+        "current_commit": true,
+        "behavior": 90.4,
+        "quality": 71.88,
+        "token": 37.29,
+        "core": 72.49,
+        "featured_status": "eligible",
+        "featured_score": 79.34,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:10"
       }
     },
     {
@@ -6711,6 +9144,22 @@
           "data-ingestion",
           "data-quality"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "810e61ef475ff0d1a247c847bf4b3e34ba318aa4",
+        "current_commit": true,
+        "behavior": 96.52,
+        "quality": 70.62,
+        "token": 43.06,
+        "core": 76.68,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6777,6 +9226,22 @@
           "data-ingestion",
           "data-quality"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "12711fefbf7607d23ea55f621cd2af4139166cf9",
+        "current_commit": true,
+        "behavior": 74.57,
+        "quality": 73.12,
+        "token": 30.41,
+        "core": 63.17,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6818,6 +9283,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "29c05985a4b7f29a5f2039bc39672176542e623b",
+        "current_commit": true,
+        "behavior": 82.64,
+        "quality": 36.25,
+        "token": 32.83,
+        "core": 58.59,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6863,6 +9344,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.23",
+        "evaluated_commit_sha": "2beed86fe9c69fa12c2cee9bf36eb937d8194eb4",
+        "current_commit": true,
+        "behavior": 90.36,
+        "quality": 74.38,
+        "token": 37.52,
+        "core": 73.15,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6902,6 +9399,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9dab935e38f123340b87424b7cefd00de57cc5ba",
+        "current_commit": true,
+        "behavior": 57.56,
+        "quality": 79.38,
+        "token": 39.07,
+        "core": 58.39,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6942,6 +9455,22 @@
           "portfolio-construction",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "cc4ec36956fdd123141557c922bc34dcd7600ab6",
+        "current_commit": true,
+        "behavior": 98.13,
+        "quality": 64.38,
+        "token": 37.08,
+        "core": 74.43,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -6981,6 +9510,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "3c2550a80b6e93d8b1c2198bdd687da0cf595ff2",
+        "current_commit": true,
+        "behavior": 96.76,
+        "quality": 66.88,
+        "token": 10.22,
+        "core": 67.65,
+        "featured_status": "eligible",
+        "featured_score": 67.6,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7021,6 +9566,22 @@
           "portfolio-construction",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ba87ca4932f39e21d58c4647a919422bcadfe2c3",
+        "current_commit": true,
+        "behavior": 79.24,
+        "quality": 71.88,
+        "token": 34.74,
+        "core": 66.28,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7060,6 +9621,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "fe7a958611aa7ed8f05a49d7f63fa8afd036acf8",
+        "current_commit": true,
+        "behavior": 97.93,
+        "quality": 78.12,
+        "token": 21.74,
+        "core": 73.93,
+        "featured_status": "eligible",
+        "featured_score": 79.74,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 3,
+        "recommendation_group": "skill:04"
       }
     },
     {
@@ -7101,6 +9678,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "f12de77b6194b735b1cb812b608fea71022da227",
+        "current_commit": true,
+        "behavior": 97.97,
+        "quality": 66.88,
+        "token": 38.23,
+        "core": 75.26,
+        "featured_status": "eligible",
+        "featured_score": 79.75,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:05"
       }
     },
     {
@@ -7140,6 +9733,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "4d259f87b204da037feb6b4e3914eae412dcb18f",
+        "current_commit": true,
+        "behavior": 83.67,
+        "quality": 73.12,
+        "token": 41.18,
+        "core": 70.41,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7180,6 +9789,22 @@
           "portfolio-construction",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ea2a22de1c66767e844d136b68d287806a43e00c",
+        "current_commit": true,
+        "behavior": 68.6,
+        "quality": 60.62,
+        "token": 28.69,
+        "core": 56.63,
+        "featured_status": "eligible",
+        "featured_score": 23.47,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7219,6 +9844,22 @@
           "factor-screening",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b0b519117f203b97048cb5eb3460a1b8bd41bd2a",
+        "current_commit": true,
+        "behavior": 98.37,
+        "quality": 80,
+        "token": 39.72,
+        "core": 79.11,
+        "featured_status": "eligible",
+        "featured_score": 70.58,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 5,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -7259,6 +9900,22 @@
           "backtesting",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "55e65e52ce485641ba09717cb3c9e9a044facd13",
+        "current_commit": true,
+        "behavior": 85.19,
+        "quality": 71.88,
+        "token": 37.69,
+        "core": 69.99,
+        "featured_status": "eligible",
+        "featured_score": 57.18,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7299,6 +9956,22 @@
           "execution",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7cb78840483dc50fe078de130bddc69fdc55df94",
+        "current_commit": true,
+        "behavior": 87.81,
+        "quality": 77.5,
+        "token": 37.76,
+        "core": 72.72,
+        "featured_status": "eligible",
+        "featured_score": 97.4,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7338,6 +10011,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.22",
+        "evaluated_commit_sha": "2cc3fb473624a1179c290c3715de72e3d40791ab",
+        "current_commit": true,
+        "behavior": 95.45,
+        "quality": 56.88,
+        "token": 39.2,
+        "core": 71.74,
+        "featured_status": "eligible",
+        "featured_score": 98.11,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7377,6 +10066,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "fc49e43f98ee304b34b01ec965563b96d7001aff",
+        "current_commit": true,
+        "behavior": 66.73,
+        "quality": 55.62,
+        "token": 32.23,
+        "core": 55.33,
+        "featured_status": "eligible",
+        "featured_score": 54.52,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7417,6 +10122,22 @@
           "evaluation",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d0fae3882bdf4b141ee56a939a3ce6f4e59700aa",
+        "current_commit": true,
+        "behavior": 43.48,
+        "quality": 60.62,
+        "token": 11.6,
+        "core": 39.8,
+        "featured_status": "eligible",
+        "featured_score": 79.78,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7456,6 +10177,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c89d92b7a6b03e8ec8df729978e73d56aadf3cd4",
+        "current_commit": true,
+        "behavior": 99.19,
+        "quality": 82.5,
+        "token": 21.96,
+        "core": 75.71,
+        "featured_status": "eligible",
+        "featured_score": 95.76,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:04"
       }
     },
     {
@@ -7497,6 +10234,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "457cc945d3f9ec587bae637c05e3b9c1e59b5428",
+        "current_commit": true,
+        "behavior": 97.05,
+        "quality": 76.88,
+        "token": 41.29,
+        "core": 78.07,
+        "featured_status": "eligible",
+        "featured_score": 99.78,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7536,6 +10289,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "394ab9fc70de5f8af595e9e66671c446ae367515",
+        "current_commit": true,
+        "behavior": 71.22,
+        "quality": 91.88,
+        "token": 34.43,
+        "core": 67.19,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7589,6 +10358,22 @@
           "factor-generation",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "46fb8aa255de5782e241601b2aeede70d6eb2174",
+        "current_commit": true,
+        "behavior": 88.96,
+        "quality": 66.88,
+        "token": 39.38,
+        "core": 71.05,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7628,6 +10413,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2e4831c9c4e1b3c039b8022f852eaee21fec1ee9",
+        "current_commit": true,
+        "behavior": 98.5,
+        "quality": 59.38,
+        "token": 21.4,
+        "core": 69.44,
+        "featured_status": "eligible",
+        "featured_score": 85.04,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7668,6 +10469,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "1df9843dfdad891e20897da754c8d1425119c36a",
+        "current_commit": true,
+        "behavior": 97.43,
+        "quality": 80,
+        "token": 14.59,
+        "core": 72.36,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7708,6 +10525,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.14",
+        "evaluated_commit_sha": "caed18abbeffb4b08e0f26950f79b9900f9f32dc",
+        "current_commit": true,
+        "behavior": 92.8,
+        "quality": 85.62,
+        "token": 36.02,
+        "core": 76.81,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7749,6 +10582,22 @@
           "backtesting",
           "evaluation"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2aff39b0993a30f8276d986cfc45a712a8063142",
+        "current_commit": true,
+        "behavior": 58.08,
+        "quality": 88.75,
+        "token": 20.71,
+        "core": 56.41,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7789,6 +10638,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "685cb3e5a975d01001487ef3b86ecfb407e18341",
+        "current_commit": true,
+        "behavior": 93.04,
+        "quality": 66.88,
+        "token": 22.04,
+        "core": 68.75,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7827,6 +10692,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "7e14135829c4927050cf4257e48386da18ec42d1",
+        "current_commit": true,
+        "behavior": 80.4,
+        "quality": 50.62,
+        "token": 39.37,
+        "core": 62.7,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7867,6 +10748,22 @@
           "portfolio-construction",
           "risk"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b40f25acc4f26a042cc1667c7c6b23c8b5f2d115",
+        "current_commit": true,
+        "behavior": 84.21,
+        "quality": 62.5,
+        "token": 43.55,
+        "core": 68.62,
+        "featured_status": "eligible",
+        "featured_score": 48.23,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7906,6 +10803,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "bad5efa88a04d9d83f8b196fab08625c08f7afed",
+        "current_commit": true,
+        "behavior": 97.71,
+        "quality": 53.12,
+        "token": 24.42,
+        "core": 68.24,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7945,6 +10858,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "a14e7fb69cd116d3068a66fb7eb95898001f518b",
+        "current_commit": true,
+        "behavior": 85.12,
+        "quality": 70.62,
+        "token": 22.47,
+        "core": 65.84,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -7984,6 +10913,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "97896616e3704e374ae4f0dbda7a93cc349b11cb",
+        "current_commit": true,
+        "behavior": 95.54,
+        "quality": 87.5,
+        "token": 39.25,
+        "core": 79.46,
+        "featured_status": "eligible",
+        "featured_score": 97.1,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8029,6 +10974,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "fec65729f709ae291ce4c9fa9a24af6b0ad35edc",
+        "current_commit": true,
+        "behavior": 58.41,
+        "quality": 71.88,
+        "token": 19.8,
+        "core": 52.12,
+        "featured_status": "eligible",
+        "featured_score": 79.41,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8086,6 +11047,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "9f9876d10718c0481810658b68d07e8ae0bd5b91",
+        "current_commit": false,
+        "behavior": 91.61,
+        "quality": 75,
+        "token": 37.39,
+        "core": 73.9,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8126,6 +11103,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "3591038081e6156fea935804682cdfabffde014f",
+        "current_commit": true,
+        "behavior": 82.27,
+        "quality": 52.5,
+        "token": 39.87,
+        "core": 64.23,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8167,6 +11160,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "e6fcece53e67b0aa1e701144a1f5ccb75053c1d4",
+        "current_commit": true,
+        "behavior": 37.93,
+        "quality": 75.62,
+        "token": 12.54,
+        "core": 41.01,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8206,6 +11215,22 @@
           "monitoring",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "d606d88e726f11dbd00fe705ba7f6a2d17d19d01",
+        "current_commit": true,
+        "behavior": 96.97,
+        "quality": 64.38,
+        "token": 20.48,
+        "core": 69.7,
+        "featured_status": "eligible",
+        "featured_score": 87.83,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8245,6 +11270,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "23141a47ba0c11761f0b333b70a0f73b13d749da",
+        "current_commit": true,
+        "behavior": 98.29,
+        "quality": 41.88,
+        "token": 23.88,
+        "core": 65.58,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8287,6 +11328,22 @@
           "execution",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "b270dbd5408267884a97ccb723af6bb67b99b4ca",
+        "current_commit": true,
+        "behavior": 63.06,
+        "quality": 62.5,
+        "token": 32.51,
+        "core": 55.28,
+        "featured_status": "eligible",
+        "featured_score": 69.47,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8325,6 +11382,22 @@
           "execution",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "4538ad0133a558ae838bd2a95ba7c871b95fcb74",
+        "current_commit": true,
+        "behavior": 88.47,
+        "quality": 38.75,
+        "token": 36.21,
+        "core": 62.98,
+        "featured_status": "eligible",
+        "featured_score": 77.47,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8366,6 +11439,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "de01a3e9d570901414025ebe99ff37521dd8119b",
+        "current_commit": true,
+        "behavior": 83.05,
+        "quality": 78.75,
+        "token": 31.83,
+        "core": 69.17,
+        "featured_status": "eligible",
+        "featured_score": 99.69,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8405,6 +11494,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "ae8dcf34ec482f72e20fa62d611c9cb74dbdadf5",
+        "current_commit": true,
+        "behavior": 98.79,
+        "quality": 78.12,
+        "token": 39.41,
+        "core": 78.78,
+        "featured_status": "eligible",
+        "featured_score": 79.95,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 7,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -8444,6 +11549,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "5d25e6700438ade67b77a498cfd1d34b567acc80",
+        "current_commit": true,
+        "behavior": 78.7,
+        "quality": 61.88,
+        "token": 38.32,
+        "core": 64.4,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8483,6 +11604,22 @@
           "factor-screening",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "8234c3fd2d2ba49ef505e249b572eac2fd008926",
+        "current_commit": true,
+        "behavior": 97.96,
+        "quality": 70.62,
+        "token": 37.14,
+        "core": 75.92,
+        "featured_status": "eligible",
+        "featured_score": 79.75,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8535,6 +11672,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "6ae79f729000f497674dd29e8a3689f816a33452",
+        "current_commit": true,
+        "behavior": 86.03,
+        "quality": 78.12,
+        "token": 38.21,
+        "core": 72.1,
+        "featured_status": "eligible",
+        "featured_score": 32.46,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8582,6 +11735,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "938daeb1f960b681eb7394274234401aa033bc3e",
+        "current_commit": true,
+        "behavior": 94.06,
+        "quality": 76.88,
+        "token": 36.1,
+        "core": 75.27,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8621,6 +11790,22 @@
           "risk",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "18c0f68769e423ce73d229fbacf4b3cc8e8c7c89",
+        "current_commit": true,
+        "behavior": 85.6,
+        "quality": 68.12,
+        "token": 37.57,
+        "core": 69.22,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8661,6 +11846,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2485c1494ecc9d8c66fded992e8438d8b59d7a2d",
+        "current_commit": true,
+        "behavior": 94.7,
+        "quality": 85.62,
+        "token": 38.67,
+        "core": 78.42,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8698,7 +11899,8 @@
         "workflow_stages": [
           "orchestration"
         ]
-      }
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -8737,6 +11939,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.14",
+        "evaluated_commit_sha": "bed7f9f765142f65ac7b33449365ddb8338be2ef",
+        "current_commit": false,
+        "behavior": 80.38,
+        "quality": 64.38,
+        "token": 30.38,
+        "core": 63.88,
+        "featured_status": "eligible",
+        "featured_score": 57.68,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8777,6 +11995,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "814489121130da25f538bedc3447584f25df5763",
+        "current_commit": true,
+        "behavior": 77.08,
+        "quality": 53.75,
+        "token": 34.28,
+        "core": 60.55,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8816,6 +12050,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "805795de05329462af50e86b4a46ad4f51d826f3",
+        "current_commit": false,
+        "behavior": 94.95,
+        "quality": 74.38,
+        "token": 39.19,
+        "core": 75.87,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8861,6 +12111,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "510f285a08c49a07829ced26c74189b8525e4e29",
+        "current_commit": true,
+        "behavior": 91.89,
+        "quality": 60.62,
+        "token": 38.75,
+        "core": 70.79,
+        "featured_status": "eligible",
+        "featured_score": 68.42,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8900,6 +12166,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "08946cb243831343bdd65338159ad14afd37f7f8",
+        "current_commit": true,
+        "behavior": 80.53,
+        "quality": 48.12,
+        "token": 29.34,
+        "core": 59.63,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -8939,6 +12221,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "c443a182c84f50629c77073c7a4a8f77c55ea4e2",
+        "current_commit": true,
+        "behavior": 99.44,
+        "quality": 78.12,
+        "token": 45.03,
+        "core": 80.51,
+        "featured_status": "eligible",
+        "featured_score": 91.89,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 1,
+        "recommendation_group": "skill:05"
       }
     },
     {
@@ -8978,6 +12276,22 @@
           "modeling",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0e33deadd53b2ad77127e3f05267d889dd152b50",
+        "current_commit": true,
+        "behavior": 42.55,
+        "quality": 71.25,
+        "token": 11.7,
+        "core": 42.01,
+        "featured_status": "eligible",
+        "featured_score": 79.39,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -9017,6 +12331,22 @@
           "data-quality",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "24f1765b3b8fac4c000ae229122db68ee5a0edca",
+        "current_commit": true,
+        "behavior": 67.44,
+        "quality": 49.38,
+        "token": 25.31,
+        "core": 52.39,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -9056,6 +12386,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "0a56f0d95c5a9902a7a6fd6f49279c5e2927d05a",
+        "current_commit": true,
+        "behavior": 99.4,
+        "quality": 70.62,
+        "token": 41.85,
+        "core": 77.82,
+        "featured_status": "eligible",
+        "featured_score": 79.95,
+        "featured_reason": null,
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -9095,6 +12441,22 @@
           "evaluation",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "bfa1a166a622fbc84487ad37d46738aa9778b1d6",
+        "current_commit": true,
+        "behavior": 87.46,
+        "quality": 58.12,
+        "token": 40.37,
+        "core": 68.35,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -9136,6 +12498,22 @@
           "reporting",
           "orchestration"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "702fa730de0ae548a888f74cac6a3c59a0ebe0a6",
+        "current_commit": true,
+        "behavior": 97.45,
+        "quality": 82.5,
+        "token": 40.6,
+        "core": 79.5,
+        "featured_status": "eligible",
+        "featured_score": 90.84,
+        "featured_reason": null,
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:06"
       }
     },
     {
@@ -9175,6 +12553,22 @@
           "factor-screening",
           "reporting"
         ]
+      },
+      "evaluation": {
+        "mode": "shadow",
+        "source_publication": "publication.v12.13",
+        "evaluated_commit_sha": "2efc3be1eb9681fbea0ce4a25acf7af15fccb8b7",
+        "current_commit": true,
+        "behavior": 79.22,
+        "quality": 83.12,
+        "token": 39,
+        "core": 70.14,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     }
   ],
@@ -9386,5 +12780,12 @@
     }
   ],
   "adapters": [],
-  "compatibility_edges": []
+  "compatibility_edges": [],
+  "evaluations": {
+    "mode": "shadow",
+    "snapshot_digest": "d2fb7396d10764b371b5853da1cf20eab902997b4a52f7a5d9bfec7808ea445b",
+    "score_record_count": 218,
+    "recommended_record_count": 28,
+    "recommendation_policy": "shadow-category-quartile.v1"
+  }
 }

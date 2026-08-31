@@ -27,7 +27,7 @@ jobs:
         with:
           node-version: 24
       - run: npm test
-      - run: node scripts/build.mjs --snapshot registry/catalog.snapshot.json --output-dir .
+      - run: node scripts/build.mjs --snapshot registry/catalog.snapshot.json --evaluations-root registry/evaluations --output-dir .
       - run: node --input-type=module -e "import { readFileSync } from 'node:fs'; import { verifyBuild } from './scripts/verify-build.mjs'; verifyBuild('.', JSON.parse(readFileSync('registry/catalog.snapshot.json', 'utf8')))"
       - uses: actions/upload-pages-artifact@v3
         with:
