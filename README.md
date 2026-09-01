@@ -25,12 +25,12 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 以下是社区公开资产的定期快照；交互式目录见 [www.quantskills.ai](https://www.quantskills.ai/)。
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:276e68899f6db4a7570a1b13cd84231f94987469343002522270686e52e87091 -->
+<!-- catalog-snapshot: sha256:829968af695eff8d2317cac23dec3962046c0acd0ea5c57e332bf46e29725a11 -->
 <table align="center"><tr>
 <td align="center"><strong>214</strong><br><sub>资产</sub></td>
 <td align="center"><strong>10</strong><br><sub>分类</sub></td>
 <td align="center"><strong>1</strong><br><sub>已发布端点</sub></td>
-<td align="center"><strong>2026-08-31</strong><br><sub>快照更新</sub></td>
+<td align="center"><strong>2026-09-01</strong><br><sub>快照更新</sub></td>
 </tr></table>
 
 ## 分类总览
@@ -177,7 +177,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-a-share-stock-dossier](https://github.com/quantskills/skill-a-share-stock-dossier) | 输入一个 A 股代码，汇总基本面、公司行动、股东行为、事件风险与资金面的可溯源尽调报告。 | reporting | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-a-share-stock-dossier.png"><img src="assets/skill-a-share-stock-dossier.png" width="260"></a> |
 | [skill-a-share-tradability-auditor](https://github.com/quantskills/skill-a-share-tradability-auditor) | A 股可交易性约束审计：把回测交易流放回历史行情，逐笔判定涨跌停封板、停牌、T+1、 裸卖空、新股窗口与参与率上限，把账面收益拆成"可成交收益"与"幽灵收益"， 并定位到具体交易。回答"这条净值曲线里有多少是市场根本不会给你的"。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-buffett-moat-screener](https://github.com/quantskills/skill-buffett-moat-screener) | 按巴菲特式护城河、估值和点时数据筛选 A 股与美股公司并生成研究记录。 | modeling | — | — | 待维护者审核 / 无公开端点 |  |
-| [skill-buffett-moat-screener--lavineversion](https://github.com/quantskills/skill-buffett-moat-screener--lavineversion) | 基于 PandaData 点时证据执行十年资本回报与护城河硬筛选。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
+| [skill-buffett-moat-screener-lavine-version](https://github.com/quantskills/skill-buffett-moat-screener-lavine-version) | 基于 PandaData 点时证据执行十年资本回报与护城河硬筛选。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | 监测 A 股概念与题材的动量、宽度和轮动变化并生成研究报告。 | monitoring | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | 计算A股滚动股息率、连续分红和除权除息日历。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-equity-placard-watchlist](https://github.com/quantskills/skill-equity-placard-watchlist) | 举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
@@ -427,7 +427,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-rotation-radar](https://github.com/quantskills/skill-rotation-radar) | 当需要分析市场状态、行业轮动、ETF 强弱排序、市场宽度、风格切换或战术配置信号时，使用此 skill。适用于 A 股、港股、美股和 ETF 池的行业轮动分析、risk-on/risk-off 状态识别、相对强弱排名、宽度确认、假突破过滤和轮动失效条件设计。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-serenity-research-model](https://github.com/quantskills/skill-serenity-research-model) | 从公开 X/Twitter 证据重建 Serenity 风格的研究逻辑。 | modeling | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-serenity-research-model.png"><img src="assets/skill-serenity-research-model.png" width="260"></a> |
 | [skill-shortterm-mean-reversal](https://github.com/quantskills/skill-shortterm-mean-reversal) | A 股五交易日收益率横截面反转因子与成本敏感回测。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
-| [skill-tqx-research](https://github.com/quantskills/skill-tqx-research) | skill tqx research | reporting | — | — | 待维护者审核 / 无公开端点 |  |
+| [skill-tqx-data-research](https://github.com/quantskills/skill-tqx-data-research) | skill tqx research | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-trendline-breakdown-reversal](https://github.com/quantskills/skill-trendline-breakdown-reversal) | 计算A股日线下跌突破划线压力位反转因子，识别下破下降压力线后反转确认的个股；当用户提供交易日期、要求自动获取当日全市场A股行情、量化选股、因子研究或回测时使用。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | 从公开 X/Twitter 帖子数据构建交易者专属研究模型技能。 | orchestration | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-x-trader-builder.png"><img src="assets/skill-x-trader-builder.png" width="260"></a> |
 
@@ -488,7 +488,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
-| [skill-backtest-assumption_check](https://github.com/quantskills/skill-backtest-assumption_check) | 独立的回测假设审计师：对回测代码/策略代码/研究报告按九大维度（成交时点、成本、涨跌停停牌、幸存者、多重比较、数据对齐、换手容量、基准、透明）逐条取证，输出缺陷×证据×严重度×影响×修复清单，配套可运行校验脚本。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
+| [skill-backtest-assumption-check](https://github.com/quantskills/skill-backtest-assumption-check) | 独立的回测假设审计师：对回测代码/策略代码/研究报告按九大维度（成交时点、成本、涨跌停停牌、幸存者、多重比较、数据对齐、换手容量、基准、透明）逐条取证，输出缺陷×证据×严重度×影响×修复清单，配套可运行校验脚本。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | 审计PandaAI工作流的图结构、代码、时序、参数和回测验证证据。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 
 </details>
