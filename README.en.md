@@ -25,12 +25,12 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 A periodic snapshot of the community's public assets; browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:276e68899f6db4a7570a1b13cd84231f94987469343002522270686e52e87091 -->
+<!-- catalog-snapshot: sha256:829968af695eff8d2317cac23dec3962046c0acd0ea5c57e332bf46e29725a11 -->
 <table align="center"><tr>
 <td align="center"><strong>214</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
-<td align="center"><strong>2026-08-31</strong><br><sub>Snapshot updated</sub></td>
+<td align="center"><strong>2026-09-01</strong><br><sub>Snapshot updated</sub></td>
 </tr></table>
 
 ## Category summary
@@ -177,7 +177,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-a-share-stock-dossier](https://github.com/quantskills/skill-a-share-stock-dossier) | Uses Pandadata to produce a sourced A-share dossier covering fundamentals, corporate actions, holders, event risks, and market funds. | reporting | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-a-share-stock-dossier.png"><img src="assets/skill-a-share-stock-dossier.png" width="260"></a> |
 | [skill-a-share-tradability-auditor](https://github.com/quantskills/skill-a-share-tradability-auditor) | A-share tradability-constraint auditor — replays a backtest or signal trade log against date-resolved price limits (10%/20%/30%; main-board ST was 5% until the 2026-07-06 rule change), locked vs intraday-opened limit bars, suspensions, T+1 settlement, the naked-short ban, the new-listing window and turnover participation caps, then splits headline PnL into executable PnL and phantom PnL. Use when the user asks 回测收益是不是真的能成交、涨停买不进、 跌停卖不出、停牌怎么处理、T+1 约束、一字板、可交易性/可成交性审计, or wants to know why a live account underperforms its backtest. Fills the ecosystem gap: the four existing auditors all check whether the DATA is right, none checks whether the EXECUTION ASSUMPTION is possible. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-buffett-moat-screener](https://github.com/quantskills/skill-buffett-moat-screener) | Screens A-share and US companies using moat, valuation, and point-in-time data for research records. | modeling | — | — | pending maintainer review / no public endpoint |  |
-| [skill-buffett-moat-screener--lavineversion](https://github.com/quantskills/skill-buffett-moat-screener--lavineversion) | PandaData-only point-in-time Buffett moat hard screener for A-shares. | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-buffett-moat-screener-lavine-version](https://github.com/quantskills/skill-buffett-moat-screener-lavine-version) | PandaData-only point-in-time Buffett moat hard screener for A-shares. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | Monitors A-share concept and theme momentum, breadth, and rotation for research reports. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | Calculates A-share rolling dividend yield, dividend continuity, and ex-dividend calendars. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-equity-placard-watchlist](https://github.com/quantskills/skill-equity-placard-watchlist) | 举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。 | reporting | — | — | pending maintainer review / no public endpoint |  |
@@ -427,7 +427,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-rotation-radar](https://github.com/quantskills/skill-rotation-radar) | 当需要分析市场状态、行业轮动、ETF 强弱排序、市场宽度、风格切换或战术配置信号时，使用此 skill。适用于 A 股、港股、美股和 ETF 池的行业轮动分析、risk-on/risk-off 状态识别、相对强弱排名、宽度确认、假突破过滤和轮动失效条件设计。 | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-serenity-research-model](https://github.com/quantskills/skill-serenity-research-model) | Reconstructs Serenity-style research logic from public X/Twitter evidence. | modeling | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-serenity-research-model.png"><img src="assets/skill-serenity-research-model.png" width="260"></a> |
 | [skill-shortterm-mean-reversal](https://github.com/quantskills/skill-shortterm-mean-reversal) | Cost-aware A-share five-session cross-sectional return reversal research. | reporting | — | — | pending maintainer review / no public endpoint |  |
-| [skill-tqx-research](https://github.com/quantskills/skill-tqx-research) | skill tqx research | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-tqx-data-research](https://github.com/quantskills/skill-tqx-data-research) | skill tqx research | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-trendline-breakdown-reversal](https://github.com/quantskills/skill-trendline-breakdown-reversal) | 计算A股日线下跌突破划线压力位反转因子，识别下破下降压力线后反转确认的个股；当用户提供交易日期、要求自动获取当日全市场A股行情、量化选股、因子研究或回测时使用。 | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-x-trader-builder](https://github.com/quantskills/skill-x-trader-builder) | Builds trader-specific research-model skills from public X/Twitter post data. | orchestration | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-x-trader-builder.png"><img src="assets/skill-x-trader-builder.png" width="260"></a> |
 
@@ -488,7 +488,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
-| [skill-backtest-assumption_check](https://github.com/quantskills/skill-backtest-assumption_check) | Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix). | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-backtest-assumption-check](https://github.com/quantskills/skill-backtest-assumption-check) | Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix). | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | Audits PandaAI workflow graphs, code, timing, parameters, and backtest-validation evidence. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 
 </details>
