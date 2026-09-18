@@ -1660,19 +1660,19 @@
       },
       "evaluation": {
         "mode": "shadow",
-        "source_publication": "publication.v12.13",
-        "evaluated_commit_sha": "33b26ef77ae97c5a824b1441d124023308cf78bb",
-        "current_commit": false,
-        "behavior": 99.78,
-        "quality": 83.12,
-        "token": 42.53,
-        "core": 81.3,
-        "featured_status": "eligible",
-        "featured_score": 79.95,
-        "featured_reason": null,
-        "recommended": true,
-        "recommendation_rank": 1,
-        "recommendation_group": "skill:06"
+        "source_publication": "publication.v12.13.on-demand",
+        "evaluated_commit_sha": "15aafacb7ecb43436351cbdbbbf2370bd8818ffd",
+        "current_commit": true,
+        "behavior": 65.13,
+        "quality": 86.88,
+        "token": 22.25,
+        "core": 59.85,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -10650,9 +10650,9 @@
         "featured_status": "eligible",
         "featured_score": 97.1,
         "featured_reason": null,
-        "recommended": false,
-        "recommendation_rank": null,
-        "recommendation_group": null
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:06"
       }
     },
     {
@@ -12190,7 +12190,7 @@
         "featured_score": 90.84,
         "featured_reason": null,
         "recommended": true,
-        "recommendation_rank": 2,
+        "recommendation_rank": 1,
         "recommendation_group": "skill:06"
       }
     },
@@ -12461,7 +12461,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "5fff6479891f88d138541a6086324bbe3046f7138502a741e1b19c8835b0cc79",
+    "snapshot_digest": "213758b3fe0e33a0d5cd181f60cc88af3b3f04788fd6e5da2e07731ea812306d",
     "score_record_count": 217,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"
