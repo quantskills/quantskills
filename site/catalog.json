@@ -1660,19 +1660,19 @@
       },
       "evaluation": {
         "mode": "shadow",
-        "source_publication": "publication.v12.13",
-        "evaluated_commit_sha": "33b26ef77ae97c5a824b1441d124023308cf78bb",
-        "current_commit": false,
-        "behavior": 99.78,
-        "quality": 83.12,
-        "token": 42.53,
-        "core": 81.3,
-        "featured_status": "eligible",
-        "featured_score": 79.95,
-        "featured_reason": null,
-        "recommended": true,
-        "recommendation_rank": 1,
-        "recommendation_group": "skill:06"
+        "source_publication": "publication.v12.13.on-demand",
+        "evaluated_commit_sha": "15aafacb7ecb43436351cbdbbbf2370bd8818ffd",
+        "current_commit": true,
+        "behavior": 65.13,
+        "quality": 86.88,
+        "token": 22.25,
+        "core": 59.85,
+        "featured_status": "not_applicable",
+        "featured_score": null,
+        "featured_reason": "no_measurable_headroom",
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -3771,16 +3771,16 @@
       },
       "evaluation": {
         "mode": "shadow",
-        "source_publication": "publication.v12.13",
-        "evaluated_commit_sha": "7c2e647a9af04c760db7a35efadb751eee7f917d",
-        "current_commit": false,
-        "behavior": 97.77,
-        "quality": 65,
-        "token": 47.74,
-        "core": 77.07,
-        "featured_status": "eligible",
-        "featured_score": 75.76,
-        "featured_reason": null,
+        "source_publication": "publication.v12.13.on-demand",
+        "evaluated_commit_sha": "801f905db991b21c05879af144f9c186404687a2",
+        "current_commit": true,
+        "behavior": 56.7,
+        "quality": 50,
+        "token": 24.67,
+        "core": 47.02,
+        "featured_status": "ineligible",
+        "featured_score": null,
+        "featured_reason": "material_core_regression",
         "recommended": false,
         "recommendation_rank": null,
         "recommendation_group": null
@@ -10650,9 +10650,9 @@
         "featured_status": "eligible",
         "featured_score": 97.1,
         "featured_reason": null,
-        "recommended": false,
-        "recommendation_rank": null,
-        "recommendation_group": null
+        "recommended": true,
+        "recommendation_rank": 2,
+        "recommendation_group": "skill:06"
       }
     },
     {
@@ -12190,7 +12190,7 @@
         "featured_score": 90.84,
         "featured_reason": null,
         "recommended": true,
-        "recommendation_rank": 2,
+        "recommendation_rank": 1,
         "recommendation_group": "skill:06"
       }
     },
@@ -12461,7 +12461,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "5d3c5f01ccc1a47d912614089c125377b418893a4cd2ac681a18625504e483fe",
+    "snapshot_digest": "213758b3fe0e33a0d5cd181f60cc88af3b3f04788fd6e5da2e07731ea812306d",
     "score_record_count": 217,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"
