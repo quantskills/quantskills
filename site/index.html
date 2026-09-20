@@ -1,8 +1,33 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QuantSkills · Community catalog</title><link rel="stylesheet" href="styles.css"></head>
-<body><a class="skip" href="#results">跳到目录</a><header class="masthead"><p class="eyebrow">QUANTSKILLS / COMMUNITY PORTAL</p><h1>量化能力的社区导航</h1><p>由 PandaAI 发起的开放目录：发现、安装、验证并分享 Quant Skills 与 Agents。</p><p><a href="https://github.com/quantskills/join">加入社区</a> · <a href="https://github.com/quantskills/skill-template">贡献 Skill</a> · <a href="https://github.com/quantskills/registry">查看 registry</a></p><p id="snapshot"></p><p id="endpoint-summary" class="endpoint-summary"></p></header>
-<nav aria-label="Primary categories" id="categories" class="category-nav"><a href="#cat-01">01</a><a href="#cat-02">02</a><a href="#cat-03">03</a><a href="#cat-04">04</a><a href="#cat-05">05</a><a href="#cat-06">06</a><a href="#cat-07">07</a><a href="#cat-08">08</a><a href="#cat-09">09</a><a href="#cat-10">10</a></nav>
-<section class="participate" aria-labelledby="participate-title"><h2 id="participate-title">从社区到可组合能力</h2><div><p><strong>1. 阅读规则</strong><br>理解公开元数据与风险边界。</p><p><strong>2. 从模板开始</strong><br>为 Skill 或 Agent 写清数据、假设和限制。</p><p><strong>3. 提交并验证</strong><br>通过 registry、issue 或 PR 共享改进。</p></div></section>
-<section class="workflow" aria-labelledby="workflow-title"><h2 id="workflow-title">5 个流程组 · 14 个阶段</h2><p>数据基础 · 研究信号 · 组合验证 · 监控交易 · 编排</p></section>
-<div class="layout"><aside aria-label="Catalog filters"><h2>筛选目录</h2><div class="view-switch" aria-label="目录视图"><button type="button" data-view="all" aria-pressed="true">全部</button><button type="button" data-view="recommended" aria-pressed="false">评分精选</button></div><p class="view-note">精选为 Shadow 分类内 Core 前 25%，不改变 Registry 上架状态。</p><label>搜索 <input id="text" type="search" placeholder="名称或摘要"></label><label>分类 <select id="category"><option value="">全部</option></select></label><label>子分类 <select id="subcategory"><option value="">全部</option></select></label><label>流程组 <select id="group"><option value="">全部</option></select></label><label>阶段 <select id="stage"><option value="">全部</option></select></label><label>类型 <select id="project_type"><option value="">全部</option></select></label><label>运行时 <select id="platform"><option value="">全部</option></select></label><label>Profile <select id="profile"><option value="">全部</option></select></label><label>端点状态 <select id="status"><option value="">全部</option></select></label><label>兼容性 <select id="compatibility"><option value="">全部</option><option value="compatible">compatible</option></select></label></aside><main id="results" aria-live="polite" aria-label="Catalog results"></main></div>
-<footer>QuantSkills community catalog · Metadata is not an endorsement or investment advice.</footer><script type="module" src="app.mjs"></script></body></html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>QuantSkills · 量化工具目录</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<a class="skip" href="#results">跳到目录</a>
+<header class="masthead">
+  <nav class="topbar" aria-label="社区导航"><a class="brand" href="./">QuantSkills<span>量化工具目录</span></a><div><a href="https://github.com/quantskills/join">加入社区</a><a href="https://github.com/quantskills/skill-template">贡献 Skill</a><a href="https://github.com/quantskills/registry">查看 registry</a></div></nav>
+  <h1>找到适合你的量化工具</h1><p>发现用于数据、研究与交易工作流的 Skills 和 Agents。</p>
+</header>
+<div class="layout">
+  <section class="filters" aria-label="目录筛选">
+    <div class="primary-filters">
+      <label class="search-field">搜索工具<input id="text" type="search" placeholder="搜索名称或用途，例如：回测、宏观、数据"></label>
+      <label>业务分类<select id="category"><option value="">全部分类</option></select></label>
+      <label>运行平台<select id="platform"><option value="">全部平台</option></select></label>
+    </div>
+    <details id="advanced-filters"><summary>更多筛选 <span id="advanced-count"></span></summary><div class="advanced-grid">
+      <label>子分类<select id="subcategory"><option value="">全部</option></select></label>
+      <label>流程组<select id="group"><option value="">全部</option></select></label>
+      <label>流程阶段<select id="stage"><option value="">全部</option></select></label>
+      <label>项目类型<select id="project_type"><option value="">全部</option></select></label>
+      <label>接口规范<select id="profile"><option value="">全部</option></select></label>
+      <label>端点状态<select id="status"><option value="">全部</option></select></label>
+      <label>兼容性<select id="compatibility"><option value="">全部</option></select></label>
+    </div></details>
+  </section>
+  <div class="results-toolbar"><div class="view-switch" aria-label="目录视图"><button type="button" data-view="all" aria-pressed="true">全部工具</button><button type="button" data-view="recommended" aria-pressed="false">评分精选</button></div><p id="result-count" role="status"></p><button id="clear-filters" type="button">清空筛选</button></div>
+  <p id="selection-note" class="view-note" hidden>精选依据 Shadow 分类内 Core 前 25% 筛选，不代表投资建议或官方背书。</p>
+  <main id="results" aria-live="polite" aria-label="工具目录"><p>正在加载目录…</p></main>
+</div>
+<footer><p>由 PandaAI 发起的开放社区 · 仅供研究参考，不构成投资建议。</p><details><summary>关于目录与数据</summary><p>阅读社区规则，从模板开始，提交并验证你的 Skill 或 Agent。</p><p>工作流覆盖数据基础、研究信号、组合验证、监控交易与编排。</p><p id="endpoint-summary"></p><p id="snapshot"></p></details></footer>
+<script type="module" src="app.mjs"></script>
+</body></html>
