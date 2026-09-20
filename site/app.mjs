@@ -113,6 +113,12 @@ export function assetViewModel(data, asset) {
   };
 }
 
+export function optionLabel(data, key, value) {
+  if (key === "category") return data?.taxonomy?.categories?.[value]?.label_zh || value;
+  if (key === "subcategory") return Object.values(data?.taxonomy?.categories || {}).flatMap((item) => list(item.subcategories)).find((item) => item.id === value)?.label_zh || value;
+  return ({ "data-foundation": "数据基础", "research-signal": "研究信号", "portfolio-validation": "组合验证", "monitoring-trading": "监控交易", orchestration: "编排", published: "已发布", "pending-maintainer": "待维护者审核", compatible: "兼容", "adapter-required": "需要适配", incompatible: "不兼容", unknown: "未知", "not-applicable": "不适用", codex: "Codex", cursor: "Cursor", "claude-code": "Claude Code", hermes: "Hermes", openclaw: "OpenClaw", skill: "Skill", agent: "Agent", "data-ingestion": "数据接入", "data-quality": "数据质量", "feature-engineering": "特征工程", "factor-generation": "因子生成", "factor-screening": "因子筛选", modeling: "建模", "portfolio-construction": "组合构建", backtesting: "回测", evaluation: "评估", risk: "风险", monitoring: "监控", execution: "执行", reporting: "报告" })[value] || value;
+}
+
 export function renderAssetCard(document_, data, asset, index = 0) {
   const model = assetViewModel(data, asset);
   const card = document_.createElement("article");
@@ -128,15 +134,25 @@ export function renderAssetCard(document_, data, asset, index = 0) {
   const badge = document_.createElement("span");
   badge.className = `endpoint-badge ${model.interface_status === "published" ? "published" : "pending"}`;
   badge.textContent = model.interface_status === "published" ? "published endpoint" : "pending maintainer review";
-  title.append(" ", badge);
+
   const summary = document_.createElement("p");
-  summary.textContent = `${model.summary_zh} ${model.summary_en}`.trim();
+  summary.className = "summary";
+  summary.textContent = model.summary_zh || model.summary_en;
   const metadata = document_.createElement("p");
-  metadata.textContent = `${model.category} / ${model.subcategory} · ${model.primary_stage} · ${model.project_type} · ${model.status}`;
+  metadata.className = "metadata";
+  metadata.textContent = [optionLabel(data, "category", model.category), ...list(asset.platforms).map((value) => optionLabel(data, "platform", value))].filter(Boolean).join(" · ");
   const edges = document_.createElement("p");
   edges.textContent = model.edges.length ? model.edges.map((edge) => `${asText(edge.status)}: ${edge.explanation}`).join(" | ") : "Compatibility: none";
   const profiles = document_.createElement("p");
   profiles.textContent = model.interface_status === "published" ? `${model.name === "skill-pandadata-warehouse" ? "Warehouse endpoint. " : ""}Published endpoints — inputs: ${model.inputs.join(", ") || "—"}; outputs: ${model.outputs.join(", ") || "—"}. Upstream providers: ${model.upstreamProviders.join(", ") || "—"}; Downstream consumers: ${model.downstreamConsumers.join(", ") || "—"}` : "Interface: pending maintainer review / no public endpoint.";
+  const details = document_.createElement("details");
+  const toggle = document_.createElement("summary");
+  toggle.textContent = "查看详情与评分说明";
+  const english = document_.createElement("p");
+  english.textContent = model.summary_en;
+  const identity = document_.createElement("p");
+  identity.textContent = `${model.name} · ${model.subcategory} · ${model.primary_stage} · ${model.project_type} · ${model.status}`;
+  details.append(toggle, identity, english, badge);
   card.append(title, summary, metadata);
   if (model.evaluation) {
     const score = document_.createElement("p");
@@ -145,9 +161,17 @@ export function renderAssetCard(document_, data, asset, index = 0) {
       ? `Featured ${Number(model.evaluation.featured_score).toFixed(2)}`
       : model.evaluation.featured_status === "not_applicable" ? "Featured N/A" : "Featured ineligible";
     score.textContent = `Shadow Core ${Number(model.evaluation.core).toFixed(2)} · B ${Number(model.evaluation.behavior).toFixed(2)} · Q ${Number(model.evaluation.quality).toFixed(2)} · T ${Number(model.evaluation.token).toFixed(2)} · ${featured}`;
-    card.append(score);
+    details.append(score);
+    const concise = document_.createElement("p");
+    concise.className = "score-line";
+    concise.textContent = `Core ${Number(model.evaluation.core).toFixed(2)} / 100${model.evaluation.recommended ? " · 评分精选" : ""}`;
+    card.append(concise);
+    const explanation = document_.createElement("p");
+    explanation.textContent = "Core 为 Shadow 综合评分；B / Q / T 分别为行为、质量与 Token 维度。精选取分类内 Core 前 25%，不代表官方背书。";
+    details.append(explanation);
   }
-  card.append(edges, profiles);
+  details.append(edges, profiles);
+  card.append(details);
   return card;
 }
 
@@ -185,11 +209,11 @@ function optionValues(data) {
   return Object.fromEntries(Object.entries(values).map(([key, items]) => [key, [...new Set(items.filter(safeOption))].sort()]));
 }
 
-function populateControl(document_, control, values) {
+function populateControl(document_, control, values, data, key) {
   for (const value of values) {
     const option = document_.createElement("option");
     option.value = value;
-    option.textContent = value;
+    option.textContent = optionLabel(data, key, value);
     control.append(option);
   }
 }
@@ -204,12 +228,21 @@ function readControls(controls) {
 export function renderResults(document_, data, state) {
   const results = document_.querySelector("#results");
   results.replaceChildren();
-  for (const [index, asset] of filterAssets(data, state).entries()) results.append(renderAssetCard(document_, data, asset, index));
-  if (!results.childNodes.length) results.textContent = "No results. Adjust active filters.";
+  const matches = filterAssets(data, state);
+  const count = document_.querySelector("#result-count");
+  if (count) count.textContent = `${matches.length} 个工具`;
+  for (const [index, asset] of matches.entries()) results.append(renderAssetCard(document_, data, asset, index));
+  if (!matches.length) {
+    const empty = document_.createElement("p");
+    empty.className = "empty-state";
+    empty.textContent = "没有匹配的工具，试试其他关键词或清空筛选。";
+    results.append(empty);
+  }
   return results;
 }
 
 if (typeof document !== "undefined") {
+  try {
   const controls = {};
   const data = await fetch("catalog.json").then((response) => { if (!response.ok) throw new Error("catalog unavailable"); return response.json(); });
   if (!/^sha256:[0-9a-f]{64}$/.test(data.snapshot_id || "")) throw new Error("invalid snapshot");
@@ -227,7 +260,7 @@ if (typeof document !== "undefined") {
     const control = document.querySelector(`#${key}`);
     if (!control) continue;
     controls[key] = control;
-    populateControl(document, control, optionValues(data)[key] || []);
+    populateControl(document, control, optionValues(data)[key] || [], data, key);
   }
   const textControl = document.querySelector("#text");
   if (textControl) controls.text = textControl;
@@ -238,6 +271,10 @@ if (typeof document !== "undefined") {
   const render = () => {
     const state = { ...readControls(controls), view };
     renderResults(document, data, state);
+    const advancedCount = ["subcategory", "group", "stage", "project_type", "profile", "status", "compatibility"].filter((key) => state[key]).length;
+    document.querySelector("#advanced-count").textContent = advancedCount ? `（已选 ${advancedCount} 项）` : "";
+    document.querySelector("#clear-filters").disabled = !Object.values(readControls(controls)).some(Boolean) && view === "all";
+    document.querySelector("#selection-note").hidden = view !== "recommended";
     const query = searchFromState(state);
     history.replaceState(null, "", `${query ? `?${query}` : ""}${location.hash}`);
   };
@@ -248,5 +285,13 @@ if (typeof document !== "undefined") {
   };
   for (const button of viewButtons) button.addEventListener("click", () => selectView(button.dataset.view));
   for (const control of Object.values(controls)) control.addEventListener("input", render);
+  document.querySelector("#clear-filters").addEventListener("click", () => {
+    for (const control of Object.values(controls)) control.value = "";
+    selectView("all");
+  });
+  if (["subcategory", "group", "stage", "project_type", "profile", "status", "compatibility"].some((key) => initial[key])) document.querySelector("#advanced-filters").open = true;
   selectView(view);
+  } catch {
+    document.querySelector("#results").textContent = "目录暂时无法加载，请刷新重试。";
+  }
 }
