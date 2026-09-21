@@ -1616,7 +1616,7 @@
         "featured_score": 95.1,
         "featured_reason": null,
         "recommended": true,
-        "recommendation_rank": 2,
+        "recommendation_rank": 1,
         "recommendation_group": "skill:03"
       }
     },
@@ -2604,19 +2604,19 @@
       },
       "evaluation": {
         "mode": "shadow",
-        "source_publication": "publication.v12.22",
-        "evaluated_commit_sha": "ce00fee720fad6eeb8e1f655fe75474b8b257d6d",
-        "current_commit": false,
-        "behavior": 99.18,
-        "quality": 91.88,
-        "token": 38.07,
-        "core": 82.08,
+        "source_publication": "publication.v12.13.on-demand",
+        "evaluated_commit_sha": "efc80319ee9541da898059aef6e18590243c8c16",
+        "current_commit": true,
+        "behavior": 95.59,
+        "quality": 75.62,
+        "token": 37.45,
+        "core": 76.06,
         "featured_status": "not_applicable",
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
-        "recommended": true,
-        "recommendation_rank": 1,
-        "recommendation_group": "skill:03"
+        "recommended": false,
+        "recommendation_rank": null,
+        "recommendation_group": null
       }
     },
     {
@@ -2670,7 +2670,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 7,
+        "recommendation_rank": 6,
         "recommendation_group": "skill:03"
       }
     },
@@ -4165,9 +4165,9 @@
         "featured_status": "not_applicable",
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
-        "recommended": false,
-        "recommendation_rank": null,
-        "recommendation_group": null
+        "recommended": true,
+        "recommendation_rank": 10,
+        "recommendation_group": "skill:03"
       }
     },
     {
@@ -5640,7 +5640,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 3,
+        "recommendation_rank": 2,
         "recommendation_group": "skill:03"
       }
     },
@@ -5968,7 +5968,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 5,
+        "recommendation_rank": 4,
         "recommendation_group": "skill:03"
       }
     },
@@ -6121,13 +6121,13 @@
       },
       "evaluation": {
         "mode": "shadow",
-        "source_publication": "publication.v12.13",
-        "evaluated_commit_sha": "1d6fbea960d7715ab38ae50be2df571f7c6358df",
-        "current_commit": false,
-        "behavior": 98.2,
-        "quality": 57.5,
-        "token": 38.84,
-        "core": 73.19,
+        "source_publication": "publication.v12.13.on-demand",
+        "evaluated_commit_sha": "9ff13122b89dfe4dd560663222cf3b69cff8394b",
+        "current_commit": true,
+        "behavior": 96.91,
+        "quality": 78.12,
+        "token": 36.42,
+        "core": 77.09,
         "featured_status": "not_applicable",
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
@@ -6407,7 +6407,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 8,
+        "recommendation_rank": 7,
         "recommendation_group": "skill:03"
       }
     },
@@ -6846,7 +6846,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 10,
+        "recommendation_rank": 9,
         "recommendation_group": "skill:03"
       }
     },
@@ -8459,7 +8459,7 @@
         "featured_score": null,
         "featured_reason": "no_measurable_headroom",
         "recommended": true,
-        "recommendation_rank": 9,
+        "recommendation_rank": 8,
         "recommendation_group": "skill:03"
       }
     },
@@ -9595,7 +9595,7 @@
         "featured_score": 70.58,
         "featured_reason": null,
         "recommended": true,
-        "recommendation_rank": 4,
+        "recommendation_rank": 3,
         "recommendation_group": "skill:03"
       }
     },
@@ -11212,7 +11212,7 @@
         "featured_score": 79.95,
         "featured_reason": null,
         "recommended": true,
-        "recommendation_rank": 6,
+        "recommendation_rank": 5,
         "recommendation_group": "skill:03"
       }
     },
@@ -12461,7 +12461,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "213758b3fe0e33a0d5cd181f60cc88af3b3f04788fd6e5da2e07731ea812306d",
+    "snapshot_digest": "fd7fba32739bed30d925adb6c2f8c190567ae30eab7b012595f2b78a9c058b42",
     "score_record_count": 217,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"
