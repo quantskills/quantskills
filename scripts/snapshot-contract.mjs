@@ -16,7 +16,7 @@ const ASSET_REQUIRED = [
   "subcategory", "stage", "tags", "platforms", "status", "requires", "summary_zh", "summary_en", "license",
   "validation_level", "maintainer_type", "last_validated", "commit_sha",
 ];
-const ASSET_OPTIONAL = ["migration_state", "migration_issues", "health", "workflow_groups", "lineage", "catalog_status", "interface_status", "declaration_status", "default_branch", "description"];
+const ASSET_OPTIONAL = ["migration_state", "migration_issues", "health", "workflow_groups", "lineage", "catalog_status", "interface_status", "declaration_status", "default_branch", "description", "current_ranking_eligible"];
 
 const PROFILE_DEFINITIONS = Object.freeze({
   "backtest-result": ["result", "result/backtest-result/1.0.0.schema.json"],
@@ -191,6 +191,7 @@ function validateAssets(assets, taxonomy, profiles, adapters) {
     string(asset.name); ensure(!names.has(asset.name), "duplicate asset"); names.add(asset.name);
     ensure(asset.url === `https://github.com/quantskills/${asset.name}`, "invalid asset URL");
     ensure(typeof asset.description === "string", "invalid description"); ensure(asset.project_type === "skill" || asset.project_type === "agent", "invalid project type");
+    if (asset.current_ranking_eligible !== undefined) ensure(typeof asset.current_ranking_eligible === "boolean", "invalid current ranking eligibility");
     ensure(asset.declaration_file === (asset.project_type === "skill" ? "SKILL.md" : "AGENTS.md"), "invalid declaration file");
     exactKeys(asset.catalog, ["category", "subcategory"]); ensure(taxonomy.subcategories.get(asset.catalog.subcategory) === asset.catalog.category, "unknown asset subcategory");
     ensure(asset.category === asset.catalog.category && asset.subcategory === asset.catalog.subcategory, "asset catalog aliases mismatch");
