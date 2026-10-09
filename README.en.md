@@ -22,27 +22,27 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 
 ## Catalog overview
 
-A periodic snapshot of the community's public assets; browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
+A periodic snapshot of the community's public assets; browse the same snapshot in the [GitHub Pages catalog](https://quantskills.github.io/quantskills/).
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:829968af695eff8d2317cac23dec3962046c0acd0ea5c57e332bf46e29725a11 -->
+<!-- catalog-snapshot: sha256:5ee87e0287642c2c1ed75f34bc8a9a925e1bbc0c2ea668cce2ca89abe54481d7 -->
 <table align="center"><tr>
-<td align="center"><strong>214</strong><br><sub>Assets</sub></td>
+<td align="center"><strong>218</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
-<td align="center"><strong>2026-10-08</strong><br><sub>Snapshot updated</sub></td>
+<td align="center"><strong>2026-10-09</strong><br><sub>Snapshot updated</sub></td>
 </tr></table>
 
 ## Category summary
 - [01 Data APIs & Warehouse](#cat-01) — 7 assets（Data Sources & Connectors / Warehouse & Cache / Market Data Governance / PIT & Data Quality）
 - [02 Factor R&D Toolbox](#cat-02) — 44 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
-- [03 Market & Instrument Analysis](#cat-03) — 44 assets（A-Share Equities / HK & US Equities / ETFs, Funds & Indices / Futures & Commodities / Options & Convertible Bonds / Macro & Cross-Asset）
+- [03 Market & Instrument Analysis](#cat-03) — 45 assets（A-Share Equities / HK & US Equities / ETFs, Funds & Indices / Futures & Commodities / Options & Convertible Bonds / Macro & Cross-Asset）
 - [04 Risk Monitoring & Alerts](#cat-04) — 22 assets（Market Regime / Flows & Crowding / Liquidity Risk / Corporate Events / Regulatory Compliance / Portfolio Stress Testing / Automated Alerts）
-- [05 Backtesting & Trading](#cat-05) — 25 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
+- [05 Backtesting & Trading](#cat-05) — 26 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
 - [06 Research Models & Replication](#cat-06) — 30 assets（Paper Replication / Strategy Replication / Statistical & ML Models / Investor Research Models / Experiment Registry & Reproducible Research）
-- [07 Research Validation & Quality](#cat-07) — 12 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
+- [07 Research Validation & Quality](#cat-07) — 13 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
 - [08 Information Search & Knowledge Analysis](#cat-08) — 10 assets（News & Disclosures / Institutional Research / Daily Review）
-- [09 Quant Agents & Automation](#cat-09) — 14 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
+- [09 Quant Agents & Automation](#cat-09) — 15 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
 - [10 Infrastructure & Templates](#cat-10) — 6 assets（Skill Template / Agent Template / Build & Release Tooling）
 
 ## Workflow map
@@ -102,7 +102,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 |---|---|---|---|---|---|---|
 | [skill-a1-lhb-tracking](https://github.com/quantskills/skill-a1-lhb-tracking) | Generates an event-ranking factor from Dragon-Tiger seat history, win rate, payoff, and next-session premium. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-alpha-a06-hotmoney-reversal](https://github.com/quantskills/skill-alpha-a06-hotmoney-reversal) | Computes a hot-money seat cooling and reversal factor from Dragon-Tiger and market data with validation artifacts. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
-| [skill-alpha-a3-streak-leader-relay](https://github.com/quantskills/skill-alpha-a3-streak-leader-relay) | 连板龙头接力（A3）Alpha 因子——从全 A 市场每日 ≥3 板候选池中识别 T+1 接力的事件型 top-N 信号，10 个子因子（个股截面 8 + 大盘情绪 2），权重可用 ICIR + shrinkage 重训，含滚动 IC gate 与 score 加权。研究层面的候选发现器，非交易策略。 | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-alpha-a3-streak-leader-relay](https://github.com/quantskills/skill-alpha-a3-streak-leader-relay) | Event-driven top-N relay signal from daily A-share streak leaders: ten sub-factors, ICIR-shrinkage weights, rolling IC gate and sentiment filter; research-only candidate finder, not a strategy. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-alpha-f1-position-change](https://github.com/quantskills/skill-alpha-f1-position-change) | Computes a futures top-20-seat position-change factor and signal from net-position data. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-alpha-f5-member-position-concentration](https://github.com/quantskills/skill-alpha-f5-member-position-concentration) | Computes member-position concentration signals from institutional, hot-money, and northbound net positions. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-alpha-f6-family-position-reverse](https://github.com/quantskills/skill-alpha-f6-family-position-reverse) | Computes a futures family-position reversal signal from seat-position relationships. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
@@ -167,7 +167,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 <a id="cat-03"></a>
 <details>
-<summary><strong>03 Market & Instrument Analysis</strong> — 44 assets, 4 with screenshots</summary>
+<summary><strong>03 Market & Instrument Analysis</strong> — 45 assets, 4 with screenshots</summary>
 
 ### A-Share Equities（15）
 
@@ -180,11 +180,11 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-buffett-moat-screener-lavine-version](https://github.com/quantskills/skill-buffett-moat-screener-lavine-version) | PandaData-only point-in-time Buffett moat hard screener for A-shares. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-concept-rotation-monitor](https://github.com/quantskills/skill-concept-rotation-monitor) | Monitors A-share concept and theme momentum, breadth, and rotation for research reports. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-dividend-yield-scan](https://github.com/quantskills/skill-dividend-yield-scan) | Calculates A-share rolling dividend yield, dividend continuity, and ex-dividend calendars. | reporting | — | — | pending maintainer review / no public endpoint |  |
-| [skill-equity-placard-watchlist](https://github.com/quantskills/skill-equity-placard-watchlist) | 举牌行为监控——侦测 A 股股东持股比例上穿 5%/10%/15%/20%/25%/30% 法定披露梯度的权益变动事件，含举牌梯度、意图倾向（财务 vs 战略）、6 个月锁定期、逼近举牌线观察名单。剔除通道账户与股本稀释造成的假举牌。BUILD 型 skill，可被复盘 agent 或事件驱动 Alpha 调用。 | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-equity-placard-watchlist](https://github.com/quantskills/skill-equity-placard-watchlist) | Rebuilds A-share shareholder placard events across the 5%-30% disclosure tiers from top-holder snapshots, with intent, lock-up period and near-threshold watchlist; research only. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-graham-netnet-screener](https://github.com/quantskills/skill-graham-netnet-screener) | 当需要开发、计算、验证 Graham 净净营运资本(NCAV) 因子时，使用此 skill。适用于 A 股全市场深度价值筛选，排除银行/房地产/非银金融，计算 NCAV 折价因子并生成 buy/sell/hold 信号。 | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-holder-structure-scan](https://github.com/quantskills/skill-holder-structure-scan) | Tracks A-share holder counts, top-holder concentration, and free float to assess ownership concentration. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-post-market-screener](https://github.com/quantskills/skill-post-market-screener) | Screens A-share stocks after market close using technical patterns and capital-flow evidence. | factor-screening | — | — | pending maintainer review / no public endpoint |  |
-| [skill-soros-reflexivity-detector](https://github.com/quantskills/skill-soros-reflexivity-detector) | 索罗斯反身性识别器——用双环模型（快环情绪-资金 / 慢环基本面-资本）判断 A 股"这波涨跌是不是自我强化的反身性、转到哪一圈、燃料和裂缝在哪"，做阶段识别与仓位纪律。BUILD 型 skill，可被复盘 agent 或 Alpha 调用。 | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-soros-reflexivity-detector](https://github.com/quantskills/skill-soros-reflexivity-detector) | Detects self-reinforcing reflexive regimes in A-shares with a fast/slow dual-loop model and outputs an eight-stage classification plus position discipline; no top or bottom forecasts. Research only. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-stock-score](https://github.com/quantskills/skill-stock-score) | skill stock score | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-stock-screener](https://github.com/quantskills/skill-stock-screener) | Screens A-share stocks from natural-language criteria and Pandadata evidence. | factor-screening | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-stock-screener.png"><img src="assets/skill-stock-screener.png" width="260"></a> |
 | [skill-templeton-global-contrarian](https://github.com/quantskills/skill-templeton-global-contrarian) | 当需要开发、计算、验证 Templeton 全球价值多因子 V2 时，使用此 skill。适用于 A 股/港股/美股跨市场价值筛选，基于 EP/BP/SP/股息/ROE/杠杆/动量 七子因子截面打分，生成 buy/sell/hold 信号。 | reporting | — | — | pending maintainer review / no public endpoint |  |
@@ -204,12 +204,13 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-stock-memory-analyzer-usa](https://github.com/quantskills/skill-stock-memory-analyzer-usa) | Performs multidimensional research analysis of US memory-chip stocks. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-us-sector-rotation](https://github.com/quantskills/skill-us-sector-rotation) | Generates factual reports on US sector performance, valuation, and rotation. | reporting | — | — | pending maintainer review / no public endpoint |  |
 
-### ETFs, Funds & Indices（4）
+### ETFs, Funds & Indices（5）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-etf-arbitrage-monitor](https://github.com/quantskills/skill-etf-arbitrage-monitor) | Monitors A-share ETF primary/secondary-market premiums and redemption-basket feasibility. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-etf-fund-evaluator](https://github.com/quantskills/skill-etf-fund-evaluator) | Evaluates domestic non-QDII passive equity-index ETFs and comparable-index peers. | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-fund-holding-xray](https://github.com/quantskills/skill-fund-holding-xray) | Uses PandaAI fund data and ETF constituents to estimate holdings, concentration and sector/style exposure with risk notes; estimates do not replace full actual holdings. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-index-rebalance-event-study](https://github.com/quantskills/skill-index-rebalance-event-study) | Runs reproducible event studies for index additions, deletions, and weight changes. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-index-valuation-rotation](https://github.com/quantskills/skill-index-valuation-rotation) | Analyzes A-share index valuation percentiles, relative industry valuation, and rotation signals. | reporting | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-index-valuation-rotation.png"><img src="assets/skill-index-valuation-rotation.png" width="260"></a> |
 
@@ -259,7 +260,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
-| [skill-b7-lhb-monitor](https://github.com/quantskills/skill-b7-lhb-monitor) | Monitors Dragon-Tiger entries and seat labels to produce next-session watchlists and searchable views. | monitoring | — | — | pending maintainer review / no public endpoint |  |
+| [skill-b7-lhb-monitor](https://github.com/quantskills/skill-b7-lhb-monitor) | Pulls the post-market A-share dragon-tiger list, tags broker seats as northbound, institution, hot-money, quant or branch, and builds a next-day watchlist with an HTML dashboard; research only. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-block-trade-radar](https://github.com/quantskills/skill-block-trade-radar) | Builds an A-share block-trade radar from discount or premium, volume, and price evidence. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-capital-flow-crowding-monitor](https://github.com/quantskills/skill-capital-flow-crowding-monitor) | Aggregates margin, northbound-holding, and block-trade data into consensus, divergence, and crowding-percentile signals. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-northbound-margin-monitor](https://github.com/quantskills/skill-northbound-margin-monitor) | Monitors northbound flows, margin trading, and futures conditions with multiple risk signals. | monitoring | — | — | pending maintainer review / no public endpoint |  |
@@ -304,13 +305,13 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-a-share-market-risk-radar](https://github.com/quantskills/skill-a-share-market-risk-radar) | Scans A-share macro, funding, valuation, trend, sector-rotation, and event evidence into risk levels. | monitoring | — | — | pending maintainer review / no public endpoint |  |
-| [skill-b6-limitup-pool](https://github.com/quantskills/skill-b6-limitup-pool) | Maintains a daily limit-up pool with board, break, reseal, theme, sentiment, and dashboard outputs. | monitoring | — | — | pending maintainer review / no public endpoint |  |
+| [skill-b6-limitup-pool](https://github.com/quantskills/skill-b6-limitup-pool) | Maintains the daily A-share limit-up pool with streak, blow-up and re-seal marks, theme groups, special patterns and sentiment metrics; outputs tables and an HTML dashboard; research only. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 
 </details>
 
 <a id="cat-05"></a>
 <details>
-<summary><strong>05 Backtesting & Trading</strong> — 25 assets, 2 with screenshots</summary>
+<summary><strong>05 Backtesting & Trading</strong> — 26 assets, 2 with screenshots</summary>
 
 ### Strategies & Signals（4）
 
@@ -333,11 +334,12 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-rl-portfolio-allocator](https://github.com/quantskills/skill-rl-portfolio-allocator) | skill rl portfolio allocator | risk | — | — | pending maintainer review / no public endpoint |  |
 | [skill-signal-portfolio-optimize](https://github.com/quantskills/skill-signal-portfolio-optimize) | Converts one stock signal into benchmark-relative target weights with auditable risk, exposure, turnover, and cost controls. | portfolio-construction | — | — | pending maintainer review / no public endpoint |  |
 
-### Backtesting Engine（2）
+### Backtesting Engine（3）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-backtest](https://github.com/quantskills/skill-backtest) | Provides a cross-sectional long-only backtest protocol with T+1 execution, fees, limit filters, and diagnostics. | backtesting | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-backtest.png"><img src="assets/skill-backtest.png" width="260"></a> |
+| [skill-backtest-etf](https://github.com/quantskills/skill-backtest-etf) | Backtests ETF time-series and cross-sectional strategies using PandaData and local Parquet with explicit next-day execution, price and cost assumptions; research only. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | Runs long-only cross-sectional factor backtests on supplied factors and market data with diagnostics. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 
 ### Performance Attribution（4）
@@ -403,7 +405,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-dl-gnn-stock-graph](https://github.com/quantskills/skill-dl-gnn-stock-graph) | Builds A-share heterogeneous graphs for GNN stock selection and backtesting. | modeling | — | — | pending maintainer review / no public endpoint |  |
 | [skill-dl-tcn-shortterm](https://github.com/quantskills/skill-dl-tcn-shortterm) | 使用因果扩张 Temporal Convolutional Network 对沪深 A 股分钟线执行未来 1、2、3、5 个交易日的横截面收益排序研究，并以同数据、切分和预算的 LSTM 作为基准，生成可审计的数据、训练、速度和预测效果证据。用于运行或诊断 TCN 短线预测、核验感受野与因果卷积、PIT/walk-forward/purge/embargo、防止未来泄漏、比较 RankIC/Top 区域指标与训练吞吐，或判断研究模型是否达到冻结候选条件；不用于组合换手优化、券商连接、实盘交易或收益承诺。 | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-dl-transformer-multiasset](https://github.com/quantskills/skill-dl-transformer-multiasset) | skill dl transformer multiasset | evaluation | — | — | pending maintainer review / no public endpoint |  |
-| [skill-llm-rag-financial-qa](https://github.com/quantskills/skill-llm-rag-financial-qa) | 财报公告 RAG 问答系统——就一家 A 股公司的财报/公告提问，给出带官方引用、可核对、拒绝编造的回答。三路路由（数字精确算 / 底仓文本检索 / 官方全文按需）+ 引用纪律 + 拒答。数据源 PandaData 优先、官方披露网页为次级源。BUILD 型 skill，可被复盘 agent 或投研 agent 调用。 | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-llm-rag-financial-qa](https://github.com/quantskills/skill-llm-rag-financial-qa) | QA over A-share financial reports and announcements with exact numeric computation, BM25 retrieval and disclosure-sourced citations; refuses when the corpus lacks coverage. Research only. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-ml-purged-cv](https://github.com/quantskills/skill-ml-purged-cv) | 审计任意金融特征、可训练时序模型或候选策略收益，并执行防泄漏的 Purged K-Fold、Embargo、CPCV、Causal Walk-Forward、PBO、DSR、Governed Holdout 与 Temporal Forward Evidence。用于检查未来函数、信息区间重叠、特征可用时间和血缘、Fold-Local 预处理、CPCV Path 稳健性、策略选择过拟合、预测是否在标签成熟前登记，以及在接受金融模型或策略前生成结构化验证证据。 | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-model-hpo-evidence-driven](https://github.com/quantskills/skill-model-hpo-evidence-driven) | Optimizes quantitative multi-factor model hyperparameters with fixed validation and trial-level evidence. | modeling | — | — | pending maintainer review / no public endpoint |  |
 | [skill-pair-correlation](https://github.com/quantskills/skill-pair-correlation) | Computes and interprets asset-pair correlations, rolling relationships, and research uses. | evaluation | — | — | pending maintainer review / no public endpoint |  |
@@ -442,7 +444,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 <a id="cat-07"></a>
 <details>
-<summary><strong>07 Research Validation & Quality</strong> — 12 assets, 1 with screenshots</summary>
+<summary><strong>07 Research Validation & Quality</strong> — 13 assets, 1 with screenshots</summary>
 
 ### Lookahead & Data Leakage（2）
 
@@ -464,12 +466,13 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [skill-backtest-overfit](https://github.com/quantskills/skill-backtest-overfit) | Evaluates backtest overfitting and multiple-testing risk with DSR, PBO, purged cross-validation, and Harvey-Liu haircut. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-walk-forward-validator](https://github.com/quantskills/skill-walk-forward-validator) | Validates cross-sectional signals out of sample with purged and embargoed rolling windows. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 
-### Signal Stability（3）
+### Signal Stability（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-calendar-anomaly-scanner](https://github.com/quantskills/skill-calendar-anomaly-scanner) | Scans dated price changes for calendar anomalies using robust tests, bootstrap checks, and multiple-testing control. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factor-decay](https://github.com/quantskills/skill-factor-decay) | Analyzes decay in Rank IC, turnover, and bucket returns and estimates half-life. | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-factor-drift-monitor](https://github.com/quantskills/skill-factor-drift-monitor) | Checks factor panels for drift, coverage, missing values, duplicates and distribution changes, with optional predictive degradation analysis; research only. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [skill-signal-stability-audit](https://github.com/quantskills/skill-signal-stability-audit) | Audits quantitative-signal stability across time and samples. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 
 ### Forecast Calibration（1）
@@ -526,7 +529,7 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 
 <a id="cat-09"></a>
 <details>
-<summary><strong>09 Quant Agents & Automation</strong> — 14 assets, 5 with screenshots</summary>
+<summary><strong>09 Quant Agents & Automation</strong> — 15 assets, 5 with screenshots</summary>
 
 ### Research Agent（3）
 
@@ -536,12 +539,13 @@ A periodic snapshot of the community's public assets; browse the interactive cat
 | [agent-feng-reverse](https://github.com/quantskills/agent-feng-reverse) | Tracks Weibo user "峰哥亡命天涯" (Feng Ge), a well-known A-share reverse indicator. Extracts stock/market opinions from his posts and generates contrarian trading signals. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [agent-macro-driven-rotation](https://github.com/quantskills/agent-macro-driven-rotation) | Generates macro-driven industry-rotation research materials from clock phases, nowcasts, and valuation filters. | modeling | — | — | pending maintainer review / no public endpoint |  |
 
-### Monitoring & Risk Agent（7）
+### Monitoring & Risk Agent（8）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [agent-alpha-portfolio-guardian](https://github.com/quantskills/agent-alpha-portfolio-guardian) | Multi-factor portfolio health guardian producing a health matrix, crowding alerts, retire/rebuild candidates, IC decay curves, and a research-only effectiveness backtest L4 page. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [agent-corporate-governance-scanner](https://github.com/quantskills/agent-corporate-governance-scanner) | Corporate governance scoring agent with 9-dimension risk scoring and evidence chains | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [agent-cross-market-event-radar](https://github.com/quantskills/agent-cross-market-event-radar) | Cross-market corporate event radar: aggregates A-share placement/unlock and earnings events with HK/US dividend, earnings, meeting, and IR events into a standardized daily dashboard. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 | [agent-crowding-risk-monitor](https://github.com/quantskills/agent-crowding-risk-monitor) | Monitors crowded-trade risk from Pandadata price, turnover, margin, and Dragon-Tiger heat evidence. | monitoring | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-crowding-risk-monitor.png"><img src="assets/agent-crowding-risk-monitor.png" width="260"></a> |
 | [agent-derivatives-skew-sentiment-monitor](https://github.com/quantskills/agent-derivatives-skew-sentiment-monitor) | Monitors derivatives sentiment from option implied volatility and underlying historical volatility. | monitoring | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-derivatives-skew-sentiment-monitor.png"><img src="assets/agent-derivatives-skew-sentiment-monitor.png" width="260"></a> |
 | [agent-earnings-surprise-hunter](https://github.com/quantskills/agent-earnings-surprise-hunter) | 财报季 Surprise/暴雷猎手 Agent。获取财报预告、一致预期、审计意见，计算偏离度并生成分析报告。支持A股/港股/美股。 | reporting | — | — | pending maintainer review / no public endpoint |  |

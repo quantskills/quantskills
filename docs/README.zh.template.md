@@ -22,7 +22,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 ## 目录概况
 
-以下是社区公开资产的定期快照；交互式目录见 [www.quantskills.ai](https://www.quantskills.ai/)。
+以下是社区公开资产的定期快照；同一快照的交互式目录见 [GitHub Pages 目录](https://quantskills.github.io/quantskills/)。
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->

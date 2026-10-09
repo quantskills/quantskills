@@ -22,7 +22,7 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 
 ## Catalog overview
 
-A periodic snapshot of the community's public assets; browse the interactive catalog at [www.quantskills.ai](https://www.quantskills.ai/).
+A periodic snapshot of the community's public assets; browse the same snapshot in the [GitHub Pages catalog](https://quantskills.github.io/quantskills/).
 
 <!-- CATALOG:START -->
 <!-- CATALOG:END -->
