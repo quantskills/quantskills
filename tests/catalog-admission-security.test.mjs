@@ -110,4 +110,5 @@ test("pending interfaces and unknown modes cannot publish endpoints", () => {
   rejectsMutation((value) => { value.assets[0].interface_status = "pending-maintainer"; value.assets[0].interface = null; value.compatibility_edges = [validEdge()]; });
   rejectsMutation((value) => { value.assets[0].interface.mode = "unknown"; value.assets[0].interface.reason = "unverified"; });
   rejectsMutation((value) => { value.assets[0].catalog_status = "candidate"; });
+  rejectsMutation((value) => { value.assets[0].interface_status = "invalid-status"; });
 });
