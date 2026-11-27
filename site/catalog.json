@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "sha256:397dabd3d9cd98acf765755dabfca103754904106d45921064d6496fce579c29",
+  "snapshot_id": "sha256:3b62a921f5f66d554bbf958001432ad5bdf56ce558ba88bec45b3e3f07cb1e18",
   "taxonomy": {
     "categories": {
       "10": {
@@ -468,6 +468,56 @@
         "recommendation_rank": 1,
         "recommendation_group": "agent:09"
       }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.research-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "e9dc6f761a32a2213952c6146ce8fb05fed6d9bd",
+      "current_ranking_eligible": false,
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "国债期货 CTD / IRR / BNOC 复现与可执行边界研究 Agent。Use when a research agent needs to reproduce cheapest-to-deliver, implied repo rate and net basis on a frozen snapshot, scan financing and CTD-switch scenarios, and state an evidence-bounded execution boundary without trading instructions.",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "MIT",
+      "maintainer_type": "community",
+      "name": "agent-cfe-ctd-irr",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "agent",
+      "requires": [
+        "skill-pandadata-api"
+      ],
+      "stage": "modeling",
+      "status": "active",
+      "subcategory": "09.research-agent",
+      "summary_en": "Reproduces CGB futures cheapest-to-deliver, implied repo, and net basis and examines financing and delivery-switch scenarios.",
+      "summary_zh": "复现国债期货最便宜可交割券、隐含回购利率与净基差，并评估融资情景下的切换边界。",
+      "tags": [],
+      "url": "https://github.com/quantskills/agent-cfe-ctd-irr",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "modeling",
+        "workflow_stages": [
+          "data-ingestion",
+          "modeling",
+          "risk",
+          "reporting"
+        ]
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -1147,7 +1197,7 @@
       },
       "catalog_status": "approved",
       "category": "09",
-      "commit_sha": "79339d0285b7372179dab38b0f09bf69201c0390",
+      "commit_sha": "a7c2951888b69975e3f6dc3f6fcc49e3c197ff07",
       "current_ranking_eligible": false,
       "declaration_file": "AGENTS.md",
       "declaration_status": "legacy",
@@ -1201,6 +1251,67 @@
           "risk",
           "reporting",
           "orchestration"
+        ]
+      },
+      "evaluation": null
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.monitor-risk-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "121cda5defbfabb9f743b1e467f9e773adc975ef",
+      "current_ranking_eligible": false,
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "策略与因子失效分诊 Agent：对已上线的 A 股因子或策略做急诊分诊，回答它现在还能不能用、坏的是哪一层、是市场变了还是模型坏了、现在该不该重训。策略拆成股票池 / 信号 / 风格暴露 / 择时 / 风控 / 执行六层做反事实剥离，五类死因交叉裁决并输出重训禁令、证伪条件与复核触发；文本 + 单文件 HTML 报告 + parquet。Use when a factor or strategy has started underperforming and the user needs to know which layer failed, whether the cause is internal or external, and whether retraining is allowed right now. Research and education only, not investment advice.",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-quant-failure-triage",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "agent",
+      "requires": [
+        "skill-pandadata-api",
+        "skill-factor-drift-monitor",
+        "skill-factor-decay",
+        "agent-crowding-risk-monitor",
+        "skill-market-regime-analysis"
+      ],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "09.monitor-risk-agent",
+      "summary_en": "Triages A-share strategy or factor deterioration with layered counterfactuals, retraining criteria, and review evidence.",
+      "summary_zh": "通过六层反事实排查对 A 股因子或策略做失效分诊，记录原因、重训条件和复核证据。",
+      "tags": [
+        "a-share",
+        "failure-triage",
+        "model-drift",
+        "counterfactual",
+        "retrain-gate",
+        "pandadata"
+      ],
+      "url": "https://github.com/quantskills/agent-quant-failure-triage",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "evaluation",
+          "risk",
+          "monitoring",
+          "reporting"
         ]
       },
       "evaluation": null
@@ -3619,6 +3730,60 @@
         "recommendation_rank": null,
         "recommendation_group": null
       }
+    },
+    {
+      "catalog": {
+        "category": "04",
+        "subcategory": "04.regulatory-compliance"
+      },
+      "catalog_status": "approved",
+      "category": "04",
+      "commit_sha": "5499d632a48a2e20bbdcd820675947e3152395ab",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "master",
+      "description": "当需要研究期货交易所制度事件（交割月梯度、限仓、保证金调整等带生效日期的规则）能否形成前置风险规则、构建制度事件日历、或做\"提前减仓 vs 冻结基线\"对照实验时，使用此 skill。覆盖规则取证→平台拉数→事件日历→统一窗口对照→误报/漏报分析→价值验收的完整流程。",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-delivery-regime-risk",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "risk",
+      "status": "active",
+      "subcategory": "04.regulatory-compliance",
+      "summary_en": "Builds futures delivery, position-limit, and margin event calendars and compares historical risk for early reduction and unchanged positions.",
+      "summary_zh": "将期货交割、限仓和保证金规则整理为生效日历，比较提前减仓与冻结持仓的历史风险。",
+      "tags": [
+        "quant",
+        "futures",
+        "risk",
+        "regime",
+        "delivery"
+      ],
+      "url": "https://github.com/quantskills/skill-delivery-regime-risk",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "risk",
+        "workflow_stages": [
+          "data-ingestion",
+          "evaluation",
+          "risk",
+          "reporting"
+        ]
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -7445,6 +7610,60 @@
     },
     {
       "catalog": {
+        "category": "07",
+        "subcategory": "07.workflow-audit"
+      },
+      "catalog_status": "approved",
+      "category": "07",
+      "commit_sha": "5c9d9f9fd766435f76908e56cd52c4a8c114f334",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要核对 JEV 盯盘条件与历史回放是否语义一致时，使用此 skill。取实际条件/判断日志与已完成 K 线，用显式声明的语义重建盯盘条件与重放器，逐项输出条件判断、信号时点、等待、入场、退出的差异账本，并对差异做单旋钮消融归因。",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-jev-history-replay",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "07.workflow-audit",
+      "summary_en": "Compares JEV watch conditions with historical replay offline and records differences in decisions, timing, entries, and exits.",
+      "summary_zh": "离线核对 JEV 盯盘条件与历史回放，输出条件、信号时点、等待和出入场的差异账本。",
+      "tags": [
+        "quant",
+        "build",
+        "engineered",
+        "语义对齐",
+        "历史回放",
+        "差异账本"
+      ],
+      "url": "https://github.com/quantskills/skill-jev-history-replay",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "evaluation",
+          "monitoring",
+          "reporting"
+        ]
+      },
+      "evaluation": null
+    },
+    {
+      "catalog": {
         "category": "10",
         "subcategory": "10.build-release-tooling"
       },
@@ -8721,6 +8940,59 @@
         "recommendation_rank": null,
         "recommendation_group": null
       }
+    },
+    {
+      "catalog": {
+        "category": "05",
+        "subcategory": "05.strategy-signal"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "3b1c69b5c8f02312bf6ca1f08082dcf2cbe7b408",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要把一段主观交易观点转成可回测、可检验的交易规则时，使用此 skill。抽取标的/方向/触发/期限/止损/止盈六字段，标注样本校验抽取准确率，并按冻结基线做成本后评估。",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-opinion-to-ruler",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "modeling",
+      "status": "active",
+      "subcategory": "05.strategy-signal",
+      "summary_en": "Converts trading opinions into testable rule fields and evaluates extraction accuracy and historical results after costs.",
+      "summary_zh": "把主观交易观点拆成可检验的规则字段，评估字段提取和扣成本后的历史表现。",
+      "tags": [
+        "quant",
+        "alpha",
+        "opinion",
+        "rule-extraction",
+        "backtest"
+      ],
+      "url": "https://github.com/quantskills/skill-opinion-to-ruler",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "modeling",
+        "workflow_stages": [
+          "modeling",
+          "backtesting",
+          "evaluation"
+        ]
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -11755,6 +12027,61 @@
     },
     {
       "catalog": {
+        "category": "05",
+        "subcategory": "05.performance-attribution"
+      },
+      "catalog_status": "approved",
+      "category": "05",
+      "commit_sha": "ae4b6dde1b8e5bb16c2cab70668238e8a794f93f",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Use when evaluating a frozen quantitative strategy lifecycle with point-in-time state replay, comparing always-on, threshold, downweight, retirement, cooldown, and reactivation rules, and producing out-of-sample returns, opportunity cost, and an auditable state ledger.",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-strategy-lifecycle",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "05.performance-attribution",
+      "summary_en": "Replays point-in-time strategy states and compares exposure reductions, cooldown, retirement, and reactivation with costs.",
+      "summary_zh": "回放策略状态机，比较降权、冷却、退役和再激活规则的样本外表现与机会成本。",
+      "tags": [
+        "strategy-lifecycle",
+        "downweight",
+        "retirement",
+        "reactivation",
+        "state-machine",
+        "out-of-sample"
+      ],
+      "url": "https://github.com/quantskills/skill-strategy-lifecycle",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "backtesting",
+          "evaluation",
+          "risk",
+          "reporting"
+        ]
+      },
+      "evaluation": null
+    },
+    {
+      "catalog": {
         "category": "08",
         "subcategory": "08.daily-review"
       },
@@ -12455,6 +12782,61 @@
     },
     {
       "catalog": {
+        "category": "08",
+        "subcategory": "08.document-knowledge"
+      },
+      "catalog_status": "approved",
+      "category": "08",
+      "commit_sha": "2f8c285201225f222b1b5decbf35957b10bb9be8",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要把本地音频或视频离线转写成文字时使用此 skill。基于 faster-whisper 在本机产出带时间戳的原始语料，标点、分段、摘要交给调用方大模型完成；零凭据、零云端 API，音频全程不离开本机。",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-video-2-text",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "reporting",
+      "status": "active",
+      "subcategory": "08.document-knowledge",
+      "summary_en": "Transcribes local audio and video to timestamped text with faster-whisper for review and subtitles.",
+      "summary_zh": "使用 faster-whisper 在本地把音视频转成带时间戳的文字，供后续整理和字幕制作。",
+      "tags": [
+        "audio",
+        "video",
+        "transcription",
+        "whisper",
+        "speech-to-text",
+        "offline",
+        "meeting-notes",
+        "subtitle"
+      ],
+      "url": "https://github.com/quantskills/skill-video-2-text",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "reporting",
+        "workflow_stages": [
+          "data-ingestion",
+          "reporting"
+        ]
+      },
+      "evaluation": null
+    },
+    {
+      "catalog": {
         "category": "07",
         "subcategory": "07.walk-forward-oos"
       },
@@ -12832,7 +13214,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "bf1f2342f7b875392b2e77f3e1926577dba4c2dcc551a2d984f67a9026996d82",
+    "snapshot_digest": "a2aba57d139b7316490523a0b8f0ebe24dcb1bd29bd1986b6dc2d9bf3b34838d",
     "score_record_count": 217,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"

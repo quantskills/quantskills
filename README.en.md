@@ -25,9 +25,9 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 A periodic snapshot of the community's public assets; browse the same snapshot in the [GitHub Pages catalog](https://quantskills.github.io/quantskills/).
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:397dabd3d9cd98acf765755dabfca103754904106d45921064d6496fce579c29 -->
+<!-- catalog-snapshot: sha256:3b62a921f5f66d554bbf958001432ad5bdf56ce558ba88bec45b3e3f07cb1e18 -->
 <table align="center"><tr>
-<td align="center"><strong>221</strong><br><sub>Assets</sub></td>
+<td align="center"><strong>228</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
 <td align="center"><strong>2026-11-27</strong><br><sub>Snapshot updated</sub></td>
@@ -37,12 +37,12 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 - [01 Data APIs & Warehouse](#cat-01) — 7 assets（Data Sources & Connectors / Warehouse & Cache / Market Data Governance / PIT & Data Quality）
 - [02 Factor R&D Toolbox](#cat-02) — 45 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
 - [03 Market & Instrument Analysis](#cat-03) — 45 assets（A-Share Equities / HK & US Equities / ETFs, Funds & Indices / Futures & Commodities / Options & Convertible Bonds / Macro & Cross-Asset）
-- [04 Risk Monitoring & Alerts](#cat-04) — 22 assets（Market Regime / Flows & Crowding / Liquidity Risk / Corporate Events / Regulatory Compliance / Portfolio Stress Testing / Automated Alerts）
-- [05 Backtesting & Trading](#cat-05) — 26 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
+- [04 Risk Monitoring & Alerts](#cat-04) — 23 assets（Market Regime / Flows & Crowding / Liquidity Risk / Corporate Events / Regulatory Compliance / Portfolio Stress Testing / Automated Alerts）
+- [05 Backtesting & Trading](#cat-05) — 28 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
 - [06 Research Models & Replication](#cat-06) — 30 assets（Paper Replication / Strategy Replication / Statistical & ML Models / Investor Research Models / Experiment Registry & Reproducible Research）
-- [07 Research Validation & Quality](#cat-07) — 14 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
-- [08 Information Search & Knowledge Analysis](#cat-08) — 10 assets（News & Disclosures / Institutional Research / Daily Review）
-- [09 Quant Agents & Automation](#cat-09) — 16 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
+- [07 Research Validation & Quality](#cat-07) — 15 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
+- [08 Information Search & Knowledge Analysis](#cat-08) — 11 assets（News & Disclosures / Institutional Research / Daily Review / Document Extraction & Knowledge Organization）
+- [09 Quant Agents & Automation](#cat-09) — 18 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
 - [10 Infrastructure & Templates](#cat-10) — 6 assets（Skill Template / Agent Template / Build & Release Tooling）
 
 ## Workflow map
@@ -249,7 +249,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-04"></a>
 <details>
-<summary><strong>04 Risk Monitoring & Alerts</strong> — 22 assets, 1 with screenshots</summary>
+<summary><strong>04 Risk Monitoring & Alerts</strong> — 23 assets, 1 with screenshots</summary>
 
 ### Market Regime（1）
 
@@ -282,12 +282,13 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 | [skill-klarman-special-situations](https://github.com/quantskills/skill-klarman-special-situations) | Researches private placements, restructurings, spin-offs, and distressed turnarounds as special situations. | modeling | — | — | pending maintainer review / no public endpoint |  |
 | [skill-refinancing-monitor](https://github.com/quantskills/skill-refinancing-monitor) | Tracks A-share refinancing lifecycles, pricing, and dilution risk. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 
-### Regulatory Compliance（3）
+### Regulatory Compliance（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-audit-opinion-scanner](https://github.com/quantskills/skill-audit-opinion-scanner) | Assesses A-share financial health from audit opinions, statements, and industry benchmarks with risk checks. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-csrc-approval-pipeline](https://github.com/quantskills/skill-csrc-approval-pipeline) | A-share CSRC approval pipeline tracking: categorization by announcement level, approval flow monitoring, and status report generation. | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-delivery-regime-risk](https://github.com/quantskills/skill-delivery-regime-risk) | Builds futures delivery, position-limit, and margin event calendars and compares historical risk for early reduction and unchanged positions. | risk | — | — | pending maintainer review / no public endpoint |  |
 | [skill-regulatory-risk-radar](https://github.com/quantskills/skill-regulatory-risk-radar) | Aggregates and grades A-share regulatory and compliance risk events. | monitoring | — | — | pending maintainer review / no public endpoint |  |
 
 ### Portfolio Stress Testing（6）
@@ -312,14 +313,15 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-05"></a>
 <details>
-<summary><strong>05 Backtesting & Trading</strong> — 26 assets, 2 with screenshots</summary>
+<summary><strong>05 Backtesting & Trading</strong> — 28 assets, 2 with screenshots</summary>
 
-### Strategies & Signals（4）
+### Strategies & Signals（5）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-global-macro-trend-strategy](https://github.com/quantskills/skill-global-macro-trend-strategy) | Turns global signals and public daily prices into backtestable research strategies, positions, and risk rules. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-ma-crossover-signal](https://github.com/quantskills/skill-ma-crossover-signal) | Computes moving-average crossover signals and reports trend state, latest cross, MA gap, and price bias. | factor-generation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-opinion-to-ruler](https://github.com/quantskills/skill-opinion-to-ruler) | Converts trading opinions into testable rule fields and evaluates extraction accuracy and historical results after costs. | modeling | — | — | pending maintainer review / no public endpoint |  |
 | [skill-oversold-rebound](https://github.com/quantskills/skill-oversold-rebound) | Identifies A-share oversold-rebound conditions and screens candidate stocks. | factor-screening | — | — | pending maintainer review / no public endpoint |  |
 | [skill-qbti](https://github.com/quantskills/skill-qbti) | Translates a five-part user questionnaire into factor directions and strategy parameters. | portfolio-construction | — | — | pending maintainer review / no public endpoint |  |
 
@@ -343,13 +345,14 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 | [skill-backtest-etf](https://github.com/quantskills/skill-backtest-etf) | Backtests ETF time-series and cross-sectional strategies using PandaData and local Parquet with explicit next-day execution, price and cost assumptions; research only. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factor-backtest](https://github.com/quantskills/skill-factor-backtest) | Runs long-only cross-sectional factor backtests on supplied factors and market data with diagnostics. | backtesting | — | — | pending maintainer review / no public endpoint |  |
 
-### Performance Attribution（4）
+### Performance Attribution（5）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-portfolio-attribution](https://github.com/quantskills/skill-portfolio-attribution) | Attributes active portfolio returns to industry allocation, stock selection, interaction, and factor contributions. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-portfolio-pnl-attribution](https://github.com/quantskills/skill-portfolio-pnl-attribution) | Attributes realized portfolio returns by security and sector while reconciling fees, benchmarks, and input quality. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-risk-return-metrics](https://github.com/quantskills/skill-risk-return-metrics) | Calculates risk-return metrics for portfolios or strategies. | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-strategy-lifecycle](https://github.com/quantskills/skill-strategy-lifecycle) | Replays point-in-time strategy states and compares exposure reductions, cooldown, retirement, and reactivation with costs. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-strategy-tearsheet-report](https://github.com/quantskills/skill-strategy-tearsheet-report) | Generates strategy-performance tearsheets with risk-adjusted metrics. | reporting | — | — | pending maintainer review / no public endpoint |  |
 
 ### Transaction Costs（3）
@@ -445,7 +448,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-07"></a>
 <details>
-<summary><strong>07 Research Validation & Quality</strong> — 14 assets, 1 with screenshots</summary>
+<summary><strong>07 Research Validation & Quality</strong> — 15 assets, 1 with screenshots</summary>
 
 ### Lookahead & Data Leakage（2）
 
@@ -488,19 +491,20 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 |---|---|---|---|---|---|---|
 | [skill-factor-debug](https://github.com/quantskills/skill-factor-debug) | Provides a symptom, cause, and verification playbook for factor failures. | evaluation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-debug.png"><img src="assets/skill-factor-debug.png" width="260"></a> |
 
-### Workflow Audit（3）
+### Workflow Audit（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-backtest-assumption-check](https://github.com/quantskills/skill-backtest-assumption-check) | Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix). | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-constraint-stress-test](https://github.com/quantskills/skill-constraint-stress-test) | Evaluates trading safeguards in offline replay with duplicate input, prompt perturbation, missing quotes, and timeout retries. | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-jev-history-replay](https://github.com/quantskills/skill-jev-history-replay) | Compares JEV watch conditions with historical replay offline and records differences in decisions, timing, entries, and exits. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | Audits PandaAI workflow graphs, code, timing, parameters, and backtest-validation evidence. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 
 </details>
 
 <a id="cat-08"></a>
 <details>
-<summary><strong>08 Information Search & Knowledge Analysis</strong> — 10 assets, 1 with screenshots</summary>
+<summary><strong>08 Information Search & Knowledge Analysis</strong> — 11 assets, 1 with screenshots</summary>
 
 ### News & Disclosures（5）
 
@@ -527,21 +531,28 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 | [skill-strategy-performance-report](https://github.com/quantskills/skill-strategy-performance-report) | Use when an agent needs to generate a periodic performance report for a LIVE A-share quant strategy — 日报/周报/月报/半年报/年报 or custom period — covering returns, risk, trade analysis, and position/turnover detail, with embedded visualizations. Outputs a self-contained offline HTML dashboard (interactive ECharts) plus Markdown + JSON. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [skill-trade-review](https://github.com/quantskills/skill-trade-review) | Trade review skill that turns trade records into attribution, pattern detection, per-trade review, and actionable advice. | reporting | — | — | pending maintainer review / no public endpoint |  |
 
+### Document Extraction & Knowledge Organization（1）
+
+| Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
+|---|---|---|---|---|---|---|
+| [skill-video-2-text](https://github.com/quantskills/skill-video-2-text) | Transcribes local audio and video to timestamped text with faster-whisper for review and subtitles. | reporting | — | — | pending maintainer review / no public endpoint |  |
+
 </details>
 
 <a id="cat-09"></a>
 <details>
-<summary><strong>09 Quant Agents & Automation</strong> — 16 assets, 5 with screenshots</summary>
+<summary><strong>09 Quant Agents & Automation</strong> — 18 assets, 5 with screenshots</summary>
 
-### Research Agent（3）
+### Research Agent（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
+| [agent-cfe-ctd-irr](https://github.com/quantskills/agent-cfe-ctd-irr) | Reproduces CGB futures cheapest-to-deliver, implied repo, and net basis and examines financing and delivery-switch scenarios. | modeling | — | — | pending maintainer review / no public endpoint |  |
 | [agent-correlation-break-research](https://github.com/quantskills/agent-correlation-break-research) | Uses Pandadata price-series correlation changes to identify style shifts, diversification stress, and structural market moves. | monitoring | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-correlation-break-research.png"><img src="assets/agent-correlation-break-research.png" width="260"></a> |
 | [agent-feng-reverse](https://github.com/quantskills/agent-feng-reverse) | Tracks Weibo user "峰哥亡命天涯" (Feng Ge), a well-known A-share reverse indicator. Extracts stock/market opinions from his posts and generates contrarian trading signals. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [agent-macro-driven-rotation](https://github.com/quantskills/agent-macro-driven-rotation) | Generates macro-driven industry-rotation research materials from clock phases, nowcasts, and valuation filters. | modeling | — | — | pending maintainer review / no public endpoint |  |
 
-### Monitoring & Risk Agent（8）
+### Monitoring & Risk Agent（9）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
@@ -553,6 +564,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 | [agent-earnings-surprise-hunter](https://github.com/quantskills/agent-earnings-surprise-hunter) | 财报季 Surprise/暴雷猎手 Agent。获取财报预告、一致预期、审计意见，计算偏离度并生成分析报告。支持A股/港股/美股。 | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [agent-intraday-rl-timing](https://github.com/quantskills/agent-intraday-rl-timing) | Research-only RL lab for intraday timing on minute bars: Gym env, baseline policies, leakage-aware walk-forward train/eval. No live orders. | reporting | — | — | pending maintainer review / no public endpoint |  |
 | [agent-market-regime-monitor](https://github.com/quantskills/agent-market-regime-monitor) | Monitors market regimes from Pandadata index breadth, volatility, and funding evidence. | monitoring | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-market-regime-monitor.png"><img src="assets/agent-market-regime-monitor.png" width="260"></a> |
+| [agent-quant-failure-triage](https://github.com/quantskills/agent-quant-failure-triage) | Triages A-share strategy or factor deterioration with layered counterfactuals, retraining criteria, and review evidence. | risk | — | — | pending maintainer review / no public endpoint |  |
 
 ### Trading Execution Agent（1）
 
