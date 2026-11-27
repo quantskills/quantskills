@@ -1,5 +1,5 @@
 {
-  "snapshot_id": "sha256:5ee87e0287642c2c1ed75f34bc8a9a925e1bbc0c2ea668cce2ca89abe54481d7",
+  "snapshot_id": "sha256:397dabd3d9cd98acf765755dabfca103754904106d45921064d6496fce579c29",
   "taxonomy": {
     "categories": {
       "10": {
@@ -1139,6 +1139,71 @@
         "recommendation_rank": null,
         "recommendation_group": null
       }
+    },
+    {
+      "catalog": {
+        "category": "09",
+        "subcategory": "09.workflow-orchestration-agent"
+      },
+      "catalog_status": "approved",
+      "category": "09",
+      "commit_sha": "79339d0285b7372179dab38b0f09bf69201c0390",
+      "current_ranking_eligible": false,
+      "declaration_file": "AGENTS.md",
+      "declaration_status": "legacy",
+      "default_branch": "master",
+      "description": "Coordinate point-in-time A-share small-cap selection, domestic-listed global ETF rotation, low-volatility blue-chip selection, market-regime allocation, portfolio risk controls, reproducible backtests, and attribution. Use for research workflows that need deterministic style adaptation from Pandadata evidence; never use it to place live orders.",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "agent-market-style-adaptive",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "agent",
+      "requires": [
+        "skill-market-regime-analysis",
+        "skill-small-cap-fundamental",
+        "skill-global-etf-rotation",
+        "skill-low-vol-blue-chip"
+      ],
+      "stage": "orchestration",
+      "status": "active",
+      "subcategory": "09.workflow-orchestration-agent",
+      "summary_en": "Coordinates small-cap, global ETF, and low-volatility strategies by market regime, with research backtests and attribution.",
+      "summary_zh": "按市场状态组合小市值、全球 ETF 和低波策略，执行可复核的回测与归因。",
+      "tags": [
+        "a-share",
+        "style-rotation",
+        "small-cap",
+        "etf-rotation",
+        "low-volatility",
+        "regime",
+        "pandadata",
+        "backtest"
+      ],
+      "url": "https://github.com/quantskills/agent-market-style-adaptive",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "orchestration",
+        "workflow_stages": [
+          "data-ingestion",
+          "portfolio-construction",
+          "backtesting",
+          "evaluation",
+          "risk",
+          "reporting",
+          "orchestration"
+        ]
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -3226,6 +3291,60 @@
     },
     {
       "catalog": {
+        "category": "07",
+        "subcategory": "07.workflow-audit"
+      },
+      "catalog_status": "approved",
+      "category": "07",
+      "commit_sha": "dd67f08e397df9d222ffae5f91e62234423b684d",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "当需要评测 AI 交易员在异常数据和重复请求下是否守住交易约束时，使用此 skill。支持四类故障注入（同输入重复、提示扰动、缺失行情、超时/重试），市场无关的约束判定器，有/无校验层前后对照，输出约束违反率、重复动作率与拒绝执行表现。",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-constraint-stress-test",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "07.workflow-audit",
+      "summary_en": "Evaluates trading safeguards in offline replay with duplicate input, prompt perturbation, missing quotes, and timeout retries.",
+      "summary_zh": "通过重复输入、提示扰动、行情缺失和超时重试，离线评估交易约束校验与拒绝执行行为。",
+      "tags": [
+        "quant",
+        "build",
+        "engineered",
+        "约束测试",
+        "故障注入",
+        "压力测试"
+      ],
+      "url": "https://github.com/quantskills/skill-constraint-stress-test",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "evaluation",
+          "risk",
+          "reporting"
+        ]
+      },
+      "evaluation": null
+    },
+    {
+      "catalog": {
         "category": "01",
         "subcategory": "01.market-data-governance"
       },
@@ -4600,6 +4719,58 @@
         "recommendation_rank": null,
         "recommendation_group": null
       }
+    },
+    {
+      "catalog": {
+        "category": "02",
+        "subcategory": "02.factor-evaluation"
+      },
+      "catalog_status": "approved",
+      "category": "02",
+      "commit_sha": "d94bbcb2adaf59079a1a9e75fb02db94f8b493bf",
+      "current_ranking_eligible": false,
+      "declaration_file": "SKILL.md",
+      "declaration_status": "legacy",
+      "default_branch": "main",
+      "description": "Evaluate whether a factor-drift alert creates net value after the response action. Use for out-of-sample comparisons of no action, fixed de-risking, alert-triggered downweighting, retraining or signal switching, including false-alarm cost and recovery latency.",
+      "health": "reviewed-declaration-only",
+      "interface": null,
+      "interface_status": "pending-maintainer",
+      "last_validated": "2026-11-27",
+      "license": "GPL-3.0-only",
+      "maintainer_type": "community",
+      "name": "skill-factor-drift-closure",
+      "platforms": [
+        "codex",
+        "claude-code",
+        "cursor",
+        "hermes",
+        "openclaw"
+      ],
+      "project_type": "skill",
+      "requires": [],
+      "stage": "evaluation",
+      "status": "active",
+      "subcategory": "02.factor-evaluation",
+      "summary_en": "Evaluates out-of-sample net value after factor-drift alerts and response actions.",
+      "summary_zh": "检验因子漂移预警后的降权、重训或换信号是否产生扣成本后的样本外增量。",
+      "tags": [
+        "factor-drift",
+        "closed-loop",
+        "false-alarm",
+        "recovery-latency",
+        "out-of-sample"
+      ],
+      "url": "https://github.com/quantskills/skill-factor-drift-closure",
+      "validation_level": "listed",
+      "workflow": {
+        "primary_stage": "evaluation",
+        "workflow_stages": [
+          "evaluation",
+          "monitoring"
+        ]
+      },
+      "evaluation": null
     },
     {
       "catalog": {
@@ -12661,7 +12832,7 @@
   "compatibility_edges": [],
   "evaluations": {
     "mode": "shadow",
-    "snapshot_digest": "c3e5775752be5c0d1bbf6d3ac95a5b3de4158a3ab5a0b368f2a934e4cc0ba2e2",
+    "snapshot_digest": "bf1f2342f7b875392b2e77f3e1926577dba4c2dcc551a2d984f67a9026996d82",
     "score_record_count": 217,
     "recommended_record_count": 28,
     "recommendation_policy": "shadow-category-quartile.v1"

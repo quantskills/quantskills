@@ -25,24 +25,24 @@ Quantitative experience should be described, reproduced, and discussed openly: c
 A periodic snapshot of the community's public assets; browse the same snapshot in the [GitHub Pages catalog](https://quantskills.github.io/quantskills/).
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:5ee87e0287642c2c1ed75f34bc8a9a925e1bbc0c2ea668cce2ca89abe54481d7 -->
+<!-- catalog-snapshot: sha256:397dabd3d9cd98acf765755dabfca103754904106d45921064d6496fce579c29 -->
 <table align="center"><tr>
-<td align="center"><strong>218</strong><br><sub>Assets</sub></td>
+<td align="center"><strong>221</strong><br><sub>Assets</sub></td>
 <td align="center"><strong>10</strong><br><sub>Categories</sub></td>
 <td align="center"><strong>1</strong><br><sub>Published endpoints</sub></td>
-<td align="center"><strong>2026-11-18</strong><br><sub>Snapshot updated</sub></td>
+<td align="center"><strong>2026-11-27</strong><br><sub>Snapshot updated</sub></td>
 </tr></table>
 
 ## Category summary
 - [01 Data APIs & Warehouse](#cat-01) — 7 assets（Data Sources & Connectors / Warehouse & Cache / Market Data Governance / PIT & Data Quality）
-- [02 Factor R&D Toolbox](#cat-02) — 44 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
+- [02 Factor R&D Toolbox](#cat-02) — 45 assets（Factor Ideation / Factor Generation / Orthogonalization & Blending / Factor Selection / Factor Evaluation / Factor Pool & Online Serving）
 - [03 Market & Instrument Analysis](#cat-03) — 45 assets（A-Share Equities / HK & US Equities / ETFs, Funds & Indices / Futures & Commodities / Options & Convertible Bonds / Macro & Cross-Asset）
 - [04 Risk Monitoring & Alerts](#cat-04) — 22 assets（Market Regime / Flows & Crowding / Liquidity Risk / Corporate Events / Regulatory Compliance / Portfolio Stress Testing / Automated Alerts）
 - [05 Backtesting & Trading](#cat-05) — 26 assets（Strategies & Signals / Portfolio Construction / Backtesting Engine / Performance Attribution / Transaction Costs / Market Microstructure / Positions & Orders / Paper & Live Execution）
 - [06 Research Models & Replication](#cat-06) — 30 assets（Paper Replication / Strategy Replication / Statistical & ML Models / Investor Research Models / Experiment Registry & Reproducible Research）
-- [07 Research Validation & Quality](#cat-07) — 13 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
+- [07 Research Validation & Quality](#cat-07) — 14 assets（Lookahead & Data Leakage / Survivorship Bias / Walk-Forward & OOS / Signal Stability / Forecast Calibration / Numerical & Model Audit / Workflow Audit）
 - [08 Information Search & Knowledge Analysis](#cat-08) — 10 assets（News & Disclosures / Institutional Research / Daily Review）
-- [09 Quant Agents & Automation](#cat-09) — 15 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
+- [09 Quant Agents & Automation](#cat-09) — 16 assets（Research Agent / Monitoring & Risk Agent / Trading Execution Agent / Workflow Orchestration Agent）
 - [10 Infrastructure & Templates](#cat-10) — 6 assets（Skill Template / Agent Template / Build & Release Tooling）
 
 ## Workflow map
@@ -87,7 +87,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-02"></a>
 <details>
-<summary><strong>02 Factor R&D Toolbox</strong> — 44 assets, 8 with screenshots</summary>
+<summary><strong>02 Factor R&D Toolbox</strong> — 45 assets, 8 with screenshots</summary>
 
 ### Factor Ideation（2）
 
@@ -143,11 +143,12 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 | [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | Runs mRMR or Marginal-SAGE on local factor and label data to produce Top-K rankings. | factor-screening | — | — | pending maintainer review / no public endpoint |  |
 | [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | Selects factor combinations using residual IC and out-of-sample evaluation. | factor-screening | — | — | pending maintainer review / no public endpoint |  |
 
-### Factor Evaluation（8）
+### Factor Evaluation（9）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-build-b10-factor-evaluation](https://github.com/quantskills/skill-build-b10-factor-evaluation) | Evaluates quantitative factors with IC, IR, stratified backtests, monotonicity, turnover, and decay diagnostics. | evaluation | — | — | pending maintainer review / no public endpoint |  |
+| [skill-factor-drift-closure](https://github.com/quantskills/skill-factor-drift-closure) | Evaluates out-of-sample net value after factor-drift alerts and response actions. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factor-evaluate](https://github.com/quantskills/skill-factor-evaluate) | Scores a cross-sectional factor using IC, Sharpe, drawdown, monotonicity, and turnover. | evaluation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-evaluate.png"><img src="assets/skill-factor-evaluate.png" width="260"></a> |
 | [skill-factor-ic-decay](https://github.com/quantskills/skill-factor-ic-decay) | Diagnose factor IC decay, ICIR, significance, rolling stability, and multi-horizon half-life. Evidence-first, no trading signals. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-factor-mason](https://github.com/quantskills/skill-factor-mason) | Checks timing, IC/IR, costs, and neutralization quality in single-factor research. | evaluation | — | — | pending maintainer review / no public endpoint |  |
@@ -444,7 +445,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-07"></a>
 <details>
-<summary><strong>07 Research Validation & Quality</strong> — 13 assets, 1 with screenshots</summary>
+<summary><strong>07 Research Validation & Quality</strong> — 14 assets, 1 with screenshots</summary>
 
 ### Lookahead & Data Leakage（2）
 
@@ -487,11 +488,12 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 |---|---|---|---|---|---|---|
 | [skill-factor-debug](https://github.com/quantskills/skill-factor-debug) | Provides a symptom, cause, and verification playbook for factor failures. | evaluation | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-debug.png"><img src="assets/skill-factor-debug.png" width="260"></a> |
 
-### Workflow Audit（2）
+### Workflow Audit（3）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [skill-backtest-assumption-check](https://github.com/quantskills/skill-backtest-assumption-check) | Use when an agent needs to independently audit the assumptions and biases behind a backtest / strategy code / research backtest report — execution timing and lookahead, trading costs, price limits and suspensions, survivorship bias, parameter freedom and multiple testing, data alignment and adjustment, turnover and capacity, benchmark and excess returns, and reporting transparency. Outputs a structured defect list (axis x evidence x severity x impact x fix). | reporting | — | — | pending maintainer review / no public endpoint |  |
+| [skill-constraint-stress-test](https://github.com/quantskills/skill-constraint-stress-test) | Evaluates trading safeguards in offline replay with duplicate input, prompt perturbation, missing quotes, and timeout retries. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 | [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | Audits PandaAI workflow graphs, code, timing, parameters, and backtest-validation evidence. | evaluation | — | — | pending maintainer review / no public endpoint |  |
 
 </details>
@@ -529,7 +531,7 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 
 <a id="cat-09"></a>
 <details>
-<summary><strong>09 Quant Agents & Automation</strong> — 15 assets, 5 with screenshots</summary>
+<summary><strong>09 Quant Agents & Automation</strong> — 16 assets, 5 with screenshots</summary>
 
 ### Research Agent（3）
 
@@ -558,12 +560,13 @@ A periodic snapshot of the community's public assets; browse the same snapshot i
 |---|---|---|---|---|---|---|
 | [agent-ssquant](https://github.com/quantskills/agent-ssquant) | SSQuant Agent workflow for futures strategies, data services, CTP gates, and Chinese backtest reports. | execution | — | — | pending maintainer review / no public endpoint |  |
 
-### Workflow Orchestration Agent（3）
+### Workflow Orchestration Agent（4）
 
 | Project | Bilingual summary | Primary stage | Inputs | Outputs | Interface status | Screenshot |
 |---|---|---|---|---|---|---|
 | [agent-for-liangshuyuan-tasks](https://github.com/quantskills/agent-for-liangshuyuan-tasks) | Multi-agent collaboration framework for Liangshuyuan tasks, organizing quantitative tools, build workflows, and task roles. | orchestration | — | — | pending maintainer review / no public endpoint |  |
 | [agent-future-trading](https://github.com/quantskills/agent-future-trading) | Multi-agent futures research, strategy generation, backtesting, and research feedback workflow | orchestration | — | — | pending maintainer review / no public endpoint |  |
+| [agent-market-style-adaptive](https://github.com/quantskills/agent-market-style-adaptive) | Coordinates small-cap, global ETF, and low-volatility strategies by market regime, with research backtests and attribution. | orchestration | — | — | pending maintainer review / no public endpoint |  |
 | [agent-quantspace](https://github.com/quantskills/agent-quantspace) | AI-native quantitative research framework for reusable skills, strategy workflows, backtests, and reports. | orchestration | — | — | pending maintainer review / no public endpoint | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-quantspace.png"><img src="assets/agent-quantspace.png" width="260"></a> |
 
 </details>

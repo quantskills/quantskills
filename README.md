@@ -25,24 +25,24 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 以下是社区公开资产的定期快照；同一快照的交互式目录见 [GitHub Pages 目录](https://quantskills.github.io/quantskills/)。
 
 <!-- CATALOG:START -->
-<!-- catalog-snapshot: sha256:5ee87e0287642c2c1ed75f34bc8a9a925e1bbc0c2ea668cce2ca89abe54481d7 -->
+<!-- catalog-snapshot: sha256:397dabd3d9cd98acf765755dabfca103754904106d45921064d6496fce579c29 -->
 <table align="center"><tr>
-<td align="center"><strong>218</strong><br><sub>资产</sub></td>
+<td align="center"><strong>221</strong><br><sub>资产</sub></td>
 <td align="center"><strong>10</strong><br><sub>分类</sub></td>
 <td align="center"><strong>1</strong><br><sub>已发布端点</sub></td>
-<td align="center"><strong>2026-11-18</strong><br><sub>快照更新</sub></td>
+<td align="center"><strong>2026-11-27</strong><br><sub>快照更新</sub></td>
 </tr></table>
 
 ## 分类总览
 - [01 数据接口与数据仓库](#cat-01) — 7 项资产（数据源与连接器 / 仓库与缓存 / 行情数据治理 / PIT 与数据质量）
-- [02 因子研发工具箱](#cat-02) — 44 项资产（因子创意 / 因子生成 / 正交与合成 / 因子筛选 / 因子评价 / 因子池与在线化）
+- [02 因子研发工具箱](#cat-02) — 45 项资产（因子创意 / 因子生成 / 正交与合成 / 因子筛选 / 因子评价 / 因子池与在线化）
 - [03 市场与标的分析](#cat-03) — 45 项资产（A 股 / 港股与美股 / ETF、基金与指数 / 期货与商品 / 期权与可转债 / 宏观与跨资产）
 - [04 风险监控与预警](#cat-04) — 22 项资产（市场状态 / 资金与拥挤 / 流动性风险 / 公司事件 / 监管合规 / 组合压力测试 / 自动预警）
 - [05 策略回测与交易工具](#cat-05) — 26 项资产（策略与信号 / 组合构建 / 回测引擎 / 绩效归因 / 交易成本 / 微观结构 / 仓位与订单 / 模拟与实盘执行）
 - [06 投研模型与研究复现](#cat-06) — 30 项资产（论文复现 / 策略复现 / 统计与机器学习模型 / 投资者研究模型 / 实验登记与可重复研究）
-- [07 研究验证与质量工具](#cat-07) — 13 项资产（前视与数据泄漏 / 幸存者偏差 / Walk-forward 与 OOS / 信号稳定性 / 预测校准 / 数值与模型审计 / 工作流审计）
+- [07 研究验证与质量工具](#cat-07) — 14 项资产（前视与数据泄漏 / 幸存者偏差 / Walk-forward 与 OOS / 信号稳定性 / 预测校准 / 数值与模型审计 / 工作流审计）
 - [08 资讯搜索与知识分析](#cat-08) — 10 项资产（新闻与公告 / 机构研究 / 每日复盘）
-- [09 量化智能体与自动化](#cat-09) — 15 项资产（研究 Agent / 监控与风险 Agent / 交易执行 Agent / 工作流编排 Agent）
+- [09 量化智能体与自动化](#cat-09) — 16 项资产（研究 Agent / 监控与风险 Agent / 交易执行 Agent / 工作流编排 Agent）
 - [10 基础设施与模板](#cat-10) — 6 项资产（Skill 模板 / Agent 模板 / 构建与发布工具）
 
 ## 工作流地图
@@ -87,7 +87,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 <a id="cat-02"></a>
 <details>
-<summary><strong>02 因子研发工具箱</strong> — 44 项资产，含截图 8</summary>
+<summary><strong>02 因子研发工具箱</strong> — 45 项资产，含截图 8</summary>
 
 ### 因子创意（2）
 
@@ -143,11 +143,12 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 | [skill-factor-ranking-sage](https://github.com/quantskills/skill-factor-ranking-sage) | 在本地因子和标签数据上运行mRMR或Marginal-SAGE并输出Top-K排名。 | factor-screening | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-residual-guided-factor-selection](https://github.com/quantskills/skill-residual-guided-factor-selection) | 使用残差 IC 和样本外评估筛选因子组合。 | factor-screening | — | — | 待维护者审核 / 无公开端点 |  |
 
-### 因子评价（8）
+### 因子评价（9）
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
 | [skill-build-b10-factor-evaluation](https://github.com/quantskills/skill-build-b10-factor-evaluation) | 评估因子的 IC、IR、分层回测、单调性、换手率和衰减表现。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
+| [skill-factor-drift-closure](https://github.com/quantskills/skill-factor-drift-closure) | 检验因子漂移预警后的降权、重训或换信号是否产生扣成本后的样本外增量。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-factor-evaluate](https://github.com/quantskills/skill-factor-evaluate) | 对单个截面因子计算IC、夏普、回撤、单调性和换手的综合评分。 | evaluation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-evaluate.png"><img src="assets/skill-factor-evaluate.png" width="260"></a> |
 | [skill-factor-ic-decay](https://github.com/quantskills/skill-factor-ic-decay) | 用日度截面 Spearman IC、ICIR、Newey-West 显著性、滚动稳定性与多周期半衰期，诊断因子预测力衰减；事实优先，不给买卖指令。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-factor-mason](https://github.com/quantskills/skill-factor-mason) | 检查单因子研究中的时点、IC/IR、成本和中性化质量。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
@@ -444,7 +445,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 <a id="cat-07"></a>
 <details>
-<summary><strong>07 研究验证与质量工具</strong> — 13 项资产，含截图 1</summary>
+<summary><strong>07 研究验证与质量工具</strong> — 14 项资产，含截图 1</summary>
 
 ### 前视与数据泄漏（2）
 
@@ -487,11 +488,12 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 |---|---|---|---|---|---|---|
 | [skill-factor-debug](https://github.com/quantskills/skill-factor-debug) | 提供按症状、病因和验证手段组织的因子失效诊断手册。 | evaluation | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/skill-factor-debug.png"><img src="assets/skill-factor-debug.png" width="260"></a> |
 
-### 工作流审计（2）
+### 工作流审计（3）
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
 | [skill-backtest-assumption-check](https://github.com/quantskills/skill-backtest-assumption-check) | 独立的回测假设审计师：对回测代码/策略代码/研究报告按九大维度（成交时点、成本、涨跌停停牌、幸存者、多重比较、数据对齐、换手容量、基准、透明）逐条取证，输出缺陷×证据×严重度×影响×修复清单，配套可运行校验脚本。 | reporting | — | — | 待维护者审核 / 无公开端点 |  |
+| [skill-constraint-stress-test](https://github.com/quantskills/skill-constraint-stress-test) | 通过重复输入、提示扰动、行情缺失和超时重试，离线评估交易约束校验与拒绝执行行为。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 | [skill-pandaai-workflow-audit](https://github.com/quantskills/skill-pandaai-workflow-audit) | 审计PandaAI工作流的图结构、代码、时序、参数和回测验证证据。 | evaluation | — | — | 待维护者审核 / 无公开端点 |  |
 
 </details>
@@ -529,7 +531,7 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 
 <a id="cat-09"></a>
 <details>
-<summary><strong>09 量化智能体与自动化</strong> — 15 项资产，含截图 5</summary>
+<summary><strong>09 量化智能体与自动化</strong> — 16 项资产，含截图 5</summary>
 
 ### 研究 Agent（3）
 
@@ -558,12 +560,13 @@ QuantSkills 是由 [PandaAI](https://www.pandaaiquant.com/) 发起的开放量�
 |---|---|---|---|---|---|---|
 | [agent-ssquant](https://github.com/quantskills/agent-ssquant) | SSQuant Agent 组织期货策略、数据服务、CTP 门禁检查和中文回测报告工作流。 | execution | — | — | 待维护者审核 / 无公开端点 |  |
 
-### 工作流编排 Agent（3）
+### 工作流编排 Agent（4）
 
 | 项目 | 双语摘要 | 主阶段 | 输入 | 输出 | 接口状态 | 截图 |
 |---|---|---|---|---|---|---|
 | [agent-for-liangshuyuan-tasks](https://github.com/quantskills/agent-for-liangshuyuan-tasks) | 面向量枢院任务的多 Agent 协作框架，组织量化交易工具、构建流程与任务分工。 | orchestration | — | — | 待维护者审核 / 无公开端点 |  |
 | [agent-future-trading](https://github.com/quantskills/agent-future-trading) | 多智能体期货研究、策略生成、历史回测与研究反馈工作流 | orchestration | — | — | 待维护者审核 / 无公开端点 |  |
+| [agent-market-style-adaptive](https://github.com/quantskills/agent-market-style-adaptive) | 按市场状态组合小市值、全球 ETF 和低波策略，执行可复核的回测与归因。 | orchestration | — | — | 待维护者审核 / 无公开端点 |  |
 | [agent-quantspace](https://github.com/quantskills/agent-quantspace) | 面向 AI 编码代理的量化研究框架，组织数据、技能、策略、回测和报告工作流。 | orchestration | — | — | 待维护者审核 / 无公开端点 | <a href="https://raw.githubusercontent.com/quantskills/quantskills/main/assets/agent-quantspace.png"><img src="assets/agent-quantspace.png" width="260"></a> |
 
 </details>
